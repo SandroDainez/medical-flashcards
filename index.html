@@ -209,7 +209,14 @@ a{text-decoration:none}
 
     <!-- DASHBOARD -->
     <div id="v-dashboard" class="view on">
-      <div class="vhead"><h1>Bom estudo! 👋</h1><p id="v-date"></p></div>
+      <div class="vhead">
+        <h1>Bom estudo! 👋</h1>
+        <p id="v-date"></p>
+        <div style="margin-top: 16px;">
+          <label for="study-cat-select" style="font-weight: 600; font-size: 14px; color: #334155; margin-bottom: 6px; display: block;">Filtrar por Matéria</label>
+          <select class="sel" id="study-cat-select" style="min-width: 250px;"></select>
+        </div>
+      </div>
       <div class="stat-row">
         <div class="scard"><span class="scard-icon">🔔</span><div><span class="scard-num num-red" id="s-due">0</span><span class="scard-lbl">Para revisar hoje</span></div></div>
         <div class="scard"><span class="scard-icon">🌱</span><div><span class="scard-num num-blue" id="s-new">0</span><span class="scard-lbl">Cards novos</span></div></div>
@@ -222,10 +229,7 @@ a{text-decoration:none}
       </div>
       <div class="cta" id="cta" style="display:none">
         <p id="cta-msg"></p>
-        <div style="display: flex; align-items: center; gap: 10px;">
-          <select class="sel" id="study-cat-select" style="background: #fff; color: #1e3a8a; border: 2px solid #fff;"></select>
-          <button class="btn btn-white btn-lg" onclick="go('study')">Começar Estudo 🚀</button>
-        </div>
+        <button class="btn btn-white btn-lg" onclick="go('study')">Começar Estudo 🚀</button>
       </div>
     </div>
 
