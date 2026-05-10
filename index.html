@@ -222,7 +222,10 @@ a{text-decoration:none}
       </div>
       <div class="cta" id="cta" style="display:none">
         <p id="cta-msg"></p>
-        <button class="btn btn-white btn-lg" onclick="go('study')">Começar Estudo 🚀</button>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <select class="sel" id="study-cat-select" style="background: #fff; color: #1e3a8a; border: 2px solid #fff;"></select>
+          <button class="btn btn-white btn-lg" onclick="go('study')">Começar Estudo 🚀</button>
+        </div>
       </div>
     </div>
 
@@ -375,47 +378,60 @@ function todayStr() { return new Date().toISOString().split('T')[0]; }
 function addDays(n) { var d = new Date(); d.setDate(d.getDate() + n); return d.toISOString().split('T')[0]; }
 function isDue(card) { return card.due <= todayStr(); }
 
-// ===================== SAMPLE DATA =====================
-var SAMPLES = [
-  {cat:'Anatomia', q:'Quais são os músculos do manguito rotador?', a:'SISS: Supraespinhal, Infraespinhal, Subescapular, Redondo menor', hint:'Mnemônico: SISS', exp:'Estabilizam a articulação glenoumeral.'},
-  {cat:'Anatomia', q:'Qual nervo inerva o diafragma?', a:'Nervo frênico (C3, C4, C5)', hint:'"C3, C4, C5 keeps the diaphragm alive"', exp:'Origina-se do plexo cervical e desce pelo mediastino.'},
-  {cat:'Fisiologia', q:'Qual o potencial de membrana em repouso de um neurônio?', a:'-70 mV', hint:'Interior mais negativo', exp:'Mantido pela bomba Na⁺/K⁺-ATPase. Limiar de disparo: ~-55 mV.'},
-  {cat:'Fisiologia', q:'O que é o reflexo de Hering-Breuer?', a:'Inibe a inspiração quando os pulmões estão distendidos em excesso', hint:'Pulmão cheio → para de inspirar', exp:'Mediado por mecanorreceptores via nervo vago. Evita hiperinflação.'},
-  {cat:'Farmacologia', q:'Qual o mecanismo de ação das estatinas?', a:'Inibição competitiva da HMG-CoA redutase, enzima limitante da síntese de colesterol', hint:'HMG-CoA → mevalonato (passo inibido)', exp:'Reduzem LDL em ~30-55%. Efeito pleiotrópico: anti-inflamatório.'},
-  {cat:'Farmacologia', q:'Qual é o antídoto para intoxicação por paracetamol?', a:'N-acetilcisteína (NAC)', hint:'Repõe glutationa hepática', exp:'Deve ser administrada nas primeiras 8-10h.'},
-  {cat:'Patologia', q:'Quais são os 4 sinais cardinais da inflamação aguda?', a:'Calor, Rubor, Tumor (edema) e Dor — mais Functio laesa (perda de função)', hint:'Descritos por Celsius + Virchow', exp:'Mediados por vasodilatação e aumento da permeabilidade vascular.'},
-  {cat:'Bioquímica', q:'O que é a via de pentose-fosfato?', a:'Gera NADPH e ribose-5-fosfato a partir da glicose-6-fosfato', hint:'NADPH = antioxidante; Ribose = nucleotídeos', exp:'Deficiência de G6PD → anemia hemolítica.'},
-  {cat:'Microbiologia', q:'Qual bactéria produz a toxina do tétano?', a:'Clostridium tetani — tetanospasmina', hint:'Gram+, anaeróbio, esporulado', exp:'Bloqueia neurônios inibitórios → espasmos. Tto: imunoglobulina + metronidazol.'},
-  {cat:'Clínica Médica', q:'Quais são os critérios de Framingham para IC?', a:'Maiores: DPN, ortopneia, TVJ, crepitações, B3, hepatojugular. Menores: edema, tosse noturna, hepatomegalia', hint:'2 maiores OU 1 maior + 2 menores', exp:'Confirmado por ecocardiograma.'},
-  {cat:'Neurologia', q:'O que é a Tríade de Cushing?', a:'Hipertensão arterial + Bradicardia + Bradipneia irregular', hint:'Sinal de herniação iminente', exp:'Reflexo vasopressor para manter perfusão cerebral com PIC elevada.'},
-  {cat:'Imunologia', q:'Diferença entre imunidade inata e adaptativa?', a:'Inata: inespecífica, sem memória (neutrófilos, macrófagos, NK). Adaptativa: específica, com memória (linfócitos T e B)', hint:'Inata = rápida; Adaptativa = específica', exp:'A adaptativa pode ser humoral (Ac via B) ou celular (via T).'},
-  {cat:'Semiologia', q:'Como diferenciar sopro inocente de patológico em crianças?', a:'Inocente: sistólico ≤2/6, sem irradiação nem frêmito. Patológico: diastólico, ≥3/6, frêmito, irradiação', hint:'Diastólico = sempre patológico', exp:'Todo sopro diastólico requer investigação com ecocardiograma.'},
-  {cat:'Pediatria', q:'Vacinas do calendário brasileiro para os 2 meses?', a:'Pentavalente, VIP (polio), PCV13 (pneumocócica), Rotavírus (VORH)', hint:'Primeira vacinação após BCG e HepB ao nascer', exp:'Pentavalente: DTP + HiB + HepB.'},
-  {cat:'Cirurgia', q:'Critérios de Ranson na pancreatite aguda?', a:'Admissão: idade>55, leuco>16k, glicose>200, LDH>350, AST>250. 48h: ↓Ht>10%, Ca<8, PaO2<60', hint:'Score ≥3 = grave', exp:'Mortalidade: 0-2=<1%, 3-4=15%, 5-6=40%, ≥7≈100%.'}
-];
-
 function mkId() { return Math.random().toString(36).slice(2) + Date.now().toString(36); }
 
 // ===================== STATE =====================
 var cards = [];
+var allCards = []; // Holds all cards loaded from JSON
 var stats = { total: 0, correct: 0, days: {}, streak: 0, lastDay: '' };
 var queue = [], qIdx = 0, qTotal = 0;
 var deleteId = null;
 var currentView = 'dashboard';
 
 // ===================== INIT =====================
-function init() {
-  cards = LS.get('mc2_cards', []);
-  stats = LS.get('mc2_stats', { total: 0, correct: 0, days: {}, streak: 0, lastDay: '' });
+async function init() {
+  // 1. Fetch all cards from the external source
+  await loadAllCardsFromJSON();
 
-  if (cards.length === 0) {
+  // 2. Load user's progress from localStorage
+  stats = LS.get('mc2_stats', { total: 0, correct: 0, days: {}, streak: 0, lastDay: '' });
+  var storedCards = LS.get('mc2_cards', []);
+
+  // 3. Sync fetched cards with stored progress
+  if (allCards.length > 0) {
     var t = todayStr();
-    cards = SAMPLES.map(function(s) {
-      return { id: mkId(), cat: s.cat, q: s.q, a: s.a, hint: s.hint, exp: s.exp,
-               interval: 0, rep: 0, ef: 2.5, due: t, created: t, reviews: 0 };
+    var cardMap = {};
+    storedCards.forEach(function(c) { cardMap[c.q] = c; }); // Use question as a unique key for syncing
+
+    cards = allCards.map(function(s) {
+      var stored = cardMap[s.q];
+      if (stored) {
+        // If card exists in storage, update its content but keep its progress
+        stored.cat = s.cat;
+        stored.a = s.a;
+        stored.hint = s.hint;
+        stored.exp = s.exp;
+        return stored;
+      } else {
+        // If it's a new card from JSON, initialize it
+        return { id: mkId(), cat: s.cat, q: s.q, a: s.a, hint: s.hint, exp: s.exp,
+                 interval: 0, rep: 0, ef: 2.5, due: t, created: t, reviews: 0 };
+      }
     });
-    LS.set('mc2_cards', cards);
+    // Add any cards that were in localStorage but not in JSON (e.g., user-created)
+    storedCards.forEach(function(sc) {
+      if (!allCards.find(c => c.q === sc.q)) {
+        cards.push(sc);
+      }
+    });
+
+  } else if (storedCards.length > 0) {
+    // If JSON fails but we have localStorage, use that
+    cards = storedCards;
   }
+  // Fallback to SAMPLES is removed as we rely on JSON now.
+
+  LS.set('mc2_cards', cards);
 
   renderSidebar();
   updateBadge();
@@ -433,6 +449,19 @@ function init() {
     }
   });
 }
+
+async function loadAllCardsFromJSON() {
+  try {
+    const response = await fetch('cards.json');
+    if (!response.ok) throw new Error('Network response was not ok');
+    allCards = await response.json();
+    console.log('Loaded ' + allCards.length + ' cards from cards.json');
+  } catch (error) {
+    console.error('Failed to load cards.json:', error);
+    allCards = []; // Start with an empty array if fetch fails
+  }
+}
+
 
 // ===================== NAVIGATION =====================
 function go(view) {
@@ -507,6 +536,19 @@ function renderDashboard() {
     });
   }
   document.getElementById('cat-due-list').innerHTML = cdHtml;
+  
+  // Populate category selector
+  var catSelect = document.getElementById('study-cat-select');
+  var allCats = [];
+  cards.forEach(function(c) { if (allCats.indexOf(c.cat) < 0) allCats.push(c.cat); });
+  allCats.sort();
+  catSelect.innerHTML = '<option value="all">Todas as Matérias ('+due.length+')</option>';
+  allCats.forEach(function(cat) {
+    var opt = document.createElement('option');
+    opt.value = cat;
+    opt.textContent = cat + ' (' + (catDue[cat] || 0) + ')';
+    catSelect.appendChild(opt);
+  });
 
   // Upcoming
   var upcoming = cards.filter(function(c) { return !isDue(c); })
@@ -536,13 +578,32 @@ function renderDashboard() {
 
 // ===================== STUDY =====================
 function startStudy() {
-  queue = dueCards();
+  var allDue = dueCards();
+  var selectedCategory = document.getElementById('study-cat-select').value;
+
+  if (selectedCategory && selectedCategory !== 'all') {
+    queue = allDue.filter(function(c) { return c.cat === selectedCategory; });
+  } else {
+    queue = allDue;
+  }
+  
   qTotal = queue.length;
   qIdx = 0;
   var area = document.getElementById('study-area');
   var done = document.getElementById('done-box');
-  if (queue.length === 0) { area.style.display = 'none'; done.style.display = 'block'; return; }
-  area.style.display = 'block'; done.style.display = 'none';
+  if (queue.length === 0) {
+    area.style.display = 'none';
+    done.style.display = 'block';
+    // Adjust message if a category was selected but had no due cards
+    if (selectedCategory && selectedCategory !== 'all') {
+      done.querySelector('p').textContent = 'Nenhum card de ' + esc(selectedCategory) + ' para revisar agora. Escolha outra matéria ou volte mais tarde.';
+    } else {
+      done.querySelector('p').textContent = 'Não há cards para revisar agora. Volte amanhã ou crie novos cards.';
+    }
+    return;
+  }
+  area.style.display = 'block';
+  done.style.display = 'none';
   showCard();
 }
 
