@@ -103,5 +103,166 @@
     "a": "Admissão: idade>55, leuco>16k, glicose>200, LDH>350, AST>250. 48h: ↓Ht>10%, Ca<8, PaO2<60",
     "hint": "Score ≥3 = grave",
     "exp": "Mortalidade: 0-2=<1%, 3-4=15%, 5-6=40%, ≥7≈100%."
+  },
+  {
+    "cat": "Classificação ASA",
+    "q": "O que significa a classificação ASA I?",
+    "a": "Paciente saudável, sem doença sistêmica, não fumante, sem ou mínimo uso de álcool.",
+    "hint": "ASA I = 'Ideal' — paciente perfeito para cirurgia.",
+    "exp": "A classificação ASA foi criada pela American Society of Anesthesiologists para estratificar o risco perioperatório. ASA I representa o menor risco cirúrgico. Exemplos: adulto jovem saudável submetido a cirurgia eletiva."
+  },
+  {
+    "cat": "Classificação ASA",
+    "q": "Quais condições caracterizam um paciente ASA II?",
+    "a": "Doença sistêmica leve e sem limitação funcional. Ex: DM2 controlado, HAS controlada, obesidade leve (IMC 30-40), tabagismo, gestante a termo.",
+    "hint": "ASA II = doença sistêmica leve, SEM limitação funcional.",
+    "exp": "O paciente ASA II tem alguma comorbidade, mas ela está bem controlada e não impõe restrição significativa às atividades da vida diária. O risco cirúrgico é levemente aumentado em relação ao ASA I."
+  },
+  {
+    "cat": "Classificação ASA",
+    "q": "O que diferencia ASA III de ASA II?",
+    "a": "ASA III: doença sistêmica grave com limitação funcional, mas sem risco de morte imediato. Ex: DM ou HAS mal controlados, DPOC, IRC em diálise, IAM/AVC > 3 meses.",
+    "hint": "ASA III = doença grave COM limitação funcional.",
+    "exp": "A palavra-chave é 'limitação funcional'. O paciente ASA III tem sua capacidade funcional reduzida pela doença, mas ainda não é uma ameaça imediata à vida. IAM ou AVC ocorridos há menos de 3 meses elevam para ASA IV."
+  },
+  {
+    "cat": "Classificação ASA",
+    "q": "Quando um paciente é classificado como ASA IV?",
+    "a": "Doença sistêmica grave com risco de vida constante. Ex: IAM ou AVC recente (< 3 meses), isquemia miocárdica ativa, sepse grave, ICC descompensada, insuficiência hepática grave.",
+    "hint": "ASA IV = ameaça constante à vida.",
+    "exp": "O risco de morte perioperatória em ASA IV é significativamente elevado. A cirurgia eletiva é geralmente contraindicada; apenas procedimentos urgentes ou emergenciais são realizados."
+  },
+  {
+    "cat": "Classificação ASA",
+    "q": "O que significa o sufixo 'E' na classificação ASA (ex: ASA IIIE)?",
+    "a": "Indica que o procedimento é de emergência, o que aumenta o risco perioperatório independentemente da classificação base.",
+    "hint": "E = Emergency (Emergência). Sempre piora o prognóstico.",
+    "exp": "O 'E' é adicionado à classificação ASA quando a cirurgia não pode ser adiada. Estudos mostram que cirurgias de emergência têm mortalidade 2-3x maior que cirurgias eletivas equivalentes, justificando a distinção."
+  },
+  {
+    "cat": "Classificação ASA",
+    "q": "Um paciente com morte cerebral sendo submetido a cirurgia para doação de órgãos é classificado como ASA?",
+    "a": "ASA VI — paciente com morte cerebral declarada sendo doador de órgãos.",
+    "hint": "ASA VI = morte encefálica / doação de órgãos.",
+    "exp": "A classificação ASA VI foi adicionada posteriormente para cobrir a situação específica de doação de órgãos. O ASA V cobre pacientes moribundos sem expectativa de sobreviver sem a cirurgia (ex: aneurisma de aorta roto)."
+  },
+  {
+    "cat": "Jejum Pré-Operatório",
+    "q": "Quais são as recomendações de jejum pré-operatório da SBA/ASA para líquidos claros em adultos?",
+    "a": "Mínimo de 2 horas para líquidos claros (água, chá sem leite, café sem leite, suco sem polpa).",
+    "hint": "2-4-6-8: líquidos claros / leite materno / leite não humano ou fórmula / sólidos.",
+    "exp": "A regra 2-4-6-8 é um mnemônico prático: 2h para líquidos claros, 4h para leite materno, 6h para leite não humano/fórmula infantil, 8h para refeição sólida completa. O objetivo é reduzir o risco de aspiração pulmonar (Síndrome de Mendelson)."
+  },
+  {
+    "cat": "Jejum Pré-Operatório",
+    "q": "Qual o tempo mínimo de jejum para refeição leve (ex: torrada e líquido claro) antes de procedimento eletivo?",
+    "a": "6 horas.",
+    "hint": "Refeição leve = 6h. Refeição completa (carne, frituras) = 8h.",
+    "exp": "Refeições com alto teor de gordura e proteína retardam o esvaziamento gástrico e exigem 8h de jejum. Refeições leves (ex: torrada, biscoito) são consideradas com 6h. A distinção é clinicamente relevante no planejamento cirúrgico."
+  },
+  {
+    "cat": "Jejum Pré-Operatório",
+    "q": "Qual o tempo de jejum recomendado para leite materno em lactentes?",
+    "a": "4 horas.",
+    "hint": "Leite MATERNO = 4h (mnemônico: M-4).",
+    "exp": "O leite materno tem composição diferente do leite de vaca e se esvazia mais rapidamente do estômago. Por isso, o jejum é menor (4h) do que para leite não humano ou fórmula (6h)."
+  },
+  {
+    "cat": "Jejum Pré-Operatório",
+    "q": "A ingestão de carboidratos orais hipertônicos (maltodextrina) até 2h antes da cirurgia é permitida em pacientes sem fatores de risco para aspiração?",
+    "a": "Sim. Evidências mostram benefício metabólico (redução de resistência à insulina e catabolismo pós-operatório) sem aumento do risco de aspiração.",
+    "hint": "ERAS protocol: carbo-loading até 2h antes em não diabéticos sem risco de esvaziamento gástrico retardado.",
+    "exp": "Protocolos ERAS (Enhanced Recovery After Surgery) preconizam a ingestão de solução de carboidratos (ex: maltodextrina 12,5%) até 2h antes da cirurgia. Contraindicado em pacientes com esvaziamento gástrico retardado (diabetes com neuropatia autonômica, obesos mórbidos, gestantes no 3º trimestre)."
+  },
+  {
+    "cat": "Avaliação de Via Aérea",
+    "q": "Descreva as classes do Índice de Mallampati e o que cada uma representa.",
+    "a": "Classe I: palato mole, fauces, úvula e pilares visíveis. Classe II: palato mole, fauces e úvula visíveis. Classe III: palato mole e base da úvula visíveis. Classe IV: apenas palato duro visível.",
+    "hint": "Quanto maior o número, menor a visualização → maior dificuldade de intubação.",
+    "exp": "O Mallampati é avaliado com o paciente sentado, boca aberta, língua protrusa e sem fonação. Classes III e IV correlacionam-se com maior dificuldade de laringoscopia. Sensibilidade ~50%, especificidade ~90% para via aérea difícil."
+  },
+  {
+    "cat": "Avaliação de Via Aérea",
+    "q": "Qual o valor normal da Distância Tireomentoniana (DTM) e o que um valor reduzido sugere?",
+    "a": "Normal ≥ 6,5 cm (ou 3 dedos). DTM < 6 cm sugere dificuldade de laringoscopia direta.",
+    "hint": "Tiro-mento: mede de 'tiro' (tireoide) a 'mento' (mento/queixo). < 6 cm = difícil.",
+    "exp": "A DTM é medida com o pescoço em extensão máxima, da borda superior da cartilagem tireoide até a sínfise mentoniana. Valores reduzidos indicam espaço submandibular diminuído, dificultando a compressão da língua durante laringoscopia e consequente visualização da glote."
+  },
+  {
+    "cat": "Avaliação de Via Aérea",
+    "q": "O que é a Distância Esternomentoniana (DEM) e qual valor indica possível dificuldade de intubação?",
+    "a": "É a distância do manúbrio do esterno até a sínfise mentoniana com o pescoço em extensão máxima. DEM < 12,5 cm sugere dificuldade de intubação.",
+    "hint": "DEM avalia a extensão do pescoço: < 12,5 cm = ruim.",
+    "exp": "A DEM avalia a capacidade de extensão cervical. É útil especialmente em pacientes com limitação de movimento cervical (artrite reumatoide, espondiloartrite anquilosante). Complementa o Mallampati e a DTM na avaliação multiparamétrica da via aérea."
+  },
+  {
+    "cat": "Avaliação de Via Aérea",
+    "q": "Descreva a Classificação de Cormack-Lehane e sua importância clínica.",
+    "a": "Grau I: glote totalmente visível. Grau II: apenas comissura posterior. Grau III: somente epiglote visível. Grau IV: nem epiglote visível.",
+    "hint": "Cormack é vista NA laringoscopia (ao contrário do Mallampati, que é ANTES). Grau III/IV = via aérea difícil confirmada.",
+    "exp": "A Cormack-Lehane é a classificação realizada durante a laringoscopia direta, documentando o que o laringoscopista visualiza. Grau I e II geralmente permitem intubação fácil, enquanto III e IV indicam necessidade de técnicas alternativas."
+  },
+  {
+    "cat": "Farmacocinética",
+    "q": "O que é meia-vida contexto-sensível?",
+    "a": "É o tempo necessário para que a concentração plasmática de um fármaco caia 50% após a interrupção de uma infusão contínua de uma determinada duração.",
+    "hint": "Diferente da meia-vida de eliminação. Relevante para opioides e hipnóticos.",
+    "exp": "Para fármacos como o remifentanil, a meia-vida contexto-sensível é curta e independente da duração da infusão, permitindo um despertar rápido. Para o fentanil, ela aumenta drasticamente com a duração da infusão devido à redistribuição a partir dos tecidos periféricos."
+  },
+  {
+    "cat": "Farmacocinética",
+    "q": "Defina o conceito de 'volume de distribuição' (Vd).",
+    "a": "É um volume teórico que representa a distribuição de um fármaco no corpo após atingir o equilíbrio. Vd = Dose / Concentração plasmática inicial.",
+    "hint": "Vd alto = mais fármaco nos tecidos, menos no plasma.",
+    "exp": "Fármacos lipossolúveis (ex: propofol) tendem a ter um alto Vd, pois se distribuem amplamente nos tecidos adiposos. Fármacos hidrossolúveis (ex: bloqueadores neuromusculares) tendem a ter um Vd menor, confinados principalmente ao compartimento plasmático e extracelular."
+  },
+  {
+    "cat": "Farmacodinâmica",
+    "q": "Qual a diferença entre potência e eficácia de um fármaco?",
+    "a": "Potência refere-se à dose necessária para produzir um efeito (menor dose para mesmo efeito = mais potente). Eficácia é o efeito máximo que um fármaco pode produzir.",
+    "hint": "Potência = Dose. Eficácia = Efeito máximo.",
+    "exp": "Um fármaco pode ser muito potente, mas ter baixa eficácia. Por exemplo, a buprenorfina é mais potente que a morfina, mas sua eficácia como analgésico é menor (efeito teto)."
+  },
+  {
+    "cat": "Farmacodinâmica",
+    "q": "O que é um agonista, antagonista e agonista inverso?",
+    "a": "Agonista: liga-se ao receptor e o ativa. Antagonista: liga-se ao receptor e bloqueia a ação do agonista (sem efeito próprio). Agonista inverso: liga-se ao receptor e induz uma resposta oposta à do agonista.",
+    "hint": "Agonista = ativa. Antagonista = bloqueia. Agonista inverso = efeito oposto.",
+    "exp": "Exemplo clássico: Morfina é um agonista opioide. Naloxona é um antagonista (reverte a depressão respiratória). O flumazenil é um antagonista que reverte os efeitos dos benzodiazepínicos (agonistas)."
+  },
+  {
+    "cat": "Anestésicos Inalatórios",
+    "q": "O que é a Concentração Alveolar Mínima (CAM)?",
+    "a": "É a concentração de um anestésico inalatório no alvéolo (em % da atmosfera) que impede a resposta motora a um estímulo cirúrgico (incisão) em 50% dos pacientes.",
+    "hint": "CAM é uma medida de potência do inalatório. Menor CAM = mais potente.",
+    "exp": "Fatores que diminuem a CAM (necessitam de menos anestésico): idade avançada, hipotermia, uso de opioides, benzodiazepínicos, gravidez. Fatores que aumentam a CAM (necessitam de mais): hipertermia, uso de anfetaminas, etilismo crônico."
+  },
+  {
+    "cat": "Anestésicos Inalatórios",
+    "q": "Qual a importância do coeficiente de partição sangue:gás de um anestésico inalatório?",
+    "a": "Determina a velocidade de indução e recuperação anestésica. Quanto menor o coeficiente, menos solúvel o agente no sangue, mais rápida a indução e a recuperação.",
+    "hint": "Baixo coeficiente sangue:gás = rápido (ex: Desflurano, Sevoflurano). Alto = lento (ex: Halotano).",
+    "exp": "Um agente pouco solúvel (baixo coeficiente) satura o sangue rapidamente, e a pressão parcial no cérebro se equilibra rapidamente com a pressão parcial no alvéolo, levando a um início de ação rápido. O Desflurano (0,42) é muito mais rápido que o Sevoflurano (0,65) e o Halotano (2,4)."
+  },
+  {
+    "cat": "Anestésicos Venosos",
+    "q": "Qual o principal mecanismo de ação do Propofol?",
+    "a": "Potencialização da atividade do receptor GABA-A, aumentando a neurotransmissão inibitória no SNC.",
+    "hint": "Agonista do receptor GABA-A. Causa hipnose.",
+    "exp": "O propofol é um agente hipnótico intravenoso de curta duração. Causa depressão miocárdica e vasodilatação, resultando em hipotensão. Também possui propriedades antieméticas e pode causar dor à injeção."
+  },
+  {
+    "cat": "Anestésicos Venosos",
+    "q": "Quais as principais características da Cetamina como agente anestésico?",
+    "a": "Produz anestesia dissociativa. É analgésica, hipnótica e amnésica. Causa estimulação simpatomimética (aumento de FC, PA e DC), broncodilatação e mantém os reflexos de via aérea.",
+    "hint": "Dissociativa + Simpatomimética + Broncodilatadora.",
+    "exp": "Diferente de outros anestésicos, a cetamina é um antagonista do receptor NMDA. É ideal para pacientes instáveis hemodinamicamente (choque) ou com broncoespasmo. Pode causar alucinações e delírios na recuperação, que podem ser atenuados com o uso de benzodiazepínicos."
+  },
+  {
+    "cat": "Anestésicos Venosos",
+    "q": "Qual a principal vantagem do Etomidato para indução anestésica?",
+    "a": "Estabilidade hemodinâmica. Causa mínima depressão miocárdica e vascular, sendo ideal para pacientes com reserva cardíaca limitada ou em choque.",
+    "hint": "Etomidato = Estabilidade. Cuidado com a suprarrenal.",
+    "exp": "Apesar de sua estabilidade cardiovascular, o etomidato inibe a enzima 11-beta-hidroxilase, suprimindo a produção de cortisol pela suprarrenal. Uma única dose pode causar supressão por até 24h, o que limita seu uso em infusão contínua ou em pacientes sépticos."
   }
 ]
