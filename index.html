@@ -490,10 +490,16 @@ function renderSidebar() {
   cards.forEach(function(c) { counts[c.cat] = (counts[c.cat] || 0) + 1; });
   var html = '';
   Object.keys(counts).sort().forEach(function(cat) {
-    html += '<div class="scat-item" onclick="filterCat(\'' + esc(cat) + '\')">' +
+    html += '<div class="scat-item" onclick="studyCat(\'' + esc(cat) + '\')">' +
             '<span>' + esc(cat) + '</span><span class="scat-count">' + counts[cat] + '</span></div>';
   });
   document.getElementById('cat-list').innerHTML = html;
+}
+
+function studyCat(cat) {
+  go('dashboard');
+  document.getElementById('study-cat-select').value = cat;
+  go('study');
 }
 
 function filterCat(cat) {
