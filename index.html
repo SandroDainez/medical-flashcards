@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>MedCards</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f1f5f9;color:#1e293b;min-height:100vh;line-height:1.5}
+a{text-decoration:none}
+
+/* LAYOUT */
+#app{display:flex;min-height:100vh}
+.sidebar{width:240px;background:#0f172a;display:flex;flex-direction:column;position:fixed;top:0;left:0;height:100vh;overflow-y:auto;z-index:100}
+.main{margin-left:240px;flex:1;padding:32px;max-width:calc(100vw - 240px)}
+
+/* SIDEBAR */
+.brand{display:flex;align-items:center;gap:10px;padding:20px 16px;border-bottom:1px solid rgba(255,255,255,.1)}
+.brand-icon{font-size:22px}
+.brand-name{font-size:17px;font-weight:700;color:#fff}
+.snav{padding:12px 8px;display:flex;flex-direction:column;gap:2px}
+.snav-btn{display:flex;align-items:center;gap:10px;width:100%;padding:10px 12px;background:none;border:none;border-radius:8px;color:#cbd5e1;font-size:14px;font-weight:500;cursor:pointer;transition:background .15s,color .15s;text-align:left}
+.snav-btn:hover{background:rgba(255,255,255,.1);color:#fff}
+.snav-btn.on{background:#1d4ed8;color:#fff}
+.snav-icon{font-size:15px;width:20px;text-align:center}
+.badge{margin-left:auto;background:#b91c1c;color:#fff;font-size:11px;font-weight:700;padding:1px 7px;border-radius:20px;display:none}
+.badge.vis{display:inline-block}
+.scat-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:#94a3b8;padding:8px 12px 4px;display:block}
+.scats{padding:4px 8px 16px;border-top:1px solid rgba(255,255,255,.08);margin-top:8px}
+.scat-item{display:flex;justify-content:space-between;align-items:center;padding:5px 12px;font-size:13px;color:#cbd5e1;cursor:pointer;border-radius:6px;transition:background .15s}
+.scat-item:hover{background:rgba(255,255,255,.08);color:#fff}
+.scat-count{background:rgba(255,255,255,.15);color:#e2e8f0;font-size:11px;padding:1px 7px;border-radius:20px}
+
+/* VIEWS */
+.view{display:none}
+.view.on{display:block;animation:fi .2s ease}
+@keyframes fi{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+.vhead{margin-bottom:28px}
+.vhead h1{font-size:26px;font-weight:700;color:#0f172a}
+.vhead p{color:#475569;font-size:14px;margin-top:4px}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:7px;padding:9px 18px;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;transition:filter .15s}
+.btn:hover{filter:brightness(.92)}
+.btn-blue{background:#1d4ed8;color:#fff}
+.btn-gray{background:#e2e8f0;color:#334155}
+.btn-red{background:#b91c1c;color:#fff}
+.btn-lg{padding:13px 26px;font-size:15px}
+.btn-white{background:#fff;color:#1d4ed8;font-weight:700}
+
+/* STAT CARDS */
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
+.scard{background:#fff;border-radius:12px;padding:18px 20px;display:flex;align-items:center;gap:14px;border:1px solid #e2e8f0;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.scard-icon{font-size:30px}
+.scard-num{font-size:30px;font-weight:700;display:block;line-height:1}
+.scard-lbl{font-size:12px;color:#475569;font-weight:500}
+.num-red{color:#b91c1c}.num-blue{color:#1d4ed8}.num-green{color:#15803d}.num-amber{color:#b45309}
+
+/* DASHBOARD PANELS */
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:20px}
+.panel{background:#fff;border-radius:12px;padding:22px;border:1px solid #e2e8f0;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.panel h3{font-size:14px;font-weight:600;color:#334155;margin-bottom:14px}
+.catrow{display:flex;justify-content:space-between;align-items:center;padding:9px 11px;background:#f8fafc;border-radius:8px;font-size:13px;margin-bottom:6px}
+.catrow:last-child{margin-bottom:0}
+.catrow-name{font-weight:600;color:#1e293b}
+.catrow-badge{background:#dbeafe;color:#1d4ed8;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px}
+.uprow{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f1f5f9;font-size:13px}
+.uprow:last-child{border:none}
+.uprow-q{color:#334155;font-weight:500;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-right:10px}
+.uprow-d{color:#64748b;font-weight:500;white-space:nowrap}
+.cta{background:linear-gradient(135deg,#1d4ed8,#1e40af);border-radius:12px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;color:#fff}
+.cta p{font-size:16px;font-weight:500}
+
+/* STUDY */
+.study-wrap{max-width:660px;margin:0 auto}
+.phead{display:flex;align-items:center;gap:12px;margin-top:6px}
+.phead-txt{font-size:14px;color:#475569;font-weight:500;min-width:55px}
+.pbar{flex:1;max-width:280px;height:8px;background:#e2e8f0;border-radius:4px;overflow:hidden}
+.pbar-fill{height:100%;background:#1d4ed8;border-radius:4px;transition:width .4s ease;width:0%}
+.cat-tag{display:inline-block;background:#dbeafe;color:#1d4ed8;font-size:11px;font-weight:700;padding:3px 11px;border-radius:20px;margin-bottom:14px;text-transform:uppercase;letter-spacing:.5px}
+.fc-wrap{perspective:1000px;height:300px;margin-bottom:18px;cursor:pointer}
+.fc{width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:transform .5s cubic-bezier(.4,0,.2,1);border-radius:12px}
+.fc.flipped{transform:rotateY(180deg)}
+.fc-front,.fc-back{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;padding:28px;display:flex;flex-direction:column;box-shadow:0 8px 24px rgba(0,0,0,.1)}
+.fc-front{background:#fff;border:2px solid #e2e8f0}
+.fc-back{background:linear-gradient(140deg,#1e3a8a,#1d4ed8);transform:rotateY(180deg)}
+.fc-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.fc-front .fc-label{color:#64748b}
+.fc-back .fc-label{color:#93c5fd}
+.fc-body{flex:1;display:flex;align-items:center;justify-content:center;font-size:19px;font-weight:600;line-height:1.5;text-align:center}
+.fc-front .fc-body{color:#0f172a}
+.fc-back .fc-body{color:#fff}
+.fc-hint{font-size:13px;color:#64748b;font-weight:500;text-align:center;font-style:italic}
+.fc-explain{font-size:13px;color:#bfdbfe;text-align:center;margin-top:10px;border-top:1px solid rgba(255,255,255,.2);padding-top:10px;font-style:italic}
+.study-ctrl{text-align:center;margin-bottom:18px}
+.rate-lbl{text-align:center;font-size:15px;font-weight:600;color:#334155;margin-bottom:10px}
+.rate-btns{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.rbtn{display:flex;flex-direction:column;align-items:center;gap:3px;padding:12px 8px;border:2px solid #e2e8f0;border-radius:12px;background:#fff;cursor:pointer;transition:transform .12s,box-shadow .12s,border-color .12s,background .12s;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.rbtn:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.12)}
+.rbtn-icon{font-size:22px}
+.rbtn-title{font-size:13px;font-weight:700;color:#1e293b}
+.rbtn-sub{font-size:11px;color:#64748b;font-weight:500}
+.rbtn-again:hover{border-color:#b91c1c;background:#fff1f1}
+.rbtn-hard:hover{border-color:#b45309;background:#fffbeb}
+.rbtn-good:hover{border-color:#15803d;background:#f0fdf4}
+.rbtn-easy:hover{border-color:#1d4ed8;background:#eff6ff}
+.done-box{text-align:center;padding:70px 20px}
+.done-icon{font-size:60px;margin-bottom:14px}
+.done-box h2{font-size:22px;font-weight:700;color:#0f172a;margin-bottom:8px}
+.done-box p{color:#475569;font-size:14px;margin-bottom:22px}
+
+/* BROWSE */
+.bctrl{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;align-items:center}
+.inp{padding:9px 13px;border:2px solid #e2e8f0;border-radius:8px;font-size:14px;background:#fff;color:#1e293b;outline:none;transition:border-color .15s}
+.inp:focus{border-color:#1d4ed8}
+.inp-stretch{flex:1;min-width:180px}
+.sel{padding:9px 13px;border:2px solid #e2e8f0;border-radius:8px;font-size:14px;background:#fff;color:#1e293b;cursor:pointer;outline:none}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px;margin-top:14px}
+.ci{background:#fff;border-radius:12px;padding:18px;border:1px solid #e2e8f0;box-shadow:0 1px 3px rgba(0,0,0,.08);transition:box-shadow .15s}
+.ci:hover{box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.ci-cat{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#1d4ed8;margin-bottom:7px}
+.ci-q{font-size:14px;font-weight:600;color:#0f172a;line-height:1.4;margin-bottom:7px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.ci-a{font-size:13px;color:#475569;font-weight:500;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:10px}
+.ci-foot{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#64748b;font-weight:500;border-top:1px solid #f1f5f9;padding-top:9px}
+.ci-dot{width:7px;height:7px;border-radius:50%;display:inline-block;margin-right:4px}
+.dot-new{background:#1d4ed8}.dot-learn{background:#b45309}.dot-rev{background:#15803d}
+.ci-actions{display:flex;gap:5px}
+.ic-btn{border:1px solid #e2e8f0;border-radius:6px;padding:3px 7px;background:#fff;cursor:pointer;font-size:12px;transition:background .12s}
+.ic-btn:hover{background:#f1f5f9}
+.ic-btn.del:hover{background:#fee2e2;border-color:#b91c1c}
+
+/* FORM */
+.form-wrap{max-width:620px;background:#fff;border-radius:12px;padding:28px;border:1px solid #e2e8f0;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.fg{margin-bottom:18px}
+.fg label{display:block;font-size:14px;font-weight:600;color:#0f172a;margin-bottom:5px}
+.ta{width:100%;padding:9px 13px;border:2px solid #e2e8f0;border-radius:8px;font-size:14px;font-family:inherit;color:#1e293b;background:#fff;outline:none;resize:vertical;transition:border-color .15s}
+.ta:focus{border-color:#1d4ed8}
+.fg .sel{width:100%}
+.fg .inp{width:100%}
+.form-btns{display:flex;gap:10px;justify-content:flex-end;margin-top:20px}
+
+/* STATS */
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.sbig-row{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.sbig{background:#fff;border-radius:12px;padding:22px;text-align:center;border:1px solid #e2e8f0;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.sbig-n{font-size:38px;font-weight:800;color:#1d4ed8;line-height:1;display:block;margin-bottom:6px}
+.sbig-l{font-size:13px;color:#475569;font-weight:500}
+.stat-panel{background:#fff;border-radius:12px;padding:22px;border:1px solid #e2e8f0;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.stat-panel.full{grid-column:1/-1}
+.stat-panel h3{font-size:14px;font-weight:600;color:#334155;margin-bottom:14px}
+.heat{display:flex;gap:3px;flex-wrap:wrap}
+.hc{width:13px;height:13px;border-radius:2px}
+.h0{background:#e2e8f0}.h1{background:#bfdbfe}.h2{background:#60a5fa}.h3{background:#2563eb}.h4{background:#1d4ed8}
+.cbars{display:flex;flex-direction:column;gap:10px}
+.cbar-lbl{display:flex;justify-content:space-between;font-size:13px;margin-bottom:3px}
+.cbar-name{font-weight:600;color:#1e293b}.cbar-cnt{color:#475569;font-weight:500}
+.cbar-track{height:8px;background:#e2e8f0;border-radius:4px;overflow:hidden}
+.cbar-fill{height:100%;border-radius:4px;transition:width .5s ease}
+.ret-items{display:flex;flex-direction:column;gap:10px}
+.ret-item{display:flex;align-items:center;gap:10px;font-size:13px}
+.ret-lbl{min-width:90px;font-weight:600;color:#334155}
+.ret-track{flex:1;height:22px;background:#e2e8f0;border-radius:6px;overflow:hidden}
+.ret-fill{height:100%;border-radius:6px;display:flex;align-items:center;padding-left:8px;font-size:12px;font-weight:700;color:#fff}
+.ret-n{min-width:28px;text-align:right;font-weight:600;color:#475569;font-size:13px}
+
+/* TOAST */
+.toast{position:fixed;bottom:22px;right:22px;padding:11px 18px;border-radius:8px;font-size:14px;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.2);transform:translateY(70px);opacity:0;transition:all .3s ease;pointer-events:none;z-index:9999;color:#fff;background:#0f172a}
+.toast.show{transform:none;opacity:1}
+.t-green{background:#15803d}.t-red{background:#b91c1c}
+
+/* MODAL */
+.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;z-index:8000;display:none}
+.modal-bg.show{display:flex}
+.modal-box{background:#fff;border-radius:12px;padding:28px;max-width:380px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,.2)}
+.modal-box h3{font-size:17px;font-weight:700;color:#0f172a;margin-bottom:7px}
+.modal-box p{color:#475569;font-size:14px;margin-bottom:22px}
+.modal-btns{display:flex;gap:10px;justify-content:flex-end}
+
+/* EMPTY */
+.empty{text-align:center;padding:50px 20px}
+.empty-ic{font-size:46px;margin-bottom:10px}
+.empty h3{font-size:17px;font-weight:600;color:#334155;margin-bottom:6px}
+.empty p{font-size:13px;color:#475569}
+
+@media(max-width:900px){.stat-row,.sbig-row{grid-template-columns:repeat(2,1fr)}.dgrid,.sg{grid-template-columns:1fr}}
+@media(max-width:640px){.rate-btns{grid-template-columns:repeat(2,1fr)}.sidebar{width:0;transform:translateX(-100%)}.main{margin-left:0;padding:16px}}
+</style>
+</head>
+<body>
+<div id="app">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-icon">⚕️</span><span class="brand-name">MedCards</span></div>
+    <nav class="snav">
+      <button class="snav-btn on" id="nb-dashboard" onclick="go('dashboard')"><span class="snav-icon">📊</span>Dashboard</button>
+      <button class="snav-btn" id="nb-study" onclick="go('study')"><span class="snav-icon">🧠</span>Estudar Agora<span class="badge" id="due-badge"></span></button>
+      <button class="snav-btn" id="nb-browse" onclick="go('browse')"><span class="snav-icon">📚</span>Meus Cards</button>
+      <button class="snav-btn" id="nb-create" onclick="go('create')"><span class="snav-icon">➕</span>Criar Card</button>
+      <button class="snav-btn" id="nb-stats" onclick="go('stats')"><span class="snav-icon">📈</span>Estatísticas</button>
+    </nav>
+    <div class="scats">
+      <span class="scat-label">Categorias</span>
+      <div id="cat-list"></div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- DASHBOARD -->
+    <div id="v-dashboard" class="view on">
+      <div class="vhead"><h1>Bom estudo! 👋</h1><p id="v-date"></p></div>
+      <div class="stat-row">
+        <div class="scard"><span class="scard-icon">🔔</span><div><span class="scard-num num-red" id="s-due">0</span><span class="scard-lbl">Para revisar hoje</span></div></div>
+        <div class="scard"><span class="scard-icon">🌱</span><div><span class="scard-num num-blue" id="s-new">0</span><span class="scard-lbl">Cards novos</span></div></div>
+        <div class="scard"><span class="scard-icon">✅</span><div><span class="scard-num num-green" id="s-done">0</span><span class="scard-lbl">Aprendidos</span></div></div>
+        <div class="scard"><span class="scard-icon">🔥</span><div><span class="scard-num num-amber" id="s-streak">0</span><span class="scard-lbl">Dias seguidos</span></div></div>
+      </div>
+      <div class="dgrid">
+        <div class="panel"><h3>Revisar por Categoria</h3><div id="cat-due-list"></div></div>
+        <div class="panel"><h3>Próximas Revisões</h3><div id="upcoming"></div></div>
+      </div>
+      <div class="cta" id="cta" style="display:none">
+        <p id="cta-msg"></p>
+        <button class="btn btn-white btn-lg" onclick="go('study')">Começar Estudo 🚀</button>
+      </div>
+    </div>
+
+    <!-- STUDY -->
+    <div id="v-study" class="view">
+      <div class="vhead">
+        <h1>Sessão de Estudo</h1>
+        <div class="phead"><span class="phead-txt" id="p-txt">0 / 0</span><div class="pbar"><div class="pbar-fill" id="p-fill"></div></div></div>
+      </div>
+      <div id="done-box" class="done-box" style="display:none">
+        <div class="done-icon">🎉</div>
+        <h2>Tudo em dia!</h2>
+        <p>Não há cards para revisar agora. Volte amanhã ou crie novos cards.</p>
+        <button class="btn btn-blue" onclick="go('dashboard')">Ir ao Dashboard</button>
+      </div>
+      <div id="study-area" class="study-wrap">
+        <div class="cat-tag" id="fc-cat"></div>
+        <div class="fc-wrap" onclick="flip()">
+          <div class="fc" id="fc">
+            <div class="fc-front">
+              <div class="fc-label">Pergunta</div>
+              <div class="fc-body" id="fc-q"></div>
+              <div class="fc-hint" id="fc-hint"></div>
+            </div>
+            <div class="fc-back">
+              <div class="fc-label">Resposta</div>
+              <div class="fc-body" id="fc-a"></div>
+              <div class="fc-explain" id="fc-exp"></div>
+            </div>
+          </div>
+        </div>
+        <div class="study-ctrl"><button class="btn btn-gray" id="flip-btn" onclick="flip()">Virar Card 🔄</button></div>
+        <div id="rate-panel" style="display:none">
+          <p class="rate-lbl">Como você foi?</p>
+          <div class="rate-btns">
+            <button class="rbtn rbtn-again" onclick="rate(0)"><span class="rbtn-icon">😰</span><span class="rbtn-title">Errei</span><span class="rbtn-sub">Repetir agora</span></button>
+            <button class="rbtn rbtn-hard" onclick="rate(1)"><span class="rbtn-icon">😓</span><span class="rbtn-title">Difícil</span><span class="rbtn-sub">+1 dia</span></button>
+            <button class="rbtn rbtn-good" onclick="rate(2)"><span class="rbtn-icon">😊</span><span class="rbtn-title">Bom</span><span class="rbtn-sub">+4 dias</span></button>
+            <button class="rbtn rbtn-easy" onclick="rate(3)"><span class="rbtn-icon">😎</span><span class="rbtn-title">Fácil</span><span class="rbtn-sub">+7 dias</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BROWSE -->
+    <div id="v-browse" class="view">
+      <div class="vhead">
+        <h1>Meus Cards</h1>
+        <div class="bctrl">
+          <input class="inp inp-stretch" id="srch" type="text" placeholder="🔍 Buscar..." oninput="renderBrowse()"/>
+          <select class="sel" id="fcat" onchange="renderBrowse()"><option value="">Todas categorias</option></select>
+          <button class="btn btn-blue" onclick="go('create')">+ Novo Card</button>
+        </div>
+      </div>
+      <div class="cgrid" id="card-grid"></div>
+    </div>
+
+    <!-- CREATE -->
+    <div id="v-create" class="view">
+      <div class="vhead"><h1 id="form-title">Criar Novo Card</h1></div>
+      <div class="form-wrap">
+        <div class="fg">
+          <label>Categoria *</label>
+          <select class="sel" id="f-cat" style="width:100%">
+            <option value="">Selecione...</option>
+            <option>Anatomia</option><option>Fisiologia</option><option>Bioquímica</option>
+            <option>Farmacologia</option><option>Patologia</option><option>Microbiologia</option>
+            <option>Imunologia</option><option>Semiologia</option><option>Clínica Médica</option>
+            <option>Cirurgia</option><option>Pediatria</option><option>Ginecologia</option>
+            <option>Psiquiatria</option><option>Neurologia</option><option>Outro</option>
+          </select>
+        </div>
+        <div class="fg"><label>Pergunta (Frente) *</label><textarea class="ta" id="f-q" rows="4" placeholder="Ex: Qual nervo inerva o diafragma?"></textarea></div>
+        <div class="fg"><label>Resposta (Verso) *</label><textarea class="ta" id="f-a" rows="4" placeholder="Ex: Nervo frênico (C3, C4, C5)"></textarea></div>
+        <div class="fg"><label>Dica (opcional)</label><input class="inp" id="f-hint" type="text" placeholder="Ex: Mnemônico ou pista..." style="width:100%"/></div>
+        <div class="fg"><label>Explicação adicional (opcional)</label><textarea class="ta" id="f-exp" rows="3" placeholder="Contexto extra, mnemônico..."></textarea></div>
+        <input type="hidden" id="f-id"/>
+        <div class="form-btns">
+          <button class="btn btn-gray" onclick="go('browse')">Cancelar</button>
+          <button class="btn btn-blue" id="f-submit" onclick="saveCard()">Salvar Card</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div id="v-stats" class="view">
+      <div class="vhead"><h1>Estatísticas</h1></div>
+      <div class="sg">
+        <div class="sbig-row">
+          <div class="sbig"><span class="sbig-n" id="st-total">0</span><span class="sbig-l">Total de Cards</span></div>
+          <div class="sbig"><span class="sbig-n" id="st-reviews">0</span><span class="sbig-l">Revisões Totais</span></div>
+          <div class="sbig"><span class="sbig-n" id="st-acc">0%</span><span class="sbig-l">Taxa de Acerto</span></div>
+          <div class="sbig"><span class="sbig-n" id="st-days">0</span><span class="sbig-l">Dias Estudados</span></div>
+        </div>
+        <div class="stat-panel full"><h3>Atividade — últimos 90 dias</h3><div class="heat" id="heat"></div></div>
+        <div class="stat-panel"><h3>Cards por Categoria</h3><div class="cbars" id="cbars"></div></div>
+        <div class="stat-panel"><h3>Maturidade dos Cards</h3><div class="ret-items" id="ret"></div></div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- MODAL -->
+<div class="modal-bg" id="modal">
+  <div class="modal-box">
+    <h3>Confirmar exclusão</h3>
+    <p>Deseja excluir este card? Esta ação não pode ser desfeita.</p>
+    <div class="modal-btns">
+      <button class="btn btn-gray" onclick="closeModal()">Cancelar</button>
+      <button class="btn btn-red" onclick="doDelete()">Excluir</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ===================== STORAGE (resiliente a sandbox) =====================
+var LS = {
+  get: function(k, def) {
+    try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : def; } catch(e) { return def; }
+  },
+  set: function(k, v) {
+    try { localStorage.setItem(k, JSON.stringify(v)); } catch(e) {}
+  }
+};
+
+// ===================== SM-2 =====================
+function sm2(card, rating) {
+  var q = [1, 3, 4, 5][rating];
+  var interval = card.interval || 0;
+  var rep = card.rep || 0;
+  var ef = card.ef || 2.5;
+  if (q < 3) { rep = 0; interval = 1; }
+  else {
+    if (rep === 0) interval = 1;
+    else if (rep === 1) interval = 6;
+    else interval = Math.round(interval * ef);
+    ef = Math.max(1.3, ef + 0.1 - (5 - q) * (0.08 + (5 - q) * 0.02));
+    ef = Math.round(ef * 100) / 100;
+    rep++;
+  }
+  var d = new Date(); d.setDate(d.getDate() + interval);
+  return { interval: interval, rep: rep, ef: ef, due: d.toISOString().split('T')[0] };
+}
+
+function todayStr() { return new Date().toISOString().split('T')[0]; }
+function addDays(n) { var d = new Date(); d.setDate(d.getDate() + n); return d.toISOString().split('T')[0]; }
+function isDue(card) { return card.due <= todayStr(); }
+
+// ===================== SAMPLE DATA =====================
+var SAMPLES = [
+  {cat:'Anatomia', q:'Quais são os músculos do manguito rotador?', a:'SISS: Supraespinhal, Infraespinhal, Subescapular, Redondo menor', hint:'Mnemônico: SISS', exp:'Estabilizam a articulação glenoumeral.'},
+  {cat:'Anatomia', q:'Qual nervo inerva o diafragma?', a:'Nervo frênico (C3, C4, C5)', hint:'"C3, C4, C5 keeps the diaphragm alive"', exp:'Origina-se do plexo cervical e desce pelo mediastino.'},
+  {cat:'Fisiologia', q:'Qual o potencial de membrana em repouso de um neurônio?', a:'-70 mV', hint:'Interior mais negativo', exp:'Mantido pela bomba Na⁺/K⁺-ATPase. Limiar de disparo: ~-55 mV.'},
+  {cat:'Fisiologia', q:'O que é o reflexo de Hering-Breuer?', a:'Inibe a inspiração quando os pulmões estão distendidos em excesso', hint:'Pulmão cheio → para de inspirar', exp:'Mediado por mecanorreceptores via nervo vago. Evita hiperinflação.'},
+  {cat:'Farmacologia', q:'Qual o mecanismo de ação das estatinas?', a:'Inibição competitiva da HMG-CoA redutase, enzima limitante da síntese de colesterol', hint:'HMG-CoA → mevalonato (passo inibido)', exp:'Reduzem LDL em ~30-55%. Efeito pleiotrópico: anti-inflamatório.'},
+  {cat:'Farmacologia', q:'Qual é o antídoto para intoxicação por paracetamol?', a:'N-acetilcisteína (NAC)', hint:'Repõe glutationa hepática', exp:'Deve ser administrada nas primeiras 8-10h.'},
+  {cat:'Patologia', q:'Quais são os 4 sinais cardinais da inflamação aguda?', a:'Calor, Rubor, Tumor (edema) e Dor — mais Functio laesa (perda de função)', hint:'Descritos por Celsius + Virchow', exp:'Mediados por vasodilatação e aumento da permeabilidade vascular.'},
+  {cat:'Bioquímica', q:'O que é a via de pentose-fosfato?', a:'Gera NADPH e ribose-5-fosfato a partir da glicose-6-fosfato', hint:'NADPH = antioxidante; Ribose = nucleotídeos', exp:'Deficiência de G6PD → anemia hemolítica.'},
+  {cat:'Microbiologia', q:'Qual bactéria produz a toxina do tétano?', a:'Clostridium tetani — tetanospasmina', hint:'Gram+, anaeróbio, esporulado', exp:'Bloqueia neurônios inibitórios → espasmos. Tto: imunoglobulina + metronidazol.'},
+  {cat:'Clínica Médica', q:'Quais são os critérios de Framingham para IC?', a:'Maiores: DPN, ortopneia, TVJ, crepitações, B3, hepatojugular. Menores: edema, tosse noturna, hepatomegalia', hint:'2 maiores OU 1 maior + 2 menores', exp:'Confirmado por ecocardiograma.'},
+  {cat:'Neurologia', q:'O que é a Tríade de Cushing?', a:'Hipertensão arterial + Bradicardia + Bradipneia irregular', hint:'Sinal de herniação iminente', exp:'Reflexo vasopressor para manter perfusão cerebral com PIC elevada.'},
+  {cat:'Imunologia', q:'Diferença entre imunidade inata e adaptativa?', a:'Inata: inespecífica, sem memória (neutrófilos, macrófagos, NK). Adaptativa: específica, com memória (linfócitos T e B)', hint:'Inata = rápida; Adaptativa = específica', exp:'A adaptativa pode ser humoral (Ac via B) ou celular (via T).'},
+  {cat:'Semiologia', q:'Como diferenciar sopro inocente de patológico em crianças?', a:'Inocente: sistólico ≤2/6, sem irradiação nem frêmito. Patológico: diastólico, ≥3/6, frêmito, irradiação', hint:'Diastólico = sempre patológico', exp:'Todo sopro diastólico requer investigação com ecocardiograma.'},
+  {cat:'Pediatria', q:'Vacinas do calendário brasileiro para os 2 meses?', a:'Pentavalente, VIP (polio), PCV13 (pneumocócica), Rotavírus (VORH)', hint:'Primeira vacinação após BCG e HepB ao nascer', exp:'Pentavalente: DTP + HiB + HepB.'},
+  {cat:'Cirurgia', q:'Critérios de Ranson na pancreatite aguda?', a:'Admissão: idade>55, leuco>16k, glicose>200, LDH>350, AST>250. 48h: ↓Ht>10%, Ca<8, PaO2<60', hint:'Score ≥3 = grave', exp:'Mortalidade: 0-2=<1%, 3-4=15%, 5-6=40%, ≥7≈100%.'}
+];
+
+function mkId() { return Math.random().toString(36).slice(2) + Date.now().toString(36); }
+
+// ===================== STATE =====================
+var cards = [];
+var stats = { total: 0, correct: 0, days: {}, streak: 0, lastDay: '' };
+var queue = [], qIdx = 0, qTotal = 0;
+var deleteId = null;
+var currentView = 'dashboard';
+
+// ===================== INIT =====================
+function init() {
+  cards = LS.get('mc2_cards', []);
+  stats = LS.get('mc2_stats', { total: 0, correct: 0, days: {}, streak: 0, lastDay: '' });
+
+  if (cards.length === 0) {
+    var t = todayStr();
+    cards = SAMPLES.map(function(s) {
+      return { id: mkId(), cat: s.cat, q: s.q, a: s.a, hint: s.hint, exp: s.exp,
+               interval: 0, rep: 0, ef: 2.5, due: t, created: t, reviews: 0 };
+    });
+    LS.set('mc2_cards', cards);
+  }
+
+  renderSidebar();
+  updateBadge();
+  renderDashboard();
+
+  document.addEventListener('keydown', function(e) {
+    if (currentView !== 'study') return;
+    var flipped = document.getElementById('fc').classList.contains('flipped');
+    if (e.code === 'Space' && !flipped) { e.preventDefault(); flip(); }
+    if (flipped) {
+      if (e.key === '1') rate(0);
+      if (e.key === '2') rate(1);
+      if (e.key === '3') rate(2);
+      if (e.key === '4') rate(3);
+    }
+  });
+}
+
+// ===================== NAVIGATION =====================
+function go(view) {
+  currentView = view;
+  var views = ['dashboard','study','browse','create','stats'];
+  views.forEach(function(v) {
+    var el = document.getElementById('v-' + v);
+    if (el) el.className = 'view' + (v === view ? ' on' : '');
+    var nb = document.getElementById('nb-' + v);
+    if (nb) nb.className = 'snav-btn' + (v === view ? ' on' : '');
+  });
+  if (view === 'dashboard') renderDashboard();
+  if (view === 'study') startStudy();
+  if (view === 'browse') renderBrowse();
+  if (view === 'stats') renderStats();
+  if (view === 'create') resetForm();
+}
+
+// ===================== SIDEBAR =====================
+function renderSidebar() {
+  var counts = {};
+  cards.forEach(function(c) { counts[c.cat] = (counts[c.cat] || 0) + 1; });
+  var html = '';
+  Object.keys(counts).sort().forEach(function(cat) {
+    html += '<div class="scat-item" onclick="filterCat(\'' + esc(cat) + '\')">' +
+            '<span>' + esc(cat) + '</span><span class="scat-count">' + counts[cat] + '</span></div>';
+  });
+  document.getElementById('cat-list').innerHTML = html;
+}
+
+function filterCat(cat) {
+  go('browse');
+  document.getElementById('fcat').value = cat;
+  renderBrowse();
+}
+
+function updateBadge() {
+  var n = dueCards().length;
+  var b = document.getElementById('due-badge');
+  b.textContent = n || '';
+  b.className = 'badge' + (n > 0 ? ' vis' : '');
+}
+
+function dueCards() { return cards.filter(function(c) { return isDue(c); }); }
+
+// ===================== DASHBOARD =====================
+function renderDashboard() {
+  var t = todayStr();
+  document.getElementById('v-date').textContent =
+    new Date().toLocaleDateString('pt-BR', {weekday:'long', year:'numeric', month:'long', day:'numeric'});
+
+  var due = dueCards();
+  var newC = cards.filter(function(c) { return c.rep === 0; });
+  var done = cards.filter(function(c) { return c.rep > 2; });
+
+  document.getElementById('s-due').textContent = due.length;
+  document.getElementById('s-new').textContent = newC.length;
+  document.getElementById('s-done').textContent = done.length;
+  document.getElementById('s-streak').textContent = stats.streak || 0;
+
+  // Category due
+  var catDue = {};
+  due.forEach(function(c) { catDue[c.cat] = (catDue[c.cat] || 0) + 1; });
+  var cdHtml = '';
+  var cats = Object.keys(catDue).sort(function(a,b) { return catDue[b]-catDue[a]; });
+  if (cats.length === 0) {
+    cdHtml = '<div style="color:#64748b;font-size:14px;padding:8px 0">Nenhuma revisão pendente! 🎉</div>';
+  } else {
+    cats.forEach(function(cat) {
+      cdHtml += '<div class="catrow"><span class="catrow-name">' + esc(cat) + '</span>' +
+                '<span class="catrow-badge">' + catDue[cat] + ' cards</span></div>';
+    });
+  }
+  document.getElementById('cat-due-list').innerHTML = cdHtml;
+
+  // Upcoming
+  var upcoming = cards.filter(function(c) { return !isDue(c); })
+    .sort(function(a,b) { return a.due.localeCompare(b.due); }).slice(0, 6);
+  var upHtml = '';
+  if (upcoming.length === 0) {
+    upHtml = '<div style="color:#64748b;font-size:13px;padding:6px 0">Sem revisões futuras programadas.</div>';
+  } else {
+    upcoming.forEach(function(c) {
+      var days = Math.ceil((new Date(c.due) - new Date()) / 86400000);
+      var lbl = days <= 1 ? 'Amanhã' : 'Em ' + days + ' dias';
+      upHtml += '<div class="uprow"><span class="uprow-q">' + esc(c.q) + '</span>' +
+                '<span class="uprow-d">' + lbl + '</span></div>';
+    });
+  }
+  document.getElementById('upcoming').innerHTML = upHtml;
+
+  var cta = document.getElementById('cta');
+  if (due.length > 0) {
+    document.getElementById('cta-msg').textContent =
+      'Você tem ' + due.length + ' card' + (due.length > 1 ? 's' : '') + ' para revisar hoje!';
+    cta.style.display = 'flex';
+  } else {
+    cta.style.display = 'none';
+  }
+}
+
+// ===================== STUDY =====================
+function startStudy() {
+  queue = dueCards();
+  qTotal = queue.length;
+  qIdx = 0;
+  var area = document.getElementById('study-area');
+  var done = document.getElementById('done-box');
+  if (queue.length === 0) { area.style.display = 'none'; done.style.display = 'block'; return; }
+  area.style.display = 'block'; done.style.display = 'none';
+  showCard();
+}
+
+function showCard() {
+  if (qIdx >= queue.length) { finishStudy(); return; }
+  var card = queue[qIdx];
+  var fc = document.getElementById('fc');
+  fc.classList.remove('flipped');
+  document.getElementById('rate-panel').style.display = 'none';
+  document.getElementById('flip-btn').style.display = 'inline-flex';
+  document.getElementById('fc-cat').textContent = card.cat;
+  document.getElementById('fc-q').textContent = card.q;
+  document.getElementById('fc-a').textContent = card.a;
+  document.getElementById('fc-hint').textContent = card.hint ? '💡 ' + card.hint : '';
+  document.getElementById('fc-exp').textContent = card.exp || '';
+  var pct = (qIdx / qTotal) * 100;
+  document.getElementById('p-txt').textContent = qIdx + ' / ' + qTotal;
+  document.getElementById('p-fill').style.width = pct + '%';
+}
+
+function flip() {
+  var fc = document.getElementById('fc');
+  fc.classList.toggle('flipped');
+  if (fc.classList.contains('flipped')) {
+    document.getElementById('rate-panel').style.display = 'block';
+    document.getElementById('flip-btn').style.display = 'none';
+  }
+}
+
+function rate(r) {
+  var card = queue[qIdx];
+  var upd = sm2(card, r);
+  var idx = cards.findIndex(function(c) { return c.id === card.id; });
+  if (idx !== -1) {
+    cards[idx].interval = upd.interval;
+    cards[idx].rep = upd.rep;
+    cards[idx].ef = upd.ef;
+    cards[idx].due = upd.due;
+    cards[idx].reviews = (cards[idx].reviews || 0) + 1;
+  }
+  stats.total = (stats.total || 0) + 1;
+  if (r >= 2) stats.correct = (stats.correct || 0) + 1;
+  var t = todayStr();
+  stats.days = stats.days || {};
+  stats.days[t] = (stats.days[t] || 0) + 1;
+  if (stats.lastDay !== t) {
+    var yest = addDays(-1);
+    stats.streak = stats.lastDay === yest ? (stats.streak || 0) + 1 : 1;
+    stats.lastDay = t;
+  }
+  LS.set('mc2_cards', cards);
+  LS.set('mc2_stats', stats);
+  if (r === 0) { queue.push(Object.assign({}, card, upd)); qTotal = queue.length; }
+  qIdx++;
+  showCard();
+  updateBadge();
+}
+
+function finishStudy() {
+  document.getElementById('study-area').style.display = 'none';
+  document.getElementById('done-box').style.display = 'block';
+  document.getElementById('p-fill').style.width = '100%';
+  document.getElementById('p-txt').textContent = qTotal + ' / ' + qTotal;
+  toast('Sessão concluída! 🎉', 't-green');
+  updateBadge();
+}
+
+// ===================== BROWSE =====================
+function renderBrowse() {
+  var cats = [];
+  cards.forEach(function(c) { if (cats.indexOf(c.cat) < 0) cats.push(c.cat); });
+  cats.sort();
+  var fcat = document.getElementById('fcat');
+  var curCat = fcat.value;
+  fcat.innerHTML = '<option value="">Todas categorias</option>';
+  cats.forEach(function(c) {
+    var opt = document.createElement('option');
+    opt.value = c; opt.textContent = c;
+    if (c === curCat) opt.selected = true;
+    fcat.appendChild(opt);
+  });
+
+  var srch = (document.getElementById('srch').value || '').toLowerCase();
+  var filt = cards.filter(function(c) {
+    if (curCat && c.cat !== curCat) return false;
+    if (srch && c.q.toLowerCase().indexOf(srch) < 0 && c.a.toLowerCase().indexOf(srch) < 0 && c.cat.toLowerCase().indexOf(srch) < 0) return false;
+    return true;
+  });
+
+  var t = todayStr();
+  var html = '';
+  if (filt.length === 0) {
+    html = '<div class="empty" style="grid-column:1/-1"><div class="empty-ic">📭</div><h3>Nenhum card encontrado</h3><p>Ajuste o filtro ou crie um novo card.</p></div>';
+  } else {
+    filt.forEach(function(card) {
+      var due = card.due <= t;
+      var dot = card.rep === 0 ? 'dot-new' : card.rep <= 2 ? 'dot-learn' : 'dot-rev';
+      var lbl = card.rep === 0 ? 'Novo' : card.rep <= 2 ? 'Aprendendo' : 'Revisão';
+      var days = Math.ceil((new Date(card.due) - new Date()) / 86400000);
+      var dl = due ? 'Para revisar' : days <= 1 ? 'Amanhã' : 'Em ' + days + ' dias';
+      html += '<div class="ci">' +
+        '<div class="ci-cat">' + esc(card.cat) + '</div>' +
+        '<div class="ci-q">' + esc(card.q) + '</div>' +
+        '<div class="ci-a">' + esc(card.a) + '</div>' +
+        '<div class="ci-foot">' +
+          '<span><span class="ci-dot ' + dot + '"></span>' + lbl + ' · ' + dl + '</span>' +
+          '<div class="ci-actions">' +
+            '<button class="ic-btn" onclick="editCard(\'' + card.id + '\')">✏️ Editar</button>' +
+            '<button class="ic-btn del" onclick="askDelete(\'' + card.id + '\')">🗑️</button>' +
+          '</div>' +
+        '</div></div>';
+    });
+  }
+  document.getElementById('card-grid').innerHTML = html;
+}
+
+// ===================== CARD CRUD =====================
+function resetForm() {
+  document.getElementById('form-title').textContent = 'Criar Novo Card';
+  document.getElementById('f-submit').textContent = 'Salvar Card';
+  document.getElementById('f-id').value = '';
+  document.getElementById('f-cat').value = '';
+  document.getElementById('f-q').value = '';
+  document.getElementById('f-a').value = '';
+  document.getElementById('f-hint').value = '';
+  document.getElementById('f-exp').value = '';
+}
+
+function editCard(id) {
+  var card = cards.find(function(c) { return c.id === id; });
+  if (!card) return;
+  go('create');
+  document.getElementById('form-title').textContent = 'Editar Card';
+  document.getElementById('f-submit').textContent = 'Atualizar';
+  document.getElementById('f-id').value = card.id;
+  document.getElementById('f-cat').value = card.cat;
+  document.getElementById('f-q').value = card.q;
+  document.getElementById('f-a').value = card.a;
+  document.getElementById('f-hint').value = card.hint || '';
+  document.getElementById('f-exp').value = card.exp || '';
+}
+
+function saveCard() {
+  var id = document.getElementById('f-id').value;
+  var cat = document.getElementById('f-cat').value.trim();
+  var q = document.getElementById('f-q').value.trim();
+  var a = document.getElementById('f-a').value.trim();
+  var hint = document.getElementById('f-hint').value.trim();
+  var exp = document.getElementById('f-exp').value.trim();
+  if (!cat || !q || !a) { toast('Preencha os campos obrigatórios (*).', 't-red'); return; }
+  if (id) {
+    var idx = cards.findIndex(function(c) { return c.id === id; });
+    if (idx !== -1) Object.assign(cards[idx], { cat: cat, q: q, a: a, hint: hint, exp: exp });
+    toast('Card atualizado!', 't-green');
+  } else {
+    cards.push({ id: mkId(), cat: cat, q: q, a: a, hint: hint, exp: exp,
+                 interval: 0, rep: 0, ef: 2.5, due: todayStr(), created: todayStr(), reviews: 0 });
+    toast('Card criado!', 't-green');
+  }
+  LS.set('mc2_cards', cards);
+  renderSidebar(); updateBadge(); go('browse');
+}
+
+function askDelete(id) { deleteId = id; document.getElementById('modal').className = 'modal-bg show'; }
+function closeModal() { document.getElementById('modal').className = 'modal-bg'; deleteId = null; }
+function doDelete() {
+  if (!deleteId) return;
+  cards = cards.filter(function(c) { return c.id !== deleteId; });
+  LS.set('mc2_cards', cards);
+  closeModal(); toast('Card excluído.', 't-green');
+  renderBrowse(); renderSidebar(); updateBadge();
+}
+
+// ===================== STATS =====================
+var CAT_COLORS = { 'Anatomia':'#1d4ed8','Fisiologia':'#6d28d9','Bioquímica':'#db2777','Farmacologia':'#059669','Patologia':'#dc2626','Microbiologia':'#d97706','Imunologia':'#0891b2','Semiologia':'#65a30d','Clínica Médica':'#9333ea','Cirurgia':'#c2410c','Pediatria':'#0284c7','Ginecologia':'#be185d','Psiquiatria':'#4f46e5','Neurologia':'#b45309','Outro':'#475569' };
+
+function renderStats() {
+  document.getElementById('st-total').textContent = cards.length;
+  document.getElementById('st-reviews').textContent = stats.total || 0;
+  var acc = (stats.total || 0) > 0 ? Math.round(((stats.correct||0) / stats.total) * 100) : 0;
+  document.getElementById('st-acc').textContent = acc + '%';
+  document.getElementById('st-days').textContent = Object.keys(stats.days || {}).length;
+
+  // Heatmap
+  var ds = stats.days || {};
+  var hHtml = '';
+  for (var i = 89; i >= 0; i--) {
+    var d = addDays(-i);
+    var n = ds[d] || 0;
+    var lv = n === 0 ? 0 : n < 5 ? 1 : n < 10 ? 2 : n < 20 ? 3 : 4;
+    hHtml += '<div class="hc h' + lv + '" title="' + d + ': ' + n + ' revisões"></div>';
+  }
+  document.getElementById('heat').innerHTML = hHtml;
+
+  // Category bars
+  var counts = {};
+  cards.forEach(function(c) { counts[c.cat] = (counts[c.cat] || 0) + 1; });
+  var ckeys = Object.keys(counts).sort(function(a,b) { return counts[b]-counts[a]; });
+  var mx = ckeys.length > 0 ? counts[ckeys[0]] : 1;
+  var cbHtml = '';
+  ckeys.forEach(function(cat) {
+    var pct = Math.round((counts[cat] / mx) * 100);
+    var color = CAT_COLORS[cat] || '#475569';
+    cbHtml += '<div><div class="cbar-lbl"><span class="cbar-name">' + esc(cat) + '</span><span class="cbar-cnt">' + counts[cat] + '</span></div>' +
+              '<div class="cbar-track"><div class="cbar-fill" style="width:' + pct + '%;background:' + color + '"></div></div></div>';
+  });
+  document.getElementById('cbars').innerHTML = cbHtml || '<div style="color:#64748b;font-size:14px">Nenhum card ainda.</div>';
+
+  // Retention
+  var tot = cards.length || 1;
+  var nw = cards.filter(function(c) { return c.rep === 0; }).length;
+  var lr = cards.filter(function(c) { return c.rep > 0 && c.rep <= 2; }).length;
+  var mt = cards.filter(function(c) { return c.rep > 2; }).length;
+  var items = [{l:'Novos',n:nw,col:'#1d4ed8'},{l:'Aprendendo',n:lr,col:'#b45309'},{l:'Maduros',n:mt,col:'#15803d'}];
+  var rHtml = '';
+  items.forEach(function(item) {
+    var pct = Math.round((item.n / tot) * 100);
+    rHtml += '<div class="ret-item"><span class="ret-lbl">' + item.l + '</span>' +
+             '<div class="ret-track"><div class="ret-fill" style="width:' + pct + '%;background:' + item.col + '">' + (pct > 12 ? pct+'%' : '') + '</div></div>' +
+             '<span class="ret-n">' + item.n + '</span></div>';
+  });
+  document.getElementById('ret').innerHTML = rHtml;
+}
+
+// ===================== HELPERS =====================
+function esc(s) {
+  return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+var _toast;
+function toast(msg, cls) {
+  var el = document.getElementById('toast');
+  el.textContent = msg; el.className = 'toast ' + (cls||'') + ' show';
+  clearTimeout(_toast); _toast = setTimeout(function() { el.classList.remove('show'); }, 3000);
+}
+
+// ===================== START =====================
+init();
+</script>
+</body>
+</html>

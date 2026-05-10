@@ -1,0 +1,107 @@
+[
+  {
+    "category": "Anatomia",
+    "front": "Quais são os músculos do manguito rotador?",
+    "back": "SISS: Supraespinhal, Infraespinhal, Subescapular, Redondo menor",
+    "hint": "Mnemônico: SISS",
+    "explanation": "O manguito rotador estabiliza a articulação glenoumeral e é responsável pelos movimentos de rotação do ombro."
+  },
+  {
+    "category": "Anatomia",
+    "front": "Qual nervo inerva o diafragma?",
+    "back": "Nervo frênico (C3, C4, C5)",
+    "hint": "C3, C4, C5 keeps the diaphragm alive",
+    "explanation": "O nervo frênico origina-se do plexo cervical e desce pelo mediastino para inervar o diafragma."
+  },
+  {
+    "category": "Fisiologia",
+    "front": "Qual é o potencial de ação em repouso de uma célula neuronal típica?",
+    "back": "-70 mV (membrana em repouso)",
+    "hint": "Valor negativo — interior mais negativo",
+    "explanation": "Mantido pela bomba Na⁺/K⁺-ATPase e pelos canais de K⁺ em repouso. Limiar de disparo: ~-55 mV."
+  },
+  {
+    "category": "Fisiologia",
+    "front": "O que é o reflexo de Hering-Breuer?",
+    "back": "Reflexo pulmonar que inibe a inspiração quando os pulmões estão excessivamente distendidos",
+    "hint": "Pulmão cheio → para de inspirar",
+    "explanation": "Mediado por mecanorreceptores de distensão nas vias aéreas, via nervo vago. Evita hiperinflação."
+  },
+  {
+    "category": "Farmacologia",
+    "front": "Qual o mecanismo de ação das estatinas?",
+    "back": "Inibição competitiva da HMG-CoA redutase, enzima limitante da síntese de colesterol",
+    "hint": "HMG-CoA → mevalonato (passo inibido)",
+    "explanation": "Reduzem LDL em ~30-55%. Efeito pleiotrópico: anti-inflamatório e estabilização de placa."
+  },
+  {
+    "category": "Farmacologia",
+    "front": "Qual é o antídoto para intoxicação por paracetamol?",
+    "back": "N-acetilcisteína (NAC)",
+    "hint": "Repõe glutationa hepática",
+    "explanation": "NAC deve ser administrada nas primeiras 8-10h. Regenera a glutationa que neutraliza o metabólito tóxico NAPQI."
+  },
+  {
+    "category": "Patologia",
+    "front": "Quais são os 4 sinais cardinais da inflamação aguda?",
+    "back": "Calor, Rubor, Tumor (edema) e Dor — mais Functio laesa (perda de função)",
+    "hint": "Célsio descreveu os primeiros 4",
+    "explanation": "Mediados por vasodilatação, aumento da permeabilidade vascular e recrutamento de neutrófilos."
+  },
+  {
+    "category": "Bioquímica",
+    "front": "O que é a via de pentose-fosfato?",
+    "back": "Via metabólica que gera NADPH e ribose-5-fosfato a partir da glicose-6-fosfato",
+    "hint": "NADPH = proteção antioxidante; Ribose = síntese de nucleotídeos",
+    "explanation": "Ocorre no citoplasma. Deficiência de G6PD compromete esta via e causa anemia hemolítica."
+  },
+  {
+    "category": "Microbiologia",
+    "front": "Qual bactéria produz a toxina que causa o tétano?",
+    "back": "Clostridium tetani — produz tetanospasmina (toxina tetânica)",
+    "hint": "Bacilo Gram-positivo, anaeróbio, formador de esporos",
+    "explanation": "Tetanospasmina inibe neurônios inibitórios → espasmos musculares. Tratamento: imunoglobulina + metronidazol."
+  },
+  {
+    "category": "Clínica Médica",
+    "front": "Quais são os critérios de Framingham para insuficiência cardíaca?",
+    "back": "Maiores: dispneia paroxística noturna, ortopneia, turgência venosa jugular, crepitações, B3, refluxo hepatojugular, edema pulmonar agudo. Menores: edema bilateral, tosse noturna, dispneia de esforço, hepatomegalia, derrame pleural",
+    "hint": "2 maiores OU 1 maior + 2 menores",
+    "explanation": "Diagnóstico clínico. Confirmado por ecocardiografia com FEVE < 40% (IC sistólica) ou > 50% (IC diastólica)."
+  },
+  {
+    "category": "Neurologia",
+    "front": "O que é a Tríade de Cushing na hipertensão intracraniana?",
+    "back": "Hipertensão arterial + Bradicardia + Bradipneia (respiração irregular)",
+    "hint": "HAS + Bradicardia + Bradipneia = emergência neurológica",
+    "explanation": "Reflexo vasopressor para manter perfusão cerebral quando PIC está crítica. Sinal tardio e grave de herniação iminente."
+  },
+  {
+    "category": "Imunologia",
+    "front": "Qual a diferença entre imunidade inata e adaptativa?",
+    "back": "Inata: inespecífica, sem memória, resposta imediata (neutrófilos, macrófagos, NK, complemento). Adaptativa: específica, com memória, resposta lenta (linfócitos T e B)",
+    "hint": "Inata = linha de frente rápida; Adaptativa = resposta personalizada",
+    "explanation": "A imunidade adaptativa pode ser humoral (anticorpos via células B) ou celular (via células T)."
+  },
+  {
+    "category": "Semiologia",
+    "front": "Como diferenciar sopro inocente de sopro patológico em crianças?",
+    "back": "Inocente: sistólico, grau ≤ 2/6, sem irradiação, sem frêmito, varia com posição. Patológico: diastólico, ≥ 3/6, com irradiação, frêmito, associado a sintomas",
+    "hint": "Diastólico = sempre patológico",
+    "explanation": "Todo sopro diastólico em crianças requer investigação. Ecocardiograma é padrão-ouro para avaliação."
+  },
+  {
+    "category": "Pediatria",
+    "front": "Quais as vacinas do calendário brasileiro para os 2 meses de vida?",
+    "back": "Pentavalente (DTP+HiB+HepB), VIP (polio inativada), PCV13 (pneumocócica), Rotavírus (VORH)",
+    "hint": "Primeira vacinação após BCG e HepB ao nascer",
+    "explanation": "A pentavalente inclui proteção contra difteria, tétano, coqueluche, Haemophilus e hepatite B."
+  },
+  {
+    "category": "Cirurgia",
+    "front": "Quais são os critérios de Ranson para pancreatite aguda?",
+    "back": "Na admissão: idade >55, leucócitos >16.000, glicose >200, LDH >350, AST >250. Em 48h: queda Ht >10%, aumento ureia >5, Ca <8, PaO2 <60, déficit base >4, sequestro fluidos >6L",
+    "hint": "Score ≥3 = pancreatite grave",
+    "explanation": "Cada critério = 1 ponto. Mortalidade: 0-2 = <1%; 3-4 = 15%; 5-6 = 40%; ≥7 = ~100%."
+  }
+]
