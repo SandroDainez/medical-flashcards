@@ -3,7 +3,7 @@
 const SUPABASE_URL = window.SUPABASE_URL || '';
 const SUPABASE_ANON_KEY = window.SUPABASE_ANON_KEY || '';
 const HAS_SUPABASE_CONFIG = !!(SUPABASE_URL && SUPABASE_ANON_KEY);
-const supabase = HAS_SUPABASE_CONFIG ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
+const supabaseClient = HAS_SUPABASE_CONFIG ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
 
 // ===== REVIEW SCHEDULING RULES =====
 const SM2 = {
@@ -266,7 +266,7 @@ async function loadOrCreateProfile(authUser) {
   const fallbackName = (authUser.email || 'usuário').split('@')[0];
   const resolvedName = authUser.user_metadata?.full_name || fallbackName;
 
-  const { data: existing, error: existingErr } = await supabase
+  const { data: existing, error: existingErr } = await supabaseClient
     .from('profiles')
     .select('*')
     .eq('id', authUser.id)
@@ -277,7 +277,7 @@ async function loadOrCreateProfile(authUser) {
   if (existing) {
     const needsSync = existing.email !== (authUser.email || '') || existing.full_name !== resolvedName;
     if (needsSync) {
-      const { error: syncErr } = await supabase
+      const { error: syncErr } = await supabaseClient
         .from('profiles')
         .update({
           email: authUser.email || '',
@@ -298,13 +298,13 @@ async function loadOrCreateProfile(authUser) {
     role: USER_ROLE.USER,
     status: USER_STATUS.PENDING
   };
-  const { error: insertErr } = await supabase.from('profiles').insert(insertPayload);
+  const { error: insertErr } = await supabaseClient.from('profiles').insert(insertPayload);
   if (insertErr) throw insertErr;
   return insertPayload;
 }
 
 async function loadUserData() {
-  const { data: cards, error: cardsErr } = await supabase
+  const { data: cards, error: cardsErr } = await supabaseClient
     .from('cards')
     .select('*')
     .order('created_at', { ascending: true });
@@ -332,7 +332,7 @@ async function loadUserData() {
     status: c.status || 'new'
   }));
 
-  const { data: statsRow, error: statsErr } = await supabase
+  const { data: statsRow, error: statsErr } = await supabaseClient
     .from('user_stats')
     .select('*')
     .maybeSingle();
@@ -371,7 +371,7 @@ async function seedCardsForCurrentUser() {
   }));
 
   if (payload.length === 0) return;
-  const { error } = await supabase.from('cards').insert(payload);
+  const { error } = await supabaseClient.from('cards').insert(payload);
   if (error) throw error;
 }
 
@@ -394,7 +394,7 @@ async function persistCards() {
     status: c.status || 'new'
   }));
 
-  const { error } = await supabase.from('cards').upsert(payload);
+  const { error } = await supabaseClient.from('cards').upsert(payload);
   if (error) {
     console.error('Erro ao persistir cards:', error.message);
     showToast('Erro ao salvar cards no servidor.', 'error');
@@ -411,7 +411,7 @@ async function persistStats() {
     streak: state.stats.streak || 0,
     last_studied: state.stats.lastStudied || null
   };
-  const { error } = await supabase.from('user_stats').upsert(payload);
+  const { error } = await supabaseClient.from('user_stats').upsert(payload);
   if (error) {
     console.error('Erro ao persistir stats:', error.message);
     showToast('Erro ao salvar estatísticas no servidor.', 'error');
@@ -424,7 +424,7 @@ async function initAuth() {
     return;
   }
 
-  const { data, error } = await supabase.auth.getSession();
+  const { data, error } = await supabaseClient.auth.getSession();
   if (error) {
     console.error('Erro ao carregar sessão:', error.message);
     applyAuthState(false);
@@ -440,13 +440,13 @@ async function initAuth() {
   try {
     const profile = await loadOrCreateProfile(session.user);
     if (profile.status === USER_STATUS.BLOCKED) {
-      await supabase.auth.signOut();
+      await supabaseClient.auth.signOut();
       applyAuthState(false);
       showToast('Usuário bloqueado pelo administrador.', 'error');
       return;
     }
     if (profile.status === USER_STATUS.PENDING) {
-      await supabase.auth.signOut();
+      await supabaseClient.auth.signOut();
       applyAuthState(false);
       showToast('Conta pendente de liberação do administrador.', 'error');
       return;
@@ -474,7 +474,7 @@ async function handleLoginSubmit(e) {
 
   const email = normalizeEmail(document.getElementById('login-email').value);
   const password = document.getElementById('login-password').value;
-  const { error } = await supabase.auth.signInWithPassword({ email, password });
+  const { error } = await supabaseClient.auth.signInWithPassword({ email, password });
   if (error) {
     showToast(error.message || 'Falha no login.', 'error');
     return;
@@ -495,7 +495,7 @@ async function handleRegisterSubmit(e) {
   const password = document.getElementById('register-password').value;
   const authStatus = document.getElementById('auth-status');
 
-  const { error } = await supabase.auth.signUp({
+  const { error } = await supabaseClient.auth.signUp({
     email,
     password,
     options: {
@@ -516,7 +516,7 @@ async function handleRegisterSubmit(e) {
 }
 
 async function logout() {
-  if (supabase) await supabase.auth.signOut();
+  if (supabaseClient) await supabaseClient.auth.signOut();
   applyAuthState(false);
   showToast('Sessão encerrada.', 'success');
 }
@@ -648,13 +648,13 @@ function applyTheme(theme) {
 }
 
 async function loadProfiles() {
-  const { data, error } = await supabase.from('profiles').select('*').order('created_at', { ascending: true });
+  const { data, error } = await supabaseClient.from('profiles').select('*').order('created_at', { ascending: true });
   if (error) throw error;
   state.profiles = data || [];
 }
 
 async function updateProfile(userId, changes) {
-  const { error } = await supabase.from('profiles').update(changes).eq('id', userId);
+  const { error } = await supabaseClient.from('profiles').update(changes).eq('id', userId);
   if (error) throw error;
 }
 
@@ -712,7 +712,7 @@ async function sendPasswordReset(userId) {
     showToast('Usuário sem e-mail válido.', 'error');
     return;
   }
-  const { error } = await supabase.auth.resetPasswordForEmail(user.email);
+  const { error } = await supabaseClient.auth.resetPasswordForEmail(user.email);
   if (error) {
     showToast(`Erro ao enviar recuperação: ${error.message}`, 'error');
     return;
