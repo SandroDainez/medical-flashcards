@@ -497,8 +497,10 @@ function renderSidebar() {
 }
 
 function studyCat(cat) {
-  go('dashboard');
-  document.getElementById('study-cat-select').value = cat;
+  // Set the value on the (currently hidden) dashboard dropdown
+  var select = document.getElementById('study-cat-select');
+  if (select) { select.value = cat; }
+  // Go directly to the study view, which will now read the correct value
   go('study');
 }
 
