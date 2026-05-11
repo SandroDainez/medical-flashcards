@@ -663,5 +663,726 @@
     "a": "Estratégia de adicionar um segundo vasopressor (vasopressina, angiotensina II) para reduzir a dose de noradrenalina, minimizando toxicidade catecolaminérgica (taquicardia, arritmias, isquemia). Implementado quando noradrenalina ≥0,25 mcg/kg/min.",
     "hint": "Poupar catecolamina",
     "exp": "A toxicidade catecolaminérgica inclui: apoptose cardiomiocitária, vasoconstrição mesentérica, imunossupressão e distúrbios metabólicos (hiperglicemia, hipocalemia). O 'vasopressor sparing' com vasopressina reduz a dose total de noradrenalina em ~35–40%. Estudos recentes exploram angiotensina II (ATHOS-3, Khanna 2017) e metilazul como adjuvantes em casos refratários (SSC 2021)."
+  },
+  {
+    "cat": "Fisiopatologia - FA",
+    "q": "Quais são os dois principais mecanismos eletrofisiológicos responsáveis pela iniciação e manutenção da fibrilação atrial?",
+    "a": "Gatilhos focais (principalmente das veias pulmonares) e reentrada funcional por múltiplos ondeletins (multiple wavelet reentry) no substrato atrial.",
+    "hint": "Gatilho + substrato",
+    "exp": "Segundo Braunwald's Heart Disease e as diretrizes ESC 2020, os focos ectópicos das veias pulmonares (VP) são o principal gatilho da FA paroxística. A manutenção depende de um substrato remodelado (fibrose, dilatação atrial) que permite reentrada funcional por múltiplos ondeletins simultâneos. O conceito de rotor e condução anisotrópica também contribui para a complexidade do mecanismo."
+  },
+  {
+    "cat": "Fisiopatologia - FA",
+    "q": "O que é remodelamento elétrico atrial na FA e qual sua principal consequência clínica?",
+    "a": "Encurtamento do período refratário efetivo atrial (redução de ICa,L e Ito) causado pela FA sustentada; resulta no fenômeno 'AF begets AF' — a FA perpetua a FA.",
+    "hint": "AF begets AF",
+    "exp": "A FA sustentada provoca downregulation dos canais de cálcio tipo L (ICa,L) e redução da corrente transitória de saída (Ito), encurtando o período refratário efetivo. Isso facilita a manutenção da FA ao aumentar o número de ondas de reentrada que podem coexistir no átrio. O remodelamento estrutural (fibrose mediada por TGF-β e angiotensina II) é mais tardio e menos reversível."
+  },
+  {
+    "cat": "Classificação - FA",
+    "q": "Qual é a classificação temporal da FA segundo as diretrizes ACC/AHA 2023?",
+    "a": "FA paroxística (termina espontaneamente em ≤7 dias), FA persistente (>7 dias ou necessita cardioversão), FA persistente de longa duração (>12 meses), FA permanente (ritmo aceito pelo paciente e médico, sem tentativa de cardioversão).",
+    "hint": "7 dias / 12 meses",
+    "exp": "A classificação temporal é fundamental para guiar o manejo. A FA paroxística frequentemente reverte espontaneamente em <24h. A FA persistente requer intervenção para restaurar o ritmo sinusal. A FA permanente implica decisão terapêutica de não buscar controle de ritmo — essa classificação pode mudar se o paciente e médico decidirem tentar cardioversão."
+  },
+  {
+    "cat": "Classificação - FA",
+    "q": "O que é FA de início incerto e qual sua relevância para anticoagulação pré-cardioversão?",
+    "a": "FA com duração indeterminada (não se sabe se ≤48h). Para cardioversão segura, exige anticoagulação terapêutica por ≥3 semanas OU EcoTE para exclusão de trombo em átrio/apêndice atrial esquerdo.",
+    "hint": "EcoTE ou 3 semanas",
+    "exp": "O risco de tromboembolismo na cardioversão de FA com duração >48h ou incerta é de 1-7% sem anticoagulação prévia. O trombo se forma principalmente no apêndice atrial esquerdo (AAE). O EcoTE tem sensibilidade >95% para trombo em AAE. Após cardioversão bem-sucedida, manter anticoagulação por ≥4 semanas pelo risco de 'atordoamento atrial' (atrial stunning) com reversão tardia da função mecânica."
+  },
+  {
+    "cat": "Diagnóstico - ECG",
+    "q": "Quais são os critérios eletrocardiográficos diagnósticos da fibrilação atrial?",
+    "a": "Ausência de ondas P definidas; oscilações de linha de base irregulares (ondas f) com frequência 350-600 bpm; intervalo R-R irregularmente irregular.",
+    "hint": "f irregular, sem P",
+    "exp": "O diagnóstico de FA exige ausência de atividade atrial organizada. As ondas f são mais visíveis em V1 e D2. O intervalo R-R é 'irregularmente irregular' (sem nenhum padrão). Fibrilações grosseiras (ondas f amplas) vs. finas podem ocorrer. O diagnóstico requer ao menos 30 segundos de ECG ou o complexo de uma tira de ritmo. Holter e monitores implantáveis são úteis para FA paroxística."
+  },
+  {
+    "cat": "Diagnóstico - ECG",
+    "q": "Como se distingue o Flutter Atrial Típico no ECG?",
+    "a": "Ondas F em 'dentes de serra' negativas em DII, DIII, aVF (isoline ausente), positivas em V1; frequência atrial 250-350 bpm (geralmente 300 bpm); bloqueio AV 2:1 mais comum → FC ~150 bpm.",
+    "hint": "Serra negativa inferior",
+    "exp": "O Flutter Atrial Típico é causado por macrorreentrada ao redor do anel tricúspide, usando o istmo cavo-tricuspídeo (ICT). O circuito no sentido anti-horário (contrarrotório) produz o padrão clássico: ondas F negativas em DII, DIII, aVF. O Flutter horário produz ondas F positivas em DII. O bloqueio AV 2:1 resulta em FC ~150 bpm — qualquer taquicardia regular a ~150 bpm deve levantar suspeita de Flutter com 2:1."
+  },
+  {
+    "cat": "Diagnóstico - ECG",
+    "q": "O que é FA com resposta ventricular regularizada e qual é a causa mais importante a excluir?",
+    "a": "FA com intervalos R-R regulares; a causa mais importante é intoxicação digitálica com bloqueio AV completo e ritmo juncional de escape.",
+    "hint": "Digitálico + bloqueio AV",
+    "exp": "Na FA, o intervalo R-R deve ser irregularmente irregular. Se a FA apresentar ritmo ventricular regular, suspeitar de: (1) ritmo juncional acelerado por intoxicação digitálica (mais grave — bloqueio AV completo superposto), (2) bloqueio AV completo com escape ventricular. O digitálico é classicamente associado a regularização da FA; a frequência ventricular baixa com regularidade é sinal de alerta. Deve-se dosar digoxinemia."
+  },
+  {
+    "cat": "Controle de Frequência",
+    "q": "Qual é o alvo de frequência cardíaca no controle de frequência da FA segundo as diretrizes atuais (lenient vs. strict)?",
+    "a": "Alvo lenient (frequência de repouso <110 bpm) é aceitável para a maioria dos pacientes sintomáticos leves. Alvo strict (<80 bpm repouso, <110 bpm exercício) se sintomas persistirem ou cardiomiopatia induzida por taquicardia for suspeita.",
+    "hint": "Lenient: <110",
+    "exp": "O estudo RACE II demonstrou que controle lenient (FC <110 bpm) não foi inferior ao controle strict em desfechos cardiovasculares. Porém, se o paciente permanecer sintomático ou houver suspeita de cardiomiopatia taquicardia-induzida (LVEF reduzida com FA de alta frequência), opta-se pelo controle strict. O Holter é útil para avaliar o controle de frequência ao longo do dia."
+  },
+  {
+    "cat": "Controle de Frequência",
+    "q": "Quais são as classes de drogas de primeira linha para controle de frequência na FA e suas principais contraindicações?",
+    "a": "Beta-bloqueadores (1ª linha na maioria), bloqueadores dos canais de cálcio não-diidropiridínicos (verapamil/diltiazem — contraindicados na IC com FE reduzida), digoxina (2ª linha, exceto em sedentários). Amiodarona: reservada para FA com IC avançada refratária.",
+    "hint": "BB / BCC-não DHP",
+    "exp": "Beta-bloqueadores são preferidos na IC com FE reduzida (carvedilol, metoprolol, bisoprolol). Verapamil e diltiazem são contraindicados na ICFEr por efeito inotrópico negativo. Digoxina tem ação limitada durante exercício (resposta simpática supera o efeito vagotônico) e é recomendada principalmente em sedentários ou como adjuvante. A amiodarona IV pode ser usada em situações de urgência com IC grave, mas o uso crônico oral tem toxicidade significativa."
+  },
+  {
+    "cat": "Controle de Frequência",
+    "q": "Em qual situação o controle de frequência da FA por ablação do nó AV + implante de marcapasso é indicado?",
+    "a": "FA permanente com sintomas refratários e falha/contraindicação a drogas cronotrópicas negativas, especialmente em pacientes com IC (ablação AV + ressincronização cardíaca — His-bundle pacing ou CRT preferível).",
+    "hint": "Ablação AV + MP",
+    "exp": "A estratégia 'ablate and pace' é paliativa — não cura a FA, mas controla a frequência definitivamente. Gera dependência de marcapasso. Hoje, prefere-se ablação do feixe de His com marcapasso no feixe de His (His-bundle pacing) ou ablação com CRT para preservar a sincronia ventricular, especialmente em IC. Indicação classe IIa nas diretrizes ACC/AHA 2023 quando outras estratégias falharam."
+  },
+  {
+    "cat": "Controle de Ritmo",
+    "q": "Quais são as principais drogas antiarrítmicas para cardioversão farmacológica da FA de início recente (<48h) em paciente sem cardiopatia estrutural?",
+    "a": "Flecainida e propafenona (classe IC) — mais eficazes. Ibutilida IV (classe III) ou vernakalant IV são alternativas. Amiodarona IV é eficaz mas com latência maior.",
+    "hint": "IC: flecainida/propafenona",
+    "exp": "Antiarrítmicos classe IC (flecainida, propafenona) têm alta taxa de reversão (~70%) e início rápido. São contraindicados em cardiopatia estrutural significativa (coronariopatia, IC, HVE) pelo risco de pró-arritmia (flutter IC:1). Vernakalant (bloqueador de correntes atriais seletivas) é opção em pacientes com cardiopatia leve a moderada sem síndrome coronariana aguda. Amiodarona IV é preferida na cardiopatia estrutural significativa."
+  },
+  {
+    "cat": "Controle de Ritmo",
+    "q": "Quais são as indicações de cardioversão elétrica sincronizada (CVE) de urgência na FA?",
+    "a": "Instabilidade hemodinâmica: hipotensão grave, angina, IC aguda descompensada, choque cardiogênico, síndrome de pré-excitação (WPW) com FA de alta frequência.",
+    "hint": "Instabilidade hemodinâmica",
+    "exp": "A CVE urgente é indicada quando a FA compromete hemodinamicamente o paciente, sem aguardar anticoagulação prévia (o benefício supera o risco tromboembólico). Na FA com WPW, é imperativo evitar digoxina, bloqueadores do nó AV (verapamil, beta-bloqueadores, adenosina) — risco de condução preferencial pela via acessória com FV. Na FA com WPW: CVE ou procainamida/ibutilida IV. A energia sincronizada recomendada: 120-200 J bifásico."
+  },
+  {
+    "cat": "Controle de Ritmo",
+    "q": "Quais são os antiarrítmicos recomendados para manutenção de ritmo sinusal na FA com cardiopatia estrutural significativa (IC com FE reduzida)?",
+    "a": "Amiodarona é o único antiarrítmico com perfil seguro na ICFEr. Dofetilida é alternativa (classe IC). Sotalol pode ser usado na IC leve se QTc permitir.",
+    "hint": "IC: amiodarona",
+    "exp": "Na ICFEr, os antiarrítmicos IC são contraindicados (risco de pró-arritmia ventricular). Sotalol tem efeito inotrópico negativo e prolonga QT. A amiodarona tem baixo risco pró-arrítmico ventricular mas toxicidade extracardíaca significativa (tireóide, pulmão, fígado, olho, pele) com uso prolongado. Monitorização anual de TFH, TFT, RX tórax e função hepática é obrigatória. Dofetilida requer internação para início devido ao risco de torsades de pointes."
+  },
+  {
+    "cat": "Anticoagulação - Escore",
+    "q": "Quais são as variáveis do escore CHA₂DS₂-VASc e suas pontuações?",
+    "a": "C: IC/disfunção VE (1pt); H: Hipertensão (1pt); A₂: Idade ≥75 anos (2pts); D: Diabetes (1pt); S₂: AVC/AIT/tromboembolismo prévio (2pts); V: Doença vascular (IAM, DAP, placa aórtica) (1pt); A: Idade 65-74 anos (1pt); Sc: Sexo feminino (1pt). Máximo: 9 pontos.",
+    "hint": "CHADS vasc",
+    "exp": "O CHA₂DS₂-VASc substituiu o CHADS₂ por melhor estratificação de baixo risco. Segundo ACC/AHA 2023: anticoagulação recomendada (classe I) em homens com escore ≥2 e mulheres com escore ≥3. Anticoagulação razoável (IIa) em homens com escore 1 (excluindo sexo feminino isolado). Escore 0 em homens ou 1 em mulheres (apenas por sexo) — não anticoagular. O sexo feminino não conta como fator isolado para indicar anticoagulação."
+  },
+  {
+    "cat": "Anticoagulação - Escore",
+    "q": "O escore HAS-BLED serve para contraindicar anticoagulação na FA? Qual seu papel correto?",
+    "a": "Não. O HAS-BLED identifica fatores de risco de sangramento MODIFICÁVEIS para otimização antes de iniciar ou durante anticoagulação. Escore ≥3 indica alto risco de sangramento, mas não contraindica anticoagulação — indica necessidade de correção dos fatores modificáveis.",
+    "hint": "Modificar, não contraindicar",
+    "exp": "H: Hipertensão não controlada; A: Disfunção renal/hepática; S: AVC; B: Sangramento/predisposição; L: INR lábil (apenas warfarina); E: Elderly (>65a); D: Drogas (AINEs, antiplaquetários)/álcool. Os fatores modificáveis incluem: PA não controlada, antiagregantes/AINEs desnecessários, álcool, INR lábil. Corrigir esses fatores reduz o risco de sangramento sem abrir mão da anticoagulação, que tem benefício líquido mesmo nos pacientes de alto risco de sangramento (exceto sangramento intracraniano recente)."
+  },
+  {
+    "cat": "Anticoagulação - Drogas",
+    "q": "Quais são os anticoagulantes orais diretos (DOACs) aprovados para prevenção de AVC na FA não valvar e suas doses?",
+    "a": "Dabigatrana 150mg 2x/dia (110mg 2x/dia se >80a, alto risco sangramento ou CrCl 30-50); Rivaroxabana 20mg 1x/dia com jantar (15mg se CrCl 15-49); Apixabana 5mg 2x/dia (2,5mg 2x/dia se ≥2: idade ≥80a, peso ≤60kg, creatinina ≥1,5); Edoxabana 60mg 1x/dia (30mg se CrCl 15-50, peso ≤60kg, uso de inibidores-P-gp).",
+    "hint": "DRAE: 4 DOACs",
+    "exp": "Os DOACs são superiores à varfarina na prevenção de AVC isquêmico e AVC/embolismo sistêmico na FA não valvar, com menor risco de AVC hemorrágico e hemorragia intracraniana (estudos RE-LY, ROCKET-AF, ARISTOTLE, ENGAGE AF-TIMI 48). São contraindicados na FA valvar (estenose mitral moderada-grave e próteses valvares mecânicas). O ajuste renal é fundamental — todos exigem cálculo de CrCl pelo método de Cockcroft-Gault."
+  },
+  {
+    "cat": "Anticoagulação - Drogas",
+    "q": "Em que situações a varfarina ainda é preferida aos DOACs na FA?",
+    "a": "FA valvar (estenose mitral reumática moderada-grave e próteses valvares mecânicas); insuficiência renal grave (CrCl <15 mL/min ou diálise); síndrome antifosfolípide (especialmente triplo-positivo).",
+    "hint": "Valvar / diálise / SAF",
+    "exp": "O estudo ELAN e meta-análises confirmam que DOACs são contraindicados na FA com próteses metálicas (estudo RE-ALIGN: dabigatrana inferior à varfarina com mais eventos). Na estenose mitral reumática, o mecanismo de formação de trombo (turbulência + estase) é distinto e os DOACs não foram adequadamente estudados. Em diálise, os dados são limitados; algumas diretrizes permitem apixabana 5mg 2x/dia. Na SAF triplo-positivo, rivaroxabana foi inferior à varfarina (estudo TRAPS)."
+  },
+  {
+    "cat": "Anticoagulação - Drogas",
+    "q": "Qual é o antídoto específico da dabigatrana e como funciona?",
+    "a": "Idarucizumabe (Praxbind®) — anticorpo monoclonal humanizado que se liga à dabigatrana com afinidade 350x maior que a trombina, revertendo seu efeito em minutos. Dose: 5g IV (dois frascos de 2,5g).",
+    "hint": "Ida-rucizumabe = anti-dabi",
+    "exp": "O estudo RE-VERSE AD validou o idarucizumabe em hemorragia com risco de vida ou cirurgia de urgência. A reversão é imediata e completa. Para os inibidores do fator Xa (rivaroxabana, apixabana, edoxabana), o antídoto é o andexanet alfa (AnXa, Ondexxya®), um fator Xa recombinante modificado que funciona como 'isca'. Ciraparantag (aripazine) é um agente em desenvolvimento com ação contra todos os anticoagulantes (incluindo heparina e DOACs)."
+  },
+  {
+    "cat": "Ablação por Cateter - FA",
+    "q": "Qual é o princípio da ablação por cateter para FA paroxística e qual a principal estratégia atual?",
+    "a": "Isolamento das veias pulmonares (IVP) — criação de lesões circunferenciais ao redor dos óstios das 4 veias pulmonares para bloquear condução dos focos ectópicos para o átrio esquerdo. Realizado com radiofrequência (RF) ou crioablação (balão crioablação).",
+    "hint": "Isolar veias pulmonares",
+    "exp": "O IVP é o cornerstone da ablação de FA. Para FA paroxística, o IVP isolado tem taxa de sucesso ~60-80% (livre de arritmia em 1 ano sem droga antiarrítmica). Para FA persistente, estratégias adicionais (linhas de ablação, alvos de baixa voltagem, rotores) têm resultados variáveis. O estudo FIRE AND ICE mostrou crioablação não inferior à RF. O estudo EARLY-AF e STOP-AF demonstraram superioridade da ablação sobre antiarrítmicos como terapia de primeira linha em FA paroxística sintomática."
+  },
+  {
+    "cat": "Ablação por Cateter - FA",
+    "q": "Quais são as indicações de ablação de FA segundo as diretrizes ACC/AHA 2023?",
+    "a": "Classe I: FA paroxística sintomática após falha de ≥1 antiarrítmico classe I ou III. Classe IIa: FA paroxística sintomática como primeira linha (antes de antiarrítmicos); FA persistente sintomática após falha de antiarrítmico; FA com IC com FE reduzida (pode melhorar FE). Classe IIb: FA persistente de longa duração.",
+    "hint": "Sintomático + falha AA",
+    "exp": "A indicação de ablação como primeira linha (IIa) reflete os resultados do estudo EAST-AFNET 4 e meta-análises mostrando benefício em qualidade de vida e redução de hospitalizações. Na IC com FE reduzida e FA, o estudo CASTLE-AF demonstrou redução de mortalidade e hospitalização com ablação vs. terapia clínica. A ablação não elimina necessidade de anticoagulação a longo prazo em pacientes com alto CHA₂DS₂-VASc."
+  },
+  {
+    "cat": "Ablação por Cateter - FA",
+    "q": "Quais são as principais complicações da ablação de FA?",
+    "a": "Tamponamento cardíaco (1-2%); estenose de veias pulmonares (0,5-1%); fístula átrio-esofágica (<0,1% — potencialmente fatal); AVC/AIT (0,5-1%); paralisia do nervo frênico (crioablação); lesão vascular de acesso; flutter iatrogênico.",
+    "hint": "Tamponamento / fístula esofágica",
+    "exp": "A fístula átrio-esofágica é a complicação mais grave (mortalidade >50%) — ocorre 2-4 semanas após o procedimento; apresenta-se com febre, disfagia, AVC séptico. O esôfago está em contato com a parede posterior do átrio esquerdo — monitorização da temperatura esofágica e uso de deflector esofágico reduzem o risco. O tamponamento é a complicação mais comum, geralmente manejado com pericardiocentese. A anticoagulação deve ser mantida periprocedimento (sem interrupção de DOAC — protocolo uninterrupted anticoagulation)."
+  },
+  {
+    "cat": "Flutter Atrial",
+    "q": "Qual é o mecanismo eletrofisiológico do Flutter Atrial Típico e onde se localiza o istmo crítico?",
+    "a": "Macrorreentrada ao redor do anel tricúspide. O istmo crítico é o istmo cavo-tricuspídeo (ICT) — região entre a veia cava inferior e o anel tricúspide no átrio direito. A ablação do ICT cura definitivamente o Flutter Típico.",
+    "hint": "ICT = istmo crítico",
+    "exp": "No Flutter Típico anti-horário (mais comum): a onda de ativação desce pelo septo interatrial e sobe pela parede livre do AD, passando pelo ICT (isthmus-dependent flutter). No Flutter Típico horário: sentido inverso. O ICT é o 'gargalo' do circuito — a ablação por RF criando uma linha de bloqueio bidirecional entre a VCI e o anel tricúspide tem taxa de sucesso >95% e é o tratamento de escolha. O Flutter Atípico envolve outros circuitos (ao redor de cicatrizes, anel mitral) e tem ablação mais complexa."
+  },
+  {
+    "cat": "Flutter Atrial",
+    "q": "Por que pacientes com Flutter Atrial têm risco tromboembólico similar à FA e como isso impacta a anticoagulação?",
+    "a": "O Flutter Atrial causa disfunção mecânica atrial semelhante à FA com formação de trombo no apêndice atrial esquerdo. As mesmas recomendações de anticoagulação da FA (CHA₂DS₂-VASc) se aplicam ao Flutter.",
+    "hint": "Mesmo risco que FA",
+    "exp": "Historicamente subestimado, o Flutter Atrial tem risco tromboembólico próximo ao da FA. Estudos de coorte demonstram taxas de AVC comparáveis. O Flutter e a FA frequentemente coexistem no mesmo paciente (Flutter pode converter em FA espontaneamente ou após ablação). Portanto, as diretrizes recomendam a mesma estratégia de anticoagulação do Flutter que da FA, incluindo anticoagulação por ≥4 semanas após cardioversão de Flutter com duração >48h ou incerta."
+  },
+  {
+    "cat": "FA e Insuficiência Cardíaca",
+    "q": "Como a FA e a IC se inter-relacionam fisiopatologicamente?",
+    "a": "A FA pode causar IC (cardiomiopatia taquicardia-induzida com alta frequência ventricular) e a IC predispõe à FA (dilatação atrial, fibrose, ativação neuro-hormonal). A relação é bidirecional e cada condição perpetua a outra.",
+    "hint": "Bidirecional: FA↔IC",
+    "exp": "A cardiomiopatia taquicardia-induzida é reversível com controle de frequência (<110 bpm) ou controle de ritmo — a FE pode normalizar em semanas a meses. A IC dilata o átrio esquerdo aumentando a pressão de enchimento, cria fibrose e heterogeneidade de condução, facilitando a FA. O RAAS ativado na IC também promove fibrose atrial. Em pacientes com IC e FA, o controle de ritmo (especialmente ablação) pode melhorar a FE (estudo CASTLE-AF: RRR de 38% em morte CV + hospitalização)."
+  },
+  {
+    "cat": "FA e Insuficiência Cardíaca",
+    "q": "Na FA com IC descompensada aguda e resposta ventricular rápida, qual é a melhor estratégia de controle de frequência IV?",
+    "a": "Amiodarona IV (200-300mg em bolus lento, depois infusão) é o agente mais seguro na IC grave com FE reduzida. Digoxina IV é alternativa (latência maior, menos eficaz no estresse simpático). Evitar beta-bloqueadores IV na IC descompensada.",
+    "hint": "IC grave: amiodarona IV",
+    "exp": "Na IC agudamente descompensada, os beta-bloqueadores IV (metoprolol) podem deteriorar a função hemodinâmica. O verapamil e diltiazem são contraindicados na ICFEr. A amiodarona IV tem efeito inotrópico neutro/leve e pode controlar a frequência e eventualmente reverter para ritmo sinusal. A digoxina IV age em 30-60 min com pico em 4-6h — útil como adjuvante. Se instabilidade hemodinâmica: CVE de urgência independente da anticoagulação."
+  },
+  {
+    "cat": "FA e Tireóide",
+    "q": "Como o hipertireoidismo causa FA e qual é a abordagem?",
+    "a": "O excesso de T3/T4 encurta o potencial de ação atrial, aumenta a automaticidade e cria substrato pró-arrítmico. Abordagem: tratar o hipertireoidismo (tionamidas, iodo radioativo) + controle de frequência (BB preferido). A FA frequentemente reverte após restauração do eutireoidismo.",
+    "hint": "Tratar tireóide primeiro",
+    "exp": "O hipertireoidismo é causa reversível de FA — até 60% dos casos de FA por hipertireoidismo revertem após eutireoidismo. Os beta-bloqueadores são a primeira linha para controle de frequência (propranolol também inibe conversão periférica de T4→T3). Os bloqueadores dos canais de cálcio são alternativa. Anticoagulação deve ser mantida pelo risco tromboembólico durante o estado tireotóxico. Após tratamento definitivo da tireóide, reavalia-se necessidade de anticoagulação pelo CHA₂DS₂-VASc."
+  },
+  {
+    "cat": "FA no Pós-operatório",
+    "q": "Qual é a incidência e principal fator de risco de FA no pós-operatório de cirurgia cardíaca?",
+    "a": "Incidência 20-50% após CRM e até 60% após cirurgia valvar. Pico: 2º-3º dia PO. Principal fator: inflamação pericárdica e ativação simpática. Beta-bloqueadores perioperatórios e amiodarona profilática reduzem a incidência.",
+    "hint": "2º-3º dia PO",
+    "exp": "A FA pós-operatória (POAF) é a arritmia mais comum após cirurgia cardíaca. Mecanismos: inflamação (pericardite), isquemia atrial, desequilíbrio autonômico, distúrbios eletrolíticos (hipocalemia, hipomagnesemia). Consequências: AVC, aumento de permanência hospitalar, maior mortalidade. Profilaxia: manter BB pré-op; amiodarona oral (400mg 2x/d por 5 dias antes + 200mg 2x/d 5 dias após) reduz POAF em ~50%. A maioria dos casos de POAF reverte espontaneamente em semanas; anticoagulação por ≥4 semanas é recomendada."
+  },
+  {
+    "cat": "FA na Gravidez",
+    "q": "Quais anticoagulantes são seguros na FA durante a gravidez?",
+    "a": "Heparina não-fracionada (HNF) ou heparina de baixo peso molecular (HBPM) — 1º e 3º trimestres. Varfarina pode ser considerada no 2º trimestre (13-36 semanas) se dose ≤5mg/dia. DOACs são contraindicados em todos os trimestres (dados insuficientes, possível teratogenicidade).",
+    "hint": "Heparina gravidez",
+    "exp": "A varfarina atravessa a placenta e é teratogênica (embriopatia varfarínica: hipoplasia nasal, condrodisplasia punctata — especialmente nas semanas 6-12). No 2º trimestre, o risco é menor. A HBPM não atravessa a placenta e é segura para o feto. Próximo ao parto, transição para HNF IV para facilitar reversão com protamina. Os DOACs são contraindicados pela falta de dados de segurança. O controle de frequência na gravidez: BB (metoprolol, propranolol — cuidado com betaxolol: bradicardia fetal); digoxina; verapamil."
+  },
+  {
+    "cat": "FA e Pré-excitação (WPW)",
+    "q": "Por que bloqueadores do nó AV são contraindicados na FA com síndrome de Wolff-Parkinson-White?",
+    "a": "Ao bloquear o nó AV, a condução preferencial ocorre pela via acessória (VA) — que tem período refratário curto — permitindo frequências ventriculares >300 bpm com risco de fibrilação ventricular (FV) e morte súbita.",
+    "hint": "Via acessória → FV",
+    "exp": "Na FA com WPW, os complexos QRS são pré-excitados (largos, delta wave) e a frequência ventricular pode ser extremamente alta. Drogas que bloqueiam o nó AV (digoxina, verapamil, diltiazem, adenosina, beta-bloqueadores) podem paradoxalmente acelerar a condução pela VA ao reduzir o período refratário da VA ou por efeito reflexo adrenérgico. Tratamento de escolha: CVE urgente ou procainamida IV (bloqueia a VA). A ablação da VA por cateter é o tratamento definitivo e deve ser realizada eletivamente após estabilização."
+  },
+  {
+    "cat": "Anticoagulação - Prática",
+    "q": "Qual é o intervalo mínimo entre a última dose de DOAC e uma cirurgia de baixo risco hemorrágico vs. alto risco?",
+    "a": "Baixo risco: 24h (2 meias-vidas). Alto risco/neuraxial: 48h (função renal normal). Dabigatrana com CrCl 30-50 mL/min: 48-72h para baixo risco, ≥96h para alto risco.",
+    "hint": "24h baixo / 48h alto",
+    "exp": "O manejo perioperatório dos DOACs é baseado em meias-vidas: dabigatrana (t½ 12-17h, renal 80%); rivaroxabana (t½ 5-9h); apixabana (t½ 12h); edoxabana (t½ 10-14h). Para cirurgias de alto risco de sangramento (neurocirurgia, cirurgia cardíaca, grandes ortopédicas), esperar 4-5 meias-vidas. Não há necessidade de heparina de ponte com DOACs (ao contrário da varfarina) em pacientes sem alto risco trombótico específico. O reinício pós-operatório: 24-48h para baixo risco, 48-72h para alto risco."
+  },
+  {
+    "cat": "Anticoagulação - Prática",
+    "q": "Como manejar a FA em paciente que necessita de anticoagulação e antiagregação plaquetária concomitante (ex: stent coronariano recente)?",
+    "a": "Terapia antiplaquetária dupla (DAPT) + anticoagulante = 'tripla terapia' — aumenta sangramento 3-4x. Minimizar para: DOAC + clopidogrel (sem AAS) após 1 semana pós-stent (estratégia dupla preferida). Duração conforme risco isquêmico/hemorrágico.",
+    "hint": "Dupla > tripla",
+    "exp": "Os estudos PIONEER AF-PCI, RE-DUAL PCI, AUGUSTUS e ENTRUST-AF PCI demonstraram que a estratégia dupla (DOAC + clopidogrel) é tão eficaz na prevenção de eventos isquêmicos quanto a tripla terapia (DOAC + AAS + clopidogrel), com significativa redução de sangramento. O AAS é descontinuado após 1 semana do stent na maioria dos casos. Em pacientes com ACS ou stent de alto risco trombótico (stent em tronco, bifurcação, multivaso), pode-se manter tripla terapia por 1 mês. O DOAC de escolha nessa situação é o apixabana ou rivaroxabana 15mg."
+  },
+  {
+    "cat": "Controle de Ritmo - Evidências",
+    "q": "O que o estudo EAST-AFNET 4 demonstrou sobre estratégia de controle de ritmo precoce na FA?",
+    "a": "Controle de ritmo precoce (≤1 ano do diagnóstico de FA) reduziu significativamente o desfecho primário (morte CV + AVC + hospitalização por IC ou SCA) comparado ao controle de frequência habitual em pacientes com FA e condições cardiovasculares.",
+    "hint": "EAST: ritmo precoce",
+    "exp": "O EAST-AFNET 4 (NEJM 2020) randomizou 2789 pacientes com FA recente (<1 ano) e ≥1 condição CV para controle de ritmo precoce vs. controle de frequência. Resultado: RRR de 21% no desfecho primário no grupo ritmo (5,1 vs. 6,1 por 100 pacientes-ano; HR 0,79). O benefício foi consistente independente da droga antiarrítmica ou ablação usada. Isso desafiou o paradigma anterior (AFFIRM, RACE) que não mostrou superioridade do controle de ritmo, possivelmente porque aqueles estudos incluíam FA mais antiga e pacientes mais idosos."
+  },
+  {
+    "cat": "Diagnóstico",
+    "q": "Qual é o tempo mínimo de FA detectada por monitor implantável (ILR) necessário para indicar anticoagulação (FA subclínica)?",
+    "a": "FA subclínica ≥24 horas detectada por ILR ou dispositivo implantado está associada a maior risco de AVC e indica forte consideração de anticoagulação conforme CHA₂DS₂-VASc ≥2 (homens). Episódios <24h têm risco menor mas não nulo.",
+    "hint": ">24h = anticoagular",
+    "exp": "O estudo ASSERT mostrou que episódios de taquicardia atrial subclínica >6 min detectados por marca-passo aumentaram o risco de AVC em 2,5x. O estudo LOOP demonstrou que detecção de FA por ILR e anticoagulação subsequente reduziu AVC vs. cuidado padrão. As diretrizes ACC/AHA 2023 recomendam: FA subclínica ≥24h + CHA₂DS₂-VASc ≥2 (homens) ou ≥3 (mulheres) → anticoagulação (IIa). Episódios de 5-24h: consideração individualizada. O limiar exato ainda é área de debate ativo."
+  },
+  {
+    "cat": "Oclusão do Apêndice Atrial Esquerdo",
+    "q": "Qual é a principal indicação do dispositivo de oclusão do apêndice atrial esquerdo (Watchman) na FA?",
+    "a": "FA não valvar com CHA₂DS₂-VASc ≥2 (homens) e contraindicação absoluta ou intolerância à anticoagulação oral a longo prazo (ex: sangramento intracraniano espontâneo, hemorragia digestiva recorrente refratária).",
+    "hint": "Contraindica anticoag",
+    "exp": "O AAE é responsável por >90% dos trombos na FA não valvar. O Watchman (Boston Scientific) é o dispositivo mais estudado — estudos PROTECT AF e PREVAIL mostraram não-inferioridade à varfarina. Exige anticoagulação por ≥45 dias pós-implante e dupla antiagregação por 6 meses até re-endotelização. O Lariat (ligadura epicárdica) é alternativa percutânea. Não é substituto da anticoagulação em pacientes tolerantes — é opção para quem realmente não pode anticoagular."
+  },
+  {
+    "cat": "Diagnóstico Diferencial",
+    "q": "Como diferenciar FA com condução aberrante de taquicardia ventricular (TV) no ECG?",
+    "a": "FA com aberrância: QRS largo com morfologia típica de BRD ou BRE, intervalo R-R irregularmente irregular, sem dissociação AV. TV: R-R regular (geralmente), QRS >140ms, morfologia estranha, dissociação AV (ondas P independentes), batimentos de fusão/captura.",
+    "hint": "Irregular = FA",
+    "exp": "A FA com condução aberrante (BRD funcional — fenômeno de Ashman) pode simular TV. O fenômeno de Ashman: complexo aberrante após intervalo R-R longo seguido de curto (período refratário prolongado após ciclo longo). A dissociação AV é o critério mais específico para TV. Os critérios de Brugada e Vereckei ajudam na diferenciação. Na dúvida ou instabilidade: tratar como TV. A FA com WPW pode simular TV com QRS pré-excitados largos e frequência alta — nunca usar adenosina nesse contexto."
+  },
+  {
+    "cat": "Prognóstico e Complicações",
+    "q": "Quais são os principais desfechos adversos associados à FA não tratada?",
+    "a": "AVC isquêmico (risco 5x maior); insuficiência cardíaca; cardiomiopatia taquicardia-induzida; comprometimento cognitivo/demência; qualidade de vida reduzida; mortalidade cardiovascular aumentada (2x). A FA está presente em 15-20% de todos os AVCs isquêmicos.",
+    "hint": "AVC, IC, morte",
+    "exp": "A FA é a arritmia cardíaca sustentada mais comum e causa enorme morbidade. O risco de AVC é 5x maior do que em pacientes sem FA e os AVCs são mais graves (maior área isquêmica, pior prognóstico funcional). A demência vascular e o declínio cognitivo podem ser causados por microembolias cerebrais silenciosas. A mortalidade global é 2x maior na FA vs. ritmo sinusal, mesmo após ajuste para comorbidades. O tratamento adequado (anticoagulação + controle de FC/ritmo) reduz significativamente esses desfechos."
+  },
+  {
+    "cat": "Controle de Frequência",
+    "q": "Qual é o papel da ivabradina no controle de frequência da FA?",
+    "a": "Nenhum. A ivabradina bloqueia canais If do nó sinusal e é eficaz apenas em ritmo sinusal. Não tem efeito na FA (o nó sinusal não controla a frequência ventricular na FA).",
+    "hint": "Apenas ritmo sinusal",
+    "exp": "A ivabradina é um inibidor seletivo da corrente If (funny current) do nó sinusal, reduzindo a frequência em ritmo sinusal sem efeito inotrópico negativo. Na FA, a frequência ventricular é determinada pela condução pelo nó AV, não pelo nó sinusal. Portanto, a ivabradina não tem papel no controle de frequência na FA. Esse é um ponto frequentemente testado em provas — confusão entre indicações. A ivabradina tem indicação na IC com FE reduzida em ritmo sinusal com FC ≥70 bpm e sintomas persistentes."
+  },
+  {
+    "cat": "Ablação por Cateter - Técnica",
+    "q": "O que é o protocolo de anticoagulação uninterrupted durante ablação de FA e por que é preferido?",
+    "a": "Manutenção do DOAC sem interrupção antes, durante e após a ablação. Reduz tromboembolismo periprocedimento sem aumentar sangramento significativamente, comparado à estratégia de interrupção com ponte heparínica.",
+    "hint": "Sem interromper DOAC",
+    "exp": "Estudos como VENTURE-AF e RE-CIRCUIT demonstraram que a ablação sem interrupção do DOAC é segura e eficaz. A interrupção do DOAC cria uma 'janela' de anticoagulação subótima num período de alto risco tromboembólico (manipulação intracardíaca, cardioversão). A estratégia uninterrupted é recomendada nas diretrizes atuais. Adicionalmente, heparina IV é administrada intraprocedimento com alvo de ACT (activated clotting time) >300-350 segundos. A estratégia de 'minimal interruption' (última dose na manhã do procedimento) também é aceitável."
+  },
+  {
+    "cat": "Classificação - FA",
+    "q": "O que é FA 'solitária' (lone AF) e tem ainda relevância clínica?",
+    "a": "Termo históricamente usado para FA em jovens (<60 anos) sem cardiopatia ou hipertensão identificadas — baixo risco tromboembólico. O termo está em desuso pois o CHA₂DS₂-VASc já contempla essa população (escore 0 = baixo risco). O conceito foi abandonado nas diretrizes atuais.",
+    "hint": "Termo obsoleto",
+    "exp": "A 'lone AF' foi descrita como FA em pacientes jovens sem fatores de risco identificáveis. No entanto, estudos longitudinais mostraram que muitos desses pacientes desenvolviam hipertensão ou outras condições ao longo do tempo. As diretrizes ACC/AHA 2023 recomendam usar o CHA₂DS₂-VASc para todos os pacientes com FA — escore 0 em homens não requer anticoagulação. O termo 'lone AF' foi retirado das diretrizes por ser impreciso e potencialmente enganoso."
+  },
+  {
+    "cat": "Diagnóstico",
+    "q": "Quais exames complementares são recomendados na avaliação inicial do paciente com FA recém-diagnosticada?",
+    "a": "ECG 12 derivações; ecocardiograma transtorácico (ETT); TSH; hemograma; eletrólitos; função renal (creatinina); função hepática; glicemia; teste de esforço se cardiopatia isquêmica suspeita; Holter se FA paroxística suspeita e ECG normal.",
+    "hint": "ETT + TSH + função renal",
+    "exp": "O ETT é fundamental para avaliar: dilatação e função do AE, função ventricular (excluir cardiomiopatia), valvopatias (especialmente estenose mitral), HVE, PSAP (hipertensão pulmonar). O TSH detecta hiper/hipotireoidismo como causa reversível. A função renal é necessária para dosar e ajustar anticoagulantes. Eletrólitos identificam distúrbios que perpetuam a arritmia. O EcoTE é indicado antes de cardioversão (FA >48h) ou quando se suspeita de trombo no AAE."
+  },
+  {
+    "cat": "Fisiopatologia - Flutter",
+    "q": "Por que o Flutter Atrial tipicamente apresenta bloqueio AV 2:1 e não conduz 1:1 ao ventrículo?",
+    "a": "A frequência atrial do Flutter (~300 bpm) excede a capacidade de condução do nó AV, que entra em período refratário relativo após cada impulso conduzido, resultando em bloqueio 2:1 fisiológico (FC ventricular ~150 bpm).",
+    "hint": "Refratário nodal = 2:1",
+    "exp": "O nó AV tem período refratário funcional que limita a condução a ~200-250 bpm. Com frequência atrial de 300 bpm no Flutter, cada segundo impulso encontra o nó AV refratário, resultando em condução 2:1 e FC ventricular de ~150 bpm. Em crianças, em pacientes com síndrome de pré-excitação (WPW) ou sob efeito de agentes que encurtam o período refratário do nó AV (simpaticomiméticos, cafeína), pode ocorrer condução 1:1 com FC ~300 bpm — emergência por risco de FV."
+  },
+  {
+    "cat": "Controle de Ritmo - Cardioversão",
+    "q": "Qual é o protocolo de anticoagulação para cardioversão eletiva de FA com duração ≤48 horas?",
+    "a": "Se duração comprovada ≤48h: cardioversão sem anticoagulação prévia obrigatória (mas heparina IV/DOAC imediatamente antes se CHA₂DS₂-VASc ≥2) + anticoagulação por ≥4 semanas após ('atordoamento atrial').",
+    "hint": "≤48h: anticoag após",
+    "exp": "A janela de ≤48h é o limiar abaixo do qual o risco de trombo no AAE é considerado baixo (estudos de EcoTE mostram trombo em <1% dos casos). No entanto, após cardioversão, mesmo bem-sucedida, o átrio fica 'atordoado' por dias a semanas com disfunção mecânica residual, criando risco de formação de novo trombo. Por isso, a anticoagulação por ≥4 semanas pós-cardioversão é mandatória em todos os pacientes com FA, independente do CHA₂DS₂-VASc. Após 4 semanas, decide-se anticoagulação a longo prazo pelo escore."
+  },
+  {
+    "cat": "Controle de Ritmo",
+    "q": "O que é a estratégia 'pill in the pocket' e para quem é indicada?",
+    "a": "Uso de antiarrítmico (flecainida 200-300mg VO ou propafenona 450-600mg VO) pelo próprio paciente durante episódio de FA paroxística sintomática, sem hospitalização. Indicada para FA paroxística infrequente, sem cardiopatia estrutural significativa, com episódios bem tolerados.",
+    "hint": "Auto-cardioversão oral",
+    "exp": "A estratégia 'pill in the pocket' permite que o paciente converta a FA em casa, evitando idas ao pronto-socorro. Requisitos: (1) ausência de cardiopatia estrutural significativa; (2) episódios infrequentes com início claro; (3) primeira dose em ambiente monitorado para verificar segurança (ausência de bradicardia, PR/QRS prolongados, pró-arritmia); (4) paciente treinado para reconhecer sintomas e quando usar. Taxa de conversão: ~70-90% em 3-4 horas. O uso concomitante de betabloqueador previne a aceleração da resposta ventricular se o Flutter surgir."
+  },
+  {
+    "cat": "FA - Populações Especiais",
+    "q": "Como manejar FA em paciente com doença renal crônica estágio 5 (TFG <15 mL/min ou diálise)?",
+    "a": "Anticoagulação é controversa — dados limitados. A apixabana 5mg 2x/dia é o DOAC com maior evidência em diálise (estudos RENAL-AF e AXADIA). Varfarina é alternativa (risco de calcificação vascular). Nunca usar dabigatrana (80% excreção renal).",
+    "hint": "Apixabana em diálise",
+    "exp": "Pacientes com DRC avançada têm risco aumentado tanto de AVC quanto de sangramento, tornando a decisão de anticoagulação complexa. A varfarina foi historicamente usada mas está associada a calcificação arterial e eventos cardiovasculares em pacientes renais. A apixabana tem menor dependência renal (~27% excreção renal) e é o DOAC com mais dados em DRC grave/diálise. O estudo RENAL-AF (apixabana vs. varfarina em diálise) foi interrompido precocemente mas sugere segurança similar. A decisão deve ser individualizada com discussão de riscos."
+  },
+  {
+    "cat": "Controle de Ritmo - Evidências",
+    "q": "O que os estudos AFFIRM e RACE concluíram sobre controle de ritmo vs. controle de frequência na FA?",
+    "a": "Controle de ritmo NÃO foi superior ao controle de frequência em mortalidade ou AVC em pacientes com FA crônica (idade >65 anos, FRs cardiovasculares). O controle de ritmo apresentou mais hospitalizações e efeitos adversos das drogas antiarrítmicas.",
+    "hint": "AFFIRM: ritmo = frequência",
+    "exp": "O AFFIRM (NEJM 2002, n=4060) e o RACE (NEJM 2002) compararam controle de ritmo (drogas antiarrítmicas) vs. controle de frequência em pacientes com FA persistente/crônica. Ambos falharam em mostrar superioridade do controle de ritmo. A análise post-hoc do AFFIRM sugeriu que manutenção do ritmo sinusal estava associada a menor mortalidade — mas anulada pelos efeitos adversos das drogas. Esses estudos são anteriores à era da ablação por cateter moderna e do EAST-AFNET 4. O EAST-AFNET 4 (2020) mudou o paradigma, mostrando benefício do controle de ritmo PRECOCE."
+  },
+  {
+    "cat": "Ablação - Resultados",
+    "q": "Qual é a taxa de sucesso da ablação de FA paroxística vs. FA persistente em longo prazo?",
+    "a": "FA paroxística: 70-85% livre de FA em 1 ano (único procedimento), 80-90% após múltiplos procedimentos. FA persistente: 50-70% em 1 ano (único procedimento); FA persistente longa duração: 40-60%. Taxas reduzem com o tempo e melhoram com reintervenção.",
+    "hint": "Parox > persist",
+    "exp": "O substrato da FA persistente é mais complexo (maior fibrose, remodelamento mais avançado) — o IVP isolado frequentemente é insuficiente. Estratégias adicionais (ablação de rotores, linhas no teto do AE e no istmo mitral, ablação de baixa voltagem) aumentam a complexidade e o risco sem benefício consistentemente demonstrado em ECRs. A cirurgia de Cox-Maze III/IV tem taxa de sucesso maior (85-95%) mas é reservada para cirurgias cardíacas concomitantes. Fatores preditivos de insucesso: AAE dilatado, FA longa duração, obesidade, apneia do sono não tratada."
+  },
+  {
+    "cat": "FA - Populações Especiais",
+    "q": "Como a apneia obstrutiva do sono (AOS) se relaciona com a FA e impacta o tratamento?",
+    "a": "AOS é fator de risco independente para FA (OR ~2) e preditor de recorrência após ablação (redução de sucesso em ~30%). O CPAP adequado reduz recorrência de FA e melhora resultados pós-ablação.",
+    "hint": "AOS: CPAP melhora ablação",
+    "exp": "A AOS causa FA por hipóxia intermitente, variações de pressão intratorácica, ativação autonômica e remodelamento atrial. Estudos mostram que CPAP reduz a recorrência de FA de forma comparável a antiarrítmicos em pacientes com AOS e FA paroxística. Antes de indicar ablação ou intensificar antiarrítmicos, o screening para AOS (polissonografia ou monitorização domiciliar) é recomendado. O manejo da AOS é componente fundamental da estratégia de 'upstream therapy' (tratamento da causa subjacente da FA)."
+  },
+  {
+    "cat": "Upstream Therapy",
+    "q": "O que é 'upstream therapy' na FA e quais agentes têm evidência para prevenção/redução da carga de FA?",
+    "a": "Tratamento das condições que promovem remodelamento atrial e substrato pró-arrítmico. Evidência: IECA/BRA (especialmente na IC e HAS), estatinas (pós-CRM), controle da obesidade/apneia do sono, exercício moderado. Evidência limitada para omega-3, colchicina.",
+    "hint": "IECA/BRA: anti-remodelamento",
+    "exp": "O RAAS e a inflamação promovem fibrose atrial e remodelamento. IECA/BRA têm evidência mais forte em contexto de IC e pós-IAM para prevenção de FA. Na população geral com FA, a evidência é menos consistente. A perda de peso significativa (>10% do peso corporal) demonstrou redução substancial da carga de FA no estudo LEGACY. O exercício aeróbico moderado reduz FA; o exercício de alta intensidade (atletas de endurance) paradoxalmente pode aumentar o risco. A colchicina pode reduzir FA pós-operatória (inflamatória)."
+  },
+  {
+    "cat": "Diagnóstico",
+    "q": "Qual é o papel do monitor cardíaco implantável (ILR) no diagnóstico da FA?",
+    "a": "Detecção de FA paroxística em pacientes com AVC criptogênico ou palpitações inexplicadas. O ILR aumenta a detecção de FA em 3-4x comparado ao monitoramento convencional (Holter 24h) em pacientes pós-AVC (estudo CRYSTAL AF).",
+    "hint": "AVC cripto → ILR",
+    "exp": "O estudo CRYSTAL AF (NEJM 2014) mostrou que o ILR detectou FA em 12,4% dos pacientes com AVC criptogênico em 12 meses vs. 2% no monitoramento convencional (30 dias de monitoramento). Em 36 meses: 30% vs. 3%. O ILR é recomendado após AVC criptogênico para busca de FA subclínica — se detectada, indica anticoagulação oral. Também usado em palpitações com Holter negativo e síncope inexplicada. A durabilidade é de ~3 anos com bateria. Leitura remota automática transmite alertas quando FA é detectada."
+  },
+  {
+    "cat": "Controle de Ritmo - Drogas",
+    "q": "Quais são os principais efeitos adversos da amiodarona que necessitam monitoramento periódico?",
+    "a": "Tireóide (hiper ou hipotireoidismo — 15-20%); pulmão (pneumonite/fibrose — 1-5%); fígado (hepatotoxicidade); olho (depósitos corneanos — quase universais, raramente afetam visão; neuropatia óptica — raro mas grave); pele (fotossensibilidade, coloração acinzentada); neurológico (ataxia, tremores).",
+    "hint": "TPEFON: 6 órgãos",
+    "exp": "A amiodarona contém 37% de iodo por peso molecular — 200mg/dia libera ~75mg de iodo livre diariamente (ingesta diária normal: 0,2mg). Isso explica a disfunção tireoidiana. Monitoramento anual: TSH (semestralmente no primeiro ano), TGO/TGP/GGT, RX de tórax (TC se sintomas), função ocular (fundoscopia se visual alterada). A pneumonite por amiodarona pode ser aguda (dias-semanas após início) ou crônica (insidiosa). TC de tórax com 'vidro fosco' é o padrão. Descontinuação + corticóide para pneumonite grave. A meia-vida extremamente longa (40-55 dias) significa efeitos persistem semanas a meses após descontinuação."
+  },
+  {
+    "cat": "FA - Definições",
+    "q": "O que é 'FA subclínica' ou 'AHRE' (Atrial High Rate Episodes) e como difere da FA clínica?",
+    "a": "AHRE são episódios de frequência atrial alta detectados por dispositivos implantados (PM, CDI, ILR) sem sintomas ou ECG convencional positivo. A FA clínica requer documentação em ECG de 12 derivações ou registro de pelo menos 30 segundos.",
+    "hint": "AHRE: dispositivo sem ECG",
+    "exp": "Com a proliferação de dispositivos cardíacos implantados e wearables, a FA subclínica/AHRE está sendo detectada com crescente frequência. Estudos como ASSERT, TRENDS e SOS-AF estabeleceram que AHRE >6 minutos aumentam risco de AVC. A correlação entre AHRE detectadas por dispositivos e FA verdadeira no ECG varia — alguns episódios são artefatos ou oversensing. A decisão de anticoagular baseada em AHRE deve considerar o contexto clínico e o CHA₂DS₂-VASc. Algoritmos mais recentes exigem AHRE >24h para indicação mais forte de anticoagulação."
+  },
+  {
+    "cat": "Definições e Critérios",
+    "q": "Qual a definição de Sepse segundo o Sepsis-3 (Singer et al., JAMA 2016)?",
+    "a": "Disfunção orgânica com risco de vida causada por resposta desregulada do hospedeiro à infecção, definida como aumento agudo de ≥ 2 pontos no escore SOFA.",
+    "hint": "SOFA ≥2 agudo",
+    "exp": "O Sepsis-3 substituiu os critérios SIRS por disfunção orgânica. O SOFA (Sequential Organ Failure Assessment) avalia 6 sistemas: respiratório (PaO2/FiO2), coagulação (plaquetas), hepático (bilirrubina), cardiovascular (PAM/vasopressores), neurológico (Glasgow) e renal (creatinina/diurese). A mudança enfatiza a resposta desregulada — não apenas a inflamação — como central na fisiopatologia."
+  },
+  {
+    "cat": "Definições e Critérios",
+    "q": "Como se define Choque Séptico segundo o Sepsis-3?",
+    "a": "Subconjunto da sepse com anormalidades circulatórias e celulares/metabólicas profundas: necessidade de vasopressor para manter PAM ≥ 65 mmHg E lactato sérico > 2 mmol/L, apesar de ressuscitação volêmica adequada.",
+    "hint": "Vasopressor + Lactato >2",
+    "exp": "O choque séptico identifica pacientes com mortalidade hospitalar > 40%. A combinação de necessidade de vasopressor (indicando vasoplegsia) e hiperlactatemia (indicando hipoperfusão celular) diferencia esse subgrupo de maior gravidade da sepse sem choque. Antes do Sepsis-3, o choque séptico era definido como hipotensão refratária — a nova definição é mais precisa e prognóstica."
+  },
+  {
+    "cat": "Definições e Critérios",
+    "q": "Quais são os critérios do escore qSOFA e quando utilizá-lo?",
+    "a": "qSOFA (quick SOFA): frequência respiratória ≥ 22/min, alteração do estado mental (Glasgow < 15) e PAS ≤ 100 mmHg. Score ≥ 2 sugere provável mau prognóstico. Usado para triagem rápida fora da UTI.",
+    "hint": "FR, Glasgow, PAS",
+    "exp": "O qSOFA foi proposto como ferramenta de triagem rápida, sem necessidade de exames laboratoriais, para identificar pacientes com infecção suspeita fora da UTI que possam ter evolução desfavorável. Sensibilidade menor que SOFA completo para diagnóstico de sepse, mas aplicável à beira do leito em emergências e enfermarias. Não substitui o SOFA para diagnóstico formal."
+  },
+  {
+    "cat": "Definições e Critérios",
+    "q": "O que é SIRS e por que foi abandonado como critério diagnóstico de Sepse?",
+    "a": "SIRS (Síndrome da Resposta Inflamatória Sistêmica): ≥2 de: temperatura >38°C ou <36°C, FC >90 bpm, FR >20/min ou PaCO2 <32 mmHg, leucócitos >12.000 ou <4.000 ou >10% bastões. Foi abandonado por baixa especificidade (presente em exercício, trauma, cirurgia) e por não capturar a disfunção orgânica.",
+    "hint": "Baixa especificidade",
+    "exp": "Os critérios SIRS foram introduzidos em 1991 (Bone et al.) e eram hipersensíveis mas inespecíficos — a maioria dos pacientes internados preenchia ≥2 critérios sem infecção. O Sepsis-3 (2016) substituiu por SOFA ≥2, que foca na disfunção orgânica real, sendo mais específico e prognóstico. A sepse severa (sepse + disfunção orgânica) foi eliminada como categoria separada."
+  },
+  {
+    "cat": "Definições e Critérios",
+    "q": "Quais órgãos e parâmetros são avaliados no escore SOFA completo?",
+    "a": "6 sistemas: (1) Respiratório — PaO2/FiO2; (2) Coagulação — plaquetas (×10³/µL); (3) Hepático — bilirrubina (mg/dL); (4) Cardiovascular — PAM ou dose de vasopressor; (5) Neurológico — Escala de Glasgow; (6) Renal — creatinina (mg/dL) ou diurese (mL/kg/h). Cada sistema pontuado de 0-4.",
+    "hint": "6 sistemas, 0-4 pts",
+    "exp": "Escore SOFA total varia de 0-24. Cada ponto acima do basal indica disfunção orgânica aguda. No Sepsis-3, o aumento de ≥2 pontos a partir da linha de base (considerada zero na ausência de disfunção prévia) define sepse. O SOFA é também utilizado para monitorar resposta ao tratamento e prognóstico ao longo da internação na UTI."
+  },
+  {
+    "cat": "Fisiopatologia",
+    "q": "Qual é o principal mecanismo fisiopatológico da vasodilatação no choque séptico?",
+    "a": "Ativação excessiva da óxido nítrico sintase induzível (iNOS) por citocinas (TNF-α, IL-1β), levando à produção maciça de óxido nítrico (NO), que relaxa o músculo liso vascular via GMPc, causando vasoplegsia refratária.",
+    "hint": "iNOS → NO → GMPc",
+    "exp": "O LPS bacteriano e outros PAMPs ativam macrófagos e células endoteliais via TLRs (toll-like receptors), desencadeando tempestade de citocinas pró-inflamatórias. TNF-α e IL-1β induzem a expressão de iNOS, que produz grandes quantidades de NO. O NO ativa a guanilato ciclase solúvel, elevando GMPc intracelular e causando relaxamento de músculo liso vascular. Vasopressina e azul de metileno atuam inibindo essa via."
+  },
+  {
+    "cat": "Fisiopatologia",
+    "q": "O que é 'disfunção mitocondrial séptica' e qual seu papel na hiperlactatemia?",
+    "a": "Na sepse grave, citocinas e espécies reativas de oxigênio inibem a cadeia transportadora de elétrons (especialmente complexo I e IV), reduzindo produção de ATP. A célula recorre à glicólise anaeróbia, produzindo lactato — mesmo na presença de O2 (hipóxia citopática).",
+    "hint": "Hipóxia citopática",
+    "exp": "A hiperlactatemia na sepse tem múltiplas causas: (1) hipoperfusão real com hipóxia tecidual; (2) disfunção mitocondrial (hipóxia citopática) — células 'não conseguem usar' o O2 disponível; (3) glicólise aeróbica acelerada por catecolaminas (ativação de receptores β2 → maior produção de piruvato → lactato). Isso explica por que lactato pode permanecer elevado mesmo após restauração da perfusão — e por que o clearance de lactato é mais importante que o valor absoluto."
+  },
+  {
+    "cat": "Fisiopatologia",
+    "q": "Qual o papel da disfunção endotelial na sepse e suas consequências clínicas?",
+    "a": "Citocinas e PAMPs danificam o endotélio → perda do glicocálix → aumento da permeabilidade capilar (edema), exposição de fatores pró-trombóticos (FT), vasodilatação via NO, adesão de leucócitos. Resulta em: choque distributivo, CIVD, edema orgânico e falência de múltiplos órgãos.",
+    "hint": "Glicocálix perdido",
+    "exp": "O glicocálix endotelial é a camada de proteoglicanos e glicoproteínas que reveste a superfície luminal do endotélio. Na sepse, heparanases e metaloproteases o degradam, expondo o endotélio. Consequências: aumento da permeabilidade capilar (fluidos escapam para o interstício), ativação da coagulação (fator tissular exposto), redução da atividade anticoagulante (menos trombomodulina). A albumina tem efeito protetor sobre o glicocálix — base fisiológica do seu uso na sepse."
+  },
+  {
+    "cat": "Fisiopatologia",
+    "q": "Descreva o mecanismo da CIVD (Coagulação Intravascular Disseminada) na sepse.",
+    "a": "Endotoxinas e citocinas ativam o fator tissular (FT) → ativação da cascata da coagulação → geração de trombina → microtrombos → consumo de fatores e plaquetas → sangramento. Simultaneamente, fibrinólise é suprimida (PAI-1 elevado).",
+    "hint": "FT → Trombina → Consumo",
+    "exp": "A CIVD séptica é uma CIVD 'pró-trombótica com fibrinólise inibida'. LPS ativa monócitos a expressar FT (fator III), iniciando a via extrínseca. A proteína C ativada (anticoagulante natural) é reduzida. O PAI-1 (inibidor do ativador do plasminogênio) é elevado por citocinas, suprimindo a fibrinólise. Resultado: trombos em microcirculação → isquemia orgânica, com consumo paradoxal causando também sangramento. D-dímero elevado e queda de fibrinogênio são marcadores."
+  },
+  {
+    "cat": "Fisiopatologia",
+    "q": "O que é o 'fenótipo hiperdinâmico' do choque séptico e como se distingue do cardiogênico?",
+    "a": "Choque séptico precoce: alto débito cardíaco (DC elevado), resistência vascular sistêmica baixa (RVS↓), pressão de pulso ampla, extremidades quentes — choque 'quente'. Cardiogênico: DC baixo, RVS alta, extremidades frias e úmidas.",
+    "hint": "Quente vs. Frio",
+    "exp": "O choque séptico é classicamente distributivo: vasodilatação periférica (via NO e prostaglandinas) reduz a pós-carga, e o coração compensa aumentando o DC (desde que bem ressuscitado). Mas pode haver disfunção miocárdica séptica concomitante (cardiomiopatia séptica), tornando o quadro misto. Ecocardiografia point-of-care (POCUS) é essencial para distinguir — mostra câmaras hiperdinâmicas na sepse e hipocinéticas no choque cardiogênico."
+  },
+  {
+    "cat": "Diagnóstico e Biomarcadores",
+    "q": "Qual o papel do lactato sérico no diagnóstico e monitoramento do choque séptico?",
+    "a": "Lactato > 2 mmol/L é critério diagnóstico de choque séptico (junto a vasopressor). Lactato > 4 mmol/L indica hipoperfusão grave. O clearance de lactato (redução ≥ 10-20% em 2h) é alvo de ressuscitação e marcador prognóstico — mais importante que o valor absoluto isolado.",
+    "hint": "Clearance >10-20% em 2h",
+    "exp": "A SSC 2021 recomenda medir lactato ao diagnóstico e repetir em 1-2h se inicial > 2 mmol/L. O lactato reflete hipoperfusão tecidual (hipóxia) mas também pode ser elevado por glicólise aeróbica acelerada (β2-agonistas), falência hepática (metabolismo reduzido) ou disfunção mitocondrial. O clearance de lactato correlaciona-se com melhora da perfusão e redução de mortalidade — um alvo mais dinâmico e clinicamente relevante."
+  },
+  {
+    "cat": "Diagnóstico e Biomarcadores",
+    "q": "Qual a utilidade da Procalcitonina (PCT) na sepse?",
+    "a": "PCT > 0,5 ng/mL sugere infecção bacteriana sistêmica. Utilizada para: (1) suporte ao diagnóstico de sepse bacteriana vs. viral/não-infecciosa; (2) guia de desescalonamento de antibióticos — queda de ≥ 80% ou PCT < 0,5 ng/mL orienta suspensão segura.",
+    "hint": "Desescalonar antibiótico",
+    "exp": "PCT é produzida por células neuroendócrinas em resposta a endotoxinas bacterianas e citocinas pró-inflamatórias (IL-6, TNF-α). Eleva-se em 4-6h e pico em 24-48h. Mais específica que PCR para infecção bacteriana. Vantagem sobre PCR: meia-vida mais curta (24-36h), permitindo monitoramento rápido de resposta. Falsos positivos: trauma cirúrgico, TCE, câncer medular de tireoide. Falsos negativos: infecções localizadas, fungos, vírus."
+  },
+  {
+    "cat": "Diagnóstico e Biomarcadores",
+    "q": "Qual a diferença prognóstica entre lactato 2-4 mmol/L e > 4 mmol/L na sepse?",
+    "a": "Lactato 2-4 mmol/L: mortalidade ~15-25% (hipoperfusão moderada). Lactato > 4 mmol/L: mortalidade > 40%, indica hipoperfusão grave/choque séptico declarado independente da pressão arterial. Ambos requerem ressuscitação agressiva e reavaliação em 2h.",
+    "hint": "4 mmol/L = 40% mortalidade",
+    "exp": "O lactato > 2 mmol/L define choque séptico junto ao vasopressor (Sepsis-3). Pacientes com PAM adequada mas lactato > 4 têm prognóstico similar ao com hipotensão — a SSC 2021 inclui esse grupo nos bundles de ressuscitação. O conceito de 'choque oculto' (pressão normal + lactato elevado) é clinicamente relevante: não espere hipotensão para iniciar ressuscitação agressiva."
+  },
+  {
+    "cat": "Diagnóstico e Biomarcadores",
+    "q": "Qual o papel das hemoculturas no manejo da sepse e quando devem ser coletadas?",
+    "a": "Coletar ≥ 2 pares de hemoculturas (aeróbias e anaeróbias) ANTES de iniciar antibióticos, idealmente em < 45 minutos do diagnóstico. Positividade: 30-50% na bacteremia séptica. Não atrasar antibióticos além de 45 min esperando coleta.",
+    "hint": "Antes dos ATB, ≤45 min",
+    "exp": "Hemoculturas identificam o patógeno e permitem desescalonamento dirigido — reduzindo resistência, toxicidade e custo. Coletar de 2 sítios diferentes (preferencialmente venopunção periférica bilateral, ou 1 periférica + 1 de CVC se já instalado). Volume adequado (8-10 mL por frasco) é crítico para sensibilidade. A SSC 2021 mantém coleta pré-ATB como recomendação forte, mas não deve atrasar antibioticoterapia se logisticamente difícil."
+  },
+  {
+    "cat": "Diagnóstico e Biomarcadores",
+    "q": "O que é 'sepsis mimics' e quais diagnósticos diferenciais devem ser considerados?",
+    "a": "Condições que simulam sepse: SIRS não-infecciosa (pancreatite, embolia pulmonar, IAM, crise adrenal, tireotoxicose), anafilaxia, overdose/intoxicação, síndrome neuroléptica maligna, trombose. Avaliação criteriosa evita antibioticoterapia desnecessária.",
+    "hint": "SIRS sem infecção",
+    "exp": "O diagnóstico de sepse é clínico-laboratorial e requer suspeita de infecção. Pancreatite grave, embolia pulmonar extensa e IAM podem apresentar SOFA ≥2, hipotensão e lactato elevado sem infecção. A crise adrenal (hipocortisolismo) mimetiza o choque séptico refratário. Anamnese cuidadosa, busca ativa do foco infeccioso (exame físico, culturas, imagem) e testes direcionados (amilase, D-dímero, ECG, cortisol) são fundamentais."
+  },
+  {
+    "cat": "Ressuscitação Volêmica",
+    "q": "Qual o volume e tipo de fluido recomendado na ressuscitação inicial da sepse pela SSC 2021?",
+    "a": "SSC 2021: cristaloide isotônico 30 mL/kg nas primeiras 3 horas para hipotensão ou lactato ≥ 4 mmol/L. Solução salina 0,9% ou Ringer Lactato. Após 3h, guiar por marcadores de responsividade a fluidos.",
+    "hint": "30 mL/kg / 3h",
+    "exp": "O bundle 1 hora da SSC 2021 prevê início imediato de ressuscitação volêmica. Ringer Lactato é preferido sobre SF 0,9% por menor risco de acidose hiperclorêmica e lesão renal aguda (estudo SMART). Após a ressuscitação inicial, avaliação de responsividade a fluidos (variação de pressão de pulso, elevação passiva de pernas, ecocardiografia) deve guiar reposição adicional — evitar sobrecarga hídrica que piora prognóstico."
+  },
+  {
+    "cat": "Ressuscitação Volêmica",
+    "q": "O que é o 'bundle de 1 hora' da SSC 2021 e quais suas metas?",
+    "a": "Iniciar DENTRO de 1 hora: (1) medir lactato; (2) coletar hemoculturas; (3) iniciar antibióticos de amplo espectro; (4) 30 mL/kg de cristaloide se hipotensão ou lactato ≥ 4 mmol/L; (5) iniciar vasopressor se PAM < 65 mmHg durante/após ressuscitação.",
+    "hint": "LHAVV: Lactato, Hemoc, ATB, Volume, Vaso",
+    "exp": "O bundle foi condensado de 3h/6h (2012) para 1h (2018/2021) baseado em evidências de que atrasos no ATB e ressuscitação aumentam mortalidade. Cada hora de atraso no ATB eleva mortalidade em 7-10%. A meta PAM ≥ 65 mmHg é o alvo hemodinâmico mínimo. O clearance de lactato e reavaliação clínica seriada são fundamentais nas primeiras 6h."
+  },
+  {
+    "cat": "Ressuscitação Volêmica",
+    "q": "Qual é o papel da albumina na ressuscitação da sepse?",
+    "a": "SSC 2021: considerar albumina 4-5% quando grandes volumes de cristaloides são necessários. Não é recomendada rotineiramente como fluido inicial. Pode reduzir volume total de fluidos e tem efeito protetor sobre o glicocálix endotelial. Albumina a 20-25% na hipoalbuminemia grave.",
+    "hint": "Glicocálix + Grandes volumes",
+    "exp": "O estudo ALBIOS mostrou que albumina não reduziu mortalidade em 28 dias vs. cristaloides, mas análise de subgrupo sugeriu benefício no choque séptico. A albumina restaura a oncose intravascular, protege o glicocálix endotelial e tem propriedades anti-inflamatórias. Contraindicações práticas: custo elevado, risco de sobrecarga. A SSC 2021 faz recomendação fraca (sugestão) para uso quando cristaloides substanciais são necessários."
+  },
+  {
+    "cat": "Ressuscitação Volêmica",
+    "q": "Por que coloides sintéticos (HES - amido hidroxietílico) são contraindicados na sepse?",
+    "a": "Amidos sintéticos aumentam risco de Lesão Renal Aguda (LRA) e necessidade de terapia renal substitutiva. Estudos 6S e CHEST mostraram maior mortalidade e LRA com HES vs. cristaloides em pacientes sépticos. SSC 2021: não usar HES em sepse.",
+    "hint": "HES → LRA aumentada",
+    "exp": "O HES deposita-se no epitélio tubular renal e em células do SRE, causando lesão tubular direta. O estudo 6S (NEJM 2012) mostrou mortalidade de 51% com HES vs. 43% com Ringer Acetato em sepse grave. O estudo CHEST (NEJM 2012) confirmou maior incidência de LRA com HES. Gelatinas têm evidência menos conclusiva de dano, mas também não são recomendadas rotineiramente. Somente cristaloides isotônicos e albumina têm suporte da SSC 2021."
+  },
+  {
+    "cat": "Ressuscitação Volêmica",
+    "q": "Como avaliar responsividade a fluidos na sepse? Cite métodos estáticos e dinâmicos.",
+    "a": "Estáticos (menos confiáveis): PVC, pressão de oclusão da artéria pulmonar (PAOP). Dinâmicos (preferidos): variação de pressão de pulso (VPP >13% em VM), variação de volume sistólico (VVS), elevação passiva de pernas (EPP) + medida de DC, desafio de fluido com 100-200 mL.",
+    "hint": "VPP, EPP, Desafio fluido",
+    "exp": "PVC isolada é pobre preditor de responsividade a fluidos (metanálise: AUC ~0,56). Os parâmetros dinâmicos têm melhor acurácia. VPP > 13% em paciente em VM controlada (sem arritmias, sem PEEP alta) prediz responsividade (AUC ~0,84). EPP: elevar pernas 45° e medir variação do DC imediatamente (autotransfusão de ~300 mL). POCUS: índice de colapsabilidade da VCI > 50% em ventilação espontânea prediz responsividade."
+  },
+  {
+    "cat": "Vasopressores e Inotrópicos",
+    "q": "Qual é o vasopressor de primeira linha no choque séptico e por quê?",
+    "a": "Noradrenalina (norepinefrina) é o vasopressor de primeira linha. Age principalmente em receptores α1 (vasoconstrição) com algum efeito β1 (inotropia leve). Comparada à dopamina: menos arritmias e menor mortalidade (estudo SOAP II). SSC 2021: recomendação forte.",
+    "hint": "α1 dominante, menos arritmia",
+    "exp": "O estudo SOAP II (NEJM 2010) comparou noradrenalina vs. dopamina: noradrenalina associou-se a menor taxa de arritmias (24% vs. 12,4%) e menor mortalidade no subgrupo de choque cardiogênico. A dopamina não demonstrou vantagem em nenhum subgrupo de choque séptico. Noradrenalina eleva PAM principalmente por vasoconstrição (↑RVS) com modesta elevação do DC. Concentrações: 4-16 mcg/mL via CVC; pode iniciar via acesso periférico calibroso por curto período."
+  },
+  {
+    "cat": "Vasopressores e Inotrópicos",
+    "q": "Quando adicionar Vasopressina ao tratamento do choque séptico?",
+    "a": "Adicionar vasopressina 0,03-0,04 U/min quando noradrenalina ≥ 0,25-0,5 mcg/kg/min (choque refratário), para reduzir dose de noradrenalina. SSC 2021: recomendação fraca. Não titular — dose fixa. Efeito: agonismo V1 (vasoconstrição) e V2 (retenção de água).",
+    "hint": "Dose fixa 0,03 U/min",
+    "exp": "Na sepse grave, vasopressina endógena é esgotada (deficiência relativa). Vasopressina exógena restaura o tônus vasomotor via receptores V1 vasculares, independente do sistema adrenérgico — mecanismo complementar à noradrenalina. O estudo VASST não mostrou diferença de mortalidade vs. noradrenalina em geral, mas subgrupo com sepse menos grave se beneficiou. Vantagem: permite reduzir catecolaminas (menor toxicidade). Dose acima de 0,04 U/min: risco de isquemia coronária, mesentérica."
+  },
+  {
+    "cat": "Vasopressores e Inotrópicos",
+    "q": "Qual o papel da Dobutamina no choque séptico e quando indicá-la?",
+    "a": "Dobutamina (agonista β1 > β2) é inotrópico de escolha quando há: (1) disfunção miocárdica séptica (FE reduzida ao ECO) + hipoperfusão persistente; (2) sinais de baixo DC apesar de PAM adequada. Dose: 2,5-20 mcg/kg/min. Pode causar hipotensão por vasodilatação (β2).",
+    "hint": "Cardiomiopatia séptica",
+    "exp": "A cardiomiopatia séptica ocorre em 30-60% dos casos, caracterizada por disfunção sistólica e/ou diastólica reversível (em sobreviventes). Mediada por TNF-α, IL-1β, NO e depressão direta do miócito. POCUS à beira do leito identifica FE reduzida e orienta indicação de inotrópico. O estudo ProCESS não sustentou metas de SvO2 > 70% com dobutamina de rotina, mas ela permanece indicada em casos de disfunção miocárdica documentada com hipoperfusão."
+  },
+  {
+    "cat": "Vasopressores e Inotrópicos",
+    "q": "Qual a diferença entre Epinefrina e Noradrenalina no choque séptico refratário?",
+    "a": "Epinefrina: agonismo α1, α2, β1 e β2 intenso → maior vasoconstrição + inotropia + cronotopia. Usada como vasopressor de resgate no choque séptico refratário (≥ 2 vasopressores em altas doses). Efeito adverso importante: hiperlactatemia por estimulação β2 (glicólise) — não confundir com piora da hipoperfusão.",
+    "hint": "Lactato falso-positivo",
+    "exp": "A epinefrina causa hiperlactatemia via β2 em músculos esqueléticos (aumento de glicogenólise e glicólise) independente da perfusão tecidual. Isso dificulta o uso do lactato como marcador de ressuscitação enquanto em uso. Deve ser reservada para choque refratário. O azul de metileno (inibidor da guanilato ciclase) e a terlipressina são outras alternativas no choque vasoplégico refratário."
+  },
+  {
+    "cat": "Vasopressores e Inotrópicos",
+    "q": "O que é choque vasoplégico refratário e quais são as opções de resgate?",
+    "a": "Choque séptico com necessidade de múltiplos vasopressores em altas doses sem resposta adequada. Opções de resgate: vasopressina (0,03-0,04 U/min), angiotensina II, azul de metileno (1-2 mg/kg IV), corticoterapia (hidrocortisona 200 mg/dia), terlipressina.",
+    "hint": "Azul de metileno, Ang II",
+    "exp": "O azul de metileno inibe a guanilato ciclase solúvel, reduzindo o efeito vasodilatador do NO — útil no choque vasoplégico refratário (ex: pós-CEC, anafilaxia, sepse). A angiotensina II (ATHOS-3 trial) mostrou redução de dose de noradrenalina em choque vasoplégico de alto débito. A angiotensina II atua via receptores AT1 na musculatura vascular. Corticoterapia complementa ao restaurar sensibilidade de receptores adrenérgicos."
+  },
+  {
+    "cat": "Antibioticoterapia",
+    "q": "Qual o timing ideal para início de antibióticos na sepse e no choque séptico?",
+    "a": "Sepse sem choque: iniciar em 1 hora do reconhecimento. Choque séptico: iniciar IMEDIATAMENTE (< 1 hora) após diagnóstico. Cada hora de atraso aumenta mortalidade em 7-10%. SSC 2021: recomendação forte para choque, recomendação moderada para sepse sem choque.",
+    "hint": "Choque = Imediato",
+    "exp": "O estudo de Kumar et al. (Crit Care Med 2006) demonstrou que cada hora de atraso no ATB no choque séptico reduzia a sobrevida em ~7%. A SSC 2021 diferencia sepse (1h) de choque séptico (imediato) baseado na maior mortalidade e urgência do segundo. Na sepse sem choque e incerteza diagnóstica, avaliação rápida (45-60 min) é permitida antes do ATB para evitar uso desnecessário. Mas uma vez confirmada a sepse, não atrasar."
+  },
+  {
+    "cat": "Antibioticoterapia",
+    "q": "Qual deve ser a cobertura empírica inicial de antibióticos no choque séptico de foco desconhecido?",
+    "a": "Cobertura de amplo espectro: gram-positivos (incluindo MRSA se suspeita), gram-negativos (incluindo Pseudomonas se fatores de risco), e anaeróbios se foco abdominal/pélvico suspeito. Exemplos: Piperacilina-tazobactam + Vancomicina; ou Carbapenêmico + Vancomicina em casos de maior gravidade/resistência.",
+    "hint": "Amplo espectro + MRSA",
+    "exp": "A escolha empírica deve considerar: foco suspeito, perfil local de resistência (antibiograma institucional), fatores de risco para organismos resistentes (internação prévia, ATB recente, colonização conhecida), e imunossupressão. Em suspeita de MRSA: Vancomicina ou Linezolida. Em gram-negativos resistentes (KPC, ESBL): Carbapenêmico. Em Candida (imunocomprometido, cirurgia abdominal, acesso venoso prolongado): acrescentar Equinocandina."
+  },
+  {
+    "cat": "Antibioticoterapia",
+    "q": "O que é desescalonamento de antibióticos e quando realizá-lo na sepse?",
+    "a": "Desescalonamento: transição de ATB de amplo espectro para terapia direcionada (menor espectro) baseada em culturas e antibiograma. Realizar em 48-72h após identificação do patógeno. Reduz resistência, toxicidade e custo sem aumentar mortalidade.",
+    "hint": "48-72h + cultura positiva",
+    "exp": "O desescalonamento é uma das intervenções mais importantes em stewardship antimicrobiano em UTI. Estudos (incluindo DALI, Morel et al.) mostram que desescalonamento guiado por culturas não piora prognóstico e pode melhorá-lo por reduzir seleção de resistentes e efeitos adversos. A PCT (queda ≥80% ou < 0,5 ng/mL) pode guiar duração total. Duração típica: 7-10 dias para a maioria das infecções sépticas, podendo ser menor em resposta clínica rápida."
+  },
+  {
+    "cat": "Antibioticoterapia",
+    "q": "Qual a duração recomendada de antibioticoterapia na sepse pela SSC 2021?",
+    "a": "SSC 2021: 7-10 dias para a maioria das infecções. Cursos mais curtos (5-7 dias) se boa resposta clínica. Guiar pelo nível de PCT (redução ≥80% ou < 0,5 ng/mL favorece suspensão). Prolongar em: imunocomprometidos, foco não controlado, resposta lenta.",
+    "hint": "7 dias padrão, PCT guia",
+    "exp": "A tendência é encurtar cursos de ATB baseado em biomarcadores e resposta clínica. Meta-análises mostram que cursos de 5-7 dias são equivalentes a 10-14 dias em pneumonia e infecções do trato urinário complicadas. A SSC 2021 recomenda usar PCT para orientar duração — reduzindo exposição a ATB sem aumentar mortalidade ou recorrência (estudos SAPS, ProHOSP). Exceções: endocardite, osteomielite, abscesso não drenado, Staphylococcus aureus bacteremia."
+  },
+  {
+    "cat": "Antibioticoterapia",
+    "q": "Quais os critérios para cobertura antifúngica empírica na sepse?",
+    "a": "Considerar equinocandina empírica em: imunossuprimidos (neutropênicos, transplantados), colonização por Candida em múltiplos sítios, cirurgia abdominal recente (especialmente por perfuração GI), NPT prolongada, cateter venoso central de longa data, antibioticoterapia prolongada de amplo espectro.",
+    "hint": "Candida score ≥3",
+    "exp": "O Candida Score ≥3 prediz candidemia (sensibilidade ~81%): cirurgia abdominal +1, NPT +1, colonização em múltiplos sítios +1, sepse grave/choque +2. Equinocandinas (micafungina, caspofungina, anidulafungina) são preferidas a fluconazol no choque séptico por Candida por melhor espectro e menor interação com drogas. Candida auris e C. glabrata podem ser resistentes ao fluconazol — acrescentam mais indicações para equinocandinas."
+  },
+  {
+    "cat": "Controle do Foco",
+    "q": "Qual a importância e o timing do controle do foco infeccioso na sepse?",
+    "a": "Controle do foco é essencial e deve ser realizado o mais brevemente possível (idealmente < 6-12h). Inclui: drenagem de abscessos, desbridamento de tecido necrótico, remoção de dispositivos infectados, reparo de perfurações viscerais. Sem controle do foco, ATB são insuficientes.",
+    "hint": "< 12h, sem foco = falha",
+    "exp": "SSC 2021: controle do foco é recomendação forte. O princípio é que corpos estranhos e coleções infectadas são fontes de PAMPs e biofilme inacessíveis aos ATB — perpetuam a resposta inflamatória. Exemplo: abscesso intra-abdominal requer drenagem percutânea ou cirúrgica; fascite necrotizante exige desbridamento cirúrgico urgente; CVC infectado deve ser removido imediatamente. A abordagem menos invasiva eficaz é preferida para minimizar dano adicional."
+  },
+  {
+    "cat": "Corticoterapia",
+    "q": "Quando está indicada hidrocortisona no choque séptico? Qual a dose e duração pela SSC 2021?",
+    "a": "Indicada quando: PAM < 65 mmHg persiste apesar de noradrenalina ≥ 0,25 mcg/kg/min por ≥ 4h (refratário). Dose: hidrocortisona 200 mg/dia em infusão contínua ou 50 mg 6/6h. Duração: manter até resolução do choque (desmame gradual).",
+    "hint": "Nora ≥0,25 por 4h",
+    "exp": "A insuficiência adrenal relativa (IAR) ocorre em 30-60% dos pacientes em choque séptico — resposta inadequada de cortisol ao estresse. Hidrocortisona melhora hemodinâmica (permite redução de vasopressores — 'vasopressor sparing'), mas estudos (CORTICUS, APROCCHSS, ADRENAL) mostram resultados mistos sobre mortalidade. O estudo ADRENAL (NEJM 2018) não mostrou redução de mortalidade em 90 dias, mas mostrou desmame mais rápido de vasopressores. Teste de estimulação com ACTH não é mais recomendado para guiar uso."
+  },
+  {
+    "cat": "Corticoterapia",
+    "q": "O teste de estimulação com ACTH (250 mcg) deve guiar o uso de hidrocortisona na sepse?",
+    "a": "Não. SSC 2021 não recomenda o teste de ACTH para guiar uso de corticosteroide na sepse. A decisão é baseada exclusivamente na refratariedade ao vasopressor (noradrenalina ≥ 0,25 mcg/kg/min), não nos níveis de cortisol.",
+    "hint": "Clínica, não o ACTH",
+    "exp": "O teste de estimulação com ACTH (cortisol basal + pós-250mcg ACTH) foi inicialmente proposto para identificar IAR. O estudo CORTICUS (NEJM 2008) mostrou que respondedores e não-respondedores ao ACTH tiveram benefício similar à hidrocortisona, invalidando o teste como guia. A SSC 2021 simplificou: use hidrocortisona baseado apenas na necessidade de altas doses de vasopressores, sem aguardar resultado laboratorial. Isso agiliza o tratamento e evita coleta desnecessária."
+  },
+  {
+    "cat": "Ventilação Mecânica",
+    "q": "Quais os parâmetros ventilatórios protetores recomendados na SDRA associada à sepse?",
+    "a": "Volume corrente (VC): 6 mL/kg de peso ideal. Pressão de platô: ≤ 30 cmH2O. Driving pressure: < 15 cmH2O. PEEP: titulada por tabelas PEEP/FiO2 (nível mínimo que mantém SpO2 ≥ 88-95%). FiO2 para SpO2 88-95%.",
+    "hint": "6 mL/kg, Platô ≤30",
+    "exp": "A ventilação protetora (ARDSnet, NEJM 2000) reduziu mortalidade de 40% para 31% na SDRA. Driving pressure = (pressão de platô - PEEP) — reflete a distensão aérea e é o melhor preditor de mortalidade na SDRA. Valores > 15 cmH2O associam-se a pior prognóstico. Em SDRA moderado-grave (PaO2/FiO2 < 150), prona por 16h/dia reduz mortalidade em 60 dias (estudo PROSEVA: 16% vs. 32%). Bloqueo neuromuscular precoce (48h) pode ser considerado em SDRA grave."
+  },
+  {
+    "cat": "Ventilação Mecânica",
+    "q": "Qual a meta de oxigenação na VM do paciente séptico com SDRA?",
+    "a": "SSC 2021: SpO2 92-96% (não supranormal). PaO2 55-80 mmHg. Evitar hipóxia (SpO2 < 88%) e hiperoxia (SpO2 > 96% / PaO2 > 100 mmHg). A hiperoxia é associada a estresse oxidativo e atelectasias por absorção.",
+    "hint": "92-96% SpO2, não mais",
+    "exp": "A hiperoxia liberal foi historicamente aceita por 'segurança', mas estudos recentes (como ICU-ROX e OXYGEN-ICU) sugerem que alvos conservadores de O2 são pelo menos equivalentes e potencialmente superiores em pacientes críticos. A toxicidade do O2 inclui: formação de radicais livres, atelectasias absortivas (FiO2 > 0,6), vasoconstrição coronária e cerebral. A SSC 2021 adota alvo conservador de SpO2 92-96% na sepse."
+  },
+  {
+    "cat": "Ventilação Mecânica",
+    "q": "Quando indicar decúbito prono (prona) na SDRA séptica?",
+    "a": "Indicada em SDRA moderada-grave: PaO2/FiO2 < 150 mmHg com FiO2 ≥ 0,6 e PEEP ≥ 5 cmH2O, apesar de VM protetora. Duração: sessões de ≥ 16 horas/dia. Estudo PROSEVA (NEJM 2013): redução de mortalidade de 32% para 16% em 28 dias.",
+    "hint": "P/F < 150, sessões ≥16h",
+    "exp": "O PROSEVA foi um marco: sesões de prona de ≥16h em SDRA grave com VM protetora reduziram mortalidade em 28 e 90 dias. Mecanismos: melhora da relação ventilação-perfusão (zonas dorsais bem perfundidas passam a ser ventiladas), distribuição mais homogênea do VC (reduz barotrauma), drenagem de secreções. Contraindicações relativas: instabilidade de coluna, queimaduras faciais graves, gestação avançada, cirurgia abdominal/torácica recente, pressão intracraniana elevada."
+  },
+  {
+    "cat": "Suporte Renal",
+    "q": "Como a sepse causa Lesão Renal Aguda (LRA) e qual o estadiamento KDIGO?",
+    "a": "LRA séptica: hipoperfusão renal + citocinas + obstrução de microcirculação + disfunção mitocondrial tubular. KDIGO: Estágio 1: creatinina ×1,5-1,9 ou diurese < 0,5 mL/kg/h por 6-12h; Estágio 2: ×2-2,9 ou diurese < 0,5 mL/kg/h por ≥12h; Estágio 3: ×3 ou creatinina ≥4 mg/dL ou diurese <0,3 mL/kg/h por ≥24h ou anúria ≥12h.",
+    "hint": "1,5x / 2x / 3x creatinina",
+    "exp": "LRA ocorre em 40-60% dos pacientes sépticos. Além da hipoperfusão, a sepse causa lesão tubular direta por citocinas e espécies reativas de oxigênio, independente da PAM. O 'choque criptogênico renal' explica por que PAM normal não protege completamente. Biomarcadores precoces de LRA séptica: NGAL urinária, cistatina C. A oligo-anúria pode persistir mesmo após restauração hemodinâmica — não forçar diurese com furosemida em alta dose (não muda desfecho, apenas o escore)."
+  },
+  {
+    "cat": "Suporte Renal",
+    "q": "Quando indicar Terapia Renal Substitutiva Contínua (TRSC) na sepse e qual modalidade preferir?",
+    "a": "Indicações: oligoanúria refratária, hipercalemia grave (>6,5 mEq/L), acidose metabólica grave (pH <7,1), sobrecarga hídrica grave refratária a diurético, uremia sintomática. Modalidade: TRSC (hemofiltração/hemodiafiltração) é preferida em instabilidade hemodinâmica sobre hemodiálise intermitente.",
+    "hint": "AEIOU: Acidose, Eletrolito, Intoxicação, Overload, Uremia",
+    "exp": "A TRSC oferece maior estabilidade hemodinâmica por remoção mais lenta e contínua de fluidos e solutos — menos hipotensão intradialítica. Dose recomendada: 20-25 mL/kg/h de efluente (estudos ATN e RENAL: doses maiores não reduziram mortalidade). Dose mínima de 20 mL/kg/h deve ser garantida prescrevendo 25-30 para compensar pausas. O timing precoce vs. tardio permanece controverso (AKIKI-2, IDEAL-ICU não mostraram benefício do início precoce)."
+  },
+  {
+    "cat": "Controle Glicêmico",
+    "q": "Qual a meta de glicemia recomendada na sepse pela SSC 2021?",
+    "a": "SSC 2021: alvo de glicemia 140-180 mg/dL. Evitar hipoglicemia (<70 mg/dL) — mais perigosa que hiperglicemia moderada. Usar protocolos de insulina em infusão contínua com monitoramento de 1-2h quando glicemia > 180 mg/dL.",
+    "hint": "140-180 mg/dL",
+    "exp": "O estudo de Van den Berghe (2001) sugeriu benefício de controle intensivo (80-110 mg/dL) em cirúrgicos, mas o NICE-SUGAR (NEJM 2009) — maior RCT de glicemia em UTI — mostrou maior mortalidade com controle intensivo vs. convencional (140-180), principalmente por hipoglicemia grave. A hipoglicemia é mais deletéria que a hiperglicemia moderada no cérebro e coração isquêmicos. Alvo 140-180 é o consenso atual. Monitoramento frequente (1-2h) é essencial ao usar insulina EV."
+  },
+  {
+    "cat": "Imunologia e Imunomodulação",
+    "q": "O que é imunossupressão séptica (imunoparalisia) e qual sua relevância clínica?",
+    "a": "Fase tardia da sepse caracterizada por: linfopenia (apoptose de linfócitos T e B), disfunção de células T (exaustão), redução de monócitos HLA-DR, anergia. Pacientes tornam-se suscetíveis a infecções oportunistas secundárias e reativação viral (CMV, HSV). Contribui para a mortalidade tardia.",
+    "hint": "HLA-DR monócitos baixo",
+    "exp": "A resposta imune na sepse é bifásica: inflamação excessiva inicial (SIRS, 'tempestade de citocinas') seguida de imunoparalisia (CARS — compensatory anti-inflammatory response syndrome). Na fase de imunoparalisia: IL-10 elevada, TNF-α baixa, monócitos com baixa expressão de HLA-DR (< 8.000 moléculas/monócito = imunossupressão). Estratégias investigacionais: IL-7 (proliferação de linfócitos), anti-PD-1 (reativar linfócitos T exaustos), GM-CSF (restaurar monócitos). Vigilância ativa para infecções secundárias é fundamental."
+  },
+  {
+    "cat": "Imunologia e Imunomodulação",
+    "q": "Qual o papel das imunoglobulinas (IVIG) no tratamento da sepse?",
+    "a": "IVIG não tem recomendação da SSC 2021 para uso rotineiro. Evidências insuficientes de benefício em mortalidade. Pode ser considerada em casos específicos: choque tóxico estreptocócico ou estafilocócico, fasciite necrotizante. A IVIG polientada neutraliza superantígenos bacterianos.",
+    "hint": "Não recomendada rotina",
+    "exp": "Meta-análises incluindo os estudos SIS-2 e SBITS mostraram resultados inconsistentes das IVIG na sepse geral. A SSC 2021 faz uma recomendação fraca contra uso rotineiro. Nos casos de síndrome do choque tóxico estreptocócico (STSS), a IVIG neutraliza a exotoxina pirogênica estreptocócica A — mecanismo fisiopatológico bem definido. Nesses casos selecionados, pode ser considerada apesar de evidência limitada. Custo elevado é outro limitante."
+  },
+  {
+    "cat": "Escalas e Prognóstico",
+    "q": "Quais são as principais escalas de gravidade utilizadas em UTI para pacientes sépticos e o que avaliam?",
+    "a": "APACHE II (Acute Physiology and Chronic Health Evaluation II): 12 variáveis fisiológicas + idade + doença crônica — prediz mortalidade hospitalar. SAPS II/III: versões simplificadas. SOFA: disfunção orgânica seriada (monitoramento e diagnóstico). LODS, MODS: alternativas para disfunção de múltiplos órgãos.",
+    "hint": "APACHE II: 12 variáveis",
+    "exp": "APACHE II: pontuação 0-71; mortalidade esperada eleva exponencialmente. Calculado nas primeiras 24h de UTI usando piores valores. Limitação: não recalibrado para populações modernas, subestima mortalidade em sepse grave. SOFA é mais útil para monitoramento diário. SAPS 3 (calculado na admissão): prediz mortalidade com boa calibração em populações globais. Nenhuma escala substitui julgamento clínico individualizado, mas são úteis para benchmarking e pesquisa."
+  },
+  {
+    "cat": "Escalas e Prognóstico",
+    "q": "Quais fatores estão associados a maior mortalidade no choque séptico?",
+    "a": "Mortalidade aumentada: lactato > 4 mmol/L, necessidade de ≥ 2 vasopressores, disfunção de ≥ 3 órgãos (SOFA > 11), atraso no ATB > 1h, foco não controlado, imunossupressão grave, idade avançada, comorbidades (DM, insuficiência hepática, neoplasia).",
+    "hint": "SOFA >11 = >50% mortalidade",
+    "exp": "A mortalidade do choque séptico permanece entre 30-50% apesar dos avanços. O SOFA de admissão > 11 associa-se a mortalidade > 50%. A disfunção de múltiplos órgãos é o maior determinante de mortalidade — cada órgão adicional com disfunção eleva o risco. Lactato persistentemente elevado após 6h de ressuscitação (não-clearance) é marcador de falha terapêutica e preditor independente de mortalidade. A causa da morte em UTI por sepse é frequentemente falência de múltiplos órgãos, não o choque circulatório em si."
+  },
+  {
+    "cat": "Complicações e Sequelas",
+    "q": "O que é PICS (Post-Intensive Care Syndrome) e como se manifesta em sobreviventes de sepse?",
+    "a": "PICS: conjunto de novos problemas ou piora de problemas pré-existentes em sobreviventes de UTI. Domínios: (1) físico — fraqueza muscular, disfagia, polineuropatia do doente crítico; (2) cognitivo — déficits de memória, atenção, velocidade de processamento; (3) psiquiátrico — TEPT, depressão, ansiedade.",
+    "hint": "Físico + Cognitivo + Psiquiátrico",
+    "exp": "PICS afeta 30-70% dos sobreviventes de UTI, com impacto significativo na qualidade de vida por anos após a alta. A fraqueza muscular adquirida na UTI (ICU-AW) afeta 25-60% dos pacientes — causada por imobilização prolongada, corticosteroides, bloqueadores neuromusculares, inflamação sistêmica. Medidas preventivas: mobilização precoce, protocolos de despertar diário, minimização de sedação (ABCDEF bundle), envolvimento familiar, suporte nutricional. Follow-up em clínicas pós-UTI é recomendado."
+  },
+  {
+    "cat": "Complicações e Sequelas",
+    "q": "O que é polineuropatia do doente crítico (PDC) e sua relação com a sepse?",
+    "a": "PDC (Critical Illness Polyneuropathy): neuropatia axonal primária de nervos motores e sensitivos, causada pela sepse e disfunção de múltiplos órgãos. Manifesta-se como fraqueza simétrica, arreflexia, dificuldade de desmame da VM. Eletromiografia: lesão axonal com preservação da mielinização.",
+    "hint": "Axonal, arreflexia, VM difícil",
+    "exp": "PDC ocorre em 25-60% dos pacientes sépticos em VM por > 7 dias. Fatores de risco: sepse grave, SIRS prolongado, hiperglicemia, imobilização. O mecanismo envolve: hipoperfusão da vasa nervorum, toxicidade de citocinas e espécies reativas de oxigênio sobre axônios, canalopatias de sódio. Distinção da miopatia do crítico (CIM) exige EMG/biópsia muscular. Ambas contribuem para dificuldade de desmame da VM. Prevenção: controle glicêmico, mobilização precoce, evitar corticosteroides e BNM desnecessários."
+  },
+  {
+    "cat": "Complicações e Sequelas",
+    "q": "Como o delirium se relaciona com sepse e qual seu impacto prognóstico?",
+    "a": "Delirium ocorre em 60-80% dos pacientes sépticos em UTI. Associa-se a: mortalidade aumentada, maior tempo de VM e internação, déficits cognitivos tardios. Avaliado pela CAM-ICU (Confusion Assessment Method for ICU). Prevenção: ABCDEF bundle, minimização de sedação, mobilização precoce.",
+    "hint": "CAM-ICU, ABCDEF bundle",
+    "exp": "O delirium em UTI é frequentemente subdiagnosticado. Sepse causa delirium por: disfunção da barreira hematoencefálica (citocinas, LPS entram no SNC), neurotoxinas circulantes, alterações de neurotransmissores (↓colinérgico, ↑dopaminérgico). O estudo MIND (Pandharipande et al.) mostrou que delirium > 1 dia associa-se a déficits cognitivos 3 e 12 meses depois. Haloperidol não mostrou redução de mortalidade (HOPE-ICU). Dexmedetomidina (vs. midazolam) reduz duração do delirium. ABCDEF bundle é a estratégia preventiva mais abrangente."
+  },
+  {
+    "cat": "Monitorização Hemodinâmica",
+    "q": "Qual o papel do cateter de artéria pulmonar (Swan-Ganz) no manejo da sepse atualmente?",
+    "a": "Não recomendado rotineiramente. O cateter de Swan-Ganz (CAP) não reduziu mortalidade vs. monitorização convencional (PAC-Man, FACCT). POCUS (ecocardiografia ponto de cuidado) é preferido por ser não-invasivo, imediato e fornece informação estrutural/funcional superior.",
+    "hint": "POCUS substituiu Swan",
+    "exp": "O estudo PAC-Man (NEJM 2005) e o FACCT (NEJM 2006) não mostraram benefício do CAP em pacientes críticos. O CAP mede: PAPO, DC (Fick ou termodiluição), SvO2, PAPm — mas é invasivo, com complicações (arritmias, pneumotórax, infecção). O POCUS fornece: FE ventricular, volemia (colapsabilidade VCI), efusão pericárdica, avaliação valvar — informação funcional mais relevante sem riscos invasivos. Indicações residuais do CAP: HTAP grave, disfunção ventricular direita, choque cardiogênico complexo."
+  },
+  {
+    "cat": "Monitorização Hemodinâmica",
+    "q": "O que é Saturação Venosa Central de Oxigênio (ScvO2) e qual seu papel na sepse?",
+    "a": "ScvO2: saturação de O2 na veia cava superior (VCS), coletada pelo CVC jugular/subclávia. Normal: 70-80%. ScvO2 < 70% indica aumento da extração de O2 pelos tecidos (hipoperfusão ou baixo DC). Usado no protocolo EGDT de Rivers como meta, mas seu uso mandatório foi questionado pelo ProCESS/ARISE/ProMISe.",
+    "hint": "ScvO2 <70% = hipoperfusão",
+    "exp": "O estudo de Rivers et al. (2001) usou ScvO2 ≥ 70% como meta no EGDT (Early Goal-Directed Therapy). Os estudos ProCESS, ARISE e ProMISe (2014-2015) mostraram que o EGDT estrito não reduziu mortalidade vs. cuidado usual. A conclusão foi que os próprios controles já recebiam bom cuidado. A ScvO2 permanece como marcador de perfusão, mas não como meta mandatória. ScvO2 > 80% com lactato elevado pode indicar vasoparalisia (O2 não é consumido) ou disfunção mitocondrial."
+  },
+  {
+    "cat": "Monitorização Hemodinâmica",
+    "q": "Qual é o papel do POCUS (Ecografia Point-of-Care) no manejo do choque séptico?",
+    "a": "POCUS avalia: (1) função ventricular (FE VE e VD); (2) volemia (colapsabilidade VCI); (3) derrame pericárdico; (4) pneumotórax; (5) pneumonia/consolidação. Orienta causa do choque, responsividade a fluidos e resposta ao tratamento — em tempo real, à beira do leito.",
+    "hint": "RUSH: Pump, Tank, Pipes",
+    "exp": "O protocolo RUSH (Rapid Ultrasound in Shock) avalia 3 componentes: (1) 'Pump' — função cardíaca (HipoFE = cardiogênico, HiperFE/VE vazia = distributivo); (2) 'Tank' — volemia (VCI colapsável = hipovolemia, VCI dilatada = obstrução/sobrecarga); (3) 'Pipes' — aorta e circulação (AAA, dissecção). Em sepse: VE hiperdinâmica, VCI colapsável, sem efusão pericárdica. Se VD dilatado: pensar em TEP como complicação. POCUS integra o cuidado à beira do leito sem riscos do CAP."
+  },
+  {
+    "cat": "Ressuscitação Volêmica",
+    "q": "O que é 'fluid creep' e por que é prejudicial na sepse?",
+    "a": "Fluid creep: acúmulo progressivo de fluidos além da necessidade fisiológica, levando a sobrecarga hídrica (balanço hídrico acumulado positivo). Consequências: edema pulmonar, SDRA, LRA (compartmental syndrome), íleo paralítico, feridas de difícil cicatrização. Balanço positivo acumulado é fator independente de mortalidade.",
+    "hint": "Balanço + = morte",
+    "exp": "Estudos observacionais (incluindo FACTT) mostram que balanço hídrico acumulado positivo > 10% do peso corporal na primeira semana associa-se a aumento de mortalidade em UTI. A 'fase de ressuscitação' (D1-2) justifica balanço positivo. Após estabilização, iniciar 'desressuscitação': balanço neutro ou negativo com furosemida e restrição hídrica. O conceito ROSE (Ressuscitation, Optimization, Stabilization, Evacuation) orienta o manejo hídrico em quatro fases temporais na sepse."
+  },
+  {
+    "cat": "Fisiopatologia",
+    "q": "Qual o papel dos padrões moleculares associados a patógenos (PAMPs) e a danos (DAMPs) na fisiopatologia da sepse?",
+    "a": "PAMPs (ex: LPS, ácido lipoteicoico, flagelina) são reconhecidos por TLRs (Toll-like receptors) em células imunes → ativam NF-κB → produção de citocinas pró-inflamatórias. DAMPs (HMGB1, histonas, DNA mitocondrial) são liberados por células danificadas → amplificam inflamação mesmo sem mais patógenos.",
+    "hint": "TLR → NF-κB → citocinas",
+    "exp": "A descoberta dos TLRs (Nobel 2011: Jules Hoffmann, Bruce Beutler) revolucionou a compreensão da sepse. O LPS bacteriano gram-negativo se liga ao TLR4 (com LBP e CD14 como co-receptores), ativando MyD88 → NF-κB → TNF-α, IL-1β, IL-6, IL-8. Os DAMPs explicam a perpetuação da resposta inflamatória após clearance bacteriano. HMGB1 (proteína de grupo de alta mobilidade B1) é um DAMP tardio liberado horas após o início da sepse, potencialmente alvo terapêutico futuro."
+  },
+  {
+    "cat": "Antibioticoterapia",
+    "q": "Como otimizar a farmacodinâmica dos antibióticos beta-lactâmicos na sepse grave?",
+    "a": "Beta-lactâmicos são tempo-dependentes: eficácia correlaciona-se com % do tempo que a concentração livre > CIM (fT > CIM). Na sepse: volumes de distribuição alterados, clearance aumentado. Estratégias: infusão estendida (3-4h) ou contínua, doses maiores e mais frequentes, monitoramento farmacocinético (TDM).",
+    "hint": "Infusão estendida, fT>CIM",
+    "exp": "Na sepse, alterações farmacocinéticas (FC) comprometem a eficácia dos ATB: aumento do volume de distribuição por edema (dilui a concentração sérica), hiperfiltração glomerular aumenta clearance renal (underexposure), hipoalbuminemia aumenta fração livre de ATB ligados a proteínas. Infusão estendida de piperacilina-tazobactam ou meropeném por 3-4h maximiza o fT>CIM. TDM (therapeutic drug monitoring) é cada vez mais recomendado para personalizar doses em pacientes críticos."
   }
 ]
