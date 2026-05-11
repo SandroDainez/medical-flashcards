@@ -4,11 +4,38 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>MedCards</title>
-    <link rel="stylesheet" href="style.css?v=20260511c">
+    <link rel="stylesheet" href="style.css?v=20260511e">
 </head>
 <body>
 
-<div id="app">
+<section id="auth-screen" class="auth-screen">
+    <div class="auth-card">
+        <div class="auth-header">
+            <span class="brand-icon">MC</span>
+            <h1>Entrar no MedCards</h1>
+            <p>Acesse com sua conta real (Supabase).</p>
+        </div>
+        <form id="login-form" class="auth-form">
+            <label for="login-email">E-mail</label>
+            <input id="login-email" class="text-input" type="email" autocomplete="email" required>
+            <label for="login-password">Senha</label>
+            <input id="login-password" class="text-input" type="password" autocomplete="current-password" required>
+            <button type="submit" class="btn btn-primary btn-large">Entrar</button>
+        </form>
+        <form id="register-form" class="auth-form auth-register">
+            <label for="register-name">Nome completo</label>
+            <input id="register-name" class="text-input" type="text" required>
+            <label for="register-email">E-mail</label>
+            <input id="register-email" class="text-input" type="email" autocomplete="email" required>
+            <label for="register-password">Senha</label>
+            <input id="register-password" class="text-input" type="password" autocomplete="new-password" required>
+            <button type="submit" class="btn btn-secondary">Criar conta</button>
+        </form>
+        <p id="auth-status" class="auth-help">A conta será criada como pendente até liberação do administrador.</p>
+    </div>
+</section>
+
+<div id="app" style="display:none;">
     <!-- SIDEBAR -->
     <aside class="sidebar">
         <div class="sidebar-brand">
@@ -35,7 +62,17 @@
             <button class="nav-btn" data-view="stats">
                 <span class="nav-icon">ST</span>Estatísticas
             </button>
+            <button class="nav-btn" data-view="admin" id="nav-admin-btn" style="display:none;">
+                <span class="nav-icon">AD</span>Admin
+            </button>
         </nav>
+        <div class="sidebar-session">
+            <div class="session-user">
+                <span id="session-username">-</span>
+                <small id="session-role">usuário</small>
+            </div>
+            <button id="logout-btn" class="btn btn-secondary" type="button">Sair</button>
+        </div>
     </aside>
 
     <!-- MAIN CONTENT -->
@@ -109,7 +146,10 @@
                                 </div>
                             </div>
                         </div>
-                        <button id="submit-evaluation-btn" class="btn btn-primary">Confirmar avaliação</button>
+                        <div class="eval-actions">
+                            <button id="back-to-question-btn" class="btn btn-secondary" type="button">Voltar para pergunta</button>
+                            <button id="submit-evaluation-btn" class="btn btn-primary">Confirmar avaliação</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -203,6 +243,29 @@
             </div>
         </div>
 
+        <!-- ADMIN VIEW -->
+        <div id="view-admin" class="view">
+            <div class="view-header">
+                <h1>Painel Administrativo</h1>
+                <p class="view-subtitle">Gestão de usuários, permissões e bloqueios.</p>
+            </div>
+            <div class="admin-grid">
+                <section class="admin-card">
+                    <h3>Orientação de Gestão</h3>
+                    <div class="admin-info">
+                        <p>1. Usuários novos entram como <strong>pendentes</strong>.</p>
+                        <p>2. Libere para <strong>ativo</strong> quando validar.</p>
+                        <p>3. Use <strong>bloqueado</strong> para suspender acesso.</p>
+                        <p>4. Perfil <strong>admin</strong> apenas para equipe de gestão.</p>
+                    </div>
+                </section>
+                <section class="admin-card">
+                    <h3>Usuários Cadastrados</h3>
+                    <div id="admin-users-list" class="admin-users-list"></div>
+                </section>
+            </div>
+        </div>
+
     </main>
 </div>
 
@@ -221,6 +284,11 @@
 <!-- TOAST -->
 <div id="toast" class="toast"></div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+    window.SUPABASE_URL = "https://bvbezqotrxiseifmshbe.supabase.co";
+    window.SUPABASE_ANON_KEY = "sb_publishable_pzJELreYCypmM-bwyG30CA_f7R704mw";
+</script>
 <script src="app.js"></script>
 </body>
 </html>

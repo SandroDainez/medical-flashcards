@@ -1,26 +1,33 @@
 'use strict';
 
-// ===== SM-2 SPACED REPETITION ALGORITHM =====
+const SUPABASE_URL = window.SUPABASE_URL || '';
+const SUPABASE_ANON_KEY = window.SUPABASE_ANON_KEY || '';
+const HAS_SUPABASE_CONFIG = !!(SUPABASE_URL && SUPABASE_ANON_KEY);
+const supabase = HAS_SUPABASE_CONFIG ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
+
+// ===== REVIEW SCHEDULING RULES =====
 const SM2 = {
- // ratings: 0=Again, 1=Hard, 2=Good, 3=Easy
- // maps to SM-2 quality scores: 0→1, 1→3, 2→4, 3→5
- QUALITY_MAP: [1, 3, 4, 5],
+ // ratings: 0=Wrong, 1=Hard, 2=Medium, 3=Easy
+ // fixed intervals requested by user:
+ // - easy: 7 days
+ // - medium: 3 days
+ // - hard or wrong: 1 day
+ INTERVAL_MAP: [1, 1, 3, 7],
 
  process(card, rating) {
- const q = this.QUALITY_MAP[rating];
  let { interval, repetition, easeFactor, dueDate } = card;
 
- if (q < 3) {
- repetition = 0;
- interval = 1;
- } else {
- if (repetition === 0) interval = 1;
- else if (repetition === 1) interval = 6;
- else interval = Math.round(interval * easeFactor);
+ interval = this.INTERVAL_MAP[rating] || 1;
 
- easeFactor = easeFactor + (0.1 - (5 - q) * (0.08 + (5 - q) * 0.02));
- easeFactor = Math.max(1.3, parseFloat(easeFactor.toFixed(2)));
+ if (rating === 0) {
+ repetition = 0;
+ } else {
  repetition += 1;
+ }
+
+ // Keep easeFactor for backward compatibility with existing data structure.
+ if (typeof easeFactor !== 'number' || Number.isNaN(easeFactor)) {
+  easeFactor = 2.5;
  }
 
  dueDate = this.addDays(new Date(), interval).toISOString().split('T')[0];
@@ -41,28 +48,7 @@ const SM2 = {
 
 // ===== STORAGE =====
 const Storage = {
- KEY_CARDS: 'medcards_cards',
- KEY_STATS: 'medcards_stats',
  KEY_THEME: 'medcards_theme',
-
- getCards() {
- try { return JSON.parse(localStorage.getItem(this.KEY_CARDS) || '[]'); }
- catch { return []; }
- },
-
- saveCards(cards) {
- localStorage.setItem(this.KEY_CARDS, JSON.stringify(cards));
- },
-
- getStats() {
- const defaults = { totalReviews: 0, correctReviews: 0, daysStudied: {}, streak: 0, lastStudied: '' };
- try { return { ...defaults, ...JSON.parse(localStorage.getItem(this.KEY_STATS) || '{}') }; }
- catch { return defaults; }
- },
-
- saveStats(stats) {
- localStorage.setItem(this.KEY_STATS, JSON.stringify(stats));
- },
 
  getTheme() {
    try { return localStorage.getItem(this.KEY_THEME) || 'light'; }
@@ -86,10 +72,24 @@ let state = {
  studyTotal: 0,
  selectedResult: '',
  selectedDifficulty: '',
+ currentUser: null,
+ authenticated: false,
+ profiles: [],
  pendingDeleteId: null,
  filterDiscipline: '',
  filterCategory: '',
  filterSearch: ''
+};
+
+const USER_STATUS = {
+ ACTIVE: 'active',
+ BLOCKED: 'blocked',
+ PENDING: 'pending'
+};
+
+const USER_ROLE = {
+ USER: 'user',
+ ADMIN: 'admin'
 };
 
 const KNOWN_DISCIPLINES = [
@@ -216,24 +216,299 @@ function populateDisciplineSelect(selectEl) {
     options.map(d => `<option value="${d}">${d}</option>`).join('');
 }
 
+function normalizeEmail(email = '') {
+  return email.trim().toLowerCase();
+}
+
+function applyAuthState(isAuthenticated) {
+  const authScreen = document.getElementById('auth-screen');
+  const app = document.getElementById('app');
+  const authStatus = document.getElementById('auth-status');
+
+  if (isAuthenticated) {
+    authScreen.style.display = 'none';
+    app.style.display = 'flex';
+    updateSessionUI();
+    renderAll();
+    showView('dashboard');
+  } else {
+    state.currentUser = null;
+    state.authenticated = false;
+    authScreen.style.display = 'flex';
+    app.style.display = 'none';
+    const loginForm = document.getElementById('login-form');
+    const registerForm = document.getElementById('register-form');
+    if (loginForm) loginForm.reset();
+    if (registerForm) registerForm.reset();
+    if (authStatus && !HAS_SUPABASE_CONFIG) {
+      authStatus.textContent = 'Configure window.SUPABASE_URL e window.SUPABASE_ANON_KEY para usar autenticação real.';
+    }
+  }
+}
+
+function updateSessionUI() {
+  const usernameEl = document.getElementById('session-username');
+  const roleEl = document.getElementById('session-role');
+  const navAdminBtn = document.getElementById('nav-admin-btn');
+
+  if (!state.currentUser) return;
+
+  usernameEl.textContent = state.currentUser.full_name || state.currentUser.email || '-';
+  roleEl.textContent = state.currentUser.role === USER_ROLE.ADMIN ? 'administrador' : 'usuário';
+  navAdminBtn.style.display = state.currentUser.role === USER_ROLE.ADMIN ? 'flex' : 'none';
+}
+
+function isAdmin() {
+  return !!state.currentUser && state.currentUser.role === USER_ROLE.ADMIN;
+}
+
+async function loadOrCreateProfile(authUser) {
+  const fallbackName = (authUser.email || 'usuário').split('@')[0];
+  const payload = {
+    id: authUser.id,
+    email: authUser.email || '',
+    full_name: authUser.user_metadata?.full_name || fallbackName,
+    role: USER_ROLE.USER,
+    status: USER_STATUS.PENDING
+  };
+
+  const { error } = await supabase.from('profiles').upsert(payload, { onConflict: 'id' });
+  if (error) throw error;
+
+  const { data, error: profileErr } = await supabase
+    .from('profiles')
+    .select('*')
+    .eq('id', authUser.id)
+    .single();
+
+  if (profileErr) throw profileErr;
+  return data;
+}
+
+async function loadUserData() {
+  const { data: cards, error: cardsErr } = await supabase
+    .from('cards')
+    .select('*')
+    .order('created_at', { ascending: true });
+
+  if (cardsErr) throw cardsErr;
+
+  if (!cards || cards.length === 0) {
+    await seedCardsForCurrentUser();
+    return loadUserData();
+  }
+
+  state.cards = cards.map(c => ({
+    id: c.id,
+    cat: c.cat,
+    q: c.q,
+    a: c.a,
+    hint: c.hint || '',
+    exp: c.exp || '',
+    interval: c.interval ?? 0,
+    repetition: c.repetition ?? 0,
+    easeFactor: c.ease_factor ?? 2.5,
+    dueDate: c.due_date,
+    createdAt: c.created_at?.split('T')[0] || new Date().toISOString().split('T')[0],
+    reviewCount: c.review_count ?? 0,
+    status: c.status || 'new'
+  }));
+
+  const { data: statsRow, error: statsErr } = await supabase
+    .from('user_stats')
+    .select('*')
+    .maybeSingle();
+
+  if (statsErr) throw statsErr;
+
+  if (!statsRow) {
+    const statsDefaults = { totalReviews: 0, correctReviews: 0, daysStudied: {}, streak: 0, lastStudied: '' };
+    state.stats = statsDefaults;
+    await persistStats();
+  } else {
+    state.stats = {
+      totalReviews: statsRow.total_reviews || 0,
+      correctReviews: statsRow.correct_reviews || 0,
+      daysStudied: statsRow.days_studied || {},
+      streak: statsRow.streak || 0,
+      lastStudied: statsRow.last_studied || ''
+    };
+  }
+}
+
+async function seedCardsForCurrentUser() {
+  const today = new Date().toISOString().split('T')[0];
+  const payload = state.allCards.map(c => ({
+    cat: c.cat,
+    q: c.q,
+    a: c.a,
+    hint: c.hint || '',
+    exp: c.exp || '',
+    interval: 0,
+    repetition: 0,
+    ease_factor: 2.5,
+    due_date: today,
+    review_count: 0,
+    status: 'new'
+  }));
+
+  if (payload.length === 0) return;
+  const { error } = await supabase.from('cards').insert(payload);
+  if (error) throw error;
+}
+
+async function persistCards() {
+  if (!state.authenticated || !state.currentUser) return;
+  const payload = state.cards.map(c => ({
+    id: c.id,
+    user_id: state.currentUser.id,
+    cat: c.cat,
+    q: c.q,
+    a: c.a,
+    hint: c.hint || '',
+    exp: c.exp || '',
+    interval: c.interval ?? 0,
+    repetition: c.repetition ?? 0,
+    ease_factor: c.easeFactor ?? 2.5,
+    due_date: c.dueDate,
+    created_at: c.createdAt ? new Date(c.createdAt).toISOString() : new Date().toISOString(),
+    review_count: c.reviewCount ?? 0,
+    status: c.status || 'new'
+  }));
+
+  const { error } = await supabase.from('cards').upsert(payload);
+  if (error) {
+    console.error('Erro ao persistir cards:', error.message);
+    showToast('Erro ao salvar cards no servidor.', 'error');
+  }
+}
+
+async function persistStats() {
+  if (!state.authenticated || !state.currentUser) return;
+  const payload = {
+    user_id: state.currentUser.id,
+    total_reviews: state.stats.totalReviews || 0,
+    correct_reviews: state.stats.correctReviews || 0,
+    days_studied: state.stats.daysStudied || {},
+    streak: state.stats.streak || 0,
+    last_studied: state.stats.lastStudied || null
+  };
+  const { error } = await supabase.from('user_stats').upsert(payload);
+  if (error) {
+    console.error('Erro ao persistir stats:', error.message);
+    showToast('Erro ao salvar estatísticas no servidor.', 'error');
+  }
+}
+
+async function initAuth() {
+  if (!HAS_SUPABASE_CONFIG) {
+    applyAuthState(false);
+    return;
+  }
+
+  const { data, error } = await supabase.auth.getSession();
+  if (error) {
+    console.error('Erro ao carregar sessão:', error.message);
+    applyAuthState(false);
+    return;
+  }
+
+  const session = data.session;
+  if (!session?.user) {
+    applyAuthState(false);
+    return;
+  }
+
+  try {
+    const profile = await loadOrCreateProfile(session.user);
+    if (profile.status === USER_STATUS.BLOCKED) {
+      await supabase.auth.signOut();
+      applyAuthState(false);
+      showToast('Usuário bloqueado pelo administrador.', 'error');
+      return;
+    }
+    if (profile.status === USER_STATUS.PENDING) {
+      await supabase.auth.signOut();
+      applyAuthState(false);
+      showToast('Conta pendente de liberação do administrador.', 'error');
+      return;
+    }
+
+    state.currentUser = profile;
+    state.authenticated = true;
+    await loadUserData();
+    updateStreak();
+    await persistStats();
+    applyAuthState(true);
+  } catch (authErr) {
+    console.error('Erro na autenticação:', authErr);
+    applyAuthState(false);
+    showToast('Erro ao carregar perfil do usuário.', 'error');
+  }
+}
+
+async function handleLoginSubmit(e) {
+  e.preventDefault();
+  if (!HAS_SUPABASE_CONFIG) {
+    showToast('Configuração do Supabase ausente.', 'error');
+    return;
+  }
+
+  const email = normalizeEmail(document.getElementById('login-email').value);
+  const password = document.getElementById('login-password').value;
+  const { error } = await supabase.auth.signInWithPassword({ email, password });
+  if (error) {
+    showToast(error.message || 'Falha no login.', 'error');
+    return;
+  }
+  await initAuth();
+  showToast('Login realizado com sucesso.', 'success');
+}
+
+async function handleRegisterSubmit(e) {
+  e.preventDefault();
+  if (!HAS_SUPABASE_CONFIG) {
+    showToast('Configuração do Supabase ausente.', 'error');
+    return;
+  }
+
+  const fullName = document.getElementById('register-name').value.trim();
+  const email = normalizeEmail(document.getElementById('register-email').value);
+  const password = document.getElementById('register-password').value;
+  const authStatus = document.getElementById('auth-status');
+
+  const { error } = await supabase.auth.signUp({
+    email,
+    password,
+    options: {
+      data: { full_name: fullName }
+    }
+  });
+
+  if (error) {
+    showToast(error.message || 'Falha ao criar conta.', 'error');
+    return;
+  }
+
+  if (authStatus) {
+    authStatus.textContent = 'Conta criada. Aguarde liberação do administrador para acessar.';
+  }
+  showToast('Cadastro realizado com sucesso.', 'success');
+  e.target.reset();
+}
+
+async function logout() {
+  if (supabase) await supabase.auth.signOut();
+  applyAuthState(false);
+  showToast('Sessão encerrada.', 'success');
+}
+
 // ===== INIT =====
 async function init() {
   initTheme();
- await loadAllCards();
- state.stats = Storage.getStats();
-
- const storedCards = Storage.getCards();
- if (storedCards.length > 0) {
- state.cards = storedCards;
- } else if (state.allCards.length > 0) {
- // First time load, use the fetched cards
- loadSampleCards();
- }
-
- updateStreak();
- bindEvents();
- renderAll();
- showView('dashboard');
+  await loadAllCards();
+  bindEvents();
+  await initAuth();
 }
 
 async function loadAllCards() {
@@ -250,23 +525,8 @@ async function loadAllCards() {
  }
 }
 
-function loadSampleCards() {
- const today = new Date().toISOString().split('T')[0];
- state.cards = state.allCards.map((c, i) => ({
- id: generateId(),
- ...c,
- interval: 0,
- repetition: 0,
- easeFactor: 2.5,
- dueDate: today,
- createdAt: today,
- reviewCount: 0,
- status: 'new'
- }));
- Storage.saveCards(state.cards);
-}
-
 function generateId() {
+ if (typeof crypto !== 'undefined' && crypto.randomUUID) return crypto.randomUUID();
  return Date.now().toString(36) + Math.random().toString(36).slice(2);
 }
 
@@ -287,6 +547,11 @@ function updateStreak() {
 
 // ===== EVENTS =====
 function bindEvents() {
+ const loginForm = document.getElementById('login-form');
+ if (loginForm) loginForm.addEventListener('submit', handleLoginSubmit);
+ const registerForm = document.getElementById('register-form');
+ if (registerForm) registerForm.addEventListener('submit', handleRegisterSubmit);
+
  // Nav buttons
  document.querySelectorAll('.nav-btn[data-view]').forEach(btn => {
  btn.addEventListener('click', () => showView(btn.dataset.view));
@@ -308,6 +573,7 @@ function bindEvents() {
  document.querySelectorAll('.eval-btn').forEach(btn => {
    btn.addEventListener('click', () => handleEvalOptionClick(btn));
  });
+ document.getElementById('back-to-question-btn').addEventListener('click', unflipCard);
  document.getElementById('submit-evaluation-btn').addEventListener('click', submitEvaluation);
 
  // Search & filter
@@ -340,6 +606,9 @@ function bindEvents() {
 
  const themeToggle = document.getElementById('theme-toggle');
  if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+
+ const logoutBtn = document.getElementById('logout-btn');
+ if (logoutBtn) logoutBtn.addEventListener('click', logout);
 }
 
 function initTheme() {
@@ -360,8 +629,130 @@ function applyTheme(theme) {
   if (icon) icon.textContent = theme === 'dark' ? '☀' : '◐';
 }
 
+async function loadProfiles() {
+  const { data, error } = await supabase.from('profiles').select('*').order('created_at', { ascending: true });
+  if (error) throw error;
+  state.profiles = data || [];
+}
+
+async function updateProfile(userId, changes) {
+  const { error } = await supabase.from('profiles').update(changes).eq('id', userId);
+  if (error) throw error;
+}
+
+async function toggleUserStatus(userId) {
+  if (!isAdmin()) return;
+  const profile = state.profiles.find(u => u.id === userId);
+  if (!profile) return;
+  if (profile.id === state.currentUser.id) {
+    showToast('Você não pode alterar seu próprio status.', 'error');
+    return;
+  }
+  const nextStatus = profile.status === USER_STATUS.BLOCKED ? USER_STATUS.ACTIVE : USER_STATUS.BLOCKED;
+  try {
+    await updateProfile(userId, { status: nextStatus, updated_at: new Date().toISOString() });
+    await renderAdmin();
+    showToast(`Usuário ${nextStatus === USER_STATUS.ACTIVE ? 'liberado' : 'bloqueado'}.`, 'success');
+  } catch (error) {
+    showToast(`Falha ao atualizar usuário: ${error.message}`, 'error');
+  }
+}
+
+async function approveUser(userId) {
+  if (!isAdmin()) return;
+  try {
+    await updateProfile(userId, { status: USER_STATUS.ACTIVE, updated_at: new Date().toISOString() });
+    await renderAdmin();
+    showToast('Usuário liberado com sucesso.', 'success');
+  } catch (error) {
+    showToast(`Falha ao liberar usuário: ${error.message}`, 'error');
+  }
+}
+
+async function toggleUserRole(userId) {
+  if (!isAdmin()) return;
+  const profile = state.profiles.find(u => u.id === userId);
+  if (!profile) return;
+  if (profile.id === state.currentUser.id) {
+    showToast('Não é permitido alterar seu próprio perfil.', 'error');
+    return;
+  }
+  const nextRole = profile.role === USER_ROLE.ADMIN ? USER_ROLE.USER : USER_ROLE.ADMIN;
+  try {
+    await updateProfile(userId, { role: nextRole, updated_at: new Date().toISOString() });
+    await renderAdmin();
+    showToast('Perfil atualizado.', 'success');
+  } catch (error) {
+    showToast(`Falha ao alterar perfil: ${error.message}`, 'error');
+  }
+}
+
+async function sendPasswordReset(userId) {
+  if (!isAdmin()) return;
+  const user = state.profiles.find(p => p.id === userId);
+  if (!user?.email) {
+    showToast('Usuário sem e-mail válido.', 'error');
+    return;
+  }
+  const { error } = await supabase.auth.resetPasswordForEmail(user.email);
+  if (error) {
+    showToast(`Erro ao enviar recuperação: ${error.message}`, 'error');
+    return;
+  }
+  showToast(`E-mail de recuperação enviado para ${user.email}.`, 'success');
+}
+
+async function renderAdmin() {
+  const list = document.getElementById('admin-users-list');
+  if (!list) return;
+
+  if (!isAdmin()) {
+    list.innerHTML = '<div class="empty-state"><p>Acesso restrito ao administrador.</p></div>';
+    return;
+  }
+
+  try {
+    await loadProfiles();
+  } catch (error) {
+    list.innerHTML = `<div class="empty-state"><p>Falha ao carregar usuários: ${escapeHtml(error.message)}</p></div>`;
+    return;
+  }
+
+  const users = [...state.profiles].sort((a, b) => normalizeEmail(a.email).localeCompare(normalizeEmail(b.email), 'pt-BR'));
+  list.innerHTML = users.map(user => {
+    const isCurrent = user.id === state.currentUser.id;
+    const lastLogin = user.last_login_at ? new Date(user.last_login_at).toLocaleString('pt-BR') : 'nunca';
+    const displayName = user.full_name || user.email || user.id;
+    const statusLabel = user.status === USER_STATUS.ACTIVE ? 'ativo' : (user.status === USER_STATUS.BLOCKED ? 'bloqueado' : 'pendente');
+    return `
+      <article class="admin-user-item">
+        <div class="admin-user-top">
+          <strong>${escapeHtml(displayName)} ${isCurrent ? '(você)' : ''}</strong>
+          <div style="display:flex;gap:6px;">
+            <span class="admin-badge role-${user.role === USER_ROLE.ADMIN ? 'admin' : 'user'}">${user.role === USER_ROLE.ADMIN ? 'admin' : 'usuário'}</span>
+            <span class="admin-badge status-${user.status === USER_STATUS.ACTIVE ? 'active' : (user.status === USER_STATUS.BLOCKED ? 'blocked' : 'pending')}">${statusLabel}</span>
+          </div>
+        </div>
+        <div class="admin-user-meta">${escapeHtml(user.email || '')} · Último login: ${lastLogin}</div>
+        <div class="admin-user-actions">
+          ${user.status === USER_STATUS.PENDING ? `<button class="btn-icon" onclick="approveUser('${user.id}')">Liberar</button>` : ''}
+          <button class="btn-icon" onclick="toggleUserStatus('${user.id}')" ${isCurrent ? 'disabled' : ''}>${user.status === USER_STATUS.BLOCKED ? 'Desbloquear' : 'Bloquear'}</button>
+          <button class="btn-icon" onclick="toggleUserRole('${user.id}')" ${isCurrent ? 'disabled' : ''}>${user.role === USER_ROLE.ADMIN ? 'Tornar usuário' : 'Tornar admin'}</button>
+          <button class="btn-icon" onclick="sendPasswordReset('${user.id}')">Reset senha</button>
+        </div>
+      </article>
+    `;
+  }).join('');
+}
+
 // ===== VIEWS =====
 function showView(viewId, params = {}) {
+    if (!state.authenticated) return;
+    if (viewId === 'admin' && !isAdmin()) {
+      showToast('Acesso restrito ao administrador.', 'error');
+      return;
+    }
+
     state.currentView = viewId;
 
     document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
@@ -378,6 +769,7 @@ function showView(viewId, params = {}) {
     if (viewId === 'browse') renderBrowse();
     if (viewId === 'stats') renderStats();
     if (viewId === 'create') resetForm();
+    if (viewId === 'admin') renderAdmin();
 }
 
 // ===== RENDER ALL =====
@@ -572,6 +964,16 @@ function flipCard() {
  }
 }
 
+function unflipCard() {
+ const flashcard = document.getElementById('flashcard');
+ if (!flashcard.classList.contains('flipped')) return;
+
+ flashcard.classList.remove('flipped');
+ document.querySelector('.flashcard-container').classList.remove('answered');
+ document.getElementById('rating-panel').style.display = 'none';
+ document.getElementById('flip-btn').style.display = 'inline-flex';
+}
+
 function handleEvalOptionClick(btn) {
   if (btn.dataset.result) {
     state.selectedResult = btn.dataset.result;
@@ -607,10 +1009,10 @@ function submitEvaluation() {
     return;
   }
   const rating = mapEvaluationToRating();
-  rateCard(rating);
+  rateCard(rating, state.selectedResult === 'correct');
 }
 
-function rateCard(rating) {
+function rateCard(rating, wasCorrect = null) {
  const card = state.studyQueue[state.studyIndex];
  const updated = SM2.process(card, rating);
 
@@ -624,7 +1026,8 @@ function rateCard(rating) {
 
  // Update stats
  state.stats.totalReviews = (state.stats.totalReviews || 0) + 1;
- if (rating >= 2) state.stats.correctReviews = (state.stats.correctReviews || 0) + 1;
+ const isCorrect = typeof wasCorrect === 'boolean' ? wasCorrect : rating >= 2;
+ if (isCorrect) state.stats.correctReviews = (state.stats.correctReviews || 0) + 1;
 
  const today = new Date().toISOString().split('T')[0];
  state.stats.daysStudied = state.stats.daysStudied || {};
@@ -640,8 +1043,8 @@ function rateCard(rating) {
  state.stats.lastStudied = today;
  }
 
- Storage.saveCards(state.cards);
- Storage.saveStats(state.stats);
+ void persistCards();
+ void persistStats();
 
  // If "Again", re-queue card at end
  if (rating === 0) {
@@ -794,7 +1197,7 @@ function renderBrowse() {
 }
 
 function escapeHtml(str) {
- return str
+ return String(str)
  .replace(/&/g, '&amp;')
  .replace(/</g, '&lt;')
  .replace(/>/g, '&gt;')
@@ -846,7 +1249,7 @@ function handleFormSubmit(e) {
  showToast('Card criado com sucesso!', 'success');
  }
 
- Storage.saveCards(state.cards);
+ void persistCards();
  renderSidebar();
  updateDueBadge();
  showView('browse');
@@ -888,7 +1291,7 @@ function deleteCard(id) {
 function confirmDelete() {
  if (!state.pendingDeleteId) return;
  state.cards = state.cards.filter(c => c.id !== state.pendingDeleteId);
- Storage.saveCards(state.cards);
+ void persistCards();
  document.getElementById('modal').style.display = 'none';
  state.pendingDeleteId = null;
  showToast('Card excluído.', 'success');
@@ -1005,6 +1408,11 @@ document.addEventListener('keydown', e => {
  if (e.code === 'Space' && !isFlipped) {
  e.preventDefault();
  flipCard();
+ }
+
+ if (e.key === 'Escape' && isFlipped) {
+ e.preventDefault();
+ unflipCard();
  }
 
  if (isFlipped) {

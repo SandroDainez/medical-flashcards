@@ -2,9 +2,9 @@
   {
     "cat": "Ciências Básicas - Anatomia",
     "q": "Quais são os músculos do manguito rotador?",
-    "a": "SISS: Supraespinhal, Infraespinhal, Subescapular, Redondo menor",
-    "hint": "SISS",
-    "exp": "Estabilizam a articulação glenoumeral."
+    "a": "SITS: Supraespinhal, Infraespinhal, Redondo menor, Subescapular.",
+    "hint": "SITS",
+    "exp": "Os quatro músculos do manguito rotador estabilizam a articulação glenoumeral; a sigla clássica em literatura anglófona é SITS."
   },
   {
     "cat": "Ciências Básicas - Anatomia",
@@ -130,7 +130,7 @@
     "q": "Quando um paciente é classificado como ASA IV?",
     "a": "Doença sistêmica grave com risco de vida constante. Ex: IAM ou AVC recente (< 3 meses), isquemia miocárdica ativa, sepse grave, ICC descompensada, insuficiência hepática grave.",
     "hint": "Ameaça constante",
-    "exp": "O risco de morte perioperatória em ASA IV é significativamente elevado. A cirurgia eletiva é geralmente contraindicada; apenas procedimentos urgentes ou emergenciais são realizados."
+    "exp": "O risco perioperatório em ASA IV é elevado. Em cirurgia eletiva, costuma-se otimizar o paciente e reavaliar risco-benefício; procedimentos urgentes/emergenciais podem ser necessários conforme contexto clínico."
   },
   {
     "cat": "Anestesiologia - Avaliação Pré-Op",
@@ -172,7 +172,7 @@
     "q": "A ingestão de carboidratos orais hipertônicos (maltodextrina) até 2h antes da cirurgia é permitida em pacientes sem fatores de risco para aspiração?",
     "a": "Sim. Evidências mostram benefício metabólico (redução de resistência à insulina e catabolismo pós-operatório) sem aumento do risco de aspiração.",
     "hint": "Protocolo ERAS",
-    "exp": "Protocolos ERAS (Enhanced Recovery After Surgery) preconizam a ingestão de solução de carboidratos (ex: maltodextrina 12,5%) até 2h antes da cirurgia. Contraindicado em pacientes com esvaziamento gástrico retardado (diabetes com neuropatia autonômica, obesos mórbidos, gestantes no 3º trimestre)."
+    "exp": "Protocolos ERAS aceitam carboidrato oral até ~2h antes em pacientes selecionados e sem alto risco de aspiração. Em suspeita de esvaziamento gástrico retardado (ex.: gastroparesia importante), a conduta deve ser individualizada conforme protocolo institucional e avaliação anestésica."
   },
   {
     "cat": "Anestesiologia - Avaliação Pré-Op",
@@ -263,7 +263,7 @@
     "q": "Qual o mecanismo de ação da Ketamina (cetamina)?",
     "a": "Antagonismo não competitivo do receptor NMDA, resultando em um estado de 'anestesia dissociativa'.",
     "hint": "NMDA + dissociativa",
-    "exp": "A ketamina é única por produzir analgesia intensa, amnésia e hipnose, mantendo os reflexos de via aérea e, frequentemente, estimulando o sistema cardiovascular (aumento de FC, PA e DC), o que a torna útil em pacientes chocados."
+    "exp": "A cetamina produz analgesia, amnésia e hipnose com perfil hemodinâmico frequentemente simpaticomimético (aumento de FC/PA/DC). Em pacientes com depleção catecolamínica, esse efeito pode ser atenuado, exigindo monitorização cuidadosa."
   },
   {
     "cat": "Anestesiologia - Farmacologia",
@@ -366,9 +366,9 @@
   {
     "cat": "Noradrenalina: Farmacocinética e Doses",
     "q": "Qual a dose de infusão contínua de noradrenalina no choque séptico segundo as diretrizes da Surviving Sepsis Campaign (SSC)?",
-    "a": "Iniciar com 0,01–0,1 mcg/kg/min; doses acima de 0,25–0,5 mcg/kg/min são consideradas altas (vasopressina pode ser adicionada).",
+    "a": "A SSC recomenda noradrenalina como primeira linha, sem dose fixa universal: iniciar em dose baixa e titular para PAM alvo (geralmente >=65 mmHg), com ajuste conforme perfusão.",
     "hint": "mcg/kg/min",
-    "exp": "A SSC 2021 recomenda noradrenalina como vasopressor de primeira linha no choque séptico. Doses >0,25 mcg/kg/min indicam refratariedade e sugerem associar vasopressina ou hidrocortisona. A titulação deve visar PAM ≥65 mmHg como alvo inicial (SSC 2021, Intensive Care Med)."
+    "exp": "As diretrizes enfatizam titulação pelo alvo hemodinâmico/perfusão e contexto clínico; com necessidade crescente de noradrenalina, considerar vasopressina como adjuvante."
   },
   {
     "cat": "Noradrenalina: Farmacocinética e Doses",
@@ -393,10 +393,10 @@
   },
   {
     "cat": "Noradrenalina: Indicações Clínicas",
-    "q": "Em qual tipo de choque a noradrenalina é contraindicada como monoterapia inicial?",
-    "a": "Choque cardiogênico com baixo débito cardíaco isolado — o aumento da pós-carga pode piorar a disfunção miocárdica. Geralmente associa-se inotrópico (dobutamina).",
+    "q": "Em qual cenário a noradrenalina isolada pode ser insuficiente no choque cardiogênico?",
+    "a": "No choque cardiogênico com baixo débito importante, noradrenalina pode manter pressão arterial, mas frequentemente é necessário associar inotrópico (ex.: dobutamina) para melhorar débito/perfusão.",
     "hint": "Pós-carga cardíaco",
-    "exp": "No choque cardiogênico, a vasoconstrição α1 aumenta a RVP (pós-carga), o que pode deteriorar ainda mais o VE já comprometido. A estratégia é usar noradrenalina para manter PAM mínima enquanto se adiciona dobutamina para melhorar o DC. Em casos refratários, considerar IABP ou ECMO (ESC Guidelines 2021, Acute Heart Failure)."
+    "exp": "Não é uma contraindicação absoluta de monoterapia; a estratégia é fenótipo-dependente, com noradrenalina para hipotensão e inotrópico quando há hipoperfusão por baixo débito."
   },
   {
     "cat": "Noradrenalina: Indicações Clínicas",
@@ -424,7 +424,7 @@
     "q": "Qual o mecanismo de ação da vasopressina (ADH) como vasopressor?",
     "a": "Agonista dos receptores V1 (vasculares) → ativa Gq → IP3/DAG → aumento de Ca²⁺ intracelular → vasoconstrição do músculo liso. Também age em V2 (renal) → retenção de água.",
     "hint": "V1 vascular",
-    "exp": "A vasopressina é única por ser um vasopressor não-adrenérgico: não depende de receptores catecolaminérgicos. Isso é clinicamente relevante no choque refratário, onde a down-regulation de receptores adrenérgicos pode reduzir a resposta à noradrenalina. Os receptores V1 permanecem funcionais nesse contexto (Stoelting, cap. 12)."
+    "exp": "A vasopressina atua por receptores V1 e oferece via vasopressora não catecolaminérgica, útil como adjuvante em choque refratário. O racional clínico inclui menor dependência do eixo adrenérgico quando a resposta às catecolaminas é insuficiente."
   },
   {
     "cat": "Vasopressina: Mecanismo e Receptores",
@@ -564,7 +564,7 @@
     "q": "Qual droga vasoativa é mais associada a arritmias e por quê foi preterida no choque séptico?",
     "a": "Dopamina — maior incidência de arritmias (especialmente FA) comparada à noradrenalina no estudo de De Backer et al. (NEJM 2010). Também aumenta PCAP e tem perfil receptor imprevisível em diferentes doses.",
     "hint": "Dopamina: arrítmica",
-    "exp": "O estudo SOAP II (De Backer et al., NEJM 2010, n=1679) comparou dopamina vs noradrenalina no choque: mortalidade semelhante, mas dopamina teve 2× mais arritmias (24% vs 12%). Subgrupo com choque cardiogênico teve pior desfecho com dopamina. Isso consolidou a noradrenalina como padrão-ouro no choque (SSC 2021, grau 1B)."
+    "exp": "O estudo SOAP II (De Backer et al., NEJM 2010, n=1679) comparou dopamina vs noradrenalina no choque: mortalidade global semelhante, porém mais arritmias com dopamina (24% vs 12%). Esses dados sustentam a preferência atual por noradrenalina como vasopressor de primeira linha no choque séptico."
   },
   {
     "cat": "Comparativo: Drogas Vasoativas",
@@ -641,7 +641,7 @@
     "q": "Como preparar uma solução padrão de noradrenalina e qual a concentração habitual em UTI?",
     "a": "Concentração padrão: 4–8 mg em 250 mL de SG5% ou SF0,9% (16–32 mcg/mL). Em restrição hídrica: até 32 mg/250 mL (128 mcg/mL). Infundir por bomba de seringa com acesso venoso central.",
     "hint": "4mg/250mL padrão",
-    "exp": "A escolha do diluente (SG5% vs SF) tem impacto mínimo na estabilidade da noradrenalina (estável por 24h em ambos em temperatura ambiente). Soluções alcalinas (bicarbonato) inativam a droga. Concentrações mais altas ('noradrenalina concentrada') reduzem volume infundido — útil em pacientes com restrição hídrica ou choque refratário. Sempre rotular com droga, concentração, data e hora (Barash, 8ª ed.)."
+    "exp": "A escolha do diluente (SG5% vs SF) tem impacto mínimo na estabilidade da noradrenalina (estável por 24h em ambos em temperatura ambiente). Soluções alcalinas (bicarbonato) inativam a droga. Concentrações mais altas ('noradrenalina concentrada') reduzem volume infundido — útil em pacientes com restrição hídrica ou choque refratário. Recomenda-se rotular com droga, concentração, data e hora (Barash, 8ª ed.)."
   },
   {
     "cat": "Dobutamina: Farmacocinética e Doses",
@@ -751,9 +751,9 @@
   {
     "cat": "Controle de Ritmo",
     "q": "Quais são os antiarrítmicos recomendados para manutenção de ritmo sinusal na FA com cardiopatia estrutural significativa (IC com FE reduzida)?",
-    "a": "Amiodarona é o único antiarrítmico com perfil seguro na ICFEr. Dofetilida é alternativa (classe IC). Sotalol pode ser usado na IC leve se QTc permitir.",
+    "a": "Amiodarona é a opção mais usada na ICFEr; dofetilida (classe III, onde disponível) é alternativa em cenários selecionados. Fármacos classe IC são contraindicados na cardiopatia estrutural significativa.",
     "hint": "IC: amiodarona",
-    "exp": "Na ICFEr, os antiarrítmicos IC são contraindicados (risco de pró-arritmia ventricular). Sotalol tem efeito inotrópico negativo e prolonga QT. A amiodarona tem baixo risco pró-arrítmico ventricular mas toxicidade extracardíaca significativa (tireóide, pulmão, fígado, olho, pele) com uso prolongado. Monitorização anual de TFH, TFT, RX tórax e função hepática é obrigatória. Dofetilida requer internação para início devido ao risco de torsades de pointes."
+    "exp": "Na ICFEr, antiarrítmicos classe IC aumentam risco pró-arrítmico e não devem ser usados. Dofetilida é classe III (não classe IC) e requer início monitorizado devido risco de torsades. Amiodarona mantém baixo risco pró-arrítmico ventricular, mas exige vigilância de toxicidades extracardíacas."
   },
   {
     "cat": "Anticoagulação - Escore",
@@ -856,9 +856,9 @@
   {
     "cat": "FA na Gravidez",
     "q": "Quais anticoagulantes são seguros na FA durante a gravidez?",
-    "a": "Heparina não-fracionada (HNF) ou heparina de baixo peso molecular (HBPM) — 1º e 3º trimestres. Varfarina pode ser considerada no 2º trimestre (13-36 semanas) se dose ≤5mg/dia. DOACs são contraindicados em todos os trimestres (dados insuficientes, possível teratogenicidade).",
+    "a": "Preferir HBPM (ou HNF em situações específicas) durante a gestação. Varfarina é teratogênica e, em geral, evitada; exceções ocorrem principalmente em cenários valvares de altíssimo risco trombótico com decisão especializada. DOACs não são recomendados na gravidez.",
     "hint": "Heparina gravidez",
-    "exp": "A varfarina atravessa a placenta e é teratogênica (embriopatia varfarínica: hipoplasia nasal, condrodisplasia punctata — especialmente nas semanas 6-12). No 2º trimestre, o risco é menor. A HBPM não atravessa a placenta e é segura para o feto. Próximo ao parto, transição para HNF IV para facilitar reversão com protamina. Os DOACs são contraindicados pela falta de dados de segurança. O controle de frequência na gravidez: BB (metoprolol, propranolol — cuidado com betaxolol: bradicardia fetal); digoxina; verapamil."
+    "exp": "Para FA na gestação, heparinas são as opções com melhor perfil de segurança fetal por não atravessarem a placenta. O uso de varfarina exige avaliação altamente individualizada e, na prática, é mais discutido em prótese valvar mecânica do que em FA isolada."
   },
   {
     "cat": "FA e Pré-excitação (WPW)",
@@ -907,7 +907,7 @@
     "q": "Como diferenciar FA com condução aberrante de taquicardia ventricular (TV) no ECG?",
     "a": "FA com aberrância: QRS largo com morfologia típica de BRD ou BRE, intervalo R-R irregularmente irregular, sem dissociação AV. TV: R-R regular (geralmente), QRS >140ms, morfologia estranha, dissociação AV (ondas P independentes), batimentos de fusão/captura.",
     "hint": "Irregular = FA",
-    "exp": "A FA com condução aberrante (BRD funcional — fenômeno de Ashman) pode simular TV. O fenômeno de Ashman: complexo aberrante após intervalo R-R longo seguido de curto (período refratário prolongado após ciclo longo). A dissociação AV é o critério mais específico para TV. Os critérios de Brugada e Vereckei ajudam na diferenciação. Na dúvida ou instabilidade: tratar como TV. A FA com WPW pode simular TV com QRS pré-excitados largos e frequência alta — nunca usar adenosina nesse contexto."
+    "exp": "FA com condução aberrante (incluindo fenômeno de Ashman) pode simular TV. Dissociação AV e batimentos de fusão/captura favorecem TV. Critérios de Brugada/Vereckei ajudam, e em instabilidade ou dúvida clínica a abordagem deve priorizar segurança hemodinâmica. Em taquicardia irregular de QRS largo com suspeita de pré-excitação, evitar bloqueadores nodais AV."
   },
   {
     "cat": "Prognóstico e Complicações",
@@ -954,9 +954,9 @@
   {
     "cat": "Controle de Ritmo - Cardioversão",
     "q": "Qual é o protocolo de anticoagulação para cardioversão eletiva de FA com duração ≤48 horas?",
-    "a": "Se duração comprovada ≤48h: cardioversão sem anticoagulação prévia obrigatória (mas heparina IV/DOAC imediatamente antes se CHA₂DS₂-VASc ≥2) + anticoagulação por ≥4 semanas após ('atordoamento atrial').",
+    "a": "Em FA <=48h, pode-se cardioversão sem 3 semanas prévias de anticoagulação quando bem selecionado. Recomenda-se anticoagulação periprocedimento e, após CVE, manter por ~4 semanas na maioria dos casos; a necessidade de longo prazo depende do CHA2DS2-VASc e do risco tromboembólico individual.",
     "hint": "≤48h: anticoag após",
-    "exp": "A janela de ≤48h é o limiar abaixo do qual o risco de trombo no AAE é considerado baixo (estudos de EcoTE mostram trombo em <1% dos casos). No entanto, após cardioversão, mesmo bem-sucedida, o átrio fica 'atordoado' por dias a semanas com disfunção mecânica residual, criando risco de formação de novo trombo. Por isso, a anticoagulação por ≥4 semanas pós-cardioversão é mandatória em todos os pacientes com FA, independente do CHA₂DS₂-VASc. Após 4 semanas, decide-se anticoagulação a longo prazo pelo escore."
+    "exp": "O risco tromboembólico é baixo, mas não nulo, mesmo na janela <=48h. Após cardioversão, há atordoamento atrial transitório; por isso, muitas diretrizes sugerem anticoagulação por 4 semanas, com individualização em casos de risco muito baixo e FA de curta duração."
   },
   {
     "cat": "Controle de Ritmo",
@@ -968,7 +968,7 @@
   {
     "cat": "FA - Populações Especiais",
     "q": "Como manejar FA em paciente com doença renal crônica estágio 5 (TFG <15 mL/min ou diálise)?",
-    "a": "Anticoagulação é controversa — dados limitados. A apixabana 5mg 2x/dia é o DOAC com maior evidência em diálise (estudos RENAL-AF e AXADIA). Varfarina é alternativa (risco de calcificação vascular). Nunca usar dabigatrana (80% excreção renal).",
+    "a": "Anticoagulação é controversa e deve ser individualizada. A apixabana é o DOAC com mais dados observacionais em diálise; varfarina permanece alternativa em cenários selecionados. Dabigatrana geralmente não é recomendada em TFG muito baixa/diálise pelo alto componente de eliminação renal.",
     "hint": "Apixabana em diálise",
     "exp": "Pacientes com DRC avançada têm risco aumentado tanto de AVC quanto de sangramento, tornando a decisão de anticoagulação complexa. A varfarina foi historicamente usada mas está associada a calcificação arterial e eventos cardiovasculares em pacientes renais. A apixabana tem menor dependência renal (~27% excreção renal) e é o DOAC com mais dados em DRC grave/diálise. O estudo RENAL-AF (apixabana vs. varfarina em diálise) foi interrompido precocemente mas sugere segurança similar. A decisão deve ser individualizada com discussão de riscos."
   },
