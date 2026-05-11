@@ -36,10 +36,6 @@
                 <span class="nav-icon">ST</span>Estatísticas
             </button>
         </nav>
-        <div class="sidebar-categories">
-            <span class="category-label">Categorias</span>
-            <div id="category-list"></div>
-        </div>
     </aside>
 
     <!-- MAIN CONTENT -->
@@ -58,7 +54,7 @@
                 <div class="stat-card stat-streak"><div class="stat-icon">SEQ</div><div><span id="stat-streak" class="stat-number">0</span><span class="stat-label">Dias seguidos</span></div></div>
             </div>
             <div class="dashboard-grid">
-                <div class="dashboard-card"><h3>Revisar por Categoria</h3><div id="category-review-list"></div></div>
+                <div class="dashboard-card"><h3>Revisar por Disciplina</h3><div id="category-review-list"></div></div>
                 <div class="dashboard-card"><h3>Próximas Revisões</h3><div id="upcoming-list"></div></div>
             </div>
             <div class="study-cta" id="study-cta" style="display: none;">
@@ -95,13 +91,25 @@
                 <div class="study-controls">
                     <button id="flip-btn" class="btn btn-primary btn-large">Mostrar Resposta</button>
                     <div id="rating-panel" style="display:none;" class="rating-panel">
-                        <div class="rating-label">Qual a dificuldade deste card?</div>
-                        <div class="rating-buttons">
-                            <button class="rating-btn rating-again" data-rating="0"><span>1</span><strong>Errei</strong><small>Revisar logo</small></button>
-                            <button class="rating-btn rating-hard" data-rating="1"><span>2</span><strong>Difícil</strong><small>Revisar em breve</small></button>
-                            <button class="rating-btn rating-good" data-rating="2"><span>3</span><strong>Bom</strong><small>Intervalo normal</small></button>
-                            <button class="rating-btn rating-easy" data-rating="3"><span>4</span><strong>Fácil</strong><small>Aumentar intervalo</small></button>
+                        <div class="rating-label">Como você foi neste card?</div>
+                        <div class="eval-grid">
+                            <div class="eval-group">
+                                <p class="eval-group-label">Resultado</p>
+                                <div class="eval-options">
+                                    <button class="eval-btn" data-result="correct">Acertei</button>
+                                    <button class="eval-btn" data-result="wrong">Errei</button>
+                                </div>
+                            </div>
+                            <div class="eval-group">
+                                <p class="eval-group-label">Dificuldade</p>
+                                <div class="eval-options">
+                                    <button class="eval-btn" data-difficulty="hard">Difícil</button>
+                                    <button class="eval-btn" data-difficulty="medium">Médio</button>
+                                    <button class="eval-btn" data-difficulty="easy">Fácil</button>
+                                </div>
+                            </div>
                         </div>
+                        <button id="submit-evaluation-btn" class="btn btn-primary">Confirmar avaliação</button>
                     </div>
                 </div>
             </div>
@@ -119,6 +127,7 @@
                 <h1>Meus Cards</h1>
                 <div class="browse-controls">
                     <input type="search" id="search-input" class="search-input" placeholder="Buscar em todos os cards...">
+                    <select id="filter-discipline" class="select-input"></select>
                     <select id="filter-category" class="select-input"></select>
                     <button class="btn btn-primary" data-view="create">Criar Novo Card</button>
                 </div>
@@ -143,13 +152,17 @@
                 </div>
                 <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
                     <div class="form-group">
-                        <label for="form-category">Categoria</label>
-                        <input type="text" id="form-category" class="text-input" required>
+                        <label for="form-discipline">Disciplina</label>
+                        <select id="form-discipline" class="select-input" required></select>
                     </div>
                     <div class="form-group">
-                        <label for="form-hint">Dica (opcional)</label>
-                        <input type="text" id="form-hint" class="text-input">
+                        <label for="form-category">Tema/Subcategoria</label>
+                        <input type="text" id="form-category" class="text-input" required>
                     </div>
+                </div>
+                <div class="form-group">
+                    <label for="form-hint">Dica (opcional)</label>
+                    <input type="text" id="form-hint" class="text-input">
                 </div>
                 <div class="form-group">
                     <label for="form-explanation">Explicação (opcional)</label>
@@ -180,7 +193,7 @@
                     <div id="activity-heatmap" class="activity-heatmap"></div>
                 </div>
                 <div id="category-breakdown" class="category-breakdown">
-                    <h3>Divisão por Categoria</h3>
+                    <h3>Divisão por Disciplina</h3>
                     <div id="category-bars" class="category-bars"></div>
                 </div>
                 <div id="retention-section" class="retention-section">

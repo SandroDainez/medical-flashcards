@@ -84,10 +84,137 @@ let state = {
  studyQueue: [],
  studyIndex: 0,
  studyTotal: 0,
+ selectedResult: '',
+ selectedDifficulty: '',
  pendingDeleteId: null,
+ filterDiscipline: '',
  filterCategory: '',
  filterSearch: ''
 };
+
+const KNOWN_DISCIPLINES = [
+  'Anestesiologia',
+  'Terapia Intensiva',
+  'Cardiologia',
+  'Clínica Médica',
+  'Pneumologia',
+  'Ortopedia e Traumatologia',
+  'Fisiologia',
+  'Anatomia',
+  'Farmacologia',
+  'Patologia',
+  'Microbiologia',
+  'Imunologia',
+  'Bioquímica',
+  'Semiologia',
+  'Neurologia',
+  'Cirurgia',
+  'Pediatria',
+  'Ginecologia e Obstetrícia',
+  'Psiquiatria',
+  'Outro'
+];
+
+const DISCIPLINE_COLORS = {
+  'Anestesiologia': '#ea580c',
+  'Terapia Intensiva': '#dc2626',
+  'Cardiologia': '#1d4ed8',
+  'Clínica Médica': '#2563eb',
+  'Pneumologia': '#0284c7',
+  'Ortopedia e Traumatologia': '#b45309',
+  'Fisiologia': '#7c3aed',
+  'Anatomia': '#16a34a',
+  'Farmacologia': '#0891b2',
+  'Patologia': '#b91c1c',
+  'Microbiologia': '#b45309',
+  'Imunologia': '#0f766e',
+  'Bioquímica': '#db2777',
+  'Semiologia': '#4f46e5',
+  'Neurologia': '#7e22ce',
+  'Cirurgia': '#be123c',
+  'Pediatria': '#0284c7',
+  'Ginecologia e Obstetrícia': '#9d174d',
+  'Psiquiatria': '#4338ca',
+  'Outro': '#475569'
+};
+
+function inferDisciplineByContent(cat = '', q = '') {
+  const text = `${cat} ${q}`.toLowerCase();
+
+  if (/fibrila|flutter|ablação|anticoag|cardiovers|apêndice atrial|wpw|frequência|ritmo|fa\\b/.test(text)) return 'Cardiologia';
+  if (/sepse|choque|ventila|ressuscita|hemodin|uti|intensiv|lactato|swan-ganz|foco infecc|suporte renal|pics/.test(text)) return 'Terapia Intensiva';
+  if (/noradrenalina|vasopressina|dobutamina|receptores adren|vasopressor|inotrópico|farmacocin|efeitos adversos/.test(text)) return 'Farmacologia';
+  if (/anestesi|via aére|pré-op|bloqueador neuromuscular/.test(text)) return 'Anestesiologia';
+  if (/anatom/.test(text)) return 'Anatomia';
+  if (/fisiolog/.test(text)) return 'Fisiologia';
+  if (/bioqu[ií]m/.test(text)) return 'Bioquímica';
+  if (/microbiolog/.test(text)) return 'Microbiologia';
+  if (/imunolog/.test(text)) return 'Imunologia';
+  if (/patolog/.test(text)) return 'Patologia';
+  if (/semiolog/.test(text)) return 'Semiologia';
+  if (/pediatria|vacina/.test(text)) return 'Pediatria';
+  if (/neurolog|cushing/.test(text)) return 'Neurologia';
+  if (/cirurg/.test(text)) return 'Cirurgia';
+  if (/gineco|obstetr|gravidez/.test(text)) return 'Ginecologia e Obstetrícia';
+  if (/pneumolog|sdra/.test(text)) return 'Pneumologia';
+  if (/cl[ií]nica m[eé]dica|framingham|insufici[eê]ncia card[ií]aca/.test(text)) return 'Clínica Médica';
+  return 'Outro';
+}
+
+function splitCategory(cat = '', q = '') {
+  const text = (cat || '').trim();
+  if (!text) return { discipline: 'Outro', topic: '' };
+
+  const separators = [' - ', ' – ', ': '];
+  for (const sep of separators) {
+    if (text.includes(sep)) {
+      const parts = text.split(sep);
+      const first = (parts.shift() || '').trim();
+      const topic = parts.join(sep).trim();
+      if (KNOWN_DISCIPLINES.includes(first)) {
+        return { discipline: first, topic: topic || first };
+      }
+      return { discipline: inferDisciplineByContent(text, q), topic: text };
+    }
+  }
+  return { discipline: inferDisciplineByContent(text, q), topic: text };
+}
+
+function getDiscipline(card) {
+  return splitCategory(card.cat, card.q).discipline;
+}
+
+function getTopic(card) {
+  return splitCategory(card.cat, card.q).topic || card.cat;
+}
+
+function buildCategory(discipline, topic) {
+  const d = (discipline || '').trim();
+  const t = (topic || '').trim();
+  if (!d) return t || 'Outro';
+  return t ? `${d} - ${t}` : d;
+}
+
+function getDisciplineCounts() {
+  const counts = {};
+  state.cards.forEach(c => {
+    const discipline = getDiscipline(c);
+    counts[discipline] = (counts[discipline] || 0) + 1;
+  });
+  return counts;
+}
+
+function getAllDisciplines() {
+  const fromCards = [...new Set(state.cards.map(c => getDiscipline(c)))];
+  return [...new Set([...KNOWN_DISCIPLINES, ...fromCards])].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+}
+
+function populateDisciplineSelect(selectEl) {
+  if (!selectEl) return;
+  const options = getAllDisciplines();
+  selectEl.innerHTML = '<option value="">Selecione uma disciplina...</option>' +
+    options.map(d => `<option value="${d}">${d}</option>`).join('');
+}
 
 // ===== INIT =====
 async function init() {
@@ -177,14 +304,21 @@ function bindEvents() {
  document.getElementById('flip-btn').addEventListener('click', flipCard);
  document.getElementById('flashcard').addEventListener('click', flipCard);
 
- // Rating buttons
- document.querySelectorAll('.rating-btn').forEach(btn => {
- btn.addEventListener('click', () => rateCard(parseInt(btn.dataset.rating)));
+ // Evaluation buttons (result + difficulty)
+ document.querySelectorAll('.eval-btn').forEach(btn => {
+   btn.addEventListener('click', () => handleEvalOptionClick(btn));
  });
+ document.getElementById('submit-evaluation-btn').addEventListener('click', submitEvaluation);
 
  // Search & filter
  document.getElementById('search-input').addEventListener('input', e => {
  state.filterSearch = e.target.value;
+ renderBrowse();
+ });
+
+ document.getElementById('filter-discipline').addEventListener('change', e => {
+ state.filterDiscipline = e.target.value;
+ state.filterCategory = '';
  renderBrowse();
  });
 
@@ -240,7 +374,7 @@ function showView(viewId, params = {}) {
     if (navBtn) navBtn.classList.add('active');
 
     if (viewId === 'dashboard') renderDashboard();
-    if (viewId === 'study') startStudySession(params.category);
+    if (viewId === 'study') startStudySession(params.discipline || null);
     if (viewId === 'browse') renderBrowse();
     if (viewId === 'stats') renderStats();
     if (viewId === 'create') resetForm();
@@ -255,27 +389,27 @@ function renderAll() {
 
 // ===== SIDEBAR =====
 function renderSidebar() {
-    const categories = getCategoryCounts();
     const list = document.getElementById('category-list');
+    if (!list) return;
+
+    const disciplines = getDisciplineCounts();
     list.innerHTML = '';
 
-    Object.entries(categories).sort((a, b) => b[1] - a[1]).forEach(([cat, count]) => {
-        const chip = document.createElement('div');
-        chip.className = 'cat-chip';
-        chip.innerHTML = `<span>${cat}</span><span class="cat-chip-count">${count}</span>`;
-        chip.addEventListener('click', () => {
-            showView('study', { category: cat });
-        });
-        list.appendChild(chip);
-    });
+    Object.entries(disciplines)
+      .sort((a, b) => a[0].localeCompare(b[0], 'pt-BR'))
+      .forEach(([discipline, count]) => {
+          const chip = document.createElement('div');
+          chip.className = 'cat-chip';
+          chip.innerHTML = `<span>${discipline}</span><span class="cat-chip-count">${count}</span>`;
+          chip.addEventListener('click', () => {
+              showView('study', { discipline });
+          });
+          list.appendChild(chip);
+      });
 }
 
 function getCategoryCounts() {
- const counts = {};
- state.cards.forEach(c => {
- counts[c.cat] = (counts[c.cat] || 0) + 1;
- });
- return counts;
+  return getDisciplineCounts();
 }
 
 function updateDueBadge() {
@@ -304,16 +438,19 @@ function renderDashboard() {
  document.getElementById('stat-learned').textContent = learned.length;
  document.getElementById('stat-streak').textContent = state.stats.streak || 0;
 
- // Category review list
+ // Discipline review list
  const catDue = {};
- dueCards.forEach(c => { catDue[c.cat] = (catDue[c.cat] || 0) + 1; });
+ dueCards.forEach(c => {
+   const discipline = getDiscipline(c);
+   catDue[discipline] = (catDue[discipline] || 0) + 1;
+ });
  const catList = document.getElementById('category-review-list');
 
  if (Object.keys(catDue).length === 0) {
     catList.innerHTML = '<div class="empty-state"><p>Nenhuma revisão pendente.</p></div>';
  } else {
  catList.innerHTML = Object.entries(catDue)
- .sort((a, b) => b[1] - a[1])
+ .sort((a, b) => a[0].localeCompare(b[0], 'pt-BR'))
  .map(([cat, cnt]) => `
  <div class="cat-review-item">
  <span class="cat-review-name">${cat}</span>
@@ -356,11 +493,11 @@ function renderDashboard() {
 }
 
 // ===== STUDY SESSION =====
-function startStudySession(category = null) {
+function startStudySession(discipline = null) {
     let dueCards = getDueCards();
     
-    state.studyQueue = category 
-        ? dueCards.filter(c => c.cat === category)
+    state.studyQueue = discipline
+        ? dueCards.filter(c => getDiscipline(c) === discipline)
         : dueCards;
     
     state.studyTotal = state.studyQueue.length;
@@ -391,8 +528,12 @@ function showCurrentCard() {
 
  // Reset flip
  flashcard.classList.remove('flipped');
+ document.querySelector('.flashcard-container').classList.remove('answered');
  document.getElementById('rating-panel').style.display = 'none';
  document.getElementById('flip-btn').style.display = 'inline-flex';
+ state.selectedResult = '';
+ state.selectedDifficulty = '';
+ updateEvaluationUI();
 
  // Populate
  document.getElementById('card-category-tag').textContent = card.cat;
@@ -413,9 +554,48 @@ function flipCard() {
  flashcard.classList.toggle('flipped');
 
  if (flashcard.classList.contains('flipped')) {
+ document.querySelector('.flashcard-container').classList.add('answered');
  document.getElementById('rating-panel').style.display = 'block';
  document.getElementById('flip-btn').style.display = 'none';
  }
+}
+
+function handleEvalOptionClick(btn) {
+  if (btn.dataset.result) {
+    state.selectedResult = btn.dataset.result;
+  }
+  if (btn.dataset.difficulty) {
+    state.selectedDifficulty = btn.dataset.difficulty;
+  }
+  updateEvaluationUI();
+}
+
+function updateEvaluationUI() {
+  document.querySelectorAll('.eval-btn').forEach(btn => {
+    const selectedResult = btn.dataset.result && btn.dataset.result === state.selectedResult;
+    const selectedDifficulty = btn.dataset.difficulty && btn.dataset.difficulty === state.selectedDifficulty;
+    btn.classList.toggle('selected', !!(selectedResult || selectedDifficulty));
+  });
+
+  const submitBtn = document.getElementById('submit-evaluation-btn');
+  const canSubmit = !!state.selectedResult && !!state.selectedDifficulty;
+  submitBtn.disabled = !canSubmit;
+}
+
+function mapEvaluationToRating() {
+  if (state.selectedResult === 'wrong') return 0;
+  if (state.selectedDifficulty === 'hard') return 1;
+  if (state.selectedDifficulty === 'medium') return 2;
+  return 3;
+}
+
+function submitEvaluation() {
+  if (!state.selectedResult || !state.selectedDifficulty) {
+    showToast('Selecione resultado e dificuldade.', 'error');
+    return;
+  }
+  const rating = mapEvaluationToRating();
+  rateCard(rating);
 }
 
 function rateCard(rating) {
@@ -478,22 +658,34 @@ function finishStudy() {
 
 // ===== BROWSE =====
 function renderBrowse() {
+    const disciplineEl = document.getElementById('filter-discipline');
     const filterCatEl = document.getElementById('filter-category');
-    const cats = [...new Set(state.cards.map(c => c.cat))].sort();
-    
-    // A fonte da verdade é o estado global
-    const currentCat = state.filterCategory; 
+    const disciplines = getAllDisciplines();
+    const currentDiscipline = state.filterDiscipline;
+    const currentCat = state.filterCategory;
 
-    filterCatEl.innerHTML = '<option value="">Todas categorias</option>' + 
-        cats.map(c => `<option value="${c}" ${c === currentCat ? 'selected' : ''}>${c}</option>`).join('');
-    
-    // Garante que o valor do dropdown está sincronizado
-    filterCatEl.value = currentCat; 
+    disciplineEl.innerHTML = '<option value="">Todas disciplinas</option>' +
+      disciplines.map(d => `<option value="${d}" ${d === currentDiscipline ? 'selected' : ''}>${d}</option>`).join('');
+    disciplineEl.value = currentDiscipline;
+
+    const topics = [...new Set(
+      state.cards
+        .filter(c => !currentDiscipline || getDiscipline(c) === currentDiscipline)
+        .map(c => getTopic(c))
+    )].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+
+    filterCatEl.innerHTML = '<option value="">Todos temas</option>' +
+      topics.map(t => `<option value="${t}" ${t === currentCat ? 'selected' : ''}>${t}</option>`).join('');
+    filterCatEl.value = currentCat;
 
     let filtered = state.cards;
 
+    if (state.filterDiscipline) {
+        filtered = filtered.filter(c => getDiscipline(c) === state.filterDiscipline);
+    }
+
     if (state.filterCategory) {
-        filtered = filtered.filter(c => c.cat === state.filterCategory);
+        filtered = filtered.filter(c => getTopic(c) === state.filterCategory);
     }
 
     if (state.filterSearch) {
@@ -501,7 +693,9 @@ function renderBrowse() {
         filtered = filtered.filter(c => 
             c.q.toLowerCase().includes(q) || 
             c.a.toLowerCase().includes(q) ||
-            c.cat.toLowerCase().includes(q)
+            c.cat.toLowerCase().includes(q) ||
+            getDiscipline(c).toLowerCase().includes(q) ||
+            getTopic(c).toLowerCase().includes(q)
         );
     }
 
@@ -530,11 +724,13 @@ function renderBrowse() {
         const dueLabel = isDue ? 'Para revisar' : 
                          daysLeft === 1 ? 'Amanhã' : `Em ${daysLeft} dias`;
         
+        const discipline = getDiscipline(card);
+        const topic = getTopic(card);
         return `
         <div class="card-item">
-            <div class="card-item-category">${card.cat}</div>
+            <div class="card-item-category">${discipline}</div>
             <div class="card-item-front">${escapeHtml(card.q)}</div>
-            <div class="card-item-back">${escapeHtml(card.a)}</div>
+            <div class="card-item-back">${escapeHtml(topic)} · ${escapeHtml(card.a)}</div>
             <div class="card-item-meta">
                 <span>
                     <span class="card-status-dot ${statusClass}"></span>
@@ -565,15 +761,17 @@ function handleFormSubmit(e) {
  const id = document.getElementById('edit-card-id').value;
  const today = new Date().toISOString().split('T')[0];
 
+ const discipline = document.getElementById('form-discipline').value.trim();
+ const topic = document.getElementById('form-category').value.trim();
  const data = {
- cat: document.getElementById('form-category').value,
+ cat: buildCategory(discipline, topic),
  q: document.getElementById('form-front').value.trim(),
  a: document.getElementById('form-back').value.trim(),
  hint: document.getElementById('form-hint').value.trim(),
  exp: document.getElementById('form-explanation').value.trim()
  };
 
- if (!data.q || !data.a || !data.cat) {
+ if (!data.q || !data.a || !discipline || !topic) {
  showToast('Preencha todos os campos obrigatórios.', 'error');
  return;
  }
@@ -612,6 +810,8 @@ function resetForm() {
  document.getElementById('form-title').textContent = 'Criar Novo Card';
  document.getElementById('form-submit-btn').textContent = 'Salvar Card';
  document.getElementById('card-form').reset();
+ populateDisciplineSelect(document.getElementById('form-discipline'));
+ document.getElementById('form-discipline').value = '';
 }
 
 function editCard(id) {
@@ -621,8 +821,12 @@ function editCard(id) {
  showView('create');
  document.getElementById('form-title').textContent = 'Editar Card';
  document.getElementById('form-submit-btn').textContent = 'Atualizar Card';
+ populateDisciplineSelect(document.getElementById('form-discipline'));
+
+ const parts = splitCategory(card.cat, card.q);
  document.getElementById('edit-card-id').value = card.id;
- document.getElementById('form-category').value = card.cat;
+ document.getElementById('form-discipline').value = parts.discipline;
+ document.getElementById('form-category').value = getTopic(card);
  document.getElementById('form-front').value = card.q;
  document.getElementById('form-back').value = card.a;
  document.getElementById('form-hint').value = card.hint || '';
@@ -688,10 +892,10 @@ function renderCategoryBars() {
  const container = document.getElementById('category-bars');
 
  container.innerHTML = Object.entries(counts)
- .sort((a, b) => b[1] - a[1])
+ .sort((a, b) => a[0].localeCompare(b[0], 'pt-BR'))
  .map(([cat, count]) => {
  const pct = (count / max) * 100;
- const color = CATEGORY_COLORS[cat] || '#475569';
+ const color = DISCIPLINE_COLORS[cat] || '#475569';
  return `
  <div class="cat-bar-item">
  <div class="cat-bar-label">
@@ -757,10 +961,10 @@ document.addEventListener('keydown', e => {
  }
 
  if (isFlipped) {
- if (e.key === '1') rateCard(0);
- if (e.key === '2') rateCard(1);
- if (e.key === '3') rateCard(2);
- if (e.key === '4') rateCard(3);
+ if (e.key === '1') { state.selectedResult = 'wrong'; state.selectedDifficulty = 'hard'; submitEvaluation(); }
+ if (e.key === '2') { state.selectedResult = 'correct'; state.selectedDifficulty = 'hard'; submitEvaluation(); }
+ if (e.key === '3') { state.selectedResult = 'correct'; state.selectedDifficulty = 'medium'; submitEvaluation(); }
+ if (e.key === '4') { state.selectedResult = 'correct'; state.selectedDifficulty = 'easy'; submitEvaluation(); }
  }
 });
 
