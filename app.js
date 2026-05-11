@@ -220,6 +220,19 @@ function normalizeEmail(email = '') {
   return email.trim().toLowerCase();
 }
 
+function getErrorMessage(errorLike) {
+  if (!errorLike) return 'falha inesperada.';
+  if (typeof errorLike === 'string') return errorLike;
+  if (typeof errorLike.message === 'string' && errorLike.message.trim()) return errorLike.message;
+  if (typeof errorLike.error_description === 'string' && errorLike.error_description.trim()) return errorLike.error_description;
+  if (typeof errorLike.details === 'string' && errorLike.details.trim()) return errorLike.details;
+  try {
+    return JSON.stringify(errorLike);
+  } catch {
+    return 'falha inesperada.';
+  }
+}
+
 function applyAuthState(isAuthenticated) {
   const authScreen = document.getElementById('auth-screen');
   const app = document.getElementById('app');
@@ -244,6 +257,11 @@ function applyAuthState(isAuthenticated) {
       authStatus.textContent = 'Configure window.SUPABASE_URL e window.SUPABASE_ANON_KEY para usar autenticação real.';
     }
   }
+}
+
+function setAuthStatus(message = '') {
+  const authStatus = document.getElementById('auth-status');
+  if (authStatus) authStatus.textContent = message;
 }
 
 function updateSessionUI() {
@@ -418,6 +436,35 @@ async function persistStats() {
   }
 }
 
+async function hydrateAuthenticatedUser(authUser) {
+  const profile = await loadOrCreateProfile(authUser);
+  if (profile.status === USER_STATUS.BLOCKED) {
+    await supabaseClient.auth.signOut();
+    applyAuthState(false);
+    const msg = 'Usuário bloqueado pelo administrador.';
+    setAuthStatus(msg);
+    showToast(msg, 'error');
+    return false;
+  }
+  if (profile.status === USER_STATUS.PENDING) {
+    await supabaseClient.auth.signOut();
+    applyAuthState(false);
+    const msg = 'Conta pendente de liberação do administrador.';
+    setAuthStatus(msg);
+    showToast(msg, 'error');
+    return false;
+  }
+
+  state.currentUser = profile;
+  state.authenticated = true;
+  await loadUserData();
+  updateStreak();
+  await persistStats();
+  applyAuthState(true);
+  setAuthStatus('');
+  return true;
+}
+
 async function initAuth() {
   if (!HAS_SUPABASE_CONFIG) {
     applyAuthState(false);
@@ -432,37 +479,18 @@ async function initAuth() {
       return false;
     }
 
-    const session = data.session;
-    if (!session?.user) {
+    const authUser = data.session?.user;
+    if (!authUser) {
       applyAuthState(false);
       return false;
     }
-
-    const profile = await loadOrCreateProfile(session.user);
-    if (profile.status === USER_STATUS.BLOCKED) {
-      await supabaseClient.auth.signOut();
-      applyAuthState(false);
-      showToast('Usuário bloqueado pelo administrador.', 'error');
-      return false;
-    }
-    if (profile.status === USER_STATUS.PENDING) {
-      await supabaseClient.auth.signOut();
-      applyAuthState(false);
-      showToast('Conta pendente de liberação do administrador.', 'error');
-      return false;
-    }
-
-    state.currentUser = profile;
-    state.authenticated = true;
-    await loadUserData();
-    updateStreak();
-    await persistStats();
-    applyAuthState(true);
-    return true;
+    return hydrateAuthenticatedUser(authUser);
   } catch (authErr) {
     console.error('Erro na autenticação:', authErr);
     applyAuthState(false);
-    showToast(`Erro ao autenticar: ${authErr?.message || 'falha inesperada.'}`, 'error');
+    const detail = getErrorMessage(authErr);
+    setAuthStatus(`Erro ao autenticar: ${detail}`);
+    showToast(`Erro ao autenticar: ${detail}`, 'error');
     return false;
   }
 }
@@ -476,12 +504,12 @@ async function handleLoginSubmit(e) {
 
   const email = normalizeEmail(document.getElementById('login-email').value);
   const password = document.getElementById('login-password').value;
-  const { error } = await supabaseClient.auth.signInWithPassword({ email, password });
+  const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
   if (error) {
     showToast(error.message || 'Falha no login.', 'error');
     return;
   }
-  const ok = await initAuth();
+  const ok = data?.user ? await hydrateAuthenticatedUser(data.user) : await initAuth();
   if (ok) showToast('Login realizado com sucesso.', 'success');
 }
 
