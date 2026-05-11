@@ -452,11 +452,23 @@ function renderDashboard() {
  catList.innerHTML = Object.entries(catDue)
  .sort((a, b) => a[0].localeCompare(b[0], 'pt-BR'))
  .map(([cat, cnt]) => `
- <div class="cat-review-item">
+ <div class="cat-review-item cat-review-clickable" data-discipline="${cat}" role="button" tabindex="0" aria-label="Estudar ${cat}">
  <span class="cat-review-name">${cat}</span>
  <span class="cat-review-count">${cnt} cards</span>
  </div>
  `).join('');
+
+ catList.querySelectorAll('.cat-review-clickable').forEach(item => {
+   item.addEventListener('click', () => {
+     showView('study', { discipline: item.dataset.discipline });
+   });
+   item.addEventListener('keydown', e => {
+     if (e.key === 'Enter' || e.key === ' ') {
+       e.preventDefault();
+       showView('study', { discipline: item.dataset.discipline });
+     }
+   });
+ });
  }
 
  // Upcoming reviews
