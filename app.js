@@ -264,25 +264,43 @@ function isAdmin() {
 
 async function loadOrCreateProfile(authUser) {
   const fallbackName = (authUser.email || 'usuário').split('@')[0];
-  const payload = {
-    id: authUser.id,
-    email: authUser.email || '',
-    full_name: authUser.user_metadata?.full_name || fallbackName,
-    role: USER_ROLE.USER,
-    status: USER_STATUS.PENDING
-  };
+  const resolvedName = authUser.user_metadata?.full_name || fallbackName;
 
-  const { error } = await supabase.from('profiles').upsert(payload, { onConflict: 'id' });
-  if (error) throw error;
-
-  const { data, error: profileErr } = await supabase
+  const { data: existing, error: existingErr } = await supabase
     .from('profiles')
     .select('*')
     .eq('id', authUser.id)
-    .single();
+    .maybeSingle();
 
-  if (profileErr) throw profileErr;
-  return data;
+  if (existingErr) throw existingErr;
+
+  if (existing) {
+    const needsSync = existing.email !== (authUser.email || '') || existing.full_name !== resolvedName;
+    if (needsSync) {
+      const { error: syncErr } = await supabase
+        .from('profiles')
+        .update({
+          email: authUser.email || '',
+          full_name: resolvedName,
+          updated_at: new Date().toISOString()
+        })
+        .eq('id', authUser.id);
+      if (syncErr) throw syncErr;
+      return { ...existing, email: authUser.email || '', full_name: resolvedName };
+    }
+    return existing;
+  }
+
+  const insertPayload = {
+    id: authUser.id,
+    email: authUser.email || '',
+    full_name: resolvedName,
+    role: USER_ROLE.USER,
+    status: USER_STATUS.PENDING
+  };
+  const { error: insertErr } = await supabase.from('profiles').insert(insertPayload);
+  if (insertErr) throw insertErr;
+  return insertPayload;
 }
 
 async function loadUserData() {
