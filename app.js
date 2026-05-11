@@ -712,6 +712,7 @@ function renderBrowse() {
     }
 
     const grid = document.getElementById('cards-grid');
+    grid.className = 'cards-grid browse-organized';
 
     if (filtered.length === 0) {
         grid.innerHTML = `
@@ -725,36 +726,70 @@ function renderBrowse() {
     }
 
     const today = new Date().toISOString().split('T')[0];
+    const now = new Date();
 
-    grid.innerHTML = filtered.map(card => {
+    const sorted = [...filtered].sort((a, b) => {
+      const disciplineCompare = getDiscipline(a).localeCompare(getDiscipline(b), 'pt-BR');
+      if (disciplineCompare !== 0) return disciplineCompare;
+
+      const topicCompare = getTopic(a).localeCompare(getTopic(b), 'pt-BR');
+      if (topicCompare !== 0) return topicCompare;
+
+      const dueCompare = (a.dueDate || '').localeCompare(b.dueDate || '');
+      if (dueCompare !== 0) return dueCompare;
+
+      return a.q.localeCompare(b.q, 'pt-BR');
+    });
+
+    const byDiscipline = sorted.reduce((acc, card) => {
+      const discipline = getDiscipline(card);
+      if (!acc[discipline]) acc[discipline] = [];
+      acc[discipline].push(card);
+      return acc;
+    }, {});
+
+    grid.innerHTML = Object.entries(byDiscipline).map(([discipline, cards]) => {
+      const cardsHtml = cards.map(card => {
         const isDue = card.dueDate <= today;
-        const statusClass = card.repetition === 0 ? 'status-new' : 
+        const statusClass = card.repetition === 0 ? 'status-new' :
                             (card.repetition <= 2 ? 'status-learning' : 'status-review');
-        const statusLabel = card.repetition === 0 ? 'Novo' : 
+        const statusLabel = card.repetition === 0 ? 'Novo' :
                             (card.repetition <= 2 ? 'Aprendendo' : 'Revisão');
-        const daysLeft = Math.ceil((new Date(card.dueDate) - new Date()) / 86400000);
-        const dueLabel = isDue ? 'Para revisar' : 
+        const daysLeft = Math.ceil((new Date(card.dueDate) - now) / 86400000);
+        const dueLabel = isDue ? 'Para revisar' :
                          daysLeft === 1 ? 'Amanhã' : `Em ${daysLeft} dias`;
-        
-        const discipline = getDiscipline(card);
+
         const topic = getTopic(card);
         return `
-        <div class="card-item">
-            <div class="card-item-category">${discipline}</div>
-            <div class="card-item-front">${escapeHtml(card.q)}</div>
-            <div class="card-item-back">${escapeHtml(topic)} · ${escapeHtml(card.a)}</div>
-            <div class="card-item-meta">
-                <span>
-                    <span class="card-status-dot ${statusClass}"></span>
-                    ${statusLabel} · ${dueLabel}
-                </span>
-                <div class="card-item-actions">
-                    <button class="btn-icon" onclick="editCard('${card.id}')">Editar</button>
-                    <button class="btn-icon delete" onclick="deleteCard('${card.id}')">Excluir</button>
-                </div>
-            </div>
-        </div>
+          <div class="card-item">
+              <div class="card-item-category">${escapeHtml(topic)}</div>
+              <div class="card-item-front">${escapeHtml(card.q)}</div>
+              <div class="card-item-back">${escapeHtml(card.a)}</div>
+              <div class="card-item-meta">
+                  <span>
+                      <span class="card-status-dot ${statusClass}"></span>
+                      ${statusLabel} · ${dueLabel}
+                  </span>
+                  <div class="card-item-actions">
+                      <button class="btn-icon" onclick="editCard('${card.id}')">Editar</button>
+                      <button class="btn-icon delete" onclick="deleteCard('${card.id}')">Excluir</button>
+                  </div>
+              </div>
+          </div>
         `;
+      }).join('');
+
+      return `
+        <section class="browse-section">
+          <div class="browse-section-header">
+            <h3>${escapeHtml(discipline)}</h3>
+            <span class="browse-section-count">${cards.length} cards</span>
+          </div>
+          <div class="browse-section-grid">
+            ${cardsHtml}
+          </div>
+        </section>
+      `;
     }).join('');
 }
 
