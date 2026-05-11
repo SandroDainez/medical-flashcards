@@ -277,7 +277,7 @@ function renderDashboard() {
  const catList = document.getElementById('category-review-list');
 
  if (Object.keys(catDue).length === 0) {
- catList.innerHTML = '<div class="empty-state"><p>Nenhuma revisão pendente! 🎉</p></div>';
+    catList.innerHTML = '<div class="empty-state"><p>Nenhuma revisão pendente.</p></div>';
  } else {
  catList.innerHTML = Object.entries(catDue)
  .sort((a, b) => b[1] - a[1])
@@ -365,7 +365,7 @@ function showCurrentCard() {
  document.getElementById('card-category-tag').textContent = card.cat;
  document.getElementById('card-front-content').textContent = card.q;
  document.getElementById('card-back-content').textContent = card.a;
- document.getElementById('card-hint').textContent = card.hint ? `💡 ${card.hint}` : '';
+  document.getElementById('card-hint').textContent = card.hint ? `Dica: ${card.hint}` : '';
  document.getElementById('card-explanation').textContent = card.exp || '';
 
  // Progress
@@ -439,7 +439,7 @@ function finishStudy() {
  document.getElementById('study-progress-text').textContent =
  `${state.studyTotal} / ${state.studyTotal}`;
 
- showToast('Sessão concluída! 🎉', 'success');
+  showToast('Sessão concluída.', 'success');
  updateDueBadge();
 }
 
@@ -477,7 +477,7 @@ function renderBrowse() {
     if (filtered.length === 0) {
         grid.innerHTML = `
             <div class="empty-state" style="grid-column:1/-1">
-                <div class="empty-state-icon">📭</div>
+                <div class="empty-state-icon">--</div>
                 <h3>Nenhum card encontrado</h3>
                 <p>Tente outro filtro ou crie um novo card.</p>
             </div>
@@ -508,8 +508,8 @@ function renderBrowse() {
                     ${statusLabel} · ${dueLabel}
                 </span>
                 <div class="card-item-actions">
-                    <button class="btn-icon" onclick="editCard('${card.id}')">✏️</button>
-                    <button class="btn-icon delete" onclick="deleteCard('${card.id}')">🗑️</button>
+                    <button class="btn-icon" onclick="editCard('${card.id}')">Editar</button>
+                    <button class="btn-icon delete" onclick="deleteCard('${card.id}')">Excluir</button>
                 </div>
             </div>
         </div>
