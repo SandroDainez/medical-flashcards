@@ -216,6 +216,21 @@ function getTopic(card) {
   return splitCategory(card.cat, card.q).topic || card.cat;
 }
 
+function getAnesthesiaModule(topic = '', question = '') {
+  const text = `${topic} ${question}`.toLowerCase();
+  if (/pré-?op|pre-?op|avaliaç|asa\b|jejum/.test(text)) return 'ME1';
+  if (/farmacolog|bloqueador neuromuscular|succinilcolina|rocur[oô]nio|cisatrac[uú]rio|neostigmina/.test(text)) return 'ME2';
+  if (/via[s]? a[ée]rea[s]?|intuba[cç][aã]o|ventila[cç][aã]o com m[aá]scara|laringoscop|rsi\b/.test(text)) return 'ME3';
+  return '';
+}
+
+function getBrowseTopic(card) {
+  const discipline = getDiscipline(card);
+  const topic = getTopic(card);
+  if (discipline !== 'Anestesiologia') return topic;
+  return getAnesthesiaModule(topic, card.q) || topic;
+}
+
 function buildCategory(discipline, topic) {
   const d = (discipline || '').trim();
   const t = (topic || '').trim();
@@ -1203,7 +1218,7 @@ function renderBrowse() {
     const topics = [...new Set(
       state.cards
         .filter(c => !currentDiscipline || getDiscipline(c) === currentDiscipline)
-        .map(c => getTopic(c))
+        .map(c => getBrowseTopic(c))
     )].sort((a, b) => a.localeCompare(b, 'pt-BR'));
 
     filterCatEl.innerHTML = '<option value="">Todos temas</option>' +
@@ -1217,7 +1232,7 @@ function renderBrowse() {
     }
 
     if (state.filterCategory) {
-        filtered = filtered.filter(c => getTopic(c) === state.filterCategory);
+        filtered = filtered.filter(c => getBrowseTopic(c) === state.filterCategory);
     }
 
     if (state.filterSearch) {
@@ -1227,7 +1242,7 @@ function renderBrowse() {
             c.a.toLowerCase().includes(q) ||
             c.cat.toLowerCase().includes(q) ||
             getDiscipline(c).toLowerCase().includes(q) ||
-            getTopic(c).toLowerCase().includes(q)
+            getBrowseTopic(c).toLowerCase().includes(q)
         );
     }
 
@@ -1252,7 +1267,7 @@ function renderBrowse() {
       const disciplineCompare = getDiscipline(a).localeCompare(getDiscipline(b), 'pt-BR');
       if (disciplineCompare !== 0) return disciplineCompare;
 
-      const topicCompare = getTopic(a).localeCompare(getTopic(b), 'pt-BR');
+      const topicCompare = getBrowseTopic(a).localeCompare(getBrowseTopic(b), 'pt-BR');
       if (topicCompare !== 0) return topicCompare;
 
       const dueCompare = (a.dueDate || '').localeCompare(b.dueDate || '');
@@ -1279,7 +1294,7 @@ function renderBrowse() {
         const dueLabel = isDue ? 'Para revisar' :
                          daysLeft === 1 ? 'Amanhã' : `Em ${daysLeft} dias`;
 
-        const topic = getTopic(card);
+        const topic = getBrowseTopic(card);
         return `
           <div class="card-item">
               <div class="card-item-category">${escapeHtml(topic)}</div>
