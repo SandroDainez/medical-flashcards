@@ -43,6 +43,7 @@ const SM2 = {
 const Storage = {
  KEY_CARDS: 'medcards_cards',
  KEY_STATS: 'medcards_stats',
+ KEY_THEME: 'medcards_theme',
 
  getCards() {
  try { return JSON.parse(localStorage.getItem(this.KEY_CARDS) || '[]'); }
@@ -61,6 +62,16 @@ const Storage = {
 
  saveStats(stats) {
  localStorage.setItem(this.KEY_STATS, JSON.stringify(stats));
+ },
+
+ getTheme() {
+   try { return localStorage.getItem(this.KEY_THEME) || 'light'; }
+   catch { return 'light'; }
+ },
+
+ saveTheme(theme) {
+   try { localStorage.setItem(this.KEY_THEME, theme); }
+   catch {}
  }
 };
 
@@ -80,6 +91,7 @@ let state = {
 
 // ===== INIT =====
 async function init() {
+  initTheme();
  await loadAllCards();
  state.stats = Storage.getStats();
 
@@ -191,6 +203,27 @@ function bindEvents() {
  state.pendingDeleteId = null;
  });
  document.getElementById('modal-confirm').addEventListener('click', confirmDelete);
+
+ const themeToggle = document.getElementById('theme-toggle');
+ if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+}
+
+function initTheme() {
+  const savedTheme = Storage.getTheme();
+  applyTheme(savedTheme);
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+  const next = current === 'dark' ? 'light' : 'dark';
+  applyTheme(next);
+  Storage.saveTheme(next);
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  const icon = document.getElementById('theme-toggle-icon');
+  if (icon) icon.textContent = theme === 'dark' ? '☀' : '◐';
 }
 
 // ===== VIEWS =====
