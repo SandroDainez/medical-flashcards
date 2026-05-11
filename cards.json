@@ -253,16 +253,65 @@
   },
   {
     "cat": "Anestesiologia - Farmacologia",
-    "q": "Quais as principais características da Cetamina como agente anestésico?",
-    "a": "Produz anestesia dissociativa. É analgésica, hipnótica e amnésica. Causa estimulação simpatomimética (aumento de FC, PA e DC), broncodilatação e mantém os reflexos de via aérea.",
-    "hint": "NMDA + simpático",
-    "exp": "Diferente de outros anestésicos, a cetamina é um antagonista do receptor NMDA. É ideal para pacientes instáveis hemodinamicamente (choque) ou com broncoespasmo. Pode causar alucinações e delírios na recuperação, que podem ser atenuados com o uso de benzodiazepínicos."
+    "q": "Por que o Etomidato é uma boa escolha para indução em pacientes com instabilidade hemodinâmica?",
+    "a": "Por sua estabilidade cardiovascular. Ele causa mínima depressão miocárdica e pouca alteração na frequência cardíaca, pressão arterial e débito cardíaco.",
+    "hint": "Cardioestável",
+    "exp": "É ideal para pacientes traumatizados, com sangramento ativo ou cardiopatas. Seu principal efeito colateral é a supressão adrenal, que limita seu uso em infusão contínua."
   },
   {
     "cat": "Anestesiologia - Farmacologia",
-    "q": "Qual a principal vantagem do Etomidato para indução anestésica?",
-    "a": "Estabilidade hemodinâmica. Causa mínima depressão miocárdica e vascular, sendo ideal para pacientes com reserva cardíaca limitada ou em choque.",
-    "hint": "Supra bloqueia",
-    "exp": "Apesar de sua estabilidade cardiovascular, o etomidato inibe a enzima 11-beta-hidroxilase, suprimindo a produção de cortisol pela suprarrenal. Uma única dose pode causar supressão por até 24h, o que limita seu uso em infusão contínua ou em pacientes sépticos."
+    "q": "Qual o mecanismo de ação da Ketamina (cetamina)?",
+    "a": "Antagonismo não competitivo do receptor NMDA, resultando em um estado de 'anestesia dissociativa'.",
+    "hint": "NMDA + dissociativa",
+    "exp": "A ketamina é única por produzir analgesia intensa, amnésia e hipnose, mantendo os reflexos de via aérea e, frequentemente, estimulando o sistema cardiovascular (aumento de FC, PA e DC), o que a torna útil em pacientes chocados."
+  },
+  {
+    "cat": "Anestesiologia - Farmacologia",
+    "q": "Qual é a principal característica do Remifentanil que o diferencia de outros opioides?",
+    "a": "Sua metabolização por esterases plasmáticas inespecíficas, resultando em uma meia-vida de eliminação ultracurta (3-5 minutos), independente da função renal ou hepática.",
+    "hint": "Esterases plasmáticas",
+    "exp": "Essa farmacocinética permite seu uso em infusão contínua com titulação precisa e um despertar muito rápido, mas também significa que a analgesia pós-operatória deve ser planejada com outros agentes antes do término da infusão."
+  },
+  {
+    "cat": "Anestesiologia - Bloqueadores Neuromusculares",
+    "q": "Qual a diferença entre um bloqueador neuromuscular despolarizante e um adespolarizante?",
+    "a": "Despolarizante (ex: Succinilcolina): agonista do receptor de acetilcolina, causa despolarização inicial (fasciculações) seguida de bloqueio. Adespolarizante (ex: Rocurônio): antagonista competitivo, bloqueia o receptor sem ativá-lo.",
+    "hint": "Ativa vs Bloqueia",
+    "exp": "O bloqueio despolarizante não pode ser revertido por anticolinesterásicos (pode até ser potencializado), enquanto o adespolarizante pode."
+  },
+  {
+    "cat": "Anestesiologia - Bloqueadores Neuromusculares",
+    "q": "Qual o principal risco associado ao uso de Succinilcolina?",
+    "a": "Hipercalemia grave em pacientes com queimaduras, lesão de neurônio motor superior/inferior, imobilização prolongada ou trauma muscular extenso.",
+    "hint": "Potássio (K⁺)",
+    "exp": "Nessas condições, há uma 'up-regulation' de receptores de acetilcolina extrajuncionais. A succinilcolina os ativa, causando um efluxo maciço de potássio, que pode levar a arritmias cardíacas e parada cardíaca."
+  },
+  {
+    "cat": "Anestesiologia - Bloqueadores Neuromusculares",
+    "q": "Qual o agente de reversão específico para o Rocurônio e o Vecurônio?",
+    "a": "Sugammadex.",
+    "hint": "Encapsulamento",
+    "exp": "O Sugammadex é uma ciclodextrina modificada que encapsula as moléculas de rocurônio (e em menor grau, vecurônio) no plasma, criando um gradiente de concentração que remove o bloqueador da junção neuromuscular. Permite uma reversão rápida e profunda do bloqueio."
+  },
+  {
+    "cat": "Anestesiologia - Vias Aéreas",
+    "q": "Quais são os 4 eixos que devem ser alinhados para uma laringoscopia direta ótima?",
+    "a": "Oral, Faríngeo e Laríngeo.",
+    "hint": "Posição \"sniffing\"",
+    "exp": "A posição de 'cheirador' (sniffing position), com flexão do pescoço sobre o tórax (usando um coxim sob a cabeça) e extensão da articulação atlanto-occipital, alinha esses três eixos, proporcionando a melhor visualização possível da glote durante a laringoscopia."
+  },
+  {
+    "cat": "Anestesiologia - Vias Aéreas",
+    "q": "O que significa o mnemônico 'LEMON' na avaliação da via aérea difícil?",
+    "a": "L: Look externally (olhar externamente). E: Evaluate 3-3-2 rule. M: Mallampati score. O: Obstruction. N: Neck mobility (mobilidade do pescoço).",
+    "hint": "Avaliação VAD",
+    "exp": "É uma ferramenta para prever dificuldade na ventilação sob máscara e intubação. A regra 3-3-2 refere-se a: abertura oral de 3 dedos, distância tireomentoniana de 3 dedos e distância tireo-hióidea de 2 dedos."
+  },
+  {
+    "cat": "Anestesiologia - Vias Aéreas",
+    "q": "Qual a principal diferença entre a Máscara Laríngea (LMA) clássica e a ProSeal?",
+    "a": "A LMA ProSeal possui um segundo tubo (dreno gástrico) que permite a passagem de uma sonda gástrica para esvaziar o estômago, além de um cuff posterior que melhora a vedação, permitindo pressões de ventilação mais altas.",
+    "hint": "Dreno gástrico",
+    "exp": "Essa diferença torna a ProSeal uma opção mais segura em relação à aspiração gástrica e mais eficaz para ventilação com pressão positiva em comparação com a LMA clássica."
   }
 ]
