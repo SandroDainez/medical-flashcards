@@ -1384,6 +1384,58 @@ body::after {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
+ :root { --sidebar-width: 0px; }
+ #app {
+  padding: 10px;
+  gap: 10px;
+  flex-direction: column;
+ }
+ .sidebar {
+  position: sticky;
+  top: 8px;
+  left: auto;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  border-radius: 18px;
+  overflow: visible;
+  z-index: 250;
+ }
+ .sidebar-brand {
+  padding: 12px 12px 10px;
+ }
+ .sidebar-nav {
+  flex-direction: row;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 10px 10px 12px;
+  scrollbar-width: thin;
+ }
+ .nav-btn {
+  min-width: 132px;
+  min-height: 44px;
+  border-radius: 12px;
+  white-space: nowrap;
+  justify-content: flex-start;
+ }
+ .sidebar-session {
+  margin-top: 0;
+  border-top: 1px solid rgba(255,255,255,.12);
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+ }
+ .session-user {
+  padding: 0;
+ }
+ .main-content {
+  margin-left: 0;
+  max-width: 100%;
+  min-height: calc(100vh - 20px);
+  border-radius: 20px;
+  padding: 20px;
+ }
  .stats-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
  .stat-due, .stat-new, .stat-learned, .stat-streak { grid-column: span 3; }
  .dashboard-grid { grid-template-columns: repeat(1, minmax(0, 1fr)); }
@@ -1401,16 +1453,31 @@ body::after {
 }
 
 @media (max-width: 768px) {
- :root { --sidebar-width: 0px; }
- .sidebar { transform: translateX(-100%); }
+ .sidebar {
+  border-radius: 14px;
+ }
+ .sidebar-brand {
+  padding: 10px;
+ }
+ .brand-name {
+  font-size: 16px;
+ }
+ .sidebar-nav {
+  padding: 8px;
+ }
+ .nav-btn {
+  min-width: 120px;
+  min-height: 46px;
+  padding: 10px 12px;
+  font-size: 14px;
+ }
  .main-content {
   margin-left: 0;
   max-width: 100vw;
   min-height: auto;
   border-radius: 24px;
-  padding: 20px;
+  padding: 16px;
  }
- #app { padding: 10px; }
  .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
  .stat-due, .stat-new, .stat-learned, .stat-streak { grid-column: span 1; }
  .cards-grid { grid-template-columns: 1fr; }
@@ -1425,6 +1492,33 @@ body::after {
  }
  .study-filters .select-input {
   width: 100%;
+ }
+ .study-session {
+  max-width: 100%;
+ }
+ .flashcard-container {
+  height: 300px;
+ }
+ .flashcard-front, .flashcard-back {
+  padding: 20px;
+ }
+ .card-content {
+  font-size: 18px;
+ }
+ .browse-controls {
+  flex-direction: column;
+ }
+ .browse-controls .search-input,
+ .browse-controls .select-input,
+ .browse-controls .btn {
+  width: 100%;
+  min-height: 44px;
+ }
+ .btn,
+ .select-input,
+ .text-input,
+ .textarea-input {
+  min-height: 44px;
  }
  .quick-logout-btn {
   position: sticky;
