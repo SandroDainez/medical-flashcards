@@ -421,35 +421,35 @@ async function persistStats() {
 async function initAuth() {
   if (!HAS_SUPABASE_CONFIG) {
     applyAuthState(false);
-    return;
-  }
-
-  const { data, error } = await supabaseClient.auth.getSession();
-  if (error) {
-    console.error('Erro ao carregar sessão:', error.message);
-    applyAuthState(false);
-    return;
-  }
-
-  const session = data.session;
-  if (!session?.user) {
-    applyAuthState(false);
-    return;
+    return false;
   }
 
   try {
+    const { data, error } = await supabaseClient.auth.getSession();
+    if (error) {
+      console.error('Erro ao carregar sessão:', error.message);
+      applyAuthState(false);
+      return false;
+    }
+
+    const session = data.session;
+    if (!session?.user) {
+      applyAuthState(false);
+      return false;
+    }
+
     const profile = await loadOrCreateProfile(session.user);
     if (profile.status === USER_STATUS.BLOCKED) {
       await supabaseClient.auth.signOut();
       applyAuthState(false);
       showToast('Usuário bloqueado pelo administrador.', 'error');
-      return;
+      return false;
     }
     if (profile.status === USER_STATUS.PENDING) {
       await supabaseClient.auth.signOut();
       applyAuthState(false);
       showToast('Conta pendente de liberação do administrador.', 'error');
-      return;
+      return false;
     }
 
     state.currentUser = profile;
@@ -458,10 +458,12 @@ async function initAuth() {
     updateStreak();
     await persistStats();
     applyAuthState(true);
+    return true;
   } catch (authErr) {
     console.error('Erro na autenticação:', authErr);
     applyAuthState(false);
-    showToast('Erro ao carregar perfil do usuário.', 'error');
+    showToast(`Erro ao autenticar: ${authErr?.message || 'falha inesperada.'}`, 'error');
+    return false;
   }
 }
 
@@ -479,8 +481,8 @@ async function handleLoginSubmit(e) {
     showToast(error.message || 'Falha no login.', 'error');
     return;
   }
-  await initAuth();
-  showToast('Login realizado com sucesso.', 'success');
+  const ok = await initAuth();
+  if (ok) showToast('Login realizado com sucesso.', 'success');
 }
 
 async function handleRegisterSubmit(e) {
