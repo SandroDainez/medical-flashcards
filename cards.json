@@ -313,5 +313,355 @@
     "a": "A LMA ProSeal possui um segundo tubo (dreno gástrico) que permite a passagem de uma sonda gástrica para esvaziar o estômago, além de um cuff posterior que melhora a vedação, permitindo pressões de ventilação mais altas.",
     "hint": "Dreno gástrico",
     "exp": "Essa diferença torna a ProSeal uma opção mais segura em relação à aspiração gástrica e mais eficaz para ventilação com pressão positiva em comparação com a LMA clássica."
+  },
+  {
+    "cat": "Fundamentos: Receptores Adrenérgicos",
+    "q": "Quais são os principais subtipos de receptores adrenérgicos e suas localizações predominantes?",
+    "a": "α1 (vasos, músculo liso), α2 (pré-sináptico, plaquetas), β1 (coração), β2 (brônquios, vasos), β3 (tecido adiposo).",
+    "hint": "α e β",
+    "exp": "A estimulação α1 causa vasoconstrição via IP3/DAG. β1 aumenta FC e contratilidade via AMPc. β2 causa broncodilatação e vasodilatação muscular. O conhecimento da seletividade receptorial é fundamental para prever os efeitos cardiovasculares das drogas vasoativas (Stoelting, cap. 12)."
+  },
+  {
+    "cat": "Fundamentos: Receptores Adrenérgicos",
+    "q": "Qual o mecanismo de sinalização intracelular do receptor α1-adrenérgico?",
+    "a": "Acoplado à proteína Gq → ativa fosfolipase C → gera IP3 e DAG → liberação de Ca²⁺ intracelular → contração do músculo liso.",
+    "hint": "Gq → PLC",
+    "exp": "O IP3 mobiliza Ca²⁺ do retículo sarcoplasmático, enquanto o DAG ativa a proteína quinase C. Esse mecanismo explica a vasoconstrição potente mediada por α1, base de ação da noradrenalina e fenilefrina (Stoelting, cap. 12)."
+  },
+  {
+    "cat": "Fundamentos: Receptores Adrenérgicos",
+    "q": "O receptor β1-adrenérgico sinaliza por qual via intracelular?",
+    "a": "Proteína Gs → adenilato ciclase ↑ → AMPc ↑ → PKA ↑ → fosforilação de canais de Ca²⁺ tipo L e proteínas do sarcômero → efeito inotrópico e cronotrópico positivo.",
+    "hint": "Gs → AMPc",
+    "exp": "O aumento de AMPc é a via final comum de todos os inotrópicos positivos (catecolaminas, milrinona). A PKA fosforila o fosfolambano, aumentando a recaptação de Ca²⁺ pelo RS, o que melhora o relaxamento diastólico (lusitrofia positiva) — importante em IC descompensada (Miller, 8ª ed., cap. 15)."
+  },
+  {
+    "cat": "Fundamentos: Receptores Adrenérgicos",
+    "q": "Qual receptor é responsável pelo efeito vasodilatador nos vasos de músculo esquelético em doses baixas de adrenalina?",
+    "a": "Receptor β2-adrenérgico (maior sensibilidade à adrenalina em baixas concentrações, causando vasodilatação muscular).",
+    "hint": "β2 muscular",
+    "exp": "Em baixas doses, a adrenalina estimula preferencialmente β2 em vasos musculares, reduzindo a RVP. Em doses altas, o efeito α1 predomina e causa vasoconstrição generalizada. Esse conceito explica o comportamento bifásico da PA com diferentes doses de adrenalina (Barash, 8ª ed.)."
+  },
+  {
+    "cat": "Noradrenalina: Mecanismo e Receptores",
+    "q": "Qual é o perfil receptorial da noradrenalina (norepinefrina)?",
+    "a": "Forte agonista α1 e α2; agonista moderado β1; atividade β2 mínima ou ausente.",
+    "hint": "α>>>β2",
+    "exp": "O predomínio α1 explica a potente vasoconstrição e o aumento da RVP. A atividade β1 eleva a contratilidade, mas o reflexo barorreceptor frequentemente resulta em bradicardia reflexa, diminuindo a FC apesar do efeito β1 direto. Ausência prática de β2 diferencia a noradrenalina da adrenalina (Miller, 8ª ed., cap. 15)."
+  },
+  {
+    "cat": "Noradrenalina: Mecanismo e Receptores",
+    "q": "Por que a noradrenalina pode causar bradicardia reflexa se tem atividade β1?",
+    "a": "O aumento acentuado da PA pelo efeito α1 ativa barorreceptores carotídeos e aórticos → estímulo vagal reflexo → bradicardia que supera o efeito cronotrópico positivo direto β1.",
+    "hint": "Barorreflexo",
+    "exp": "Essa bradicardia reflexa é clinicamente relevante: diferencia a noradrenalina da adrenalina (que causa taquicardia). Em pacientes com bloqueio β, a bradicardia reflexa pode ser exacerbada. Monitorar FC ao titular noradrenalina, especialmente em coronariopatas (Barash, 8ª ed., cap. 16)."
+  },
+  {
+    "cat": "Noradrenalina: Mecanismo e Receptores",
+    "q": "Qual o mecanismo pelo qual a noradrenalina aumenta a pressão de perfusão coronariana?",
+    "a": "Aumento da PAD (via vasoconstrição α1 e bradicardia reflexa) → maior gradiente de pressão durante a diástole → melhora da perfusão coronariana (preferencialmente subendocárdica).",
+    "hint": "PAD e diástole",
+    "exp": "A perfusão coronariana ocorre predominantemente na diástole. A noradrenalina, ao elevar a PAD e reduzir a FC (mais tempo diastólico), é superior à adrenalina na manutenção da perfusão coronariana. Isso justifica seu uso no choque séptico com disfunção miocárdica concomitante (SSC Guidelines 2021)."
+  },
+  {
+    "cat": "Noradrenalina: Farmacocinética e Doses",
+    "q": "Qual a dose de infusão contínua de noradrenalina no choque séptico segundo as diretrizes da Surviving Sepsis Campaign (SSC)?",
+    "a": "Iniciar com 0,01–0,1 mcg/kg/min; doses acima de 0,25–0,5 mcg/kg/min são consideradas altas (vasopressina pode ser adicionada).",
+    "hint": "mcg/kg/min",
+    "exp": "A SSC 2021 recomenda noradrenalina como vasopressor de primeira linha no choque séptico. Doses >0,25 mcg/kg/min indicam refratariedade e sugerem associar vasopressina ou hidrocortisona. A titulação deve visar PAM ≥65 mmHg como alvo inicial (SSC 2021, Intensive Care Med)."
+  },
+  {
+    "cat": "Noradrenalina: Farmacocinética e Doses",
+    "q": "Qual a meia-vida plasmática da noradrenalina e sua implicação clínica?",
+    "a": "Meia-vida de 1–2 minutos; metabolização rápida por MAO e COMT. Implicação: efeitos aparecem e desaparecem rapidamente → permite titulação fina em infusão contínua.",
+    "hint": "1-2 min",
+    "exp": "A curta meia-vida exige infusão contínua (não é usada em bolus para vasopressão sustentada). A recaptação neuronal (uptake-1) é o principal mecanismo de terminação de ação. COMT e MAO degradam o restante. Isso é importante para entender interações com IMAOs e antidepressivos tricíclicos (Stoelting, cap. 12)."
+  },
+  {
+    "cat": "Noradrenalina: Farmacocinética e Doses",
+    "q": "Por qual via deve ser administrada preferencialmente a noradrenalina e por quê?",
+    "a": "Acesso venoso central (preferencial), pois causa intensa vasoconstrição local → risco de necrose tecidual e extravasamento periférico. Em emergência, pode-se usar veia periférica de grande calibre temporariamente.",
+    "hint": "Central ou grande calibre",
+    "exp": "O extravasamento de noradrenalina pode causar necrose cutânea grave. Se ocorrer, infiltrar fentolamine 5–10 mg diluída na área. Estudos recentes (AJRCCM 2019) sugerem que a via periférica por curto prazo (<24h, veia de antecubital ou maior) é segura, mas a central ainda é preferida para uso prolongado (Miller, 8ª ed.)."
+  },
+  {
+    "cat": "Noradrenalina: Indicações Clínicas",
+    "q": "Qual é a indicação primária da noradrenalina nas diretrizes de choque?",
+    "a": "Vasopressor de primeira linha no choque séptico e choque vasoplégico (ex: pós-cirurgia cardíaca), com objetivo de PAM ≥65 mmHg.",
+    "hint": "1ª linha séptico",
+    "exp": "A SSC 2021 e as diretrizes de terapia intensiva recomendam noradrenalina como vasopressor inicial por seu perfil α-adrenérgico dominante, que restaura o tônus vascular perdido na sepse. A dopamina foi comparada e apresentou maior taxa de arritmias (NEJM 2010, De Backer et al.), sendo preterida (Miller, 8ª ed., cap. 57)."
+  },
+  {
+    "cat": "Noradrenalina: Indicações Clínicas",
+    "q": "Em qual tipo de choque a noradrenalina é contraindicada como monoterapia inicial?",
+    "a": "Choque cardiogênico com baixo débito cardíaco isolado — o aumento da pós-carga pode piorar a disfunção miocárdica. Geralmente associa-se inotrópico (dobutamina).",
+    "hint": "Pós-carga cardíaco",
+    "exp": "No choque cardiogênico, a vasoconstrição α1 aumenta a RVP (pós-carga), o que pode deteriorar ainda mais o VE já comprometido. A estratégia é usar noradrenalina para manter PAM mínima enquanto se adiciona dobutamina para melhorar o DC. Em casos refratários, considerar IABP ou ECMO (ESC Guidelines 2021, Acute Heart Failure)."
+  },
+  {
+    "cat": "Noradrenalina: Indicações Clínicas",
+    "q": "Qual é a PAM-alvo recomendada no choque séptico ao usar noradrenalina?",
+    "a": "PAM ≥65 mmHg como alvo inicial (SSC 2021). Alvos mais altos (80–85 mmHg) podem ser considerados em pacientes com hipertensão crônica, mas aumentam risco de FA.",
+    "hint": "65 mmHg",
+    "exp": "O estudo SEPSISPAM (NEJM 2014, Asfar et al.) comparou alvos de PAM 65–70 mmHg vs 80–85 mmHg: sem diferença em mortalidade, mas o grupo com alvo mais alto teve maior incidência de FA. Em pacientes com hipertensão crônica, PAM ≥65 pode ser insuficiente para perfusão orgânica adequada (SSC 2021)."
+  },
+  {
+    "cat": "Noradrenalina: Efeitos Adversos e Cuidados",
+    "q": "Quais são os principais efeitos adversos da noradrenalina?",
+    "a": "Isquemia distal (dedos, mesentério, rins), bradicardia reflexa, hipertensão excessiva, extravasamento com necrose, arritmias (menos que dopamina), cetoacidose (inibição de insulina via α2).",
+    "hint": "Isquemia distal",
+    "exp": "A vasoconstrição esplâncnica e renal pode levar à isquemia intestinal e piora de lesão renal aguda com doses elevadas. A monitorização da perfusão distal (lactato, diurese, sinais de isquemia mesentérica) é essencial. O uso prolongado em doses altas exige balanço risco-benefício criterioso (Barash, 8ª ed.)."
+  },
+  {
+    "cat": "Noradrenalina: Efeitos Adversos e Cuidados",
+    "q": "O que fazer em caso de extravasamento de noradrenalina?",
+    "a": "Infiltrar o local com fentolamina (bloqueador α) 5–10 mg em 10 mL de SF, idealmente em até 12h após o extravasamento. Monitorar sinais de necrose.",
+    "hint": "Fentolamina local",
+    "exp": "A fentolamina antagoniza α1 localmente, revertendo a vasoconstrição e prevenindo necrose. Deve ser feita com agulha fina em múltiplos pontos ao redor da área extravasada. A aplicação de nitroglicerina tópica é alternativa de segunda linha. Registro e notificação como incidente de segurança são obrigatórios (Morgan & Mikhail, 6ª ed.)."
+  },
+  {
+    "cat": "Vasopressina: Mecanismo e Receptores",
+    "q": "Qual o mecanismo de ação da vasopressina (ADH) como vasopressor?",
+    "a": "Agonista dos receptores V1 (vasculares) → ativa Gq → IP3/DAG → aumento de Ca²⁺ intracelular → vasoconstrição do músculo liso. Também age em V2 (renal) → retenção de água.",
+    "hint": "V1 vascular",
+    "exp": "A vasopressina é única por ser um vasopressor não-adrenérgico: não depende de receptores catecolaminérgicos. Isso é clinicamente relevante no choque refratário, onde a down-regulation de receptores adrenérgicos pode reduzir a resposta à noradrenalina. Os receptores V1 permanecem funcionais nesse contexto (Stoelting, cap. 12)."
+  },
+  {
+    "cat": "Vasopressina: Mecanismo e Receptores",
+    "q": "Por que a vasopressina é particularmente útil no choque séptico refratário à noradrenalina?",
+    "a": "No choque séptico grave, há depleção relativa de vasopressina endógena (deficiência relativa) e down-regulation de receptores adrenérgicos. A vasopressina age por receptor V1 (não adrenérgico), restaurando tônus vascular de forma aditiva.",
+    "hint": "Não-adrenérgico",
+    "exp": "Estudos mostraram que pacientes com choque séptico têm níveis de vasopressina plasmática mais baixos que o esperado (Landry et al., 1997). Isso justifica a reposição com doses 'fisiológicas' (0,03–0,04 U/min). O estudo VASST (Russell et al., NEJM 2008) mostrou benefício de sobrevida em subgrupo com choque menos grave (noradrenalina <15 mcg/min)."
+  },
+  {
+    "cat": "Vasopressina: Mecanismo e Receptores",
+    "q": "Quais são os subtipos de receptores da vasopressina e seus efeitos?",
+    "a": "V1 (vascular/hepático): vasoconstrição, glicogenólise. V2 (renal): retenção de água via aquaporinas (AQP2). V3/V1b (hipofisário): liberação de ACTH. OT (ocitocina): útero e mama.",
+    "hint": "V1 contrai, V2 retém",
+    "exp": "O efeito antidiurético via V2 é o mecanismo pelo qual a vasopressina é usada no diabetes insipidus. Para vasopressão no choque, as doses utilizadas (0,03–0,04 U/min) são 'fisiológicas' e agem predominantemente em V1. Doses maiores aumentam risco de isquemia coronariana e esplâncnica via V1 (Miller, 8ª ed., cap. 15)."
+  },
+  {
+    "cat": "Vasopressina: Farmacocinética e Doses",
+    "q": "Qual a dose recomendada de vasopressina como vasopressor no choque séptico?",
+    "a": "0,03–0,04 U/min em infusão contínua (dose fixa, não titulada). Máximo 0,06 U/min. Acima disso, risco significativo de isquemia.",
+    "hint": "0,03 U/min fixo",
+    "exp": "Diferente da noradrenalina, a vasopressina é usada em dose fixa (não titulada por efeito) para economia de catecolaminas. O objetivo é reduzir a dose de noradrenalina, não substituí-la completamente. Doses >0,06 U/min estão associadas a isquemia miocárdica, isquemia digital e necrose hepática (SSC 2021, Barash, 8ª ed.)."
+  },
+  {
+    "cat": "Vasopressina: Farmacocinética e Doses",
+    "q": "Qual a meia-vida da vasopressina exógena e sua implicação na prática?",
+    "a": "Meia-vida de 10–35 minutos (muito maior que catecolaminas). Permite infusão contínua estável; efeitos demoram mais para desaparecer ao reduzir a dose.",
+    "hint": "10-35 min",
+    "exp": "A vasopressina é metabolizada por vasopressinases (proteases plasmáticas) e pelos rins/fígado. Sua meia-vida relativamente longa em comparação com catecolaminas (t½ ~1-2 min) significa que ajustes de dose têm resposta mais lenta. Em desmame, reduzir gradualmente para evitar hipotensão de rebote (Morgan & Mikhail, 6ª ed.)."
+  },
+  {
+    "cat": "Vasopressina: Indicações Clínicas",
+    "q": "Em que posição na escala de vasopressores a vasopressina é recomendada pela SSC 2021?",
+    "a": "Vasopressor de segunda linha: adicionada à noradrenalina quando doses ≥0,25–0,5 mcg/kg/min são necessárias, ou como agente poupador de noradrenalina.",
+    "hint": "2ª linha, poupadora",
+    "exp": "A SSC 2021 (grade 2B) recomenda adicionar vasopressina quando a dose de noradrenalina é alta, visando reduzir a exposição catecolaminérgica total. O estudo VANISH (Gordon et al., JAMA 2016) comparou vasopressina vs noradrenalina como vasopressor inicial: vasopressina reduziu necessidade de TRRT mas sem diferença em mortalidade."
+  },
+  {
+    "cat": "Vasopressina: Indicações Clínicas",
+    "q": "Além do choque séptico, cite duas outras indicações importantes da vasopressina em anestesia/UTI.",
+    "a": "1) Diabetes insipidus central (via V2, doses menores: desmopressina). 2) PCR refratária (doses de 40 U IV em bolus, como alternativa à adrenalina — atualmente não nas diretrizes AHA 2020). 3) Hemorragia digestiva varicosa (terlipressina ou vasopressina).",
+    "hint": "DI, PCR, varizes",
+    "exp": "No PCR, o ACLS 2020 removeu a vasopressina da sequência rotineira por ausência de benefício sobre adrenalina (estudo PACA, 2013). Na hipertensão pulmonar grave com choque (ex: pós-cirurgia cardíaca), a vasopressina é vantajosa por não aumentar RVP (ao contrário da noradrenalina). Na FEVE baixa com choque vasodilatador, é preferível (Miller, 8ª ed.)."
+  },
+  {
+    "cat": "Vasopressina: Efeitos Adversos e Cuidados",
+    "q": "Quais são os principais efeitos adversos da vasopressina?",
+    "a": "Isquemia miocárdica, isquemia esplâncnica/mesentérica, isquemia digital, hiponatremia (V2, retenção de água), bradicardia, redução do débito cardíaco, necrose hepática (rara, doses altas).",
+    "hint": "Isquemia e hiponatremia",
+    "exp": "A isquemia esplâncnica é a complicação mais temida com doses elevadas de vasopressina, pois o leito mesentérico é rico em receptores V1. Monitorar sinais de isquemia intestinal (acidose láctica, distensão abdominal, diarreia sanguinolenta). Hiponatremia dilucional pode ocorrer com infusões prolongadas (Barash, 8ª ed.)."
+  },
+  {
+    "cat": "Vasopressina: Efeitos Adversos e Cuidados",
+    "q": "Por que a vasopressina pode ser vantajosa no choque séptico com insuficiência respiratória?",
+    "a": "Ao contrário das catecolaminas, a vasopressina não provoca broncoconstrição e pode causar vasoconstrição pulmonar mínima, sendo útil quando o objetivo é manter PAM sem agravar broncoespasmo ou hipertensão pulmonar leve.",
+    "hint": "Poupadora pulmonar",
+    "exp": "Em pacientes com DPOC, asma brônquica ou hipertensão pulmonar leve-moderada, a vasopressina oferece vasopressão sistêmica sem os efeitos β2 e α1 pulmonares das catecolaminas. Estudos em pós-operatório de transplante cardiopulmonar mostram benefício na manutenção do tônus sistêmico sem aumento da RVP (Miller, 8ª ed., cap. 57)."
+  },
+  {
+    "cat": "Dobutamina: Mecanismo e Receptores",
+    "q": "Qual é o perfil receptorial da dobutamina?",
+    "a": "Agonista β1 (predominante: inotrópico/cronotrópico +), agonista β2 moderado (vasodilatação), agonista α1 fraco. Resultado líquido: aumento do débito cardíaco com redução leve da RVP.",
+    "hint": "β1 dominante",
+    "exp": "A dobutamina é uma mistura racêmica: o isômero (-) tem atividade α1 (vasoconstrição) e o isômero (+) tem atividade β1 e β2. Na prática, o efeito β predomina, resultando em inotropia positiva e vasodilatação modesta. O aumento do DC é maior que o aumento da FC, diferenciando-a do isoproterenol (Stoelting, cap. 12; Miller, 8ª ed.)."
+  },
+  {
+    "cat": "Dobutamina: Mecanismo e Receptores",
+    "q": "Qual o principal efeito hemodinâmico da dobutamina em pacientes com IC descompensada?",
+    "a": "Aumento do débito cardíaco (β1: inotropia +), redução da pressão de enchimento (PCAP ↓), redução da RVP (β2), com aumento modesto ou variável da FC.",
+    "hint": "DC↑, PCAP↓",
+    "exp": "O perfil hemodinâmico da dobutamina é ideal para IC descompensada com baixo DC: aumenta o trabalho cardíaco sem aumentar excessivamente a demanda de O₂ relativa ao volume de trabalho. A redução da PCAP melhora o edema pulmonar. Comparada à milrinona, a dobutamina tem menos hipotensão e efeito mais dependente de catecolaminas endógenas (ESC Guidelines HF 2021)."
+  },
+  {
+    "cat": "Dobutamina: Mecanismo e Receptores",
+    "q": "Por que a dobutamina pode causar taquicardia e quais os riscos associados?",
+    "a": "Efeito β1 cronotrópico direto. Risco: aumento do consumo de O₂ miocárdico (MVO₂ ↑), piora de isquemia em coronariopatas, arritmias supraventriculares e ventriculares.",
+    "hint": "β1 cronotrópico",
+    "exp": "A taquicardia limita o uso de dobutamina em dose ≥10 mcg/kg/min. FC >100–110 bpm deve levar à redução da dose. Em coronariopatas, o aumento de MVO₂ pode precipitar angina ou extensão do infarto — justificando a adição de β-bloqueador de curta ação ou redução de dose. Esse princípio é usado no stress test com dobutamina para diagnóstico de DAC (Barash, 8ª ed.)."
+  },
+  {
+    "cat": "Dobutamina: Farmacocinética e Doses",
+    "q": "Qual a faixa de dose da dobutamina e o que esperar em cada faixa?",
+    "a": "2–5 mcg/kg/min: inotropia moderada, pouca taquicardia. 5–10 mcg/kg/min: inotropia significativa, aumento de FC. 10–20 mcg/kg/min: efeitos máximos, taquicardia e arritmias mais frequentes. Acima de 20 mcg/kg/min: raramente adiciona benefício.",
+    "hint": "Dose-resposta",
+    "exp": "A resposta à dobutamina é dose-dependente, mas há variabilidade interindividual significativa. Pacientes em uso crônico de β-bloqueadores têm resposta atenuada (down-regulation de receptores). Em IC crônica, a dobutamina em infusão intermitente ('dobutamina ambulatorial') é controversa por associação a aumento de mortalidade em estudos observacionais (Miller, 8ª ed.)."
+  },
+  {
+    "cat": "Dobutamina: Farmacocinética e Doses",
+    "q": "Qual a meia-vida da dobutamina?",
+    "a": "Aproximadamente 2 minutos. Metabolizada por COMT e conjugação no fígado. Exige infusão contínua; efeitos cessam rapidamente ao interromper a infusão.",
+    "hint": "~2 min",
+    "exp": "A curta meia-vida é clinicamente vantajosa: permite titulação rápida e reversão imediata de efeitos indesejados (taquicardia, hipotensão). O metabólito principal (3-O-metil dobutamina) é inativo. Não há acúmulo significativo em IR, mas redução de dose é prudente em IH grave (Stoelting, cap. 12)."
+  },
+  {
+    "cat": "Dobutamina: Indicações Clínicas",
+    "q": "Quais são as indicações primárias da dobutamina em terapia intensiva e anestesia?",
+    "a": "1) IC descompensada com baixo DC (choque cardiogênico, pós-operatório de cirurgia cardíaca). 2) Choque séptico com disfunção miocárdica (DC↓ com PAM adequada via noradrenalina). 3) Teste de estresse farmacológico (diagnóstico de DAC).",
+    "hint": "Baixo DC",
+    "exp": "Na sepse, quando a PAM está corrigida com noradrenalina mas ainda há sinais de hipoperfusão (lactato elevado, oligúria) com evidência de disfunção miocárdica (FEVE baixa na eco), a SSC 2021 recomenda considerar dobutamina. A meta é DC e não normalizar o lactato isoladamente (SSC 2021, grade 2C)."
+  },
+  {
+    "cat": "Dobutamina: Indicações Clínicas",
+    "q": "Por que a dobutamina NÃO é usada como vasopressor em hipotensão por vasoplegia?",
+    "a": "A dobutamina tem efeito vasodilatador (β2) e pode agravar a hipotensão por reduzir ainda mais a RVP. É inotrópico, não vasopressor — usada quando o problema é baixo DC, não baixa resistência vascular.",
+    "hint": "Vasodilata, não contrai",
+    "exp": "Confundir inotrópico com vasopressor é erro clínico relevante. No choque séptico clássico (vasoplegia + alto DC), a dobutamina seria prejudicial. Ela é indicada quando há componente de disfunção miocárdica associado. A diferenciação por ecocardiografia point-of-care (FEVE, função diastólica) é essencial para a escolha correta (Barash, 8ª ed., cap. 16)."
+  },
+  {
+    "cat": "Dobutamina: Indicações Clínicas",
+    "q": "Qual a indicação da dobutamina no pós-operatório de cirurgia cardíaca?",
+    "a": "Síndrome de baixo débito cardíaco (SBDC): DC indexado <2,2 L/min/m² com pressões de enchimento adequadas. Objetivo: melhorar contratilidade e reduzir PCAP enquanto minimiza taquicardia.",
+    "hint": "SBDC pós-CEC",
+    "exp": "Após circulação extracorpórea (CEC), a disfunção miocárdica transitória (stunning) é frequente. A dobutamina é o inotrópico de escolha por seu perfil favorável (aumento de DC, redução de PCAP, mínima taquicardia em doses baixas). A associação com noradrenalina (se hipotensão) ou com milrinona (se resistência aumentada) é comum (Miller, 8ª ed., cap. 50)."
+  },
+  {
+    "cat": "Dobutamina: Efeitos Adversos e Cuidados",
+    "q": "Quais são os principais efeitos adversos da dobutamina?",
+    "a": "Taquicardia, arritmias (FA, TV/FV), hipotensão (vasodilatação β2), aumento de MVO₂ (isquemia em coronariopatas), tolerância com uso prolongado (down-regulation β), cefaleia, náuseas.",
+    "hint": "Taquicardia e arritmia",
+    "exp": "A tolerância à dobutamina ('taquifilaxia') desenvolve-se em 48–72h de infusão contínua, exigindo aumento progressivo de dose para manter o efeito. Isso é clinicamente relevante em pacientes de UTI e é um argumento para uso intermitente ou substituição por milrinona (inibidor de fosfodiesterase, não sujeito à down-regulation receptorial) (ESC HF Guidelines 2021)."
+  },
+  {
+    "cat": "Dobutamina: Efeitos Adversos e Cuidados",
+    "q": "Como a dobutamina pode ser afetada pelo uso crônico de β-bloqueadores?",
+    "a": "β-bloqueadores competem pelos receptores β1/β2, reduzindo a resposta à dobutamina. Pode ser necessário aumentar doses (até 20 mcg/kg/min) ou substituir por milrinona (age a montante dos receptores, via inibição de fosfodiesterase).",
+    "hint": "Competição β",
+    "exp": "Em pacientes cardiológicos que usam carvedilol ou metoprolol, a dobutamina tem eficácia reduzida. A milrinona (inibidor da PDE3) aumenta AMPc independentemente dos receptores β, tornando-se preferida nessa situação. No entanto, milrinona causa mais hipotensão e tem meia-vida mais longa (2h), dificultando titulação rápida (Barash, 8ª ed., cap. 16)."
+  },
+  {
+    "cat": "Comparativo: Drogas Vasoativas",
+    "q": "Compare noradrenalina, vasopressina e dobutamina quanto ao efeito sobre débito cardíaco e resistência vascular periférica.",
+    "a": "Noradrenalina: RVP↑↑, DC variável (↑ inotrop., ↓ por pós-carga). Vasopressina: RVP↑↑, DC↓ (não inotrópica). Dobutamina: RVP↓, DC↑↑.",
+    "hint": "NA: vasopressora | Dob: inotrópica",
+    "exp": "Esse quadro comparativo é fundamental para escolha do agente conforme o mecanismo do choque. No choque cardiogênico puro: dobutamina. No choque séptico/vasoplégico: noradrenalina ± vasopressina. No choque misto (séptico + miocárdico): noradrenalina + dobutamina. Monitorização hemodinâmica (PAC, eco, PiCCO) orienta a titulação (Miller, 8ª ed., cap. 57)."
+  },
+  {
+    "cat": "Comparativo: Drogas Vasoativas",
+    "q": "Qual droga vasoativa é mais associada a arritmias e por quê foi preterida no choque séptico?",
+    "a": "Dopamina — maior incidência de arritmias (especialmente FA) comparada à noradrenalina no estudo de De Backer et al. (NEJM 2010). Também aumenta PCAP e tem perfil receptor imprevisível em diferentes doses.",
+    "hint": "Dopamina: arrítmica",
+    "exp": "O estudo SOAP II (De Backer et al., NEJM 2010, n=1679) comparou dopamina vs noradrenalina no choque: mortalidade semelhante, mas dopamina teve 2× mais arritmias (24% vs 12%). Subgrupo com choque cardiogênico teve pior desfecho com dopamina. Isso consolidou a noradrenalina como padrão-ouro no choque (SSC 2021, grau 1B)."
+  },
+  {
+    "cat": "Comparativo: Drogas Vasoativas",
+    "q": "Quais drogas vasoativas são seguras em acesso venoso periférico por curto prazo?",
+    "a": "Noradrenalina (até 12h em veia periférica calibrosa, antecubital/femoral, com monitorização); vasopressina (menor risco de vasoespasmo local); dobutamina (menos risco de necrose por vasodilatação local β2).",
+    "hint": "Periférico provisório",
+    "exp": "Estudo de Cardenas-Garcia et al. (Chest, 2015) demonstrou que noradrenalina em veia periférica por curto prazo (<24h, concentrações ≤64 mcg/mL) é segura se monitorada rigorosamente para extravasamento. Evitar em veias de pequeno calibre (dorso da mão, antebraço distal). O acesso central continua sendo o padrão para uso prolongado (Miller, 8ª ed.)."
+  },
+  {
+    "cat": "Comparativo: Drogas Vasoativas",
+    "q": "Qual droga vasoativa é preferida no choque anafilático refratário à adrenalina?",
+    "a": "Noradrenalina (para manter PAM com vasoconstrição α1) e/ou vasopressina (para choque refratário à adrenalina). A dobutamina pode ser usada se houver disfunção miocárdica associada.",
+    "hint": "Após adrenalina",
+    "exp": "Na anafilaxia, a adrenalina é o tratamento de escolha (α1 + β1 + β2). Se refratária, vasopressina (0,04 U/min) e noradrenalina são opções de segunda linha documentadas em relatos de caso e guidelines de choque. O glucagon é usado em pacientes em uso de β-bloqueadores (Barash, 8ª ed., cap. 34)."
+  },
+  {
+    "cat": "Aplicação Clínica em Choque",
+    "q": "Qual é a sequência de vasopressores recomendada pela SSC 2021 para choque séptico?",
+    "a": "1ª linha: Noradrenalina. 2ª linha: Vasopressina (0,03–0,04 U/min) quando dose de NA ≥0,25 mcg/kg/min. 3ª linha: Adrenalina (se ainda refratário). Dobutamina: adicionar se houver disfunção miocárdica.",
+    "hint": "NA → Vaso → Adre",
+    "exp": "A SSC 2021 não recomenda mais dopamina como vasopressor de rotina. A terlipressina não é recomendada de rotina (pode causar isquemia mais grave que vasopressina). Hidrocortisona (200 mg/dia) é recomendada como adjuvante se choque refratário a 2 vasopressores. Considerar monitorização com ecocardiografia para guiar decisão de inotrópico (SSC 2021, Crit Care Med)."
+  },
+  {
+    "cat": "Aplicação Clínica em Choque",
+    "q": "Como identificar clinicamente que um paciente em choque séptico necessita de dobutamina além da noradrenalina?",
+    "a": "Sinais de baixo DC apesar de PAM corrigida: lactato elevado e não declinante, oligúria persistente, enchimento capilar lento, frio nas extremidades, ou evidência de disfunção miocárdica à ecocardiografia (FEVE <40%, índice cardíaco <2,2).",
+    "hint": "Lactato + eco",
+    "exp": "O choque séptico pode ter 2 padrões hemodinâmicos: hiperdinâmico (alto DC, baixa RVP — maioria) e hipodinâmico (baixo DC — miocardiopatia séptica em ~15% dos casos). A ecocardiografia point-of-care diferencia esses padrões e guia a indicação de dobutamina vs apenas vasopressor. Lactato serial a cada 2h orienta a resposta ao tratamento (SSC 2021)."
+  },
+  {
+    "cat": "Aplicação Clínica em Choque",
+    "q": "Quais são os alvos de ressuscitação iniciais no choque séptico (bundle 1h da SSC)?",
+    "a": "PAM ≥65 mmHg, lactato ≤2 mmol/L, diurese >0,5 mL/kg/h, saturação venosa central de O₂ (ScvO₂) ≥70%, redução do lactato ≥10% em 2h.",
+    "hint": "PAM-Lactato-Diurese",
+    "exp": "O bundle de 1h da SSC 2018 inclui: coletar hemoculturas, iniciar ATB de amplo espectro, cristaloides 30 mL/kg se hipoperfusão, noradrenalina se hipotensão durante/após volume, dosar lactato. PAM <65 mmHg após volume adequado indica vasopressor. A ressuscitação guiada por lactato reduz mortalidade em 10–15% (Seymour et al., NEJM 2017)."
+  },
+  {
+    "cat": "Aplicação Clínica em Choque",
+    "q": "Em que situação é preferível vasopressina a noradrenalina no perioperatório de cirurgia cardíaca?",
+    "a": "Choque vasodilatador pós-CEC, especialmente em pacientes em uso de IECA/SARA pré-operatório ou que receberam milrinona — a vasopressina restaura o tônus vascular sem aumentar a RVP pulmonar, sendo preferida quando há disfunção do VD.",
+    "hint": "VD e IECA",
+    "exp": "Pacientes em IECA têm depleção de angiotensina II e resposta atenuada à noradrenalina. A vasopressina age independentemente do SRAA. Em disfunção de VD, a noradrenalina pode aumentar a RVP pulmonar e agravar a falência direita; a vasopressina tem mínimo efeito na circulação pulmonar. Considerar também angiotensina II (Giapreza) em refratários (Miller, 8ª ed., cap. 50)."
+  },
+  {
+    "cat": "Aplicação Clínica em Choque",
+    "q": "Como titular o desmame de vasopressores em paciente em recuperação de choque séptico?",
+    "a": "Reduzir gradualmente a droga com menor benefício fisiológico primeiro. Tipicamente: vasopressina → noradrenalina. Critérios: PAM estável ≥65 sem aumento de dose nas últimas 4–6h, lactato normalizando, paciente em desmame de ventilação, melhora clínica global.",
+    "hint": "Reduzir gradual",
+    "exp": "O desmame abrupto de vasopressores pode causar hipotensão de rebote. A prática recomendada é reduzir 25–50% da dose a cada 30–60 minutos monitorando PAM. A vasopressina é geralmente reduzida antes da noradrenalina, pois não é titulada pelo efeito. Uso de corticoide (hidrocortisona) facilita o desmame em pacientes refratários (Barash, 8ª ed.)."
+  },
+  {
+    "cat": "Noradrenalina: Mecanismo e Receptores",
+    "q": "Qual o efeito da noradrenalina na pressão de pulso e por quê?",
+    "a": "Reduz a pressão de pulso (PP = PAS – PAD). A vasoconstrição α1 aumenta mais a PAD que a PAS, e a bradicardia reflexa reduz o volume sistólico → PP estreita.",
+    "hint": "PP estreita",
+    "exp": "A pressão de pulso estreita é um sinal de baixo débito cardíaco (DC) — paradoxalmente, a noradrenalina pode corrigir a PA mas não o DC. Monitorar sinais de hipoperfusão (lactato, diurese, consciência) mesmo com PAM adequada. Esse é um argumento para avaliação de DC com ecocardiografia ou termodiluição ao usar altas doses de noradrenalina (Stoelting, cap. 12)."
+  },
+  {
+    "cat": "Vasopressina: Mecanismo e Receptores",
+    "q": "Qual a diferença entre vasopressina e terlipressina?",
+    "a": "Terlipressina é um pró-fármaco sintético de longa ação (t½ ~6h, ação ~4-6h), mais seletiva para V1. Vasopressina tem t½ ~10-35 min. Terlipressina é usada em síndrome hepatorrenal e varizes esofágicas; vasopressina/desmopressina no choque e DI.",
+    "hint": "Terlipressina = longa ação",
+    "exp": "A terlipressina é convertida em lisina-vasopressina por endopeptidases. Sua maior meia-vida permite administração em bolus (1–2 mg IV a cada 4–6h) ao invés de infusão contínua. Em síndrome hepatorrenal tipo 1, reduz mortalidade ao reverter vasoconstrição renal reflexa. Não é recomendada de rotina no choque séptico pela SSC 2021 (Barash, 8ª ed.)."
+  },
+  {
+    "cat": "Fundamentos: Receptores Adrenérgicos",
+    "q": "O que é o fenômeno de down-regulation de receptores adrenérgicos e qual sua relevância clínica no choque?",
+    "a": "Exposição prolongada a agonistas adrenérgicos → internalização e redução do número de receptores → redução da resposta ao vasopressor ao longo do tempo (taquifilaxia). Relevante: doses crescentes de noradrenalina para manter PAM.",
+    "hint": "Taquifilaxia adrenérgica",
+    "exp": "A down-regulation é mediada por quinases de receptor acoplado à proteína G (GRKs) e β-arrestinas. Em choque prolongado (>48-72h), a resposta às catecolaminas diminui. Isso justifica o uso de vasopressina (receptor V1 não adrenérgico) e de corticosteroides (aumentam densidade e sensibilidade de receptores adrenérgicos) em choque refratário (Miller, 8ª ed., cap. 15)."
+  },
+  {
+    "cat": "Noradrenalina: Farmacocinética e Doses",
+    "q": "Como preparar uma solução padrão de noradrenalina e qual a concentração habitual em UTI?",
+    "a": "Concentração padrão: 4–8 mg em 250 mL de SG5% ou SF0,9% (16–32 mcg/mL). Em restrição hídrica: até 32 mg/250 mL (128 mcg/mL). Infundir por bomba de seringa com acesso venoso central.",
+    "hint": "4mg/250mL padrão",
+    "exp": "A escolha do diluente (SG5% vs SF) tem impacto mínimo na estabilidade da noradrenalina (estável por 24h em ambos em temperatura ambiente). Soluções alcalinas (bicarbonato) inativam a droga. Concentrações mais altas ('noradrenalina concentrada') reduzem volume infundido — útil em pacientes com restrição hídrica ou choque refratário. Sempre rotular com droga, concentração, data e hora (Barash, 8ª ed.)."
+  },
+  {
+    "cat": "Dobutamina: Farmacocinética e Doses",
+    "q": "Como preparar a solução de dobutamina e qual a dose habitual inicial?",
+    "a": "250 mg em 250 mL SG5% (1000 mcg/mL) ou 250 mg em 500 mL (500 mcg/mL). Dose inicial: 2–5 mcg/kg/min. Dose máxima usual: 20 mcg/kg/min.",
+    "hint": "250mg/250mL",
+    "exp": "A dobutamina é compatível com SG5% e SF0,9%. Não misturar com bicarbonato (inativação). A bomba de infusão deve ser calibrada por peso do paciente. Em doses >10 mcg/kg/min, monitorar FC rigorosamente — taquicardia >110 bpm deve levar à redução de dose. Não usar em pacientes com obstrução dinâmica da via de saída do VE (CMH) — pode agravar o gradiente (Stoelting, cap. 12)."
+  },
+  {
+    "cat": "Comparativo: Drogas Vasoativas",
+    "q": "Qual droga vasoativa tem maior risco de precipitar isquemia miocárdica em coronariopatas: noradrenalina, vasopressina ou dobutamina?",
+    "a": "Dobutamina (aumenta FC e MVO₂); vasopressina em altas doses (vasoconstrição coronariana via V1). Noradrenalina pode melhorar perfusão coronariana (↑PAD), mas em doses excessivas causa vasoconstrição coronariana.",
+    "hint": "MVO₂ e vasoespasmo",
+    "exp": "A dobutamina eleva MVO₂ por aumento de FC, contratilidade e estresse parietal. Em coronariopatas com reserva coronariana limitada, isso precipita isquemia — base do teste de estresse. Vasopressina em doses >0,04 U/min pode causar vasoespasmo coronariano (receptores V1). Monitorar ECG e troponinas em pacientes de risco ao usar essas drogas (Miller, 8ª ed., cap. 15)."
+  },
+  {
+    "cat": "Aplicação Clínica em Choque",
+    "q": "O que é 'vasopressor sparing' e como é implementado na prática?",
+    "a": "Estratégia de adicionar um segundo vasopressor (vasopressina, angiotensina II) para reduzir a dose de noradrenalina, minimizando toxicidade catecolaminérgica (taquicardia, arritmias, isquemia). Implementado quando noradrenalina ≥0,25 mcg/kg/min.",
+    "hint": "Poupar catecolamina",
+    "exp": "A toxicidade catecolaminérgica inclui: apoptose cardiomiocitária, vasoconstrição mesentérica, imunossupressão e distúrbios metabólicos (hiperglicemia, hipocalemia). O 'vasopressor sparing' com vasopressina reduz a dose total de noradrenalina em ~35–40%. Estudos recentes exploram angiotensina II (ATHOS-3, Khanna 2017) e metilazul como adjuvantes em casos refratários (SSC 2021)."
   }
 ]
