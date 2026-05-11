@@ -3,7 +3,34 @@
 const SUPABASE_URL = window.SUPABASE_URL || '';
 const SUPABASE_ANON_KEY = window.SUPABASE_ANON_KEY || '';
 const HAS_SUPABASE_CONFIG = !!(SUPABASE_URL && SUPABASE_ANON_KEY);
-const supabaseClient = HAS_SUPABASE_CONFIG ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
+const ADMIN_EMAILS = (() => {
+  const raw = window.ADMIN_EMAILS;
+  if (Array.isArray(raw)) return raw.map(e => String(e || '').trim().toLowerCase()).filter(Boolean);
+  if (typeof raw === 'string') return raw.split(',').map(e => e.trim().toLowerCase()).filter(Boolean);
+  return [];
+})();
+
+function clearPersistedAuthTokens() {
+  try {
+    Object.keys(localStorage)
+      .filter(key => key.includes('auth-token') && key.startsWith('sb-'))
+      .forEach(key => localStorage.removeItem(key));
+  } catch {}
+}
+
+if (HAS_SUPABASE_CONFIG) {
+  clearPersistedAuthTokens();
+}
+
+const supabaseClient = HAS_SUPABASE_CONFIG
+  ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+      auth: {
+        persistSession: false,
+        autoRefreshToken: false,
+        detectSessionInUrl: false
+      }
+    })
+  : null;
 
 // ===== REVIEW SCHEDULING RULES =====
 const SM2 = {
@@ -76,6 +103,7 @@ let state = {
  authenticated: false,
  profiles: [],
  pendingDeleteId: null,
+  lastLoginInteractionAt: 0,
  filterDiscipline: '',
  filterCategory: '',
  filterSearch: ''
@@ -220,6 +248,10 @@ function normalizeEmail(email = '') {
   return email.trim().toLowerCase();
 }
 
+function isBootstrapAdminEmail(email = '') {
+  return ADMIN_EMAILS.includes(normalizeEmail(email));
+}
+
 function getErrorMessage(errorLike) {
   if (!errorLike) return 'falha inesperada.';
   if (typeof errorLike === 'string') return errorLike;
@@ -283,6 +315,8 @@ function isAdmin() {
 async function loadOrCreateProfile(authUser) {
   const fallbackName = (authUser.email || 'usuário').split('@')[0];
   const resolvedName = authUser.user_metadata?.full_name || fallbackName;
+  const userEmail = authUser.email || '';
+  const shouldBeBootstrapAdmin = isBootstrapAdminEmail(userEmail);
 
   const { data: existing, error: existingErr } = await supabaseClient
     .from('profiles')
@@ -293,28 +327,43 @@ async function loadOrCreateProfile(authUser) {
   if (existingErr) throw existingErr;
 
   if (existing) {
-    const needsSync = existing.email !== (authUser.email || '') || existing.full_name !== resolvedName;
+    const needsAdminPromotion = shouldBeBootstrapAdmin &&
+      (existing.role !== USER_ROLE.ADMIN || existing.status !== USER_STATUS.ACTIVE);
+    const needsPendingActivation = !shouldBeBootstrapAdmin && existing.status === USER_STATUS.PENDING;
+    const needsSync = existing.email !== userEmail ||
+      existing.full_name !== resolvedName ||
+      needsAdminPromotion ||
+      needsPendingActivation;
+
     if (needsSync) {
+      const updates = {
+        email: userEmail,
+        full_name: resolvedName,
+        updated_at: new Date().toISOString()
+      };
+      if (needsAdminPromotion) {
+        updates.role = USER_ROLE.ADMIN;
+        updates.status = USER_STATUS.ACTIVE;
+      } else if (needsPendingActivation) {
+        updates.status = USER_STATUS.ACTIVE;
+      }
+
       const { error: syncErr } = await supabaseClient
         .from('profiles')
-        .update({
-          email: authUser.email || '',
-          full_name: resolvedName,
-          updated_at: new Date().toISOString()
-        })
+        .update(updates)
         .eq('id', authUser.id);
       if (syncErr) throw syncErr;
-      return { ...existing, email: authUser.email || '', full_name: resolvedName };
+      return { ...existing, ...updates };
     }
     return existing;
   }
 
   const insertPayload = {
     id: authUser.id,
-    email: authUser.email || '',
+    email: userEmail,
     full_name: resolvedName,
-    role: USER_ROLE.USER,
-    status: USER_STATUS.PENDING
+    role: shouldBeBootstrapAdmin ? USER_ROLE.ADMIN : USER_ROLE.USER,
+    status: USER_STATUS.ACTIVE
   };
   const { error: insertErr } = await supabaseClient.from('profiles').insert(insertPayload);
   if (insertErr) throw insertErr;
@@ -502,6 +551,13 @@ async function handleLoginSubmit(e) {
     return;
   }
 
+  const loginInteractionIsFresh =
+    state.lastLoginInteractionAt && (Date.now() - state.lastLoginInteractionAt) < 120000;
+  if (!loginInteractionIsFresh) {
+    showToast('Confirme o login manualmente (digite ou clique no formulário).', 'error');
+    return;
+  }
+
   const email = normalizeEmail(document.getElementById('login-email').value);
   const password = document.getElementById('login-password').value;
   const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
@@ -525,6 +581,9 @@ async function handleRegisterSubmit(e) {
   const password = document.getElementById('register-password').value;
   const authStatus = document.getElementById('auth-status');
 
+  // Guarantee registration flow does not reuse any current session.
+  await supabaseClient.auth.signOut();
+
   const { error } = await supabaseClient.auth.signUp({
     email,
     password,
@@ -541,6 +600,9 @@ async function handleRegisterSubmit(e) {
   if (authStatus) {
     authStatus.textContent = 'Conta criada. Aguarde liberação do administrador para acessar.';
   }
+
+  // Keep user on auth screen; never auto-enter dashboard from sign-up.
+  await supabaseClient.auth.signOut();
   showToast('Cadastro realizado com sucesso.', 'success');
   e.target.reset();
 }
@@ -556,7 +618,7 @@ async function init() {
   initTheme();
   await loadAllCards();
   bindEvents();
-  await initAuth();
+  applyAuthState(false);
 }
 
 async function loadAllCards() {
@@ -597,6 +659,11 @@ function updateStreak() {
 function bindEvents() {
  const loginForm = document.getElementById('login-form');
  if (loginForm) loginForm.addEventListener('submit', handleLoginSubmit);
+  ['pointerdown', 'keydown', 'input'].forEach(evt => {
+    loginForm?.addEventListener(evt, event => {
+      if (event.isTrusted) state.lastLoginInteractionAt = Date.now();
+    });
+  });
  const registerForm = document.getElementById('register-form');
  if (registerForm) registerForm.addEventListener('submit', handleRegisterSubmit);
 
@@ -657,6 +724,8 @@ function bindEvents() {
 
  const logoutBtn = document.getElementById('logout-btn');
  if (logoutBtn) logoutBtn.addEventListener('click', logout);
+  const quickLogoutBtn = document.getElementById('quick-logout-btn');
+  if (quickLogoutBtn) quickLogoutBtn.addEventListener('click', logout);
 }
 
 function initTheme() {

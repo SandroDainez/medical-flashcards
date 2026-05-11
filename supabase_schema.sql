@@ -42,6 +42,22 @@ create table if not exists public.user_stats (
   updated_at timestamptz not null default now()
 );
 
+create or replace function public.is_active_admin()
+returns boolean
+language sql
+security definer
+set search_path = public
+stable
+as $$
+  select exists (
+    select 1
+    from public.profiles p
+    where p.id = auth.uid()
+      and p.role = 'admin'
+      and p.status = 'active'
+  );
+$$;
+
 create or replace function public.handle_new_user()
 returns trigger
 language plpgsql
@@ -77,10 +93,7 @@ create policy "profiles_select_self_or_admin"
 on public.profiles for select
 using (
   id = auth.uid()
-  or exists (
-    select 1 from public.profiles p
-    where p.id = auth.uid() and p.role = 'admin' and p.status = 'active'
-  )
+  or public.is_active_admin()
 );
 
 drop policy if exists "profiles_insert_self" on public.profiles;
@@ -93,17 +106,11 @@ create policy "profiles_update_self_or_admin"
 on public.profiles for update
 using (
   id = auth.uid()
-  or exists (
-    select 1 from public.profiles p
-    where p.id = auth.uid() and p.role = 'admin' and p.status = 'active'
-  )
+  or public.is_active_admin()
 )
 with check (
   id = auth.uid()
-  or exists (
-    select 1 from public.profiles p
-    where p.id = auth.uid() and p.role = 'admin' and p.status = 'active'
-  )
+  or public.is_active_admin()
 );
 
 drop policy if exists "cards_owner_all" on public.cards;

@@ -390,6 +390,14 @@ body::after {
  z-index: 1;
 }
 
+.quick-logout-btn {
+ position: absolute;
+ top: 16px;
+ right: 16px;
+ z-index: 3;
+ padding: 8px 14px;
+}
+
 .view { display: none; animation: fadeIn .35s ease; }
 .view.active { display: block; }
 
@@ -1405,6 +1413,12 @@ body::after {
  .eval-actions { flex-direction: column; }
  .eval-actions .btn { width: 100%; }
  .eval-grid { grid-template-columns: 1fr; }
+ .quick-logout-btn {
+  position: sticky;
+  top: 0;
+  margin-left: auto;
+  margin-bottom: 12px;
+ }
 }
 
 /* Empty state */

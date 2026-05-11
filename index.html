@@ -17,9 +17,9 @@
         </div>
         <form id="login-form" class="auth-form">
             <label for="login-email">E-mail</label>
-            <input id="login-email" class="text-input" type="email" autocomplete="email" required>
+            <input id="login-email" class="text-input" type="email" autocomplete="off" autocapitalize="none" spellcheck="false" required>
             <label for="login-password">Senha</label>
-            <input id="login-password" class="text-input" type="password" autocomplete="current-password" required>
+            <input id="login-password" class="text-input" type="password" autocomplete="off" required>
             <button type="submit" class="btn btn-primary btn-large">Entrar</button>
         </form>
         <form id="register-form" class="auth-form auth-register">
@@ -77,6 +77,7 @@
 
     <!-- MAIN CONTENT -->
     <main class="main-content">
+        <button id="quick-logout-btn" class="btn btn-secondary quick-logout-btn" type="button">Sair</button>
 
         <!-- DASHBOARD VIEW -->
         <div id="view-dashboard" class="view active">
@@ -288,6 +289,7 @@
 <script>
     window.SUPABASE_URL = "https://bvbezqotrxiseifmshbe.supabase.co";
     window.SUPABASE_ANON_KEY = "sb_publishable_pzJELreYCypmM-bwyG30CA_f7R704mw";
+    window.ADMIN_EMAILS = ["sandrodainez1@gmail.com"];
 </script>
 <script src="app.js"></script>
 </body>
