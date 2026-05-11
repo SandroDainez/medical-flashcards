@@ -214,7 +214,7 @@ a{text-decoration:none}
         <p id="v-date"></p>
         <div style="margin-top: 16px;">
           <label for="study-cat-select" style="font-weight: 600; font-size: 14px; color: #334155; margin-bottom: 6px; display: block;">Filtrar por Matéria</label>
-          <select class="sel" id="study-cat-select" style="min-width: 250px;"></select>
+          <select class="sel" id="study-cat-select" onchange="renderDashboard()" style="min-width: 250px;"></select>
         </div>
       </div>
       <div class="stat-row">
@@ -523,7 +523,12 @@ function renderDashboard() {
   document.getElementById('v-date').textContent =
     new Date().toLocaleDateString('pt-BR', {weekday:'long', year:'numeric', month:'long', day:'numeric'});
 
-  var due = dueCards();
+  var allDue = dueCards();
+  var selectedCategory = document.getElementById('study-cat-select').value;
+  var due = (selectedCategory && selectedCategory !== 'all') 
+      ? allDue.filter(function(c) { return c.cat === selectedCategory; }) 
+      : allDue;
+
   var newC = cards.filter(function(c) { return c.rep === 0; });
   var done = cards.filter(function(c) { return c.rep > 2; });
 
