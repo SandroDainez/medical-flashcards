@@ -640,6 +640,13 @@ body::after {
  margin-top: 8px;
 }
 
+.study-filters {
+ display: flex;
+ gap: 10px;
+ margin-top: 12px;
+ flex-wrap: wrap;
+}
+
 #study-progress-text { font-size: 14px; color: var(--gray-500); min-width: 60px; }
 
 .study-progress-bar {
@@ -1413,6 +1420,12 @@ body::after {
  .eval-actions { flex-direction: column; }
  .eval-actions .btn { width: 100%; }
  .eval-grid { grid-template-columns: 1fr; }
+ .study-filters {
+  flex-direction: column;
+ }
+ .study-filters .select-input {
+  width: 100%;
+ }
  .quick-logout-btn {
   position: sticky;
   top: 0;

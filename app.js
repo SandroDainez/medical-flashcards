@@ -94,6 +94,8 @@ let state = {
  cards: [], // Cards currently in use (after syncing with localStorage)
  stats: {},
  currentView: 'dashboard',
+ studyFilterDiscipline: '',
+ studyFilterTopic: '',
  studyQueue: [],
  studyIndex: 0,
  studyTotal: 0,
@@ -231,11 +233,49 @@ function getBrowseTopic(card) {
   return getAnesthesiaModule(topic, card.q) || topic;
 }
 
+function getAllBrowseTopics(selectedDiscipline = '') {
+  const base = state.cards.filter(c => !selectedDiscipline || getDiscipline(c) === selectedDiscipline);
+  const unique = [...new Set(base.map(c => getBrowseTopic(c)).filter(Boolean))];
+  if (selectedDiscipline === 'Anestesiologia') return ['ME1', 'ME2', 'ME3'];
+  return unique.sort((a, b) => a.localeCompare(b, 'pt-BR'));
+}
+
+function getDisciplineTopicOptions(discipline) {
+  if (discipline === 'Anestesiologia') return ['ME1', 'ME2', 'ME3'];
+  return [...new Set(
+    state.cards
+      .filter(c => getDiscipline(c) === discipline)
+      .map(c => getTopic(c))
+      .filter(Boolean)
+  )].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+}
+
+function updateTopicSuggestions(selectedDiscipline = '') {
+  const list = document.getElementById('form-topic-options');
+  if (!list) return;
+  const options = getDisciplineTopicOptions(selectedDiscipline);
+  list.innerHTML = options.map(topic => `<option value="${escapeHtml(topic)}"></option>`).join('');
+}
+
 function buildCategory(discipline, topic) {
   const d = (discipline || '').trim();
   const t = (topic || '').trim();
   if (!d) return t || 'Outro';
   return t ? `${d} - ${t}` : d;
+}
+
+function renderStudyFilters() {
+  const disciplineEl = document.getElementById('study-filter-discipline');
+  const topicEl = document.getElementById('study-filter-topic');
+  if (!disciplineEl || !topicEl) return;
+
+  const disciplines = getAllDisciplines();
+  disciplineEl.innerHTML = '<option value="">Todas disciplinas</option>' +
+    disciplines.map(d => `<option value="${d}" ${d === state.studyFilterDiscipline ? 'selected' : ''}>${d}</option>`).join('');
+
+  const topics = getAllBrowseTopics(state.studyFilterDiscipline);
+  topicEl.innerHTML = '<option value="">Todos temas</option>' +
+    topics.map(t => `<option value="${t}" ${t === state.studyFilterTopic ? 'selected' : ''}>${t}</option>`).join('');
 }
 
 function getDisciplineCounts() {
@@ -681,6 +721,10 @@ function bindEvents() {
   });
  const registerForm = document.getElementById('register-form');
  if (registerForm) registerForm.addEventListener('submit', handleRegisterSubmit);
+ const disciplineField = document.getElementById('form-discipline');
+ if (disciplineField) {
+  disciplineField.addEventListener('change', e => updateTopicSuggestions(e.target.value));
+ }
 
  // Nav buttons
  document.querySelectorAll('.nav-btn[data-view]').forEach(btn => {
@@ -722,6 +766,23 @@ function bindEvents() {
  state.filterCategory = e.target.value;
  renderBrowse();
  });
+
+ const studyDisciplineEl = document.getElementById('study-filter-discipline');
+ const studyTopicEl = document.getElementById('study-filter-topic');
+ if (studyDisciplineEl) {
+  studyDisciplineEl.addEventListener('change', e => {
+    state.studyFilterDiscipline = e.target.value;
+    state.studyFilterTopic = '';
+    renderStudyFilters();
+    startStudySession(state.studyFilterDiscipline || null, state.studyFilterTopic || null);
+  });
+ }
+ if (studyTopicEl) {
+  studyTopicEl.addEventListener('change', e => {
+    state.studyFilterTopic = e.target.value;
+    startStudySession(state.studyFilterDiscipline || null, state.studyFilterTopic || null);
+  });
+ }
 
  // Card form
  document.getElementById('card-form').addEventListener('submit', handleFormSubmit);
@@ -897,7 +958,17 @@ function showView(viewId, params = {}) {
     if (navBtn) navBtn.classList.add('active');
 
     if (viewId === 'dashboard') renderDashboard();
-    if (viewId === 'study') startStudySession(params.discipline || null);
+    if (viewId === 'study') {
+      if (Object.prototype.hasOwnProperty.call(params, 'discipline')) {
+        state.studyFilterDiscipline = params.discipline || '';
+        state.studyFilterTopic = '';
+      }
+      if (Object.prototype.hasOwnProperty.call(params, 'topic')) {
+        state.studyFilterTopic = params.topic || '';
+      }
+      renderStudyFilters();
+      startStudySession(state.studyFilterDiscipline || null, state.studyFilterTopic || null);
+    }
     if (viewId === 'browse') renderBrowse();
     if (viewId === 'stats') renderStats();
     if (viewId === 'create') resetForm();
@@ -1029,12 +1100,15 @@ function renderDashboard() {
 }
 
 // ===== STUDY SESSION =====
-function startStudySession(discipline = null) {
+function startStudySession(discipline = null, topic = null) {
     let dueCards = getDueCards();
-    
-    state.studyQueue = discipline
-        ? dueCards.filter(c => getDiscipline(c) === discipline)
-        : dueCards;
+    if (discipline) {
+      dueCards = dueCards.filter(c => getDiscipline(c) === discipline);
+    }
+    if (topic) {
+      dueCards = dueCards.filter(c => getBrowseTopic(c) === topic);
+    }
+    state.studyQueue = dueCards;
     
     state.studyTotal = state.studyQueue.length;
     state.studyIndex = 0;
@@ -1072,7 +1146,10 @@ function showCurrentCard() {
  updateEvaluationUI();
 
  // Populate
- document.getElementById('card-category-tag').textContent = card.cat;
+ const studyTag = getDiscipline(card) === 'Anestesiologia'
+   ? `Anestesiologia - ${getBrowseTopic(card)}`
+   : card.cat;
+ document.getElementById('card-category-tag').textContent = studyTag;
  document.getElementById('card-front-content').textContent = card.q;
  document.getElementById('card-back-content').textContent = card.a;
   document.getElementById('card-hint').textContent = card.hint ? `Dica: ${card.hint}` : '';
@@ -1219,10 +1296,13 @@ function renderBrowse() {
       state.cards
         .filter(c => !currentDiscipline || getDiscipline(c) === currentDiscipline)
         .map(c => getBrowseTopic(c))
-    )].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+    )];
+    const normalizedTopics = currentDiscipline === 'Anestesiologia'
+      ? ['ME1', 'ME2', 'ME3']
+      : topics.sort((a, b) => a.localeCompare(b, 'pt-BR'));
 
     filterCatEl.innerHTML = '<option value="">Todos temas</option>' +
-      topics.map(t => `<option value="${t}" ${t === currentCat ? 'selected' : ''}>${t}</option>`).join('');
+      normalizedTopics.map(t => `<option value="${t}" ${t === currentCat ? 'selected' : ''}>${t}</option>`).join('');
     filterCatEl.value = currentCat;
 
     let filtered = state.cards;
@@ -1394,6 +1474,7 @@ function resetForm() {
  document.getElementById('card-form').reset();
  populateDisciplineSelect(document.getElementById('form-discipline'));
  document.getElementById('form-discipline').value = '';
+ updateTopicSuggestions('');
 }
 
 function editCard(id) {
@@ -1408,6 +1489,7 @@ function editCard(id) {
  const parts = splitCategory(card.cat, card.q);
  document.getElementById('edit-card-id').value = card.id;
  document.getElementById('form-discipline').value = parts.discipline;
+ updateTopicSuggestions(parts.discipline);
  document.getElementById('form-category').value = getTopic(card);
  document.getElementById('form-front').value = card.q;
  document.getElementById('form-back').value = card.a;

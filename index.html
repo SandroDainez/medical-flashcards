@@ -110,6 +110,10 @@
                         <div id="study-progress-text">0 / 0</div>
                         <div class="study-progress-bar"><div id="study-progress-fill" class="study-progress-fill"></div></div>
                     </div>
+                    <div class="study-filters">
+                        <select id="study-filter-discipline" class="select-input"></select>
+                        <select id="study-filter-topic" class="select-input"></select>
+                    </div>
                 </div>
                 <div id="card-category-tag" class="card-category-tag"></div>
                 <div class="flashcard-container">
@@ -198,7 +202,8 @@
                     </div>
                     <div class="form-group">
                         <label for="form-category">Tema/Subcategoria</label>
-                        <input type="text" id="form-category" class="text-input" required>
+                        <input type="text" id="form-category" class="text-input" list="form-topic-options" required>
+                        <datalist id="form-topic-options"></datalist>
                     </div>
                 </div>
                 <div class="form-group">
