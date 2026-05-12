@@ -1769,5 +1769,390 @@
     "a": "VD e VE compartilham o septo interventricular e o pericárdio. Expansão do VD por aumento de pressão/volume desloca o septo para a esquerda → reduz enchimento e débito do VE.",
     "hint": "Dilatação do VD comprime o VE pelo septo.",
     "exp": "No tamponamento cardíaco, o líquido pericárdico comprime todas as câmaras. Inspiração → retorno venoso D aumenta → VD dilata → septo desvia → VE enche menos → queda do DC e da PA inspiratória (pulso paradoxal >10 mmHg). Pericardiocentese alivia imediatamente a compressão."
+  },
+  {
+    "cat": "Ciclo Cardíaco - Fases",
+    "q": "Quais são as 7 fases clássicas do ciclo cardíaco ventricular?",
+    "a": "1) Contração isovolumétrica; 2) Ejeção rápida; 3) Ejeção lenta; 4) Relaxamento isovolumétrico; 5) Enchimento rápido; 6) Diastase; 7) Sístole atrial",
+    "hint": "Pense nas fases de acordo com a abertura/fechamento das valvas",
+    "exp": "O ciclo cardíaco é dividido em sístole (contração) e diástole (relaxamento). A sístole ventricular compreende as fases de contração isovolumétrica e ejeção. A diástole inclui relaxamento isovolumétrico, enchimento rápido, diastase e sístole atrial. Cada fase é definida pelo estado das valvas mitral/tricúspide e aórtica/pulmonar."
+  },
+  {
+    "cat": "Ciclo Cardíaco - Fases",
+    "q": "Durante a contração isovolumétrica, quais valvas estão abertas?",
+    "a": "Nenhuma — todas as valvas estão fechadas",
+    "hint": "A pressão aumenta sem variação de volume",
+    "exp": "Na contração isovolumétrica, após o fechamento das valvas atrioventriculares (M1/T1 = 1ª bulha) e antes da abertura das valvas semilunares, a pressão ventricular eleva-se rapidamente sem variação de volume. A valva aórtica só abre quando a pressão ventricular esquerda supera a pressão diastólica aórtica (~80 mmHg)."
+  },
+  {
+    "cat": "Ciclo Cardíaco - Fases",
+    "q": "O que define o início da ejeção ventricular?",
+    "a": "Abertura da valva aórtica (e pulmonar), quando a pressão ventricular supera a pressão arterial diastólica",
+    "hint": "Pressão ventricular > pressão diastólica da artéria",
+    "exp": "A ejeção começa quando a pressão no VE ultrapassa ~80 mmHg (pressão diastólica aórtica). No VD, a valva pulmonar abre com ~8-10 mmHg. Durante a ejeção rápida (~70% do VS é ejetado) a pressão ainda sobe; na ejeção lenta, a pressão já está caindo mas o fluxo continua por inércia."
+  },
+  {
+    "cat": "Ciclo Cardíaco - Fases",
+    "q": "O que é o relaxamento isovolumétrico?",
+    "a": "Fase de queda da pressão ventricular com todas as valvas fechadas, após fechamento das valvas semilunares até abertura das valvas AV",
+    "hint": "Volume fixo, pressão cai",
+    "exp": "Após o fechamento das valvas aórtica/pulmonar (A2/P2 = componentes da 2ª bulha), a pressão ventricular cai rapidamente sem alteração de volume. Termina quando a pressão ventricular cai abaixo da pressão atrial, abrindo as valvas mitral e tricúspide. É o período de maior demanda energética relativa para o relaxamento ativo (consumo de ATP pela SERCA2a)."
+  },
+  {
+    "cat": "Volumes e Pressões",
+    "q": "Qual é o volume diastólico final (VDF) normal do VE?",
+    "a": "~120-130 mL",
+    "hint": "Volume ao final do enchimento ventricular",
+    "exp": "O VDF representa o volume no ventrículo ao final da diástole, antes da contração. O volume sistólico final (VSF) é ~50 mL. O volume sistólico (VS) = VDF - VSF ≈ 70 mL. A fração de ejeção (FE) = VS/VDF = 70/120 ≈ 55-65%. Em ICC com FE reduzida, o VDF aumenta (remodelamento)."
+  },
+  {
+    "cat": "Volumes e Pressões",
+    "q": "Qual a pressão diastólica final do VE (PDFVE) normal e seu significado clínico?",
+    "a": "Normal: 8-12 mmHg. Elevada indica aumento da pré-carga ou disfunção diastólica",
+    "hint": "Correlaciona-se com a pressão de oclusão pulmonar (POAP)",
+    "exp": "A PDFVE reflete a pré-carga e a complacência ventricular. A POAP (wedge) estima indiretamente a PDFVE quando não há obstrução mitral. PDFVE > 18 mmHg causa edema pulmonar. Em disfunção diastólica, a PDFVE sobe mesmo com função sistólica preservada. Na anestesia, agentes inalatórios e betabloqueadores podem aumentar PDFVE."
+  },
+  {
+    "cat": "Volumes e Pressões",
+    "q": "Quais são as pressões normais no coração direito (AD, VD, AP)?",
+    "a": "AD: 2-8 mmHg; VD: 15-30/0-8 mmHg; AP: 15-30/8-15 mmHg (média ~15 mmHg)",
+    "hint": "Pressões do lado direito são muito menores que as do esquerdo",
+    "exp": "O lado direito opera em baixa pressão. A HP é definida por PMAP ≥ 25 mmHg em repouso. A pré-carga do VD é estimada pela PVC (normal 2-8 mmHg). Em TEP maciço, a pressão sistólica do VD pode igualar a sistêmica. A anestesia geral frequentemente reduz a pré-carga do VD por vasodilatação venosa."
+  },
+  {
+    "cat": "Débito Cardíaco",
+    "q": "Como se calcula o débito cardíaco (DC) e qual o valor normal?",
+    "a": "DC = VS × FC. Normal: 4-8 L/min (índice cardíaco: 2,5-4 L/min/m²)",
+    "hint": "Produto do volume ejetado pela frequência",
+    "exp": "O DC normal é ~5 L/min (70 mL × 72 bpm). O índice cardíaco (IC) corrige pelo tamanho corporal. Métodos de medição: termodiluição (Swan-Ganz), Fick (DC = VO2/diferença arteriovenosa de O2), ecocardiografia (Doppler), bioimpedância. Em choque, o DC pode estar reduzido (distributivo, cardiogênico) ou elevado (séptico precoce)."
+  },
+  {
+    "cat": "Débito Cardíaco",
+    "q": "Quais são os 4 determinantes do débito cardíaco?",
+    "a": "Pré-carga, pós-carga, contratilidade e frequência cardíaca",
+    "hint": "Os 4 pilares da função cardíaca",
+    "exp": "Pré-carga (VDF, relação Frank-Starling), pós-carga (resistência à ejeção, principalmente RVS), contratilidade (inotropismo, Ca²⁺ intracelular, catecolaminas) e FC (cronotopismo). Na anestesia, todos são afetados: inalatórios reduzem contratilidade e pré-carga; opioides bradicardizam; vasopressores aumentam pós-carga."
+  },
+  {
+    "cat": "Lei de Frank-Starling",
+    "q": "O que descreve a lei de Frank-Starling?",
+    "a": "O volume sistólico aumenta com o aumento da pré-carga (VDF), até um ponto ótimo além do qual ocorre queda do desempenho",
+    "hint": "Maior estiramento = maior contração (até o limite)",
+    "exp": "O mecanismo de Frank-Starling baseia-se no aumento da sensibilidade das miofibrilas ao Ca²⁺ e maior sobreposição actina-miosina com o estiramento. A curva de Starling é deslocada para cima por inotrópicos positivos (catecolaminas, digoxina) e para baixo em ICC. Em IC grave, o coração opera no platô descendente da curva."
+  },
+  {
+    "cat": "Lei de Frank-Starling",
+    "q": "Como a anestesia geral afeta a curva de Frank-Starling?",
+    "a": "Desloca a curva para baixo e para a direita (depressão da contratilidade + vasodilatação → redução da pré-carga)",
+    "hint": "Inalatórios são inotrópicos negativos",
+    "exp": "Agentes halogenados (sevoflurano, isoflurano, desflurano) deprimem a função miocárdica dose-dependente por redução do Ca²⁺ intracelular (inibição dos canais L e liberação do RS). A vasodilatação venosa reduz o retorno venoso (pré-carga). O resultado é deslocamento inferior da curva de Starling. Propofol também tem efeito inotrópico negativo significativo."
+  },
+  {
+    "cat": "Pré-carga",
+    "q": "Como a pré-carga é definida fisiologicamente?",
+    "a": "É o estresse na parede ventricular ao final da diástole, proporcional ao VDF e inversamente proporcional à espessura da parede (Lei de Laplace)",
+    "hint": "Tensão da parede = P × r / (2 × espessura)",
+    "exp": "Pela Lei de Laplace: T = P × r / (2h). Clinicamente, a pré-carga é estimada pela PVC (VD) ou POAP/PDFVE (VE). O volume diastólico final é o melhor correlato. Na prática anestésica, monitoramos a pré-carga por variação da pressão de pulso (VPP > 13% sugere responsividade a volume), VPP e VS, ou ecocardiografia."
+  },
+  {
+    "cat": "Pós-carga",
+    "q": "Como a pós-carga é definida e estimada clinicamente?",
+    "a": "É o estresse sistólico da parede ventricular (resistência à ejeção). Estimada pela resistência vascular sistêmica (RVS) = (PAM - PVC) × 80 / DC",
+    "hint": "RVS normal: 800-1200 dinas·s/cm⁵",
+    "exp": "A pós-carga real é o estresse parietal sistólico (Lei de Laplace em sístole). A RVS é uma proxy clínica. RVS elevada (vasoconstricção) aumenta o trabalho cardíaco e reduz o VS. Em choque distributivo, RVS está baixa. Vasodilatadores (nitroprussiato, hidralazina) reduzem pós-carga e melhoram VS em ICC. O VE normal tolera bem aumentos de pós-carga; o VD insuficiente, não."
+  },
+  {
+    "cat": "Contratilidade",
+    "q": "Qual é o índice mais independente de pré e pós-carga para medir contratilidade?",
+    "a": "dP/dt máximo (taxa máxima de ascensão da pressão ventricular) e a relação pressão-volume de fim de sístole (ESPVR)",
+    "hint": "Avalia a velocidade de desenvolvimento de pressão",
+    "exp": "O dP/dt máx normal é >1200 mmHg/s. Reduz com inotrópicos negativos e ICC. A ESPVR (Emax) é o índice mais rigoroso, obtido por loops pressão-volume com variação de carga. Na prática clínica, a FE ao eco é o mais usado, apesar de ser dependente de carga. A contractilidade aumenta com catecolaminas (β1), Ca²⁺, glicosídeos cardíacos e milrinona."
+  },
+  {
+    "cat": "Bulhas Cardíacas",
+    "q": "Quais eventos do ciclo cardíaco geram a 1ª bulha (B1)?",
+    "a": "Fechamento das valvas mitral (M1) e tricúspide (T1) no início da sístole ventricular",
+    "hint": "Início da contração isovolumétrica",
+    "exp": "B1 ocorre no início da sístole, com o fechamento das valvas AV. O componente mitral (M1) precede o tricúspide (T1) em ~20-30 ms. B1 hiperfonética: estenose mitral, hiperdinâmico. B1 hipofonética: disfunção miocárdica grave, obesidade, derrame pericárdico. O desdobramento amplo de B1 ocorre no bloqueio de ramo direito (fechamento tardio de T1)."
+  },
+  {
+    "cat": "Bulhas Cardíacas",
+    "q": "Quais eventos geram a 2ª bulha (B2) e como ocorre seu desdobramento fisiológico?",
+    "a": "Fechamento das valvas aórtica (A2) e pulmonar (P2). Desdobramento fisiológico: P2 atrasa na inspiração (↑ retorno venoso → ↑ sístole VD → fechamento tardio da valva pulmonar)",
+    "hint": "Inspiração → P2 mais tarde",
+    "exp": "A2 normalmente precede P2. Na inspiração, o retorno venoso ao VD aumenta, prolongando a sístole direita → P2 atrasa. Na expiração, ambos se fundem. O desdobramento fixo ocorre no CIA (shunt E→D constante). O desdobramento paradoxal (B2 unido na inspiração) ocorre no BRE e estenose aórtica grave (A2 atrasado)."
+  },
+  {
+    "cat": "Bulhas Cardíacas",
+    "q": "Qual é o mecanismo da 3ª bulha (B3) e seu significado clínico?",
+    "a": "Vibração da parede ventricular durante o enchimento rápido diastólico precoce. Patológica em adultos > 40 anos → ICC, disfunção sistólica",
+    "hint": "Tom de baixa frequência no início da diástole",
+    "exp": "B3 ocorre logo após A2, no início do enchimento rápido. Em crianças e adultos jovens pode ser fisiológica. Em adultos, indica câmara dilatada e complacência reduzida. Forma o ritmo de galope ventricular (B1-B2-B3). É sinal precoce e sensível de ICC descompensada. Auscultar com campânula na região apical, com paciente em decúbito lateral esquerdo."
+  },
+  {
+    "cat": "Bulhas Cardíacas",
+    "q": "O que é a 4ª bulha (B4) e quando ocorre?",
+    "a": "Vibração ventricular gerada pela contração atrial forceful contra um ventrículo rígido/hipertrófico. Ocorre no final da diástole (pré-sistólica)",
+    "hint": "Sempre indica disfunção diastólica ou hipertrofia",
+    "exp": "B4 ocorre justo antes de B1, gerada pela sístole atrial forçada tentando encher um ventrículo pouco complacente (HVE, cardiopatia isquêmica, estenose aórtica). Forma galope atrial (B4-B1-B2). É sempre patológica. Nunca ocorre em FA (sem sístole atrial eficaz). Auscultar com campânula no ápice. Indica hipertrofia ou isquemia."
+  },
+  {
+    "cat": "Pressão Arterial e Pulso",
+    "q": "Como se definem pressão arterial sistólica, diastólica, de pulso e média?",
+    "a": "PAS: pico sistólico; PAD: mínima diastólica; PP = PAS - PAD; PAM ≈ PAD + PP/3 (ou [PAS + 2×PAD]/3)",
+    "hint": "PAM é o principal determinante da perfusão orgânica",
+    "exp": "PAM normal: 70-100 mmHg. A PAM é a pressão de perfusão relevante para a maioria dos órgãos (cérebro, rins, coração). PP normal: 30-40 mmHg. PP alargada (>60 mmHg): insuficiência aórtica, aterosclerose rígida. PP estreita (<25 mmHg): tamponamento cardíaco, estenose aórtica grave, choque cardiogênico. A manutenção da PAM ≥65 mmHg é meta padrão no choque séptico (Surviving Sepsis Campaign)."
+  },
+  {
+    "cat": "Pressão Arterial e Pulso",
+    "q": "Quais são os determinantes da pressão arterial sistólica?",
+    "a": "Volume sistólico (VS), complacência aórtica e velocidade de ejeção",
+    "hint": "PAS reflete principalmente o VS e a rigidez vascular",
+    "exp": "PAS = função do VS ejetado e da capacidade aórtica de amortecer a pressão (complacência). Com envelhecimento e aterosclerose, a aorta fica rígida → PAS sobe mais para o mesmo VS. A PAD é determinada principalmente pelo tônus vasomotor periférico (RVS) e pela FC (tempo de esvaziamento). O DC ↑ → PAS ↑; RVS ↑ → PAD ↑."
+  },
+  {
+    "cat": "Regulação Autonômica",
+    "q": "Como o barorreflexo arterial regula a pressão arterial?",
+    "a": "Barorreceptores carotídeos (IX) e aórticos (X) detectam aumento de PA → ativam NTS → inibem simpático + estimulam parassimpático → bradicardia + vasodilatação",
+    "hint": "PA ↑ → FC ↓ (reflexo de Hering-Breuer cardiovascular)",
+    "exp": "Os barorreceptores de alta pressão no seio carotídeo e arco aórtico respondem ao estiramento da parede arterial. A aferência vai ao NTS (núcleo do trato solitário) no bulbo. O NTS inibe o RVLM (simpático) e ativa o núcleo ambíguo (parassimpático/vagal). O resultado é bradicardia reflexa, vasodilatação e redução da PA. Anestésicos geralmente atenuam o barorreflexo."
+  },
+  {
+    "cat": "Regulação Autonômica",
+    "q": "Qual é o efeito da estimulação β1-adrenérgica no coração?",
+    "a": "Cronotrópico positivo (↑FC), inotrópico positivo (↑contratilidade), dromotrópico positivo (↑condução AV), lusitrópico positivo (↑relaxamento)",
+    "hint": "Catecolaminas = tudo aumenta no coração",
+    "exp": "A estimulação β1 ativa adenilil ciclase → ↑AMPc → PKA → fosforilação de canais de Ca²⁺ tipo L, fosfolambana e troponina I. Resultado: ↑Ca²⁺ intracelular (inotropismo), ↑recaptação de Ca²⁺ (lusitropismo), ↑automaticidade do nó SA (cronotopismo). Bloqueadores β1 (metoprolol, atenolol) revertem esses efeitos e são cardioprotetores no pós-IAM."
+  },
+  {
+    "cat": "Regulação Autonômica",
+    "q": "Como a acetilcolina (estimulação vagal) afeta o coração?",
+    "a": "Cronotrópico negativo (↓FC), dromotrópico negativo (↓condução AV), inotrópico negativo leve (principalmente atrial)",
+    "hint": "Vago = freio cardíaco",
+    "exp": "A ACh liga-se a receptores M2 (Gi) no nó SA e AV → ↑condutância K⁺ (IKACh) → hiperpolarização → ↓automaticidade e ↓condução AV. Também inibe adenilil ciclase → ↓AMPc. O efeito inotrópico negativo é mais pronunciado em átrios que em ventrículos. A atropina (antagonista muscarínico) é usada para tratar bradicardias vagais na anestesia."
+  },
+  {
+    "cat": "Potencial de Ação Cardíaco",
+    "q": "Quais são as 5 fases do potencial de ação ventricular?",
+    "a": "Fase 0: despolarização rápida (INa); Fase 1: repolarização inicial (IKto); Fase 2: platô (ICa-L = IK); Fase 3: repolarização rápida (IKr, IKs); Fase 4: potencial de repouso (-85 mV)",
+    "hint": "0,1,2,3,4 — depende dos canais iônicos específicos",
+    "exp": "A fase 0 é gerada por canais rápidos de Na⁺ (bloqueados por antiarrítmicos classe I). O platô (fase 2) é único do coração e garante a refratariedade longa, impedindo tetania. Os canais HERG (IKr, bloqueados por amiodarona, droperidol) prolongam o QT quando inibidos. A fase 4 automática (canais If — 'funny') no nó SA gera o automatismo."
+  },
+  {
+    "cat": "Potencial de Ação Cardíaco",
+    "q": "Como o potencial de ação do nó SA difere do potencial ventricular?",
+    "a": "Nó SA: despolarização lenta via ICa-L (sem fase 0 rápida de INa), potencial de repouso instável (-60 mV), automatismo por If (corrente funny)",
+    "hint": "SA usa cálcio, não sódio, para despolarizar",
+    "exp": "O nó SA e AV são células de resposta lenta: despolarização via Ca²⁺ (canais L e T). A fase 4 tem inclinação ascendente espontânea (corrente If = canais HCN, bloqueados por ivabradina). Por isso, bloqueadores de Ca²⁺ (verapamil, diltiazem) deprimem o nó SA/AV. Lidocaína não atua no nó SA (não há INa significativo). O período refratário longo do nó AV protege contra taquicardias supraventriculares."
+  },
+  {
+    "cat": "Sistema de Condução",
+    "q": "Qual é a sequência de ativação elétrica normal do coração?",
+    "a": "Nó SA → internodal (Bachmann para AD→AE) → nó AV → feixe de His → ramos D e E → fibras de Purkinje → miocárdio ventricular",
+    "hint": "SA → AV → His → Purkinje → miocárdio",
+    "exp": "A condução do nó SA ao nó AV leva ~40-100 ms (atraso AV = intervalo PR). O nó AV é a única via normal de condução AV. O feixe de His se divide em ramo direito e esquerdo (fascículos anterior e posterior). As fibras de Purkinje conduzem a 2-4 m/s (mais rápido do sistema). A ativação ventricular inicia no septo médio e propaga para ápice → base."
+  },
+  {
+    "cat": "Sistema de Condução",
+    "q": "Qual é a velocidade de condução nos diferentes componentes do sistema de condução?",
+    "a": "Nó SA: 0,05 m/s; Nó AV: 0,02-0,05 m/s; Feixe de His/ramos: 1-2 m/s; Purkinje: 2-4 m/s; Miocárdio ventricular: 0,3-0,5 m/s",
+    "hint": "Nó AV = mais lento; Purkinje = mais rápido",
+    "exp": "A lentidão do nó AV (decremental conduction) garante o atraso AV (enchimento ventricular após contração atrial) e protege os ventrículos de frequências atriais excessivas (FA, flutter). As fibras de Purkinje são as mais rápidas para permitir ativação ventricular quase simultânea. Bloqueio do nó AV causa escape juncional (~40-60 bpm) ou ventricular (~20-40 bpm)."
+  },
+  {
+    "cat": "ECG e Ciclo Cardíaco",
+    "q": "Quais eventos do ciclo cardíaco correspondem às ondas P, QRS e T do ECG?",
+    "a": "P: despolarização atrial; QRS: despolarização ventricular; T: repolarização ventricular. (A repolarização atrial = onda Ta, oculta no QRS)",
+    "hint": "P→átrios, QRS→ventrículos, T→repolarização ventricular",
+    "exp": "O intervalo PR (0,12-0,20 s) = condução AV. O QRS (< 0,12 s) = despolarização ventricular. O intervalo QT (corrigido = QTc) = duração total da sístole elétrica. QTc > 450ms (H) / 470ms (M) indica risco de TV polimórfica (torsades). O segmento ST (= platô da fase 2) deve ser isoelétrico; supradesnível = isquemia transmural/oclusão."
+  },
+  {
+    "cat": "ECG e Ciclo Cardíaco",
+    "q": "Como o intervalo QT varia com a FC e como se calcula o QTc?",
+    "a": "QT diminui com FC aumentada. QTc (Bazett) = QT / √RR (em segundos). Normal: QTc < 450ms (H) e < 470ms (M)",
+    "hint": "Fórmula de Bazett: QT/√RR",
+    "exp": "A fórmula de Bazett é a mais usada, mas superestima QTc em taquicardia. Fridericia (QT/RR^1/3) é mais precisa em FC extremas. Causas de QT longo: hipocalemia, hipomagnesemia, hipocalcemia, drogas (antiarrítmicos, antipsicóticos, ondansetrona, droperidol, azitromicina, cloroquina, haloperidol). Na anestesia, monitorar QTc especialmente com propofol em altas doses e ondansetrona."
+  },
+  {
+    "cat": "Diástole e Função Diastólica",
+    "q": "Quais são as 4 fases da diástole ventricular?",
+    "a": "1) Relaxamento isovolumétrico; 2) Enchimento rápido passivo; 3) Diastase (enchimento lento); 4) Sístole atrial (contribui com ~20-30% do VDF)",
+    "hint": "Relaxamento → enchimento → diastase → contração atrial",
+    "exp": "O relaxamento isovolumétrico é processo ativo (consome ATP via SERCA2a para recaptação de Ca²⁺). O enchimento rápido é passivo e dependente do gradiente pressão atrial > ventricular. A diastase é o período de baixo fluxo. A sístole atrial ('chute atrial') é crucial em ventrículos rígidos (HVE, cardiomiopatia restritiva) — sua perda em FA pode reduzir o DC em 20-30%."
+  },
+  {
+    "cat": "Diástole e Função Diastólica",
+    "q": "Como o Doppler tecidual (TDI) e o Doppler mitral classificam a disfunção diastólica?",
+    "a": "Grau I: relaxamento prejudicado (E/A<1, E' reduzido); Grau II: pseudonormal (E/A 1-2, E/e'>14); Grau III: restritivo reversível; Grau IV: restritivo irreversível",
+    "hint": "Onda E = enchimento precoce; A = sístole atrial; E' = velocidade tecidual",
+    "exp": "A relação E/e' > 14 (pelo TDI do anel mitral) indica elevação das pressões de enchimento. No padrão pseudonormal, a manobra de Valsalva desmascara o padrão de relaxamento prejudicado (E/A inverte). O padrão restritivo (E/A ≥ 2, tempo de desaceleração < 150ms) indica doença avançada e mal prognóstico. Em anestesia, o TDI é útil para detectar disfunção diastólica perioperatória."
+  },
+  {
+    "cat": "Trabalho e Consumo de O₂",
+    "q": "Como se calcula o trabalho sistólico ventricular esquerdo (TSVE) e quais fatores aumentam o consumo de O₂ miocárdico (MVO₂)?",
+    "a": "TSVE = VS × PAM × 0,0136 (g·m). MVO₂ aumenta com: ↑FC, ↑contratilidade, ↑tensão parietal (↑pré e pós-carga)",
+    "hint": "Duplo produto (FC × PAS) é proxy clínica do MVO₂",
+    "exp": "O consumo de O₂ miocárdico é determinado principalmente pela tensão parietal (maior determinante), FC e contratilidade. O duplo produto (FC × PAS) > 20.000 indica alto consumo. Na isquemia miocárdica, a balança oferta/demanda pende contra a oferta (↓fluxo coronário) ou contra a demanda (↑MVO₂). Betabloqueadores protegem reduzindo FC e contratilidade (↓MVO₂)."
+  },
+  {
+    "cat": "Trabalho e Consumo de O₂",
+    "q": "Qual é a extração de O₂ miocárdica em repouso e sua implicação para reserva coronária?",
+    "a": "~70-80% (a mais alta do organismo). A reserva para aumentar extração é mínima; o aumento de MVO₂ depende quase exclusivamente de ↑fluxo coronário",
+    "hint": "Coração quase maximiza extração em repouso",
+    "exp": "Enquanto o músculo esquelético extrai ~30% em repouso (podendo aumentar para ~70% no exercício), o miocárdio já extrai ~75% em repouso. Portanto, qualquer aumento de demanda metabólica deve ser atendido por aumento de fluxo (vasodilatação coronária). A reserva de fluxo coronário (RFC = fluxo máximo/fluxo basal) é ~4-5x. Em estenose coronária significativa (>70% da luz), a RFC reduz, manifestando isquemia ao esforço."
+  },
+  {
+    "cat": "Circulação Coronária",
+    "q": "Quais são as peculiaridades do fluxo coronário esquerdo durante o ciclo cardíaco?",
+    "a": "O fluxo na coronária esquerda ocorre predominantemente na diástole, pois a contração sistólica comprime os vasos intramurais do VE",
+    "hint": "VE: fluxo diastólico; VD: fluxo sistólico e diastólico",
+    "exp": "Durante a sístole, a pressão intramiocárdica no VE (~120 mmHg) supera a pressão de perfusão, comprimindo os vasos subendocárdicos → fluxo cessa ou reverte. O subendocárdio é mais vulnerável à isquemia. No VD (pressão sistólica ~25 mmHg), o fluxo ocorre em sístole e diástole. Taquicardia (↓duração diastólica) e PA diastólica baixa (↓gradiente) são deletérias para a perfusão coronária esquerda."
+  },
+  {
+    "cat": "Circulação Coronária",
+    "q": "Quais são os mecanismos de autorregulação do fluxo coronário?",
+    "a": "Metabólico (adenosina, H⁺, K⁺, CO₂), miogênico (resposta ao estiramento), endotelial (NO, prostaciclina), neuronal (β2: vasodilatação; α1: vasoconstrição)",
+    "hint": "Adenosina é o principal mediador vasodilatador coronário",
+    "exp": "A adenosina (produzida por hidrólise de AMP) é o principal regulador metabólico coronário — é a base do teste de stress farmacológico (adenosina/dipiridamol). O NO endotelial (via eNOS) é vasodilatador potente; sua disfunção (aterosclerose) predispõe a vasoespasmo. A autorregulação mantém o fluxo constante entre PAM 50-130 mmHg. Abaixo desse limite inferior, isquemia."
+  },
+  {
+    "cat": "Loops Pressão-Volume",
+    "q": "O que é o loop pressão-volume (PV loop) e o que cada segmento representa?",
+    "a": "Diagrama da pressão vs. volume ventricular ao longo do ciclo. Segmentos: enchimento diastólico (abaixo), contração isovolumétrica (esquerda), ejeção (acima), relaxamento isovolumétrico (direita)",
+    "hint": "Retângulo que gira no sentido anti-horário",
+    "exp": "O loop PV gira no sentido horário no VE. A largura = VS; a altura = pressão sistólica pico. A área interna = trabalho por batimento. A EDPVR (curva diastólica) define a complacência. A ESPVR (linha sistólica) define a contratilidade (Emax). Com ↑pré-carga: loop se desloca direita e alarga. Com ↑pós-carga: loop fica mais alto e estreito. Com ↑inotrópico: loop se desloca esquerda-cima."
+  },
+  {
+    "cat": "Loops Pressão-Volume",
+    "q": "Como o tamponamento cardíaco altera o loop pressão-volume?",
+    "a": "Reduz o VDF (compressão externa → ↓enchimento) → loop estreito, deslocado para a esquerda, com ↓VS e ↑FC compensatória",
+    "hint": "Compressão externa = restrição ao enchimento",
+    "exp": "No tamponamento, a pressão pericárdica comprime todas as câmaras, igualando pressões (equalização das pressões de enchimento: PVC = POAP = pressão diastólica AP). O VDF cai drasticamente → ↓VS → ↓DC. Compensação simpática: ↑FC, vasoconstrição (↑RVS). Sinal de Kussmaul (↑PVC na inspiração) é mais típico de pericardite constritiva. Tratamento: pericardiocentese imediata."
+  },
+  {
+    "cat": "Resposta ao Exercício",
+    "q": "Quais são as adaptações cardiovasculares agudas ao exercício máximo?",
+    "a": "↑DC (até 20-25 L/min), ↑FC (até 200 bpm), ↑VS (120-170 mL), ↑PAS, ↓RVS (vasodilatação muscular), ↑retorno venoso",
+    "hint": "DC pode quintuplicar no exercício máximo",
+    "exp": "No exercício: ativação simpática ↑FC e contratilidade; vasodilatação metabólica muscular ↓RVS e ↑retorno venoso; mecanismo de Frank-Starling ↑VS. A PAD pode não se alterar ou cair (↓RVS compensa ↑DC). Em atletas treinados, o VS é maior em repouso e no pico (hipertrofia excêntrica fisiológica). O VO2max é o melhor índice de aptidão cardiorrespiratória e preditor de mortalidade cirúrgica."
+  },
+  {
+    "cat": "Resposta ao Exercício",
+    "q": "Como o treinamento físico crônico remodela o coração (coração de atleta)?",
+    "a": "Hipertrofia excêntrica (↑VDF, ↑espessura parietal proporcional), bradicardia sinusal de repouso, ↑VS, ↑reserva vagal",
+    "hint": "Excêntrico = câmara dilata + paredes espessam proporcionalmente",
+    "exp": "O coração de atleta resulta de exercício aeróbico crônico: VDF aumenta (↑pré-carga crônica), paredes espessam proporcionalmente (diferente da HVE patológica, que tem paredes grossas com câmara normal/pequena). FC de repouso: 40-50 bpm por ↑tônus vagal. Deve-se diferenciar de CMH: no atleta, a hipertrofia regride com destreinamento; na CMH não. Ecocardiografia é essencial para distinção."
+  },
+  {
+    "cat": "Pressão Venosa Central",
+    "q": "O que são as ondas a, c, v e os vales x, y da curva de PVC/pressão atrial direita?",
+    "a": "a = contração atrial; c = fechamento tricúspide; v = enchimento atrial com tricúspide fechada; x = relaxamento atrial; y = abertura tricúspide/esvaziamento atrial",
+    "hint": "a, c, v são ascendentes; x, y são descendentes",
+    "exp": "Onda a ampla: estenose tricúspide, hipertensão pulmonar, bloqueio AV 1°. Onda a em canhão: bloqueio AV 3° (contração atrial contra tricúspide fechada). Ausência de onda a: FA. Onda v proeminente: insuficiência tricúspide (refluxo sistólico → onda v sistólica). Depressão x abolida: tamponamento (a pressão intrapericárdica impede queda). Vale y lento: estenose tricúspide ou tamponamento."
+  },
+  {
+    "cat": "Pressão Venosa Central",
+    "q": "Qual é a confiabilidade da PVC como guia de ressuscitação volêmica?",
+    "a": "Baixa. PVC não prediz responsividade a volume de forma confiável (evidências nível A contra seu uso isolado como guia de fluidos — Marik et al., Rivers reversal)",
+    "hint": "PVC estática ≠ responsividade a volume",
+    "exp": "Múltiplos estudos (incluindo meta-análise de Marik, Chest 2008) demonstraram que PVC entre 0-20 mmHg não prediz responsividade a volume. Parâmetros dinâmicos são superiores: variação da pressão de pulso (VPP>13%), variação do volume sistólico (VVS>10%), teste de elevação passiva das pernas (PLR), ecocardiografia (colapsabilidade da VCI). Em VM controlada, VPP é o melhor preditor."
+  },
+  {
+    "cat": "Regulação a Longo Prazo",
+    "q": "Como o sistema renina-angiotensina-aldosterona (SRAA) afeta o débito cardíaco?",
+    "a": "Retém Na⁺/H₂O (aldosterona) → ↑volemia → ↑pré-carga → ↑DC pelo mecanismo de Frank-Starling. Angiotensina II também vasoconstringe (↑pós-carga)",
+    "hint": "SRAA: volemia → pré-carga → DC",
+    "exp": "Ang II estimula zona glomerulosa adrenal → aldosterona → ↑reabsorção de Na⁺ no néfron distal → ↑volemia. Também estimula sede, libera ADH e vasoconstringe (↑pós-carga). Inibidores do SRAA (IECA, BRA, sacubitril/valsartana) são pilares do tratamento da ICC com FE reduzida por reduzirem pós-carga e remodelamento ventricular."
+  },
+  {
+    "cat": "Regulação a Longo Prazo",
+    "q": "Qual é o papel do peptídeo natriurético (BNP/NT-proBNP) no ciclo cardíaco?",
+    "a": "Liberado pelos miócitos ventriculares em resposta ao estiramento (↑pressão de enchimento) → natriurese, vasodilatação, inibição do SRAA e SNS",
+    "hint": "BNP = hormônio de sobrecarga ventricular",
+    "exp": "BNP (cérebro) e NT-proBNP são biomarcadores de disfunção ventricular. BNP > 100 pg/mL e NT-proBNP > 300 pg/mL sugerem ICC. São ajustados por idade e função renal. Na anestesia, BNP elevado pré-operatório é preditor independente de MACE perioperatório (evidência nível A no FOCUS). Nesiritida (BNP recombinante) já foi usado na ICC aguda descompensada."
+  },
+  {
+    "cat": "Acoplamento Excitação-Contração",
+    "q": "Descreva o acoplamento excitação-contração no cardiomiócito (calcium-induced calcium release — CICR)",
+    "a": "PA → abertura de canais L de Ca²⁺ (diidropiridina) → entrada de Ca²⁺ → ativa receptores RyR2 (rianodina) no RS → liberação maciça de Ca²⁺ → liga troponina C → encurtamento actina-miosina",
+    "hint": "Pequena entrada de Ca²⁺ dispara liberação maior do RS",
+    "exp": "O Ca²⁺ que entra pelo sarcolema (~10-20% do total) funciona como gatilho para a liberação de Ca²⁺ do retículo sarcoplasmático (RS) pelos receptores RyR2 (90% do Ca²⁺ citosólico). O Ca²⁺ citoplasmático sobe de 0,1 para 1-10 μM, ativa a troponina C, desloca a troponina I do filamento de actina e permite a ciclagem cruzada actina-miosina. Bloqueadores de Ca²⁺ (verapamil) atuam nos canais L."
+  },
+  {
+    "cat": "Acoplamento Excitação-Contração",
+    "q": "Como ocorre o relaxamento miocárdico (lusitropismo)?",
+    "a": "Recaptação ativa de Ca²⁺ para o RS pela SERCA2a (inibida por fosfolambana), efluxo pelo NCX (Na⁺/Ca²⁺ exchanger) e por canais de Ca²⁺ do sarcolema",
+    "hint": "SERCA2a é o principal mecanismo (70% do Ca²⁺)",
+    "exp": "O relaxamento é processo ativo que consome ATP (fase mais energética da diástole). SERCA2a recapta ~70% do Ca²⁺; o NCX extrude ~30%. A fosfolambana inibe a SERCA2a; sua fosforilação (por PKA via β1-adrenérgico) libera essa inibição → relaxamento mais rápido (efeito lusitrópico positivo das catecolaminas). Disfunção da SERCA2a é mecanismo central da IC e disfunção diastólica."
+  },
+  {
+    "cat": "Sístole Atrial",
+    "q": "Qual a contribuição da sístole atrial para o volume diastólico final e quando ela é crítica?",
+    "a": "Contribui com ~20-30% do VDF em repouso. Crítica em: ventrículos hipertróficos/rígidos (HVE, CMH, estenose aórtica), taquicardia, e em qualquer condição de disfunção diastólica",
+    "hint": "Mais importante quanto menor for a complacência ventricular",
+    "exp": "Em condições normais, o enchimento passivo é responsável por ~70-80% do VDF, e a sístole atrial contribui com ~20-30%. Em ventrículos rígidos, a dependência do 'chute atrial' aumenta para > 40%. A perda da sístole atrial eficaz em FA pode reduzir o DC em 20-30% em pacientes com disfunção diastólica. Daí a importância de manter o ritmo sinusal ou controlar a FC na FA em cardiopatas."
+  },
+  {
+    "cat": "Valvas Cardíacas",
+    "q": "Quais são os mecanismos que promovem o fechamento adequado das valvas semilunares (aórtica/pulmonar)?",
+    "a": "Reversão do gradiente de pressão no final da ejeção (pressão arterial > pressão ventricular) + fluxo retrógrado precoce que preenche os seios de Valsalva",
+    "hint": "Os seios de Valsalva previnem oclusão dos óstios coronários",
+    "exp": "No final da ejeção, a pressão ventricular cai abaixo da pressão arterial. O fluxo reverso preenche os seios de Valsalva (aórtico direito, esquerdo e não-coronariano), gerando vórtices que fecham as cúspides uniformemente. Os ostia coronários ficam na periferia dos seios, protegidos da oclusão pelas cúspides. Doença da raiz aórtica altera essa geometria e pode causar insuficiência aórtica."
+  },
+  {
+    "cat": "Reserva Cardíaca",
+    "q": "O que é a reserva cardíaca e como ela é avaliada pré-operatoriamente?",
+    "a": "Capacidade do coração de aumentar DC acima do basal. Avaliada pelo MET (equivalente metabólico): < 4 METs = reserva funcional baixa → ↑risco cirúrgico",
+    "hint": "< 4 METs = sobe 1 lance de escadas sem desconforto?",
+    "exp": "1 MET = consumo de O₂ em repouso (~3,5 mL/kg/min). Atividades: 1-2 METs (cuidados pessoais), 4 METs (subir escada, caminhar 100m rápido), >10 METs (natação, corrida). MET < 4 é critério de risco no algoritmo ACC/AHA perioperatório (junto com índice RCRI). Quando MET < 4 e risco cirúrgico elevado, considerar teste funcional (ECO dobutamina, cintilografia) antes de cirurgia não cardíaca."
+  },
+  {
+    "cat": "Reserva Cardíaca",
+    "q": "O que é o índice de risco cardíaco revisado (RCRI/Lee) e seus 6 preditores?",
+    "a": "1) Cirurgia de alto risco; 2) Doença coronária; 3) ICC; 4) Doença cerebrovascular; 5) DM insulino-dependente; 6) Creatinina > 2 mg/dL. RCRI ≥ 3 → risco MACE >10%",
+    "hint": "6 variáveis clínicas pré-operatórias",
+    "exp": "O RCRI (Lee et al., 1999) é a ferramenta mais validada para estratificação de risco cardíaco perioperatório em cirurgia não cardíaca. Cada variável vale 1 ponto. RCRI 0: risco ~0,4%; 1: ~1%; 2: ~2-3%; ≥3: >5-10%. Diretrizes ACC/AHA 2014/2024 recomendam seu uso na avaliação pré-operatória. O calculador ACS-NSQIP MICA tem desempenho similar ou superior."
+  },
+  {
+    "cat": "Mecanismos de Choque",
+    "q": "Como o choque cardiogênico altera os parâmetros hemodinâmicos do ciclo cardíaco?",
+    "a": "↓DC, ↓FE, ↑PDFVE/POAP (>18 mmHg), ↑RVS, ↓SvO₂, ↓pressão de pulso",
+    "hint": "Bomba fraca + vasos tensos + pulmão cheio",
+    "exp": "No choque cardiogênico (mortalidade ~40-50%): DC baixo (<2,2 L/min/m²), POAP elevada (>18 mmHg = edema pulmonar), RVS alta (compensação). SvO₂ < 60% indica extração aumentada por baixa oferta. Diferente do choque distributivo (séptico): DC alto, RVS baixa, SvO₂ alta. O tratamento do cardiogênico inclui inotrópicos (dobutamina), vasopressores se hipotensão grave, e suporte mecânico (balão intra-aórtico, Impella, ECMO-VA)."
+  },
+  {
+    "cat": "Efeitos dos Anestésicos",
+    "q": "Como o propofol afeta o ciclo cardíaco e a hemodinâmica?",
+    "a": "↓PA (vasodilatação arterial e venosa > depressão miocárdica), ↓FC (modesto), ↓DC, ↓RVS. Pode precipitar bradicardia sinusal grave",
+    "hint": "Propofol: vasodilatação predomina sobre depressão miocárdica",
+    "exp": "O propofol inibe canais de Ca²⁺ vascular e reduz o tônus simpático → vasodilatação intensa (↓pré e pós-carga). A depressão miocárdica direta existe mas é menos pronunciada que com inalatórios. A hipotensão é especialmente severa em pacientes hipovolêmicos, idosos e cardiopatas. Síndrome de infusão do propofol (PRIS): doses > 4-5 mg/kg/h por > 48h → acidose lática, rabdomiólise, arritmia, IC."
+  },
+  {
+    "cat": "Efeitos dos Anestésicos",
+    "q": "Qual anestésico inalatório tem maior efeito deprimente sobre a contratilidade miocárdica e por que?",
+    "a": "Halotano > isoflurano ≈ sevoflurano > desflurano. Mecanismo: redução de Ca²⁺ intracelular (inibição de canais L e do RS) + redução da sensibilidade das miofibrilas ao Ca²⁺",
+    "hint": "Halotano sensitiza para arritmias E deprime mais",
+    "exp": "Todos os halogenados deprimem o miocárdio dose-dependente. Halotano é o mais depressor e sensitiza para arritmias por catecolaminas (cuidado com epinefrina em campo cirúrgico). Sevoflurano e isoflurano têm perfil mais favorável; causam vasodilatação periférica que pode reduzir a aparente depressão. Desflurano estimula o sistema simpático (principalmente com elevação rápida de concentração), podendo causar taquicardia e hipertensão transitórias."
+  },
+  {
+    "cat": "Monitoração Hemodinâmica",
+    "q": "Quais variáveis dinâmicas predizem responsividade a volume em paciente em ventilação mecânica?",
+    "a": "VPP (variação da pressão de pulso) > 13% e VVS (variação do volume sistólico) > 10% são os melhores preditores (AUC > 0,85)",
+    "hint": "Variação respiratória do pulso arterial = guia de fluidos",
+    "exp": "Em VM controlada com VC ≥ 8 mL/kg e sem arritmias, VPP e VVS predizem a responsividade a volume com acurácia superior a parâmetros estáticos (PVC, POAP). O mecanismo: variações de pressão intratorácica durante a VM geram oscilações no retorno venoso e no VS. Limitações: FA, respiração espontânea, VC baixo (< 8 mL/kg), cor pulmonale, abertura do tórax. O PLR (teste de elevação passiva) é alternativa quando há limitações."
+  },
+  {
+    "cat": "Acoplamento Ventriculo-Arterial",
+    "q": "O que é o acoplamento ventriculo-arterial (VAC) e qual seu valor ótimo?",
+    "a": "VAC = Ea/Ees, onde Ea = elastância arterial efetiva (pós-carga) e Ees = elastância máxima ventricular (contratilidade). Valor ótimo = 0,6-1,2 para eficiência máxima",
+    "hint": "VAC ~ 1 = coração casado com a vasculatura",
+    "exp": "O VAC descreve a interação entre o ventrículo e a vasculatura sistêmica. Ea = pressão de fim de sístole / VS; reflete pós-carga. Ees (Emax) = inclinação da ESPVR; reflete contratilidade. VAC ótimo (~0,6-1) maximiza eficiência energética e VS. Na ICC, VAC aumenta (Ea↑ por aterosclerose ou Ees↓ por disfunção sistólica). Vasodilatadores melhoram VAC ao reduzir Ea."
+  },
+  {
+    "cat": "Timing e Sincronismo",
+    "q": "O que é a dissociação eletromecânica (DEA/AESP) e quais são suas causas reversíveis?",
+    "a": "Atividade elétrica organizada sem pulso palpável. Causas reversíveis (6H 5T): Hipovolemia, Hipóxia, Hidrogênio (acidose), Hipo/hipercalemia, Hipotermia, Hipoglicemia; Tensão pneumotórax, Tamponamento, Toxinas, Trombose pulmonar, Trombose coronária",
+    "hint": "6H e 5T = causas reversíveis de AESP",
+    "exp": "Na AESP, o coração tem atividade elétrica mas a contração mecânica é ineficaz ou inexistente. O tratamento é da causa subjacente + RCP de qualidade. As causas 6H5T devem ser lembradas sistematicamente durante a parada. O ecocardiograma (POCUS) durante a parada pode identificar rapidamente: tamponamento (pericardiocentese), hipovolemia grave (VDF colabado), pneumotórax (ausência de sliding pleural)."
   }
 ]
