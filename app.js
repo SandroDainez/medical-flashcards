@@ -438,6 +438,31 @@ async function loadUserData() {
     return loadUserData();
   }
 
+  // Sync new cards from cards.json that user doesn't have yet
+  const existingQuestions = new Set(cards.map(c => c.q));
+  const newCards = state.allCards.filter(c => !existingQuestions.has(c.q));
+  if (newCards.length > 0) {
+    const today = new Date().toISOString().split('T')[0];
+    const payload = newCards.map(c => ({
+      cat: c.cat,
+      q: c.q,
+      a: c.a,
+      hint: c.hint || '',
+      exp: c.exp || '',
+      interval: 0,
+      repetition: 0,
+      ease_factor: 2.5,
+      due_date: today,
+      review_count: 0,
+      status: 'new'
+    }));
+    const { error: syncErr } = await supabaseClient.from('cards').insert(payload);
+    if (!syncErr) {
+      console.log(`Synced ${newCards.length} new cards from cards.json`);
+      return loadUserData();
+    }
+  }
+
   state.cards = cards.map(c => ({
     id: c.id,
     cat: c.cat,
@@ -983,13 +1008,37 @@ function renderAll() {
 }
 
 // ===== SIDEBAR =====
+function getGroupedCategories() {
+    const grouped = {};
+    state.cards.forEach(card => {
+        const parts = card.cat.split(' - ');
+        const subject = parts[0].trim();
+        // If there's no ' - ', the subject is the category itself
+        const category = parts.length > 1 ? parts.slice(1).join(' - ').trim() : subject;
+
+        if (!grouped[subject]) {
+            grouped[subject] = {};
+        }
+        if (!grouped[subject][category]) {
+            grouped[subject][category] = 0;
+        }
+        grouped[subject][category]++;
+    });
+    return grouped;
+}
+
 function renderSidebar() {
+<<<<<<< Updated upstream
+=======
+    const groupedCategories = getGroupedCategories();
+>>>>>>> Stashed changes
     const list = document.getElementById('category-list');
     if (!list) return;
 
     const disciplines = getDisciplineCounts();
     list.innerHTML = '';
 
+<<<<<<< Updated upstream
     Object.entries(disciplines)
       .sort((a, b) => a[0].localeCompare(b[0], 'pt-BR'))
       .forEach(([discipline, count]) => {
@@ -1001,6 +1050,34 @@ function renderSidebar() {
           });
           list.appendChild(chip);
       });
+=======
+    const sortedSubjects = Object.keys(groupedCategories).sort();
+
+    for (const subject of sortedSubjects) {
+        const subjectHeader = document.createElement('div');
+        subjectHeader.className = 'category-label'; // Re-use existing style for headers
+        subjectHeader.textContent = subject;
+        list.appendChild(subjectHeader);
+
+        const sortedCategories = Object.keys(groupedCategories[subject]).sort();
+
+        for (const category of sortedCategories) {
+            const count = groupedCategories[subject][category];
+            // Reconstruct the full, original category name to pass to the study session
+            const fullCategoryName = subject === category ? subject : `${subject} - ${category}`;
+            
+            const chip = document.createElement('div');
+            chip.className = 'cat-chip';
+            // Display only the specific category name, not the full name
+            chip.innerHTML = `<span>${category}</span><span class="cat-chip-count">${count}</span>`;
+            chip.addEventListener('click', (e) => {
+                e.stopPropagation(); 
+                showView('study', { category: fullCategoryName });
+            });
+            list.appendChild(chip);
+        }
+    }
+>>>>>>> Stashed changes
 }
 
 function getCategoryCounts() {
