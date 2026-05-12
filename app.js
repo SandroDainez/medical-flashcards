@@ -105,7 +105,6 @@ let state = {
  authenticated: false,
  profiles: [],
  pendingDeleteId: null,
-  lastLoginInteractionAt: 0,
  filterDiscipline: '',
  filterCategory: '',
  filterSearch: ''
@@ -384,11 +383,9 @@ async function loadOrCreateProfile(authUser) {
   if (existing) {
     const needsAdminPromotion = shouldBeBootstrapAdmin &&
       (existing.role !== USER_ROLE.ADMIN || existing.status !== USER_STATUS.ACTIVE);
-    const needsPendingActivation = !shouldBeBootstrapAdmin && existing.status === USER_STATUS.PENDING;
     const needsSync = existing.email !== userEmail ||
       existing.full_name !== resolvedName ||
-      needsAdminPromotion ||
-      needsPendingActivation;
+      needsAdminPromotion;
 
     if (needsSync) {
       const updates = {
@@ -398,8 +395,6 @@ async function loadOrCreateProfile(authUser) {
       };
       if (needsAdminPromotion) {
         updates.role = USER_ROLE.ADMIN;
-        updates.status = USER_STATUS.ACTIVE;
-      } else if (needsPendingActivation) {
         updates.status = USER_STATUS.ACTIVE;
       }
 
@@ -418,7 +413,7 @@ async function loadOrCreateProfile(authUser) {
     email: userEmail,
     full_name: resolvedName,
     role: shouldBeBootstrapAdmin ? USER_ROLE.ADMIN : USER_ROLE.USER,
-    status: USER_STATUS.ACTIVE
+    status: shouldBeBootstrapAdmin ? USER_STATUS.ACTIVE : USER_STATUS.PENDING
   };
   const { error: insertErr } = await supabaseClient.from('profiles').insert(insertPayload);
   if (insertErr) throw insertErr;
@@ -631,13 +626,6 @@ async function handleLoginSubmit(e) {
     return;
   }
 
-  const loginInteractionIsFresh =
-    state.lastLoginInteractionAt && (Date.now() - state.lastLoginInteractionAt) < 120000;
-  if (!loginInteractionIsFresh) {
-    showToast('Confirme o login manualmente (digite ou clique no formulário).', 'error');
-    return;
-  }
-
   const email = normalizeEmail(document.getElementById('login-email').value);
   const password = document.getElementById('login-password').value;
   const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
@@ -739,11 +727,6 @@ function updateStreak() {
 function bindEvents() {
  const loginForm = document.getElementById('login-form');
  if (loginForm) loginForm.addEventListener('submit', handleLoginSubmit);
-  ['pointerdown', 'keydown', 'input'].forEach(evt => {
-    loginForm?.addEventListener(evt, event => {
-      if (event.isTrusted) state.lastLoginInteractionAt = Date.now();
-    });
-  });
  const registerForm = document.getElementById('register-form');
  if (registerForm) registerForm.addEventListener('submit', handleRegisterSubmit);
  const disciplineField = document.getElementById('form-discipline');
