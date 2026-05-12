@@ -622,7 +622,9 @@ async function initAuth() {
 async function handleLoginSubmit(e) {
   e.preventDefault();
   if (!HAS_SUPABASE_CONFIG) {
-    showToast('Configuração do Supabase ausente.', 'error');
+    const msg = 'Configuração do Supabase ausente.';
+    setAuthStatus(msg);
+    showToast(msg, 'error');
     return;
   }
 
@@ -630,7 +632,12 @@ async function handleLoginSubmit(e) {
   const password = document.getElementById('login-password').value;
   const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
   if (error) {
-    showToast(error.message || 'Falha no login.', 'error');
+    const raw = error.message || 'Falha no login.';
+    const friendly = /email not confirmed/i.test(raw)
+      ? 'E-mail ainda não confirmado no Supabase. Confirme o e-mail ou desative confirmação obrigatória em Authentication > Providers > Email.'
+      : raw;
+    setAuthStatus(`Falha no login: ${friendly}`);
+    showToast(friendly, 'error');
     return;
   }
   const ok = data?.user ? await hydrateAuthenticatedUser(data.user) : await initAuth();
@@ -1011,17 +1018,12 @@ function getGroupedCategories() {
 }
 
 function renderSidebar() {
-<<<<<<< Updated upstream
-=======
-    const groupedCategories = getGroupedCategories();
->>>>>>> Stashed changes
     const list = document.getElementById('category-list');
     if (!list) return;
 
     const disciplines = getDisciplineCounts();
     list.innerHTML = '';
 
-<<<<<<< Updated upstream
     Object.entries(disciplines)
       .sort((a, b) => a[0].localeCompare(b[0], 'pt-BR'))
       .forEach(([discipline, count]) => {
@@ -1033,34 +1035,6 @@ function renderSidebar() {
           });
           list.appendChild(chip);
       });
-=======
-    const sortedSubjects = Object.keys(groupedCategories).sort();
-
-    for (const subject of sortedSubjects) {
-        const subjectHeader = document.createElement('div');
-        subjectHeader.className = 'category-label'; // Re-use existing style for headers
-        subjectHeader.textContent = subject;
-        list.appendChild(subjectHeader);
-
-        const sortedCategories = Object.keys(groupedCategories[subject]).sort();
-
-        for (const category of sortedCategories) {
-            const count = groupedCategories[subject][category];
-            // Reconstruct the full, original category name to pass to the study session
-            const fullCategoryName = subject === category ? subject : `${subject} - ${category}`;
-            
-            const chip = document.createElement('div');
-            chip.className = 'cat-chip';
-            // Display only the specific category name, not the full name
-            chip.innerHTML = `<span>${category}</span><span class="cat-chip-count">${count}</span>`;
-            chip.addEventListener('click', (e) => {
-                e.stopPropagation(); 
-                showView('study', { category: fullCategoryName });
-            });
-            list.appendChild(chip);
-        }
-    }
->>>>>>> Stashed changes
 }
 
 function getCategoryCounts() {
