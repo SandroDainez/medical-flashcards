@@ -32,14 +32,14 @@
     "q": "Qual o mecanismo de ação das estatinas?",
     "a": "Inibição competitiva da HMG (3-hidroxi-3-metilglutaril)-CoA redutase, enzima limitante da síntese de colesterol",
     "hint": "HMG (3-hidroxi-3-metilglutaril)-CoA redutase",
-    "exp": "Reduzem LDL em ~30-55%. Efeito pleiotrópico: anti-inflamatório.\n\nReferência: Literatura-texto reconhecida e diretrizes de sociedades médicas aplicáveis ao tema."
+    "exp": "Reduzem LDL em ~30-55%. Efeito pleiotrópico: anti-inflamatório.\n\nReferência: ACC/AHA/ACCP/HRS Guideline for Atrial Fibrillation (2023); ESC Guidelines for Atrial Fibrillation."
   },
   {
     "cat": "Ciências Básicas - Farmacologia",
     "q": "Qual é o antídoto para intoxicação por paracetamol?",
     "a": "N-acetilcisteína (NAC)",
     "hint": "Tripeptídeo hepático",
-    "exp": "Deve ser administrada nas primeiras 8-10h.\n\nReferência: Literatura-texto reconhecida e diretrizes de sociedades médicas aplicáveis ao tema."
+    "exp": "Deve ser administrada nas primeiras 8-10h.\n\nReferência: ACC/AHA/ACCP/HRS Guideline for Atrial Fibrillation (2023); ESC Guidelines for Atrial Fibrillation."
   },
   {
     "cat": "Ciências Básicas - Patologia",
@@ -366,9 +366,9 @@
   {
     "cat": "Noradrenalina: Farmacocinética e Doses",
     "q": "Qual a dose de infusão contínua de noradrenalina no choque séptico segundo as diretrizes da Surviving Sepsis Campaign (SSC)?",
-    "a": "A SSC recomenda noradrenalina como primeira linha, sem dose fixa universal: iniciar em dose baixa e titular para PAM (pressão arterial média) alvo (geralmente >=65 mmHg), com ajuste conforme perfusão.",
+    "a": "A SSC recomenda noradrenalina como vasopressor de primeira linha, sem dose fixa universal: iniciar em baixa dose e titular progressivamente para PAM alvo (tipicamente >=65 mmHg) e melhora de perfusão tecidual.",
     "hint": "mcg/kg/min",
-    "exp": "As diretrizes enfatizam titulação pelo alvo hemodinâmico/perfusão e contexto clínico; com necessidade crescente de noradrenalina, considerar vasopressina como adjuvante.\n\nReferência: Surviving Sepsis Campaign 2021 (Intensive Care Medicine); Marino's The ICU Book."
+    "exp": "A diretriz prioriza titulação individualizada por resposta hemodinâmica (PAM, perfusão periférica, diurese, lactato), em vez de um número único de dose. Em necessidade crescente de noradrenalina, considerar adição de vasopressina como poupadora de catecolamina.\n\nReferência: Surviving Sepsis Campaign 2021; Evans L et al., Intensive Care Med 2021."
   },
   {
     "cat": "Noradrenalina: Farmacocinética e Doses",
@@ -431,7 +431,7 @@
     "q": "Por que a vasopressina é particularmente útil no choque séptico refratário à noradrenalina?",
     "a": "No choque séptico grave, há depleção relativa de vasopressina endógena (deficiência relativa) e down-regulation de receptores adrenérgicos. A vasopressina age por receptor V1 (não adrenérgico), restaurando tônus vascular de forma aditiva.",
     "hint": "Não-adrenérgico",
-    "exp": "Estudos mostraram que pacientes com choque séptico têm níveis de vasopressina plasmática mais baixos que o esperado (Landry et al., 1997). Isso justifica a reposição com doses 'fisiológicas' (0,03–0,04 U/min). O estudo VASST (Russell et al., NEJM (New England Journal of Medicine) 2008) mostrou benefício de sobrevida em subgrupo com choque menos grave (noradrenalina <15 mcg/min).\n\nReferência: Surviving Sepsis Campaign 2021 (Intensive Care Medicine); Marino's The ICU Book."
+    "exp": "No choque séptico grave pode ocorrer deficiência relativa de vasopressina endógena e hiporreatividade adrenérgica. A vasopressina, em baixa dose fixa (tipicamente 0,03 U/min), atua por via não catecolaminérgica e pode reduzir necessidade de noradrenalina. O VASST não mostrou benefício global de mortalidade, mas sustentou seu uso como adjuvante hemodinâmico.\n\nReferência: Russell JA et al., NEJM 2008; Surviving Sepsis Campaign 2021."
   },
   {
     "cat": "Vasopressina: Mecanismo e Receptores",
@@ -443,9 +443,9 @@
   {
     "cat": "Vasopressina: Farmacocinética e Doses",
     "q": "Qual a dose recomendada de vasopressina como vasopressor no choque séptico?",
-    "a": "0,03–0,04 U/min em infusão contínua (dose fixa, não titulada). Máximo 0,06 U/min. Acima disso, risco significativo de isquemia.",
+    "a": "Dose usual: 0,03 U/min em infusão contínua como adjuvante da noradrenalina (alguns protocolos utilizam até 0,03-0,04 U/min). Em geral, não é titulada como catecolamina de primeira linha.",
     "hint": "0,03 U/min fixo",
-    "exp": "Diferente da noradrenalina, a vasopressina é usada em dose fixa (não titulada por efeito) para economia de catecolaminas. O objetivo é reduzir a dose de noradrenalina, não substituí-la completamente. Doses >0,06 U/min estão associadas a isquemia miocárdica, isquemia digital e necrose hepática (SSC 2021, Barash, 8ª ed.).\n\nReferência: Surviving Sepsis Campaign 2021 (Intensive Care Medicine); Marino's The ICU Book."
+    "exp": "A prática mais difundida é dose fixa baixa de vasopressina para efeito poupador de catecolamina. Doses acima da faixa usual podem aumentar risco de isquemia periférica e esplâncnica, devendo ser usadas com cautela e protocolo institucional.\n\nReferência: Surviving Sepsis Campaign 2021; Russell JA et al., NEJM 2008."
   },
   {
     "cat": "Vasopressina: Farmacocinética e Doses",
@@ -457,16 +457,16 @@
   {
     "cat": "Vasopressina: Indicações Clínicas",
     "q": "Em que posição na escala de vasopressores a vasopressina é recomendada pela SSC 2021?",
-    "a": "Vasopressor de segunda linha: adicionada à noradrenalina quando doses ≥0,25–0,5 mcg/kg/min são necessárias, ou como agente poupador de noradrenalina.",
+    "a": "Como adjuvante da noradrenalina no choque séptico quando há necessidade de dose crescente de catecolamina para manter PAM, ou com objetivo de efeito poupador de noradrenalina.",
     "hint": "2ª linha, poupadora",
-    "exp": "A SSC 2021 (grade 2B) recomenda adicionar vasopressina quando a dose de noradrenalina é alta, visando reduzir a exposição catecolaminérgica total. O estudo VANISH (Gordon et al., JAMA (Journal of the American Medical Association) 2016) comparou vasopressina vs noradrenalina como vasopressor inicial: vasopressina reduziu necessidade de TRRT mas sem diferença em mortalidade.\n\nReferência: Goodman & Gilman - As Bases Farmacológicas da Terapêutica."
+    "exp": "Na prática, a vasopressina (tipicamente 0,03 U/min em infusão contínua) é adicionada quando a resposta à noradrenalina isolada é insuficiente. O ponto de corte exato de dose de noradrenalina varia por protocolo local; o princípio é reduzir exposição catecolaminérgica mantendo perfusão.\n\nReferência: Surviving Sepsis Campaign 2021; Russell JA, NEJM 2008 (VASST)."
   },
   {
     "cat": "Vasopressina: Indicações Clínicas",
     "q": "Além do choque séptico, cite duas outras indicações importantes da vasopressina em anestesia/UTI (unidade de terapia intensiva).",
     "a": "1) Diabetes insipidus central (via V2, doses menores: desmopressina). 2) PCR (parada cardiorrespiratória) refratária (doses de 40 U IV em bolus, como alternativa à adrenalina — atualmente não nas diretrizes AHA (American Heart Association) 2020). 3) Hemorragia digestiva varicosa (terlipressina ou vasopressina).",
     "hint": "DI (diabetes insipidus), PCR (parada cardiorrespiratória), varizes",
-    "exp": "No PCR (parada cardiorrespiratória), o ACLS 2020 removeu a vasopressina da sequência rotineira por ausência de benefício sobre adrenalina (estudo PACA, 2013). Na hipertensão pulmonar grave com choque (ex: pós-cirurgia cardíaca), a vasopressina é vantajosa por não aumentar RVP (ao contrário da noradrenalina). Na FEVE (fração de ejeção do ventrículo esquerdo) baixa com choque vasodilatador, é preferível (Miller, 8ª ed.).\n\nReferência: Surviving Sepsis Campaign 2021 (Intensive Care Medicine); Marino's The ICU Book."
+    "exp": "No PCR (proteína C reativa), o ACLS 2020 removeu a vasopressina da sequência rotineira por ausência de benefício sobre adrenalina (estudo PACA, 2013). Na hipertensão pulmonar grave com choque (ex: pós-cirurgia cardíaca), a vasopressina é vantajosa por não aumentar RVP (ao contrário da noradrenalina). Na FEVE (fração de ejeção do ventrículo esquerdo) baixa com choque vasodilatador, é preferível (Miller, 8ª ed.).\n\nReferência: Surviving Sepsis Campaign 2021 (Intensive Care Medicine); Marino's The ICU Book."
   },
   {
     "cat": "Vasopressina: Efeitos Adversos e Cuidados",
@@ -571,7 +571,7 @@
     "q": "Quais drogas vasoativas são seguras em acesso venoso periférico por curto prazo?",
     "a": "Noradrenalina (até 12h em veia periférica calibrosa, antecubital/femoral, com monitorização); vasopressina (menor risco de vasoespasmo local); dobutamina (menos risco de necrose por vasodilatação local β2).",
     "hint": "Periférico provisório",
-    "exp": "Estudo de Cardenas-Garcia et al. (Chest, 2015) demonstrou que noradrenalina em veia periférica por curto prazo (<24h, concentrações ≤64 mcg/mL) é segura se monitorada rigorosamente para extravasamento. Evitar em veias de pequeno calibre (dorso da mão, antebraço distal). O acesso central continua sendo o padrão para uso prolongado (Miller, 8ª ed.).\n\nReferência: Literatura-texto reconhecida e diretrizes de sociedades médicas aplicáveis ao tema."
+    "exp": "Estudo de Cardenas-Garcia et al. (Chest, 2015) demonstrou que noradrenalina em veia periférica por curto prazo (<24h, concentrações ≤64 mcg/mL) é segura se monitorada rigorosamente para extravasamento. Evitar em veias de pequeno calibre (dorso da mão, antebraço distal). O acesso central continua sendo o padrão para uso prolongado (Miller, 8ª ed.).\n\nReferência: Goodman & Gilman - As Bases Farmacológicas da Terapêutica; Surviving Sepsis Campaign 2021."
   },
   {
     "cat": "Comparativo: Drogas Vasoativas",
@@ -583,9 +583,9 @@
   {
     "cat": "Aplicação Clínica em Choque",
     "q": "Qual é a sequência de vasopressores recomendada pela SSC 2021 para choque séptico?",
-    "a": "1ª linha: Noradrenalina. 2ª linha: Vasopressina (0,03–0,04 U/min) quando dose de NA (noradrenalina) ≥0,25 mcg/kg/min. 3ª linha: Adrenalina (se ainda refratário). Dobutamina: adicionar se houver disfunção miocárdica.",
+    "a": "Estratégia prática: noradrenalina como primeira linha; adicionar vasopressina em dose fixa (geralmente 0,03 U/min) quando há necessidade crescente de noradrenalina; considerar adrenalina se hipotensão refratária. Adicionar inotrópico (ex.: dobutamina) quando houver disfunção miocárdica/baixo débito.",
     "hint": "NA (noradrenalina) → Vaso → Adre",
-    "exp": "A SSC 2021 não recomenda mais dopamina como vasopressor de rotina. A terlipressina não é recomendada de rotina (pode causar isquemia mais grave que vasopressina). Hidrocortisona (200 mg/dia) é recomendada como adjuvante se choque refratário a 2 vasopressores. Considerar monitorização com ecocardiografia para guiar decisão de inotrópico (SSC 2021, Crit Care Med).\n\nReferência: Surviving Sepsis Campaign 2021 (Intensive Care Medicine); Marino's The ICU Book."
+    "exp": "A SSC recomenda noradrenalina como vasopressor inicial e vasopressina como adjuvante para reduzir dose de catecolamina. Não há um único limiar universal obrigatório de noradrenalina para todos os pacientes; a decisão deve ser guiada por resposta clínica e hemodinâmica.\n\nReferência: Surviving Sepsis Campaign 2021 (Intensive Care Medicine)."
   },
   {
     "cat": "Aplicação Clínica em Choque",
@@ -597,9 +597,9 @@
   {
     "cat": "Aplicação Clínica em Choque",
     "q": "Quais são os alvos de ressuscitação iniciais no choque séptico (bundle 1h da SSC)?",
-    "a": "PAM (pressão arterial média) ≥65 mmHg, lactato ≤2 mmol/L, diurese >0,5 mL/kg/h, saturação venosa central de O₂ (ScvO₂) ≥70%, redução do lactato ≥10% em 2h.",
+    "a": "Alvos iniciais práticos: PAM >=65 mmHg, melhora de perfusão (redução de lactato quando elevado, melhora do enchimento capilar e da diurese), além de reavaliação seriada após fluidos e vasopressores.",
     "hint": "PAM (pressão arterial média)-Lactato-Diurese",
-    "exp": "O bundle de 1h da SSC 2018 inclui: coletar hemoculturas, iniciar ATB (antibiótico) de amplo espectro, cristaloides 30 mL/kg se hipoperfusão, noradrenalina se hipotensão durante/após volume, dosar lactato. PAM (pressão arterial média) <65 mmHg após volume adequado indica vasopressor. A ressuscitação guiada por lactato reduz mortalidade em 10–15% (Seymour et al., NEJM (New England Journal of Medicine) 2017).\n\nReferência: Surviving Sepsis Campaign 2021 (Intensive Care Medicine); Marino's The ICU Book."
+    "exp": "No bundle de 1 hora, o foco é reconhecimento precoce, antibiótico rápido, ressuscitação volêmica e vasopressor quando indicado. ScvO2 e metas rígidas do protocolo EGDT clássico não são mais obrigatórias de rotina; a monitorização deve ser individualizada por fenótipo hemodinâmico.\n\nReferência: Surviving Sepsis Campaign 2021; ProCESS/ARISE/ProMISe trials."
   },
   {
     "cat": "Aplicação Clínica em Choque",
@@ -627,7 +627,7 @@
     "q": "Qual a diferença entre vasopressina e terlipressina?",
     "a": "Terlipressina é um pró-fármaco sintético de longa ação (t½ ~6h, ação ~4-6h), mais seletiva para V1. Vasopressina tem t½ ~10-35 min. Terlipressina é usada em síndrome hepatorrenal e varizes esofágicas; vasopressina/desmopressina no choque e DI (diabetes insipidus).",
     "hint": "Terlipressina = longa ação",
-    "exp": "A terlipressina é convertida em lisina-vasopressina por endopeptidases. Sua maior meia-vida permite administração em bolus (1–2 mg IV a cada 4–6h) ao invés de infusão contínua. Em síndrome hepatorrenal tipo 1, reduz mortalidade ao reverter vasoconstrição renal reflexa. Não é recomendada de rotina no choque séptico pela SSC 2021 (Barash, 8ª ed.).\n\nReferência: Goodman & Gilman - As Bases Farmacológicas da Terapêutica."
+    "exp": "A terlipressina é um pró-fármaco de ação mais prolongada e maior seletividade V1, com uso principal em síndrome hepatorrenal e sangramento varicoso. Em choque séptico, não é recomendada de rotina nas diretrizes atuais devido ao perfil de segurança e ausência de superioridade consistente sobre estratégias padrão com noradrenalina/vasopressina.\n\nReferência: Surviving Sepsis Campaign 2021; diretrizes de hepatologia para síndrome hepatorrenal."
   },
   {
     "cat": "Fundamentos: Receptores Adrenérgicos",
@@ -660,9 +660,9 @@
   {
     "cat": "Aplicação Clínica em Choque",
     "q": "O que é 'vasopressor sparing' e como é implementado na prática?",
-    "a": "Estratégia de adicionar um segundo vasopressor (vasopressina, angiotensina II) para reduzir a dose de noradrenalina, minimizando toxicidade catecolaminérgica (taquicardia, arritmias, isquemia). Implementado quando noradrenalina ≥0,25 mcg/kg/min.",
+    "a": "Estratégia de adicionar um segundo vasopressor (ex.: vasopressina; em cenários selecionados, angiotensina II) para reduzir exposição total à noradrenalina e seus efeitos adversos. É implementada quando há necessidade progressiva de catecolamina para manter perfusão adequada.",
     "hint": "Poupar catecolamina",
-    "exp": "A toxicidade catecolaminérgica inclui: apoptose cardiomiocitária, vasoconstrição mesentérica, imunossupressão e distúrbios metabólicos (hiperglicemia, hipocalemia). O 'vasopressor sparing' com vasopressina reduz a dose total de noradrenalina em ~35–40%. Estudos recentes exploram angiotensina II (ATHOS-3, Khanna 2017) e metilazul como adjuvantes em casos refratários (SSC 2021).\n\nReferência: Surviving Sepsis Campaign 2021 (Intensive Care Medicine); Marino's The ICU Book."
+    "exp": "O objetivo do 'vasopressor sparing' é manter PAM/perfusão com menor carga catecolaminérgica, reduzindo risco de taquiarritmia e isquemia. A decisão deve ser individualizada conforme resposta hemodinâmica e protocolo institucional.\n\nReferência: Surviving Sepsis Campaign 2021; Khanna A et al., NEJM 2017 (ATHOS-3)."
   },
   {
     "cat": "Fisiopatologia - FA",
@@ -739,7 +739,7 @@
     "q": "Quais são as principais drogas antiarrítmicas para cardioversão farmacológica da FA (fibrilação atrial) de início recente (<48h) em paciente sem cardiopatia estrutural?",
     "a": "Flecainida e propafenona (classe IC (insuficiência cardíaca)) — mais eficazes. Ibutilida IV (classe III) ou vernakalant IV são alternativas. Amiodarona IV é eficaz mas com latência maior.",
     "hint": "IC (insuficiência cardíaca): flecainida/propafenona",
-    "exp": "Antiarrítmicos classe IC (flecainida, propafenona) têm alta taxa de reversão (~70%) e início rápido. São contraindicados em cardiopatia estrutural significativa (coronariopatia, IC (insuficiência cardíaca), HVE (hipertrofia ventricular esquerda)) pelo risco de pró-arritmia (flutter IC (insuficiência cardíaca):1). Vernakalant (bloqueador de correntes atriais seletivas) é opção em pacientes com cardiopatia leve a moderada sem síndrome coronariana aguda. Amiodarona IV é preferida na cardiopatia estrutural significativa.\n\nReferência: ACC/AHA/ACCP/HRS Guideline for Atrial Fibrillation (2023); ESC Guidelines for Atrial Fibrillation."
+    "exp": "Antiarrítmicos classe IC (flecainida, propafenona) têm alta taxa de reversão (~70%) e início rápido. São contraindicados em cardiopatia estrutural significativa (coronariopatia, IC (insuficiência cardíaca), HVE (hipertrofia ventricular esquerda)) pelo risco de pró-arritmia (flutter 1:1). Vernakalant (bloqueador de correntes atriais seletivas) é opção em pacientes com cardiopatia leve a moderada sem síndrome coronariana aguda. Amiodarona IV é preferida na cardiopatia estrutural significativa.\n\nReferência: ACC/AHA/ACCP/HRS Guideline for Atrial Fibrillation (2023); ESC Guidelines for Atrial Fibrillation."
   },
   {
     "cat": "Controle de Ritmo",
@@ -795,14 +795,14 @@
     "q": "Qual é o princípio da ablação por cateter para FA (fibrilação atrial) paroxística e qual a principal estratégia atual?",
     "a": "Isolamento das veias pulmonares (IVP) — criação de lesões circunferenciais ao redor dos óstios das 4 veias pulmonares para bloquear condução dos focos ectópicos para o átrio esquerdo. Realizado com radiofrequência (RF) ou crioablação (balão crioablação).",
     "hint": "Isolar veias pulmonares",
-    "exp": "O IVP (isolamento das veias pulmonares) é o cornerstone da ablação de FA (fibrilação atrial). Para FA (fibrilação atrial) paroxística, o IVP (isolamento das veias pulmonares) isolado tem taxa de sucesso ~60-80% (livre de arritmia em 1 ano sem droga antiarrítmica). Para FA (fibrilação atrial) persistente, estratégias adicionais (linhas de ablação, alvos de baixa voltagem, rotores) têm resultados variáveis. O estudo FIRE AND ICE mostrou crioablação não inferior à RF. O estudo EARLY-AF (fibrilação atrial) e STOP-AF (fibrilação atrial) demonstraram superioridade da ablação sobre antiarrítmicos como terapia de primeira linha em FA (fibrilação atrial) paroxística sintomática.\n\nReferência: ACC/AHA/ACCP/HRS Guideline for Atrial Fibrillation (2023); ESC Guidelines for Atrial Fibrillation."
+    "exp": "O IVP (isolamento das veias pulmonares) é o cornerstone da ablação de FA (fibrilação atrial). Para FA (fibrilação atrial) paroxística, o IVP (isolamento das veias pulmonares) isolado tem taxa de sucesso ~60-80% (livre de arritmia em 1 ano sem droga antiarrítmica). Para FA (fibrilação atrial) persistente, estratégias adicionais (linhas de ablação, alvos de baixa voltagem, rotores) têm resultados variáveis. O estudo FIRE AND ICE mostrou crioablação não inferior à RF. O estudo EARLY-AF e STOP-AF demonstraram superioridade da ablação sobre antiarrítmicos como terapia de primeira linha em FA (fibrilação atrial) paroxística sintomática.\n\nReferência: ACC/AHA/ACCP/HRS Guideline for Atrial Fibrillation (2023); ESC Guidelines for Atrial Fibrillation."
   },
   {
     "cat": "Ablação por Cateter - FA",
     "q": "Quais são as indicações de ablação de FA (fibrilação atrial) segundo as diretrizes ACC (American College of Cardiology)/AHA (American Heart Association) 2023?",
     "a": "Classe I: FA (fibrilação atrial) paroxística sintomática após falha de ≥1 antiarrítmico classe I ou III. Classe IIa: FA (fibrilação atrial) paroxística sintomática como primeira linha (antes de antiarrítmicos); FA (fibrilação atrial) persistente sintomática após falha de antiarrítmico; FA (fibrilação atrial) com IC (insuficiência cardíaca) com FE (fração de ejeção) reduzida (pode melhorar FE (fração de ejeção)). Classe IIb: FA (fibrilação atrial) persistente de longa duração.",
     "hint": "Sintomático + falha AA",
-    "exp": "A indicação de ablação como primeira linha (IIa) reflete os resultados do estudo EAST-AFNET 4 e meta-análises mostrando benefício em qualidade de vida e redução de hospitalizações. Na IC (insuficiência cardíaca) com FE (fração de ejeção) reduzida e FA (fibrilação atrial), o estudo CASTLE-AF (fibrilação atrial) demonstrou redução de mortalidade e hospitalização com ablação vs. terapia clínica. A ablação não elimina necessidade de anticoagulação a longo prazo em pacientes com alto CHA₂DS₂-VASc.\n\nReferência: ACC/AHA/ACCP/HRS Guideline for Atrial Fibrillation (2023); ESC Guidelines for Atrial Fibrillation."
+    "exp": "A indicação de ablação como primeira linha (IIa) reflete os resultados do estudo EAST-AFNET 4 e meta-análises mostrando benefício em qualidade de vida e redução de hospitalizações. Na IC (insuficiência cardíaca) com FE (fração de ejeção) reduzida e FA (fibrilação atrial), o estudo CASTLE-AF demonstrou redução de mortalidade e hospitalização com ablação vs. terapia clínica. A ablação não elimina necessidade de anticoagulação a longo prazo em pacientes com alto CHA₂DS₂-VASc.\n\nReferência: ACC/AHA/ACCP/HRS Guideline for Atrial Fibrillation (2023); ESC Guidelines for Atrial Fibrillation."
   },
   {
     "cat": "Ablação por Cateter - FA",
@@ -830,7 +830,7 @@
     "q": "Como a FA (fibrilação atrial) e a IC (insuficiência cardíaca) se inter-relacionam fisiopatologicamente?",
     "a": "A FA (fibrilação atrial) pode causar IC (cardiomiopatia taquicardia-induzida com alta frequência ventricular) e a IC (insuficiência cardíaca) predispõe à FA (dilatação atrial, fibrose, ativação neuro-hormonal). A relação é bidirecional e cada condição perpetua a outra.",
     "hint": "Bidirecional: FA (fibrilação atrial)↔IC (insuficiência cardíaca)",
-    "exp": "A cardiomiopatia taquicardia-induzida é reversível com controle de frequência (<110 bpm) ou controle de ritmo — a FE (fração de ejeção) pode normalizar em semanas a meses. A IC (insuficiência cardíaca) dilata o átrio esquerdo aumentando a pressão de enchimento, cria fibrose e heterogeneidade de condução, facilitando a FA (fibrilação atrial). O RAAS ativado na IC (insuficiência cardíaca) também promove fibrose atrial. Em pacientes com IC (insuficiência cardíaca) e FA (fibrilação atrial), o controle de ritmo (especialmente ablação) pode melhorar a FE (estudo CASTLE-AF (fibrilação atrial): RRR de 38% em morte CV + hospitalização).\n\nReferência: ACC/AHA/ACCP/HRS Guideline for Atrial Fibrillation (2023); ESC Guidelines for Atrial Fibrillation."
+    "exp": "A cardiomiopatia taquicardia-induzida é reversível com controle de frequência (<110 bpm) ou controle de ritmo — a FE (fração de ejeção) pode normalizar em semanas a meses. A IC (insuficiência cardíaca) dilata o átrio esquerdo aumentando a pressão de enchimento, cria fibrose e heterogeneidade de condução, facilitando a FA (fibrilação atrial). O RAAS ativado na IC (insuficiência cardíaca) também promove fibrose atrial. Em pacientes com IC (insuficiência cardíaca) e FA (fibrilação atrial), o controle de ritmo (especialmente ablação) pode melhorar a FE (estudo CASTLE-AF: RRR de 38% em morte CV + hospitalização).\n\nReferência: ACC/AHA/ACCP/HRS Guideline for Atrial Fibrillation (2023); ESC Guidelines for Atrial Fibrillation."
   },
   {
     "cat": "FA e Insuficiência Cardíaca",
@@ -1054,7 +1054,7 @@
     "q": "Quais órgãos e parâmetros são avaliados no escore SOFA (Sequential Organ Failure Assessment) completo?",
     "a": "6 sistemas: (1) Respiratório — PaO2/FiO2; (2) Coagulação — plaquetas (×10³/µL); (3) Hepático — bilirrubina (mg/dL); (4) Cardiovascular — PAM (pressão arterial média) ou dose de vasopressor; (5) Neurológico — Escala de Glasgow; (6) Renal — creatinina (mg/dL) ou diurese (mL/kg/h). Cada sistema pontuado de 0-4.",
     "hint": "6 sistemas, 0-4 pts",
-    "exp": "Escore SOFA (Sequential Organ Failure Assessment) total varia de 0-24. Cada ponto acima do basal indica disfunção orgânica aguda. No Sepsis-3, o aumento de ≥2 pontos a partir da linha de base (considerada zero na ausência de disfunção prévia) define sepse. O SOFA (Sequential Organ Failure Assessment) é também utilizado para monitorar resposta ao tratamento e prognóstico ao longo da internação na UTI (unidade de terapia intensiva).\n\nReferência: Literatura-texto reconhecida e diretrizes de sociedades médicas aplicáveis ao tema."
+    "exp": "Escore SOFA (Sequential Organ Failure Assessment) total varia de 0-24. Cada ponto acima do basal indica disfunção orgânica aguda. No Sepsis-3, o aumento de ≥2 pontos a partir da linha de base (considerada zero na ausência de disfunção prévia) define sepse. O SOFA (Sequential Organ Failure Assessment) é também utilizado para monitorar resposta ao tratamento e prognóstico ao longo da internação na UTI (unidade de terapia intensiva).\n\nReferência: Surviving Sepsis Campaign 2021 (Intensive Care Medicine); Sepsis-3 (JAMA 2016)."
   },
   {
     "cat": "Fisiopatologia",
@@ -1103,14 +1103,14 @@
     "q": "Qual a utilidade da Procalcitonina (PCT) na sepse?",
     "a": "PCT (procalcitonina) > 0,5 ng/mL sugere infecção bacteriana sistêmica. Utilizada para: (1) suporte ao diagnóstico de sepse bacteriana vs. viral/não-infecciosa; (2) guia de desescalonamento de antibióticos — queda de ≥ 80% ou PCT (procalcitonina) < 0,5 ng/mL orienta suspensão segura.",
     "hint": "Desescalonar antibiótico",
-    "exp": "PCT (procalcitonina) é produzida por células neuroendócrinas em resposta a endotoxinas bacterianas e citocinas pró-inflamatórias (IL-6, TNF (fator de necrose tumoral)-α). Eleva-se em 4-6h e pico em 24-48h. Mais específica que PCR (parada cardiorrespiratória) para infecção bacteriana. Vantagem sobre PCR (parada cardiorrespiratória): meia-vida mais curta (24-36h), permitindo monitoramento rápido de resposta. Falsos positivos: trauma cirúrgico, TCE, câncer medular de tireoide. Falsos negativos: infecções localizadas, fungos, vírus.\n\nReferência: Surviving Sepsis Campaign 2021 (Intensive Care Medicine); Marino's The ICU Book."
+    "exp": "A PCT é um biomarcador auxiliar: pode apoiar o diagnóstico de infecção bacteriana sistêmica em conjunto com avaliação clínica e, principalmente, ajudar no descalonamento/suspensão de antibiótico quando em queda consistente. Não deve ser usada isoladamente para iniciar ou negar tratamento. Em geral, é mais específica que a PCR (proteína C reativa) para infecção bacteriana invasiva.\n\nReferência: Surviving Sepsis Campaign 2021; IDSA antimicrobial stewardship guidance."
   },
   {
     "cat": "Diagnóstico e Biomarcadores",
     "q": "Qual a diferença prognóstica entre lactato 2-4 mmol/L e > 4 mmol/L na sepse?",
-    "a": "Lactato 2-4 mmol/L: mortalidade ~15-25% (hipoperfusão moderada). Lactato > 4 mmol/L: mortalidade > 40%, indica hipoperfusão grave/choque séptico declarado independente da pressão arterial. Ambos requerem ressuscitação agressiva e reavaliação em 2h.",
-    "hint": "4 mmol/L = 40% mortalidade",
-    "exp": "O lactato > 2 mmol/L define choque séptico junto ao vasopressor (Sepsis-3). Pacientes com PAM (pressão arterial média) adequada mas lactato > 4 têm prognóstico similar ao com hipotensão — a SSC 2021 inclui esse grupo nos bundles de ressuscitação. O conceito de 'choque oculto' (pressão normal + lactato elevado) é clinicamente relevante: não espere hipotensão para iniciar ressuscitação agressiva.\n\nReferência: Surviving Sepsis Campaign 2021 (Intensive Care Medicine); Marino's The ICU Book."
+    "a": "Lactato persistentemente mais elevado costuma indicar maior gravidade e pior prognóstico na sepse. Valores >4 mmol/L sugerem hipoperfusão importante e exigem ressuscitação imediata e reavaliação frequente.",
+    "hint": "Lactato mais alto = maior gravidade",
+    "exp": "O lactato deve ser interpretado em tendência (clearance) e contexto clínico, não apenas por valor isolado. A combinação de necessidade de vasopressor para PAM >=65 mmHg e lactato >2 mmol/L após ressuscitação adequada compõe o critério de choque séptico no Sepsis-3.\n\nReferência: Sepsis-3 (JAMA 2016); Surviving Sepsis Campaign 2021."
   },
   {
     "cat": "Diagnóstico e Biomarcadores",
@@ -1124,7 +1124,7 @@
     "q": "O que é 'sepsis mimics' e quais diagnósticos diferenciais devem ser considerados?",
     "a": "Condições que simulam sepse: SIRS (síndrome da resposta inflamatória sistêmica) não-infecciosa (pancreatite, embolia pulmonar, IAM (infarto agudo do miocárdio), crise adrenal, tireotoxicose), anafilaxia, overdose/intoxicação, síndrome neuroléptica maligna, trombose. Avaliação criteriosa evita antibioticoterapia desnecessária.",
     "hint": "SIRS (síndrome da resposta inflamatória sistêmica) sem infecção",
-    "exp": "O diagnóstico de sepse é clínico-laboratorial e requer suspeita de infecção. Pancreatite grave, embolia pulmonar extensa e IAM (infarto agudo do miocárdio) podem apresentar SOFA (Sequential Organ Failure Assessment) ≥2, hipotensão e lactato elevado sem infecção. A crise adrenal (hipocortisolismo) mimetiza o choque séptico refratário. Anamnese cuidadosa, busca ativa do foco infeccioso (exame físico, culturas, imagem) e testes direcionados (amilase, D-dímero, ECG (eletrocardiograma), cortisol) são fundamentais.\n\nReferência: Literatura-texto reconhecida e diretrizes de sociedades médicas aplicáveis ao tema."
+    "exp": "O diagnóstico de sepse é clínico-laboratorial e requer suspeita de infecção. Pancreatite grave, embolia pulmonar extensa e IAM (infarto agudo do miocárdio) podem apresentar SOFA (Sequential Organ Failure Assessment) ≥2, hipotensão e lactato elevado sem infecção. A crise adrenal (hipocortisolismo) mimetiza o choque séptico refratário. Anamnese cuidadosa, busca ativa do foco infeccioso (exame físico, culturas, imagem) e testes direcionados (amilase, D-dímero, ECG (eletrocardiograma), cortisol) são fundamentais.\n\nReferência: Surviving Sepsis Campaign 2021 (Intensive Care Medicine); Sepsis-3 (JAMA 2016)."
   },
   {
     "cat": "Ressuscitação Volêmica",
@@ -1150,7 +1150,7 @@
   {
     "cat": "Ressuscitação Volêmica",
     "q": "Por que coloides sintéticos (HES - amido hidroxietílico) são contraindicados na sepse?",
-    "a": "Amidos sintéticos aumentam risco de Lesão Renal Aguda (LRA) e necessidade de terapia renal substitutiva. Estudos 6S e CHEST (Chest (estudo clínico)) mostraram maior mortalidade e LRA (lesão renal aguda) com HES (hidroxietilamido) vs. cristaloides em pacientes sépticos. SSC 2021: não usar HES (hidroxietilamido) em sepse.",
+    "a": "Amidos sintéticos aumentam risco de Lesão Renal Aguda (LRA) e necessidade de terapia renal substitutiva. Estudos 6S e CHEST mostraram maior mortalidade e LRA (lesão renal aguda) com HES (hidroxietilamido) vs. cristaloides em pacientes sépticos. SSC 2021: não usar HES (hidroxietilamido) em sepse.",
     "hint": "HES (hidroxietilamido) → LRA (lesão renal aguda) aumentada",
     "exp": "O HES (hidroxietilamido) deposita-se no epitélio tubular renal e em células do SRE, causando lesão tubular direta. O estudo 6S (NEJM 2012) mostrou mortalidade de 51% com HES (hidroxietilamido) vs. 43% com Ringer Acetato em sepse grave. O estudo CHEST (NEJM 2012) confirmou maior incidência de LRA (lesão renal aguda) com HES (hidroxietilamido). Gelatinas têm evidência menos conclusiva de dano, mas também não são recomendadas rotineiramente. Somente cristaloides isotônicos e albumina têm suporte da SSC 2021.\n\nReferência: Surviving Sepsis Campaign 2021 (Intensive Care Medicine); Marino's The ICU Book."
   },
@@ -1171,9 +1171,9 @@
   {
     "cat": "Vasopressores e Inotrópicos",
     "q": "Quando adicionar Vasopressina ao tratamento do choque séptico?",
-    "a": "Adicionar vasopressina 0,03-0,04 U/min quando noradrenalina ≥ 0,25-0,5 mcg/kg/min (choque refratário), para reduzir dose de noradrenalina. SSC 2021: recomendação fraca. Não titular — dose fixa. Efeito: agonismo V1 (vasoconstrição) e V2 (retenção de água).",
+    "a": "Adicionar vasopressina (habitualmente 0,03 U/min em infusão contínua) quando a noradrenalina isolada não mantém adequadamente a PAM/perfusão ou quando se busca efeito poupador de catecolamina.",
     "hint": "Dose fixa 0,03 U/min",
-    "exp": "Na sepse grave, vasopressina endógena é esgotada (deficiência relativa). Vasopressina exógena restaura o tônus vasomotor via receptores V1 vasculares, independente do sistema adrenérgico — mecanismo complementar à noradrenalina. O estudo VASST não mostrou diferença de mortalidade vs. noradrenalina em geral, mas subgrupo com sepse menos grave se beneficiou. Vantagem: permite reduzir catecolaminas (menor toxicidade). Dose acima de 0,04 U/min: risco de isquemia coronária, mesentérica.\n\nReferência: Surviving Sepsis Campaign 2021 (Intensive Care Medicine); Marino's The ICU Book."
+    "exp": "A vasopressina atua em receptores V1 e complementa a noradrenalina em choque vasoplégico. O racional é clínico-hemodinâmico (refratariedade relativa e necessidade de doses crescentes de catecolamina), sem dependência obrigatória de um único ponto de corte universal.\n\nReferência: Surviving Sepsis Campaign 2021; Russell JA et al., NEJM 2008."
   },
   {
     "cat": "Vasopressores e Inotrópicos",
@@ -1199,9 +1199,9 @@
   {
     "cat": "Antibioticoterapia",
     "q": "Qual o timing ideal para início de antibióticos na sepse e no choque séptico?",
-    "a": "Sepse sem choque: iniciar em 1 hora do reconhecimento. Choque séptico: iniciar IMEDIATAMENTE (< 1 hora) após diagnóstico. Cada hora de atraso aumenta mortalidade em 7-10%. SSC 2021: recomendação forte para choque, recomendação moderada para sepse sem choque.",
+    "a": "No choque séptico, iniciar antimicrobiano o mais rápido possível após reconhecimento e coleta apropriada de culturas (sem atraso indevido). Na sepse sem choque, a avaliação rápida e início precoce do antibiótico também são recomendados.",
     "hint": "Choque = Imediato",
-    "exp": "O estudo de Kumar et al. (Crit Care Med 2006) demonstrou que cada hora de atraso no ATB (antibiótico) no choque séptico reduzia a sobrevida em ~7%. A SSC 2021 diferencia sepse (1h) de choque séptico (imediato) baseado na maior mortalidade e urgência do segundo. Na sepse sem choque e incerteza diagnóstica, avaliação rápida (45-60 min) é permitida antes do ATB (antibiótico) para evitar uso desnecessário. Mas uma vez confirmada a sepse, não atrasar.\n\nReferência: Surviving Sepsis Campaign 2021 (Intensive Care Medicine); Marino's The ICU Book."
+    "exp": "Atraso no início de antibiótico em pacientes com infecção grave está associado a pior desfecho, especialmente no choque. A recomendação prática é não postergar tratamento por processos diagnósticos prolongados, mantendo simultaneamente estratégia de stewardship (revisão e descalonamento em 48-72h).\n\nReferência: Surviving Sepsis Campaign 2021; Kumar et al., Crit Care Med 2006."
   },
   {
     "cat": "Antibioticoterapia",
@@ -1229,7 +1229,7 @@
     "q": "Quais os critérios para cobertura antifúngica empírica na sepse?",
     "a": "Considerar equinocandina empírica em: imunossuprimidos (neutropênicos, transplantados), colonização por Candida em múltiplos sítios, cirurgia abdominal recente (especialmente por perfuração GI), NPT prolongada, cateter venoso central de longa data, antibioticoterapia prolongada de amplo espectro.",
     "hint": "Candida score ≥3",
-    "exp": "O Candida Score ≥3 prediz candidemia (sensibilidade ~81%): cirurgia abdominal +1, NPT +1, colonização em múltiplos sítios +1, sepse grave/choque +2. Equinocandinas (micafungina, caspofungina, anidulafungina) são preferidas a fluconazol no choque séptico por Candida por melhor espectro e menor interação com drogas. Candida auris e C. glabrata podem ser resistentes ao fluconazol — acrescentam mais indicações para equinocandinas.\n\nReferência: Surviving Sepsis Campaign 2021 (Intensive Care Medicine); Marino's The ICU Book."
+    "exp": "A cobertura antifúngica empírica deve ser reservada a pacientes com alto risco de candidíase invasiva (ex.: pós-operatório abdominal complicado, NPT, uso prolongado de antibiótico de amplo espectro, colonização multifocal, imunossupressão). A decisão deve integrar epidemiologia local, gravidade e controle de foco.\n\nReferência: Surviving Sepsis Campaign 2021; IDSA Candidiasis Guideline."
   },
   {
     "cat": "Controle do Foco",
@@ -1241,16 +1241,16 @@
   {
     "cat": "Corticoterapia",
     "q": "Quando está indicada hidrocortisona no choque séptico? Qual a dose e duração pela SSC 2021?",
-    "a": "Indicada quando: PAM (pressão arterial média) < 65 mmHg persiste apesar de noradrenalina ≥ 0,25 mcg/kg/min por ≥ 4h (refratário). Dose: hidrocortisona 200 mg/dia em infusão contínua ou 50 mg 6/6h. Duração: manter até resolução do choque (desmame gradual).",
-    "hint": "Nora ≥0,25 por 4h",
-    "exp": "A insuficiência adrenal relativa (IAR) ocorre em 30-60% dos pacientes em choque séptico — resposta inadequada de cortisol ao estresse. Hidrocortisona melhora hemodinâmica (permite redução de vasopressores — 'vasopressor sparing'), mas estudos (CORTICUS, APROCCHSS, ADRENAL) mostram resultados mistos sobre mortalidade. O estudo ADRENAL (NEJM 2018) não mostrou redução de mortalidade em 90 dias, mas mostrou desmame mais rápido de vasopressores. Teste de estimulação com ACTH (hormônio adrenocorticotrófico) não é mais recomendado para guiar uso.\n\nReferência: Surviving Sepsis Campaign 2021 (Intensive Care Medicine); Marino's The ICU Book."
+    "a": "Considerar hidrocortisona IV (200 mg/dia, em infusão contínua ou doses divididas) em choque séptico com necessidade persistente de vasopressor apesar de ressuscitação adequada.",
+    "hint": "Choque séptico refratário + hidrocortisona 200 mg/dia",
+    "exp": "A decisão é clínica (choque refratário), sem exigência de limiar único universal de dose de noradrenalina. O corticosteroide costuma reduzir tempo de vasopressor; impacto em mortalidade é variável entre estudos. A duração depende da evolução hemodinâmica, com retirada após estabilidade.\n\nReferência: Surviving Sepsis Campaign 2021; ADRENAL (NEJM 2018); APROCCHSS (NEJM 2018)."
   },
   {
     "cat": "Corticoterapia",
     "q": "O teste de estimulação com ACTH (250 mcg) deve guiar o uso de hidrocortisona na sepse?",
-    "a": "Não. SSC 2021 não recomenda o teste de ACTH (hormônio adrenocorticotrófico) para guiar uso de corticosteroide na sepse. A decisão é baseada exclusivamente na refratariedade ao vasopressor (noradrenalina ≥ 0,25 mcg/kg/min), não nos níveis de cortisol.",
+    "a": "Não. O teste de ACTH não é recomendado para decidir corticoterapia no choque séptico; a decisão é baseada na refratariedade hemodinâmica apesar de tratamento adequado.",
     "hint": "Clínica, não o ACTH (hormônio adrenocorticotrófico)",
-    "exp": "O teste de estimulação com ACTH (cortisol basal + pós-250mcg ACTH (hormônio adrenocorticotrófico)) foi inicialmente proposto para identificar IAR. O estudo CORTICUS (NEJM 2008) mostrou que respondedores e não-respondedores ao ACTH (hormônio adrenocorticotrófico) tiveram benefício similar à hidrocortisona, invalidando o teste como guia. A SSC 2021 simplificou: use hidrocortisona baseado apenas na necessidade de altas doses de vasopressores, sem aguardar resultado laboratorial. Isso agiliza o tratamento e evita coleta desnecessária.\n\nReferência: Surviving Sepsis Campaign 2021 (Intensive Care Medicine); Marino's The ICU Book."
+    "exp": "As diretrizes atuais não exigem dosagem basal de cortisol nem teste de ACTH para iniciar hidrocortisona em choque séptico refratário. O foco é resposta clínica ao manejo hemodinâmico.\n\nReferência: Surviving Sepsis Campaign 2021; CORTICUS trial."
   },
   {
     "cat": "Ventilação Mecânica",
@@ -1339,8 +1339,8 @@
   {
     "cat": "Complicações e Sequelas",
     "q": "Como o delirium se relaciona com sepse e qual seu impacto prognóstico?",
-    "a": "Delirium ocorre em 60-80% dos pacientes sépticos em UTI (unidade de terapia intensiva). Associa-se a: mortalidade aumentada, maior tempo de VM (ventilação mecânica) e internação, déficits cognitivos tardios. Avaliado pela CAM (concentração alveolar mínima)-ICU (Confusion Assessment Method for ICU). Prevenção: ABCDEF bundle, minimização de sedação, mobilização precoce.",
-    "hint": "CAM (concentração alveolar mínima)-ICU, ABCDEF bundle",
+    "a": "Delirium é frequente em pacientes sépticos críticos e associa-se a maior tempo de ventilação mecânica, maior permanência em UTI e pior desfecho funcional/cognitivo. Pode ser rastreado com CAM-ICU (Confusion Assessment Method for the ICU) ou ICDSC.",
+    "hint": "CAM-ICU, ICDSC, bundle ABCDEF",
     "exp": "O delirium em UTI (unidade de terapia intensiva) é frequentemente subdiagnosticado. Sepse causa delirium por: disfunção da barreira hematoencefálica (citocinas, LPS (lipopolissacarídeo) entram no SNC (sistema nervoso central)), neurotoxinas circulantes, alterações de neurotransmissores (↓colinérgico, ↑dopaminérgico). O estudo MIND (Pandharipande et al.) mostrou que delirium > 1 dia associa-se a déficits cognitivos 3 e 12 meses depois. Haloperidol não mostrou redução de mortalidade (HOPE-ICU). Dexmedetomidina (vs. midazolam) reduz duração do delirium. ABCDEF bundle é a estratégia preventiva mais abrangente.\n\nReferência: Surviving Sepsis Campaign 2021 (Intensive Care Medicine); Marino's The ICU Book."
   },
   {
@@ -1390,769 +1390,769 @@
     "q": "Qual é o peso médio do coração adulto e onde ele se localiza no mediastino?",
     "a": "250–350 g; localizado no mediastino médio, entre o 2º e o 5º espaço intercostal, com 2/3 à esquerda da linha média.",
     "hint": "Pense no ápice e na base.",
-    "exp": "O ápice aponta para baixo-esquerda (5º EIC, linha hemiclavicular esquerda). A base corresponde à face posterior (átrios). Essencial para interpretar radiografia de tórax e localização de eletrodos em ECG."
+    "exp": "O ápice aponta para baixo-esquerda (5º EIC, linha hemiclavicular esquerda). A base corresponde à face posterior (átrios). Essencial para interpretar radiografia de tórax e localização de eletrodos em ECG.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Coração — Visão Geral",
     "q": "Quais são as quatro câmaras cardíacas e seus pares funcionais?",
     "a": "AD + VD (circulação pulmonar / direita) e AE + VE (circulação sistêmica / esquerda).",
     "hint": "Dois átrios recebem, dois ventrículos bombeiam.",
-    "exp": "O VD tem parede mais fina (~4 mm) e menor pressão (~25/5 mmHg). O VE tem parede mais espessa (~9 mm) e maior pressão (~120/8 mmHg). Essa diferença explica por que o IAM direito causa hipotensão por baixo débito e é tratado com volume, não nitrato."
+    "exp": "O VD tem parede mais fina (~4 mm) e menor pressão (~25/5 mmHg). O VE tem parede mais espessa (~9 mm) e maior pressão (~120/8 mmHg). Essa diferença explica por que o IAM direito causa hipotensão por baixo débito e é tratado com volume, não nitrato.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Coração — Visão Geral",
     "q": "O que é o septo interatrial e qual sua relevância clínica?",
     "a": "Parede muscular entre AD e AE; a fossa oval é um remanescente do forame oval fetal, patente em ~25% dos adultos (FOP).",
     "hint": "Forame oval → fossa oval.",
-    "exp": "O FOP pode causar embolia paradoxal (trombo venoso → circulação arterial). Na ecocardiografia com contraste salino (bolhas), o shunt D→E é visível com manobra de Valsalva. Relevante no pré-operatório de cirurgia cardíaca e neurológica."
+    "exp": "O FOP pode causar embolia paradoxal (trombo venoso → circulação arterial). Na ecocardiografia com contraste salino (bolhas), o shunt D→E é visível com manobra de Valsalva. Relevante no pré-operatório de cirurgia cardíaca e neurológica.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Válvulas Cardíacas",
     "q": "Quais são as válvulas atrioventriculares e quantos folhetos cada uma possui?",
     "a": "Mitral (AE→VE): 2 folhetos (anterior e posterior). Tricúspide (AD→VD): 3 folhetos (anterior, posterior e septal).",
     "hint": "Mi-tral = 2 = bicicleta; Tri-cúspide = 3.",
-    "exp": "A válvula mitral é a mais acometida por doença reumática. Os músculos papilares (anterolateral e posteromedial no VE) sustentam as cordoalhas tendíneas; sua ruptura por IAM inferior gera regurgitação mitral aguda grave, emergência cirúrgica."
+    "exp": "A válvula mitral é a mais acometida por doença reumática. Os músculos papilares (anterolateral e posteromedial no VE) sustentam as cordoalhas tendíneas; sua ruptura por IAM inferior gera regurgitação mitral aguda grave, emergência cirúrgica.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Válvulas Cardíacas",
     "q": "Quais são as válvulas semilunares e suas localizações anatômicas?",
     "a": "Aórtica (VE → aorta): 3 cúspides (direita, esquerda, posterior/não-coronariana). Pulmonar (VD → tronco pulmonar): 3 cúspides (anterior, direita, esquerda).",
     "hint": "Semilunares = meia-lua; nenhuma tem cordoalhas.",
-    "exp": "A estenose aórtica calcificada é a valvopatia mais comum em idosos. Gradiente médio >40 mmHg ou área <1 cm² define estenose grave. Em anestesia, evitar bradicardia, taquicardia extrema e queda abrupta de RVS."
+    "exp": "A estenose aórtica calcificada é a valvopatia mais comum em idosos. Gradiente médio >40 mmHg ou área <1 cm² define estenose grave. Em anestesia, evitar bradicardia, taquicardia extrema e queda abrupta de RVS.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Válvulas Cardíacas",
     "q": "Onde se ausculta cada válvula cardíaca no exame físico?",
     "a": "Aórtica: 2º EID paraesternal. Pulmonar: 2º EIE paraesternal. Tricúspide: 4º EIE paraesternal (borda inferior). Mitral: ápice (5º EIC, LHC esquerda).",
     "hint": "'Aorta Para Todos os Médicos' — A=2D, P=2E, T=4E, M=ápice.",
-    "exp": "Regurgitação mitral: sopro holossistólico no ápice com irradiação para axila. Estenose aórtica: sopro sistólico ejetivo em losango no 2º EID com irradiação para carótidas. Conhecer a auscultação orienta o monitoramento intraoperatório."
+    "exp": "Regurgitação mitral: sopro holossistólico no ápice com irradiação para axila. Estenose aórtica: sopro sistólico ejetivo em losango no 2º EID com irradiação para carótidas. Conhecer a auscultação orienta o monitoramento intraoperatório.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Artérias Coronárias",
     "q": "Quais são os dois ostia coronarianos e de onde originam?",
     "a": "Artéria coronária esquerda (ACE) e artéria coronária direita (ACD), ambas originam dos seios de Valsalva (sinuses aórticos) logo acima da válvula aórtica.",
     "hint": "Seios de Valsalva = origem das coronárias.",
-    "exp": "Os ostia estão no seio coronariano direito (ACD) e esquerdo (ACE). Em cirurgia de troca valvular aórtica, a proteção miocárdica inclui cardioplegia nos ostia coronarianos. Estenose ostial é complicação rara, mas grave, da dissecção aórtica tipo A."
+    "exp": "Os ostia estão no seio coronariano direito (ACD) e esquerdo (ACE). Em cirurgia de troca valvular aórtica, a proteção miocárdica inclui cardioplegia nos ostia coronarianos. Estenose ostial é complicação rara, mas grave, da dissecção aórtica tipo A.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Artérias Coronárias",
     "q": "Quais são os principais ramos da artéria coronária esquerda (ACE)?",
     "a": "Tronco da coronária esquerda (TCE) → Artéria Descendente Anterior (ADA) + Artéria Circunflexa (ACx).",
     "hint": "TCE bifurca em DA e Cx.",
-    "exp": "A ADA irriga o septo interventricular anterior e a parede anterior do VE (ramos septais e diagonais). A ACx irriga a parede lateral do VE (ramos marginais obtusos). Lesão de TCE = 'widow maker'; afeta >40% do miocárdio."
+    "exp": "A ADA irriga o septo interventricular anterior e a parede anterior do VE (ramos septais e diagonais). A ACx irriga a parede lateral do VE (ramos marginais obtusos). Lesão de TCE = 'widow maker'; afeta >40% do miocárdio.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Artérias Coronárias",
     "q": "O que é dominância coronariana e qual é a mais prevalente?",
     "a": "Define-se pela artéria que origina a artéria descendente posterior (ADP) e irriga o nó AV. Dominância direita em ~70%; codominância ~20%; dominância esquerda ~10%.",
     "hint": "Dominância = quem dá a ADP.",
-    "exp": "Na dominância direita, a ACD origina a ADP e ramos para o nó AV → IAM de parede inferior (ACD) pode causar bloqueio AV. Em dominância esquerda, a ACx origina a ADP, tornando seus IAMs mais graves hemodinamicamente."
+    "exp": "Na dominância direita, a ACD origina a ADP e ramos para o nó AV → IAM de parede inferior (ACD) pode causar bloqueio AV. Em dominância esquerda, a ACx origina a ADP, tornando seus IAMs mais graves hemodinamicamente.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Artérias Coronárias",
     "q": "Qual artéria irriga o nó sinusal na maioria das pessoas?",
     "a": "Artéria coronária direita (ACD) em ~60% dos casos; ACx nos ~40% restantes.",
     "hint": "Dominância direita → nó SA irrigado pela ACD.",
-    "exp": "IAM de parede inferior frequentemente envolve a ACD e pode causar bradicardia sinusal ou bloqueio AV por isquemia do nó SA e nó AV. Monitoramento com ECG contínuo é mandatório no perioperatório de pacientes com história de IAM inferior."
+    "exp": "IAM de parede inferior frequentemente envolve a ACD e pode causar bradicardia sinusal ou bloqueio AV por isquemia do nó SA e nó AV. Monitoramento com ECG contínuo é mandatório no perioperatório de pacientes com história de IAM inferior.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Sistema de Condução",
     "q": "Descreva a sequência normal de condução elétrica no coração.",
     "a": "Nó SA → miocárdio atrial → Nó AV → Feixe de His → Ramos direito e esquerdo → Fibras de Purkinje → miocárdio ventricular.",
     "hint": "SA → AV → His → Purkinje.",
-    "exp": "O nó SA (marca-passo natural, 60–100 bpm) fica na junção da VCS com o AD. O nó AV introduz atraso de ~120 ms (intervalo PR). As fibras de Purkinje permitem condução rápida e contração sincronizada dos ventrículos. Anestésicos voláteis deprimem a condução nodal."
+    "exp": "O nó SA (marca-passo natural, 60–100 bpm) fica na junção da VCS com o AD. O nó AV introduz atraso de ~120 ms (intervalo PR). As fibras de Purkinje permitem condução rápida e contração sincronizada dos ventrículos. Anestésicos voláteis deprimem a condução nodal.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Sistema de Condução",
     "q": "Onde se localiza o nó AV e qual sua importância clínica?",
     "a": "Triângulo de Koch (entre o óstio do seio coronariano, o folheto septal da tricúspide e o tendão de Todaro), no assoalho do AD.",
     "hint": "Triângulo de Koch → nó AV.",
-    "exp": "Relevante em ablação de TSVP (via acessória perinodal) e cirurgia de CIV perimembranosa (risco de bloqueio AV iatrogênico). A isquemia nodal causa bloqueio AV de 2º/3º grau; indica marcapasso temporário perioperatório."
+    "exp": "Relevante em ablação de TSVP (via acessória perinodal) e cirurgia de CIV perimembranosa (risco de bloqueio AV iatrogênico). A isquemia nodal causa bloqueio AV de 2º/3º grau; indica marcapasso temporário perioperatório.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Sistema de Condução",
     "q": "Quais são as frequências intrínsecas dos principais marca-passos cardíacos?",
     "a": "Nó SA: 60–100 bpm. Nó AV / junção: 40–60 bpm. Sistema His-Purkinje / ventrículo: 20–40 bpm.",
     "hint": "SA > AV > ventrículo — hierarquia descendente.",
-    "exp": "Em bloqueio AV completo sem marca-passo, a frequência ventricular é 20–40 bpm, insuficiente para débito cardíaco adequado. Atropina aumenta o automatismo do nó SA e acelera a condução AV; adrenalina pode aumentar ritmo de escape ventricular."
+    "exp": "Em bloqueio AV completo sem marca-passo, a frequência ventricular é 20–40 bpm, insuficiente para débito cardíaco adequado. Atropina aumenta o automatismo do nó SA e acelera a condução AV; adrenalina pode aumentar ritmo de escape ventricular.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Pericárdio",
     "q": "Descreva as camadas do pericárdio e o volume normal de líquido pericárdico.",
     "a": "Pericárdio fibroso (externo) e pericárdio seroso [visceral (epicárdio) + parietal]. Volume normal de líquido: 15–50 mL.",
     "hint": "Duas camadas serosas + uma fibrosa.",
-    "exp": "O tamponamento cardíaco ocorre quando o acúmulo de líquido (>200 mL de forma aguda, >2 L crônico) comprime as câmaras. Tríade de Beck: hipotensão + turgência jugular + abafamento de bulhas. A pericardiocentese sub-xifoide é tratamento imediato."
+    "exp": "O tamponamento cardíaco ocorre quando o acúmulo de líquido (>200 mL de forma aguda, >2 L crônico) comprime as câmaras. Tríade de Beck: hipotensão + turgência jugular + abafamento de bulhas. A pericardiocentese sub-xifoide é tratamento imediato.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Pericárdio",
     "q": "O que é o recesso oblíquo e o recesso transverso do pericárdio?",
     "a": "Recesso transverso: entre aorta/tronco pulmonar (anteriores) e veias pulmonares/VCS (posteriores) — acessado para clampeamento aórtico. Recesso oblíquo: posterior ao AE, entre veias pulmonares.",
     "hint": "Transverso = entre grandes vasos; oblíquo = posterior ao AE.",
-    "exp": "O cirurgião cardíaco passa o dedo pelo recesso transverso para aplicar o clampe aórtico durante circulação extracorpórea. O recesso oblíquo pode acumular efusão isolada e ser visível ao ecocardiograma como espaço posterior ao AE."
+    "exp": "O cirurgião cardíaco passa o dedo pelo recesso transverso para aplicar o clampe aórtico durante circulação extracorpórea. O recesso oblíquo pode acumular efusão isolada e ser visível ao ecocardiograma como espaço posterior ao AE.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Grandes Vasos",
     "q": "Quais são os ramos diretos do arco aórtico (em ordem)?",
     "a": "1º Tronco braquiocefálico (→ subclávia direita + carótida comum direita), 2º Carótida comum esquerda, 3º Subclávia esquerda.",
     "hint": "Braquiocefálico – Carótida E – Subclávia E.",
-    "exp": "Em ~10% há variantes (ex: artéria vertebral esquerda nascendo diretamente do arco). Relevante em dissecção aórtica tipo A, onde os ramos podem ser comprometidos causando AVC ou isquemia de membros. Monitoramento da pressão arterial em ambos os braços identifica diferença > 20 mmHg sugestiva de dissecção."
+    "exp": "Em ~10% há variantes (ex: artéria vertebral esquerda nascendo diretamente do arco). Relevante em dissecção aórtica tipo A, onde os ramos podem ser comprometidos causando AVC ou isquemia de membros. Monitoramento da pressão arterial em ambos os braços identifica diferença > 20 mmHg sugestiva de dissecção.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Grandes Vasos",
     "q": "Qual é a diferença entre a aorta ascendente, o arco aórtico e a aorta descendente?",
     "a": "Ascendente: da válvula aórtica ao tronco braquiocefálico (~5 cm). Arco: do tronco braquiocefálico à subclávia esquerda. Descendente (torácica): da subclávia E ao hiato aórtico (T12).",
     "hint": "Ascendente → Arco → Descendente torácica → Abdominal.",
-    "exp": "Aneurismas da aorta ascendente (>5,5 cm) e do arco são tratados cirurgicamente. A aorta descendente, após a subclávia E, é o local mais comum de dissecção tipo B (Stanford). A reparação endovascular (TEVAR) substituiu cirurgia aberta em muitos casos."
+    "exp": "Aneurismas da aorta ascendente (>5,5 cm) e do arco são tratados cirurgicamente. A aorta descendente, após a subclávia E, é o local mais comum de dissecção tipo B (Stanford). A reparação endovascular (TEVAR) substituiu cirurgia aberta em muitos casos.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Grandes Vasos",
     "q": "Quais estruturas compõem o pedículo vascular pulmonar em cada hilo?",
     "a": "Artéria pulmonar (superior), veias pulmonares (superior e inferior, anteriores e inferiores), brônquio (posterior). Hilo direito: veias na frente, artéria acima, brônquio atrás. Hilo esquerdo: semelhante.",
     "hint": "Artéria acima, veias na frente, brônquio atrás.",
-    "exp": "Essencial em lobectomia e pneumonectomia — o cirurgião liga e secciona estruturas do hilo. A artéria pulmonar direita é mais longa, passando abaixo do arco aórtico. Embolia pulmonar maciça bloqueia o tronco pulmonar ou ramos principais, causando cor pulmonale agudo."
+    "exp": "Essencial em lobectomia e pneumonectomia — o cirurgião liga e secciona estruturas do hilo. A artéria pulmonar direita é mais longa, passando abaixo do arco aórtico. Embolia pulmonar maciça bloqueia o tronco pulmonar ou ramos principais, causando cor pulmonale agudo.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Circulação Coronariana Venosa",
     "q": "Qual é o principal coletora do retorno venoso coronariano e onde drena?",
     "a": "Seio coronariano, localizado no sulco AV posterior, drena no átrio direito através do óstio do seio coronariano.",
     "hint": "Seio coronariano → AD.",
-    "exp": "~75% do retorno venoso coronariano passa pelo seio coronariano. As veias cardíacas maior, média e menor drenam para ele. O cateter de cardioplegia retrógrada é inserido no seio coronariano (acesso pelo AD) para proteção miocárdica em CEC. As veias de Tebesio drenam diretamente nas câmaras."
+    "exp": "~75% do retorno venoso coronariano passa pelo seio coronariano. As veias cardíacas maior, média e menor drenam para ele. O cateter de cardioplegia retrógrada é inserido no seio coronariano (acesso pelo AD) para proteção miocárdica em CEC. As veias de Tebesio drenam diretamente nas câmaras.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Circulação Coronariana Venosa",
     "q": "Quais são as três principais veias cardíacas que drenam no seio coronariano?",
     "a": "Veia cardíaca maior (acompanha ADA), veia cardíaca média (acompanha ADP), veia cardíaca menor (acompanha ramo marginal direito).",
     "hint": "Maior = ADA; Média = ADP; Menor = marginal D.",
-    "exp": "A veia cardíaca maior é utilizada para posicionamento do eletrodo de estimulação ventricular esquerda em TRC (terapia de ressincronização cardíaca), via ramos laterais/posterolaterais do seio coronariano. A fluoroscopia identifica os ramos durante o implante."
+    "exp": "A veia cardíaca maior é utilizada para posicionamento do eletrodo de estimulação ventricular esquerda em TRC (terapia de ressincronização cardíaca), via ramos laterais/posterolaterais do seio coronariano. A fluoroscopia identifica os ramos durante o implante.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Inervação Cardíaca",
     "q": "Qual é a inervação autonômica do coração e seus efeitos?",
     "a": "Simpático (T1–T5): aumenta FC, contratilidade, velocidade de condução (efeitos crono, ino, dromotrópico positivos). Parassimpático (X par — vago): reduz FC e condução AV (cronotrópico e dromotrópico negativos).",
     "hint": "Simpático acelera; vago freia.",
-    "exp": "O tônus vagal predomina em repouso. O reflexo de Bezold-Jarisch (estimulação de receptores ventriculares inferiores → bradicardia + vasodilatação) ocorre em IAM inferior e pode ocorrer durante raquianestesia. Atropina bloqueia o vago; propranolol bloqueia o simpático."
+    "exp": "O tônus vagal predomina em repouso. O reflexo de Bezold-Jarisch (estimulação de receptores ventriculares inferiores → bradicardia + vasodilatação) ocorre em IAM inferior e pode ocorrer durante raquianestesia. Atropina bloqueia o vago; propranolol bloqueia o simpático.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Inervação Cardíaca",
     "q": "O que são os plexos cardíacos superficial e profundo?",
     "a": "Superficial: abaixo do arco aórtico, à direita do ligamento arterioso — fibras do vago esquerdo + simpático cervical superior esquerdo. Profundo: entre aorta e bifurcação traqueal — fibras dos demais nervos cardíacos.",
     "hint": "Superficial = abaixo do arco aórtico; profundo = atrás da aorta.",
-    "exp": "Esses plexos regulam a frequência cardíaca reflexa. O bloqueio simpático torácico (anestesia peridural alta T1–T4) causa bradicardia e redução da contratilidade — monitoramento intensivo é necessário. A denervação no transplante cardíaco elimina reflexos autonômicos; a FC de repouso é ~90–100 bpm."
+    "exp": "Esses plexos regulam a frequência cardíaca reflexa. O bloqueio simpático torácico (anestesia peridural alta T1–T4) causa bradicardia e redução da contratilidade — monitoramento intensivo é necessário. A denervação no transplante cardíaco elimina reflexos autonômicos; a FC de repouso é ~90–100 bpm.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Inervação Cardíaca",
     "q": "Por que o transplante cardíaco resulta em taquicardia de repouso e resposta atenuada ao exercício?",
     "a": "A denervação autonômica pós-transplante remove o tônus vagal (que freia a FC) e impede o aumento mediado pelo simpático no exercício. A FC de repouso é 90–110 bpm; a resposta ao esforço depende de catecolaminas circulantes.",
     "hint": "Sem vago → FC alta; sem simpático direto → resposta lenta ao esforço.",
-    "exp": "Atropina não tem efeito no coração transplantado (ausência de inervação vagal). Epinefrina e isoproterenol são eficazes (receptores beta intactos). Com o tempo, pode ocorrer reinervação parcial simpática, melhorando a resposta ao exercício."
+    "exp": "Atropina não tem efeito no coração transplantado (ausência de inervação vagal). Epinefrina e isoproterenol são eficazes (receptores beta intactos). Com o tempo, pode ocorrer reinervação parcial simpática, melhorando a resposta ao exercício.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Relações Anatômicas",
     "q": "Quais estruturas são anteriores ao coração no mediastino?",
     "a": "Esterno, cartilagens costais, timo (ou gordura tímica), pericárdio fibroso anterior.",
     "hint": "Esterno protege o coração anteriormente.",
-    "exp": "A janela paraesternal esquerda é usada para pericardiocentese cirúrgica (janela pericárdica). A ressecção do timo é necessária em cirurgia de miastenia gravis e timoma; a veia inominada esquerda (braquiocefálica E) cruza anteriormente ao arco aórtico logo abaixo do timo."
+    "exp": "A janela paraesternal esquerda é usada para pericardiocentese cirúrgica (janela pericárdica). A ressecção do timo é necessária em cirurgia de miastenia gravis e timoma; a veia inominada esquerda (braquiocefálica E) cruza anteriormente ao arco aórtico logo abaixo do timo.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Relações Anatômicas",
     "q": "Quais estruturas são posteriores ao coração?",
     "a": "Esôfago, aorta descendente, veia ázigos, ducto torácico, coluna vertebral (T5–T8), veias pulmonares.",
     "hint": "Esôfago e aorta descendente são os vizinhos posteriores principais.",
-    "exp": "O ecocardiograma transesofágico (ETE) utiliza a proximidade do esôfago com o AE para obter imagens de alta qualidade das válvulas mitral e aórtica, veias pulmonares e apêndice atrial esquerdo (pesquisa de trombo). Contraindicado em varizes esofágicas graves."
+    "exp": "O ecocardiograma transesofágico (ETE) utiliza a proximidade do esôfago com o AE para obter imagens de alta qualidade das válvulas mitral e aórtica, veias pulmonares e apêndice atrial esquerdo (pesquisa de trombo). Contraindicado em varizes esofágicas graves.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Relações Anatômicas",
     "q": "Qual é a relação do nervo frênico com o pericárdio?",
     "a": "Ambos os nervos frênicos (C3–C5) descem lateralmente ao pericárdio fibroso, entre ele e as pleuras mediastinais.",
     "hint": "Frênico = lateral ao pericárdio.",
-    "exp": "Risco de lesão do nervo frênico em: pericardiocentese lateral, cirurgia cardíaca (criopreservação, hemostasia), timectomia e ressecção de tumores mediastinais. A lesão resulta em paralisia hemidiafragmática ipsilateral e comprometimento ventilatório, especialmente em pacientes com função pulmonar limítrofe."
+    "exp": "Risco de lesão do nervo frênico em: pericardiocentese lateral, cirurgia cardíaca (criopreservação, hemostasia), timectomia e ressecção de tumores mediastinais. A lesão resulta em paralisia hemidiafragmática ipsilateral e comprometimento ventilatório, especialmente em pacientes com função pulmonar limítrofe.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Relações Anatômicas",
     "q": "O que é o ligamento arterioso e qual sua importância cirúrgica?",
     "a": "Remanescente fibroso do ducto arterioso (fetal), conecta a aorta descendente proximal ao tronco pulmonar esquerdo. Marca o limite esquerdo do arco aórtico.",
     "hint": "Ductus arteriosus obliterado = ligamento arterioso.",
-    "exp": "O nervo laríngeo recorrente esquerdo curva-se abaixo do ligamento arterioso e ao redor do arco aórtico. Em cirurgia aórtica e ressecção de tumores mediastinais, a rouquidão pós-operatória indica lesão desse nervo. A coarctação da aorta tipicamente ocorre na junção com o ligamento arterioso (istmo aórtico)."
+    "exp": "O nervo laríngeo recorrente esquerdo curva-se abaixo do ligamento arterioso e ao redor do arco aórtico. Em cirurgia aórtica e ressecção de tumores mediastinais, a rouquidão pós-operatória indica lesão desse nervo. A coarctação da aorta tipicamente ocorre na junção com o ligamento arterioso (istmo aórtico).\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Veias Cavas",
     "q": "Onde se formam a VCS e a VCI e onde drenam?",
     "a": "VCS: junção das veias braquiocefálicas D e E, drena no AD superior (T3). VCI: formada na confluência das ilíacas comuns (L5), penetra no AD inferior pelo hiato da VCI no diafragma (T8).",
     "hint": "VCS = T3; VCI = T8 (diafragma).",
-    "exp": "A VCS é local de inserção de cateteres venosos centrais (jugular interna, subclávia). Posição ideal da ponta do CVC: junção VCS-AD. A síndrome da VCS (compressão por neoplasia mediastinal) causa edema em capa e turgência jugular; pode dificultar monitoramento venoso central."
+    "exp": "A VCS é local de inserção de cateteres venosos centrais (jugular interna, subclávia). Posição ideal da ponta do CVC: junção VCS-AD. A síndrome da VCS (compressão por neoplasia mediastinal) causa edema em capa e turgência jugular; pode dificultar monitoramento venoso central.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Veias Cavas",
     "q": "Por que a pressão venosa central (PVC) pode não refletir a pré-carga do VE?",
     "a": "A PVC reflete a pressão de enchimento do AD/VD. Pode não correlacionar com a pressão de enchimento do VE em: disfunção do VD, hipertensão pulmonar, valvopatia tricúspide/mitral e variações de complacência ventricular.",
     "hint": "PVC = pré-carga direita; não necessariamente = pré-carga esquerda.",
-    "exp": "O ecocardiograma (variação do diâmetro da VCI com respiração) e a pressão de oclusão da artéria pulmonar (POAP) são complementares. Segundo diretrizes ESICM, a PVC isolada não deve guiar reposição volêmica; parâmetros dinâmicos (VPP, VVE) são superiores."
+    "exp": "O ecocardiograma (variação do diâmetro da VCI com respiração) e a pressão de oclusão da artéria pulmonar (POAP) são complementares. Segundo diretrizes ESICM, a PVC isolada não deve guiar reposição volêmica; parâmetros dinâmicos (VPP, VVE) são superiores.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Septo Interventricular",
     "q": "Quais são as partes do septo interventricular e qual é a mais frequentemente afetada na CIV congênita?",
     "a": "Parte membranosa (pequena, superior) e parte muscular (maior, inferior e apical). CIV perimembranosa (~80%) é a mais comum.",
     "hint": "Membranosa = pequena e superior; muscular = grande e inferior.",
-    "exp": "A CIV perimembranosa é adjacente ao nó AV e ao feixe de His, aumentando o risco de bloqueio AV cirúrgico. O shunt E→D aumenta o fluxo pulmonar; grandes CIVs levam a hipertensão pulmonar e eventual inversão do shunt (síndrome de Eisenmenger)."
+    "exp": "A CIV perimembranosa é adjacente ao nó AV e ao feixe de His, aumentando o risco de bloqueio AV cirúrgico. O shunt E→D aumenta o fluxo pulmonar; grandes CIVs levam a hipertensão pulmonar e eventual inversão do shunt (síndrome de Eisenmenger).\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Anatomia do VE",
     "q": "Quais são os músculos papilares do VE e o que acontece quando o posteromedial é isquêmico?",
     "a": "Anterolateral (irrigado por ADA + ACx — dupla irrigação) e posteromedial (irrigado apenas pela ADP — único suprimento). Isquemia do posteromedial → ruptura → regurgitação mitral aguda grave.",
     "hint": "Posteromedial = suprimento único = mais vulnerável.",
-    "exp": "A ruptura do músculo papilar posteromedial ocorre 2–7 dias após IAM inferior-posterior. Causa edema pulmonar agudo e choque cardiogênico. Diagnóstico por ETE (jato excêntrico de RM). Tratamento: cirurgia de emergência (reparo/troca mitral + revascularização)."
+    "exp": "A ruptura do músculo papilar posteromedial ocorre 2–7 dias após IAM inferior-posterior. Causa edema pulmonar agudo e choque cardiogênico. Diagnóstico por ETE (jato excêntrico de RM). Tratamento: cirurgia de emergência (reparo/troca mitral + revascularização).\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Anatomia do VE",
     "q": "O que são as trabéculas cárneas e a moderadora banda (banda moderadora)?",
     "a": "Trabéculas cárneas: saliências musculares internas dos ventrículos. Banda moderadora: trabécula específica do VD que conduz fibras do ramo direito do feixe de His até o músculo papilar anterior.",
     "hint": "Banda moderadora = atalho elétrico no VD.",
-    "exp": "A banda moderadora é visível ao ETE e à RM cardíaca; pode ser confundida com trombo ventricular. Em cardiomiopatia arritmogênica do VD (CAVD), as trabéculas são substituídas por gordura/fibrose. A biópsia endomiocárdica via VD pode atingir essa região."
+    "exp": "A banda moderadora é visível ao ETE e à RM cardíaca; pode ser confundida com trombo ventricular. Em cardiomiopatia arritmogênica do VD (CAVD), as trabéculas são substituídas por gordura/fibrose. A biópsia endomiocárdica via VD pode atingir essa região.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Anatomia do VD",
     "q": "Por que o VD é mais tolerante à sobrecarga de volume, mas mais sensível à sobrecarga de pressão aguda?",
     "a": "O VD tem parede fina (~3–4 mm), baixa pós-carga fisiológica (~25 mmHg) e alta complacência → tolera volume. Aumento agudo de pressão (TEP maciço, SDRA) causa dilatação, deslocamento septal e queda do débito cardíaco.",
     "hint": "VD = câmara de volume; falha com aumento súbito de pós-carga.",
-    "exp": "Na falência do VD aguda: milrinona (inodilatador) + norepinefrina (mantém perfusão coronariana do VD) + vasodilatador pulmonar (óxido nítrico inalatório, iloprosta). Evitar hipervolemia agressiva (agrava o deslocamento septal e comprime o VE — interdependência ventricular)."
+    "exp": "Na falência do VD aguda: milrinona (inodilatador) + norepinefrina (mantém perfusão coronariana do VD) + vasodilatador pulmonar (óxido nítrico inalatório, iloprosta). Evitar hipervolemia agressiva (agrava o deslocamento septal e comprime o VE — interdependência ventricular).\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Irrigação do Miocárdio",
     "q": "Quais segmentos do VE são irrigados pela artéria descendente anterior (ADA)?",
     "a": "Parede anterior, ápice, 2/3 anteriores do septo interventricular e parte da parede lateral (via ramos diagonais).",
     "hint": "ADA = parede anterior + septo anterior + ápice.",
-    "exp": "IAM anterior extenso (oclusão proximal da ADA) afeta >40% da massa ventricular e causa disfunção sistólica grave, bloqueio de ramo esquerdo e risco de ruptura de parede livre / CIV. É o IAM de maior mortalidade e demanda revascularização imediata (ICP primária)."
+    "exp": "IAM anterior extenso (oclusão proximal da ADA) afeta >40% da massa ventricular e causa disfunção sistólica grave, bloqueio de ramo esquerdo e risco de ruptura de parede livre / CIV. É o IAM de maior mortalidade e demanda revascularização imediata (ICP primária).\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Irrigação do Miocárdio",
     "q": "Quais segmentos do VE são irrigados pela artéria circunflexa (ACx)?",
     "a": "Parede lateral e posterolateral do VE; em dominância esquerda, também a parede inferior e o nó AV.",
     "hint": "Cx = lateral esquerda.",
-    "exp": "IAM de parede lateral pode ser silencioso no ECG (derivações I, aVL, V5–V6). Em dominância esquerda, oclusão da ACx causa IAM inferior e bloqueio AV — padrão atípico que exige suspeição clínica e cineangiocoronariografia."
+    "exp": "IAM de parede lateral pode ser silencioso no ECG (derivações I, aVL, V5–V6). Em dominância esquerda, oclusão da ACx causa IAM inferior e bloqueio AV — padrão atípico que exige suspeição clínica e cineangiocoronariografia.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Anatomia Cirúrgica",
     "q": "Quais são os sítios de canulação habitual para circulação extracorpórea (CEC)?",
     "a": "Cânula arterial: aorta ascendente (ou femoral/axilar quando indisponível). Cânula venosa: AD (cânula única) ou VCS + VCI (bicaval, em cirurgias intracardíacas).",
     "hint": "Arterial = aorta; venosa = AD ou bicaval.",
-    "exp": "A canulação femoral (artéria + veia femorais) é usada em reoperações, emergências e ECMO venoarterial. O risco é de perfusão retrógrada em dissecção aórtica (propaga o falso lúmen). A canulação axilar (subclávia direita) oferece perfusão anterógrada e é preferida em dissecção tipo A."
+    "exp": "A canulação femoral (artéria + veia femorais) é usada em reoperações, emergências e ECMO venoarterial. O risco é de perfusão retrógrada em dissecção aórtica (propaga o falso lúmen). A canulação axilar (subclávia direita) oferece perfusão anterógrada e é preferida em dissecção tipo A.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Anatomia Cirúrgica",
     "q": "Por que a veia safena magna e a artéria torácica interna (mamária) são os enxertos de escolha em CABG?",
     "a": "Safena magna: comprimento, calibre e fácil coleta, mas patência 10 anos ~50%. Artéria torácica interna esquerda (ATIE) → ADA: patência 10 anos >90%, por autorregulação e ausência de aterosclerose.",
     "hint": "ATIE-ADA = padrão ouro; safena = alternativa/complemento.",
-    "exp": "A ATIE direita pode ser anastomosada como enxerto in situ (artéria subclávia direita) ou como enxerto livre. O uso bilateral de artérias torácicas internas melhora sobrevida mas aumenta risco de infecção esternal (especialmente em diabéticos obesos). A artéria radial é alternativa para o 3º enxerto."
+    "exp": "A ATIE direita pode ser anastomosada como enxerto in situ (artéria subclávia direita) ou como enxerto livre. O uso bilateral de artérias torácicas internas melhora sobrevida mas aumenta risco de infecção esternal (especialmente em diabéticos obesos). A artéria radial é alternativa para o 3º enxerto.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Anatomia da Aorta",
     "q": "Quais são os seios de Valsalva e qual sua função?",
     "a": "Três dilatações da raiz aórtica acima das cúspides: seio direito (origina coronária direita), seio esquerdo (origina coronária esquerda) e seio posterior (não-coronariano). Função: evitar oclusão dos ostia coronarianos pelo fechamento das cúspides; criam fluxo turbilhonar que fecha a válvula.",
     "hint": "Três seios → dois coronarianos + um não-coronariano.",
-    "exp": "Aneurisma do seio de Valsalva (geralmente seio direito) pode romper para o VD ou AD, causando shunt contínuo agudo e insuficiência cardíaca. Em cirurgia da raiz aórtica (Bentall), os seios são excisados e os ostia reimplantados no tubo protético."
+    "exp": "Aneurisma do seio de Valsalva (geralmente seio direito) pode romper para o VD ou AD, causando shunt contínuo agudo e insuficiência cardíaca. Em cirurgia da raiz aórtica (Bentall), os seios são excisados e os ostia reimplantados no tubo protético.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Anatomia da Aorta",
     "q": "Qual é a pressão normal no interior das diferentes porções da aorta e como isso muda na hipertensão?",
     "a": "Normal: sistólica ~120 mmHg, diastólica ~80 mmHg em toda a aorta. Na hipertensão, pressão aumentada → remodelamento da parede (hipertrofia, fibrose), aumentando risco de dissecção e aneurisma.",
     "hint": "Pressão uniforme em toda a aorta (não há gradiente fisiológico significativo).",
-    "exp": "A dissecção aórtica tipo A (Stanford) envolve a aorta ascendente e é emergência cirúrgica (mortalidade 1–2%/hora sem tratamento). Tipo B (apenas descendente): tratamento clínico com controle rigoroso da PA (alvo <120/80 mmHg, FC <60 bpm) com betabloqueadores + nitroprussiato."
+    "exp": "A dissecção aórtica tipo A (Stanford) envolve a aorta ascendente e é emergência cirúrgica (mortalidade 1–2%/hora sem tratamento). Tipo B (apenas descendente): tratamento clínico com controle rigoroso da PA (alvo <120/80 mmHg, FC <60 bpm) com betabloqueadores + nitroprussiato.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Linfáticos Cardíacos",
     "q": "Qual é o principal tronco linfático do coração e onde drena?",
     "a": "Os vasos linfáticos cardíacos convergem para o tronco cardíaco, que drena nos linfonodos traqueobronquiais inferiores (subcarinais) e daí para o ducto linfático direito ou ducto torácico.",
     "hint": "Linfáticos cardíacos → linfonodos mediastinais.",
-    "exp": "Obstrução linfática (pós-cirurgia cardíaca ou linfoma mediastinal) pode causar quilopericárdio ou efusão pericárdica quilosa. O derrame pericárdico pós-pericardiotomia (síndrome pós-pericardiotomia) tem componente inflamatório e pode ocorrer semanas após cirurgia cardíaca."
+    "exp": "Obstrução linfática (pós-cirurgia cardíaca ou linfoma mediastinal) pode causar quilopericárdio ou efusão pericárdica quilosa. O derrame pericárdico pós-pericardiotomia (síndrome pós-pericardiotomia) tem componente inflamatório e pode ocorrer semanas após cirurgia cardíaca.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Apêndices Atriais",
     "q": "O que é o apêndice atrial esquerdo (AAE) e por que é clinicamente importante?",
     "a": "Estrutura auricular muscular do AE, com trabeculações internas (mm pectinados). Principal sítio de formação de trombos na fibrilação atrial (>90% dos trombos no AE estão no AAE).",
     "hint": "FA + AAE = trombo → AVC.",
-    "exp": "O ETE é o exame de escolha para excluir trombo no AAE antes de cardioversão elétrica. Velocidade de fluxo no AAE <20 cm/s (ao ETE) é marcador de alto risco trombótico. A oclusão percutânea do AAE (Watchman®) é alternativa à anticoagulação em pacientes com FA e contraindicação a anticoagulantes."
+    "exp": "O ETE é o exame de escolha para excluir trombo no AAE antes de cardioversão elétrica. Velocidade de fluxo no AAE <20 cm/s (ao ETE) é marcador de alto risco trombótico. A oclusão percutânea do AAE (Watchman®) é alternativa à anticoagulação em pacientes com FA e contraindicação a anticoagulantes.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Embriologia Cardiovascular",
     "q": "Quais são as estruturas fetais que se fecham ao nascimento e o que formam?",
     "a": "Forame oval → fossa oval. Ducto arterioso → ligamento arterioso. Ducto venoso → ligamento venoso. Veia umbilical → ligamento redondo do fígado. Artérias umbilicais → ligamentos umbilicais mediais.",
     "hint": "Cinco estruturas fetais → cinco ligamentos/fossa.",
-    "exp": "O fechamento do forame oval é funcional (primeiros dias) e anatômico (primeiros meses). O ducto arterioso fecha pela elevação da pO2 e queda das prostaglandinas; a indometacina acelera o fechamento (prematuros). A persistência do ducto arterioso (PDA) causa sopro contínuo em maquinaria e shunt E→D."
+    "exp": "O fechamento do forame oval é funcional (primeiros dias) e anatômico (primeiros meses). O ducto arterioso fecha pela elevação da pO2 e queda das prostaglandinas; a indometacina acelera o fechamento (prematuros). A persistência do ducto arterioso (PDA) causa sopro contínuo em maquinaria e shunt E→D.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Embriologia Cardiovascular",
     "q": "O que é a tetralogia de Fallot e quais são seus quatro componentes anatômicos?",
     "a": "1) CIV subaórtica, 2) Estenose pulmonar (infundibular ± valvar), 3) Cavalgamento aórtico sobre o septo, 4) Hipertrofia do VD.",
     "hint": "CIV + EP + aorta cavalgando + HVD.",
-    "exp": "A desvantagem do VD sobre-pressurizado e o shunt D→E causam cianose. A crise hipóxica (hipercianose) é desencadeada por choro, esforço ou desidratação → tratamento: posição genupeitoral, morfina, oxigênio, betabloqueador. Correção cirúrgica total é o tratamento definitivo."
+    "exp": "A desvantagem do VD sobre-pressurizado e o shunt D→E causam cianose. A crise hipóxica (hipercianose) é desencadeada por choro, esforço ou desidratação → tratamento: posição genupeitoral, morfina, oxigênio, betabloqueador. Correção cirúrgica total é o tratamento definitivo.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Válvulas — Mecanismo",
     "q": "Como a válvula aórtica se abre e fecha durante o ciclo cardíaco?",
     "a": "Abre quando a pressão no VE supera a pressão aórtica (início da sístole). Fecha quando a pressão aórtica supera a pressão do VE (início da diástole); o fluxo reverso breve preenche os seios de Valsalva e coapta as cúspides.",
     "hint": "Pressão VE > Ao = abre; Ao > VE = fecha.",
-    "exp": "A incisura dicrótica no traçado de pressão arterial corresponde ao fechamento da válvula aórtica (componente A2 da 2ª bulha). Em EA grave, o pico de pressão VE pode atingir 200–250 mmHg. O Doppler de onda contínua mede o gradiente transvalvar (Bernoulli simplificado: ΔP = 4v²)."
+    "exp": "A incisura dicrótica no traçado de pressão arterial corresponde ao fechamento da válvula aórtica (componente A2 da 2ª bulha). Em EA grave, o pico de pressão VE pode atingir 200–250 mmHg. O Doppler de onda contínua mede o gradiente transvalvar (Bernoulli simplificado: ΔP = 4v²).\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Pressões Intracardíacas",
     "q": "Quais são as pressões normais em cada câmara e nos grandes vasos?",
     "a": "AD: 0–8 mmHg. VD: 25/0–5 mmHg. AP: 25/10 mmHg (média ~15). POAP: 6–12 mmHg. AE: 6–12 mmHg. VE: 120/0–10 mmHg. Aorta: 120/80 mmHg.",
     "hint": "Direito = baixas pressões; esquerdo = altas pressões.",
-    "exp": "A POAP estima a pressão de enchimento do VE e correlaciona com a pressão diastólica final do VE. POAP >18 mmHg sugere edema pulmonar cardiogênico. Hipertensão arterial pulmonar: PAP média >20 mmHg em repouso. Essencial para interpretação do cateter de Swan-Ganz."
+    "exp": "A POAP estima a pressão de enchimento do VE e correlaciona com a pressão diastólica final do VE. POAP >18 mmHg sugere edema pulmonar cardiogênico. Hipertensão arterial pulmonar: PAP média >20 mmHg em repouso. Essencial para interpretação do cateter de Swan-Ganz.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Anatomia Ecocardiográfica",
     "q": "Quais são as janelas acústicas padrão do ecocardiograma transtorácico (ETT)?",
     "a": "Paraesternal esquerda, apical (4, 5, 3, 2 câmaras), subcostal e supraesternal.",
     "hint": "4 janelas principais: paraesternal, apical, subcostal, supraesternal.",
-    "exp": "A janela paraesternal eixo longo mostra VE, VD, mitral e aórtica. A apical 4 câmaras mostra todos os 4 compartimentos e é ideal para medir função sistólica (FEVE). A subcostal é a de escolha em ventilados (pulmão hiperinsuflado). Supraesternal avalia o arco aórtico."
+    "exp": "A janela paraesternal eixo longo mostra VE, VD, mitral e aórtica. A apical 4 câmaras mostra todos os 4 compartimentos e é ideal para medir função sistólica (FEVE). A subcostal é a de escolha em ventilados (pulmão hiperinsuflado). Supraesternal avalia o arco aórtico.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Anatomia Ecocardiográfica",
     "q": "Quais são as 17 segmentos do VE segundo a nomenclatura ASE/SBA?",
     "a": "6 basais, 6 médios, 4 apicais e 1 apex. Distribuídos em anterior, anterosseptal, septal, inferior, inferolateral e anterolateral.",
     "hint": "6+6+4+1 = 17 segmentos.",
-    "exp": "Cada segmento correlaciona com o território coronariano predominante. A análise segmentar da motilidade de parede (normocinesia, hipocinesia, acinesia, discinesia) identifica isquemia regional. Fundamental na avaliação pré-operatória e intraoperatória por ETE em cirurgia de alto risco."
+    "exp": "Cada segmento correlaciona com o território coronariano predominante. A análise segmentar da motilidade de parede (normocinesia, hipocinesia, acinesia, discinesia) identifica isquemia regional. Fundamental na avaliação pré-operatória e intraoperatória por ETE em cirurgia de alto risco.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Microcirculação",
     "q": "O que é a reserva fracionada de fluxo (FFR) e como se relaciona com a anatomia coronariana?",
     "a": "FFR = pressão distal à estenose / pressão aórtica, em hiperemia máxima (adenosina). FFR ≤0,80 indica estenose hemodinamicamente significativa e se beneficia de revascularização.",
     "hint": "FFR ≤0,80 = revascularizar.",
-    "exp": "A FFR não pode ser determinada pela anatomia angiográfica isolada: estenoses de 50–70% frequentemente são não-funcionais (FFR >0,80). O estudo FAME demonstrou que a revascularização guiada por FFR reduz MACE comparada à angiografia isolada. A tomografia de coerência óptica (OCT) complementa com detalhes morfológicos da placa."
+    "exp": "A FFR não pode ser determinada pela anatomia angiográfica isolada: estenoses de 50–70% frequentemente são não-funcionais (FFR >0,80). O estudo FAME demonstrou que a revascularização guiada por FFR reduz MACE comparada à angiografia isolada. A tomografia de coerência óptica (OCT) complementa com detalhes morfológicos da placa.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Coração — Relações Clínicas",
     "q": "Qual é a importância clínica da artéria de Kugel e da circulação colateral coronariana?",
     "a": "A artéria de Kugel (ramo atrial da ACD ou ACx) conecta ACD e ACx pelo septo interatrial. A circulação colateral (vasos de Wearn, anastomoses intercoronarianas) é protetora: reduz o tamanho do infarto em oclusões graduais versus agudas.",
     "hint": "Colaterais = proteção natural contra isquemia.",
-    "exp": "Pacientes com oclusão crônica total (CTO) frequentemente têm colaterais bem desenvolvidas e isquemia mínima. A ICP de CTO é tecnicamente desafiadora mas pode melhorar sintomas e função ventricular. A hiperemia miocárdica (adenosina) é usada para avaliar colaterais por FFR."
+    "exp": "Pacientes com oclusão crônica total (CTO) frequentemente têm colaterais bem desenvolvidas e isquemia mínima. A ICP de CTO é tecnicamente desafiadora mas pode melhorar sintomas e função ventricular. A hiperemia miocárdica (adenosina) é usada para avaliar colaterais por FFR.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Coração — Relações Clínicas",
     "q": "O que é a síndrome de Brugada e qual é a base anatômico-eletrofisiológica?",
     "a": "Canalopatia do canal de sódio (SCN5A) que afeta o gradiente transmural de repolarização no TSVD (trato de saída do VD), criando padrão de supradesnivelamento de ST em V1–V3 e risco de FV.",
     "hint": "SCN5A + TSVD = Brugada.",
-    "exp": "O padrão tipo 1 (coved) é diagnóstico. A febre, cocaína e bloqueadores de canal de sódio (ajmalina, flecainida) podem desmascarar o padrão. O CDI é o único tratamento comprovado para prevenção de morte súbita. Anestesia: evitar propofol em altas doses e bloqueadores de Na⁺ (lidocaína em excesso)."
+    "exp": "O padrão tipo 1 (coved) é diagnóstico. A febre, cocaína e bloqueadores de canal de sódio (ajmalina, flecainida) podem desmascarar o padrão. O CDI é o único tratamento comprovado para prevenção de morte súbita. Anestesia: evitar propofol em altas doses e bloqueadores de Na⁺ (lidocaína em excesso).\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Coração — Relações Clínicas",
     "q": "O que é o triângulo de Koch e por que o cirurgião deve respeitá-lo?",
     "a": "Região do AD delimitada pelo tendão de Todaro (anteriormente), folheto septal da tricúspide (inferiormente) e óstio do seio coronariano (base). Contém o nó AV.",
     "hint": "Triângulo de Koch = sede do nó AV.",
-    "exp": "Eletrofisiologistas usam o triângulo de Koch para mapear e ablacionar a via lenta do nó AV (TSVP por reentrada nodal). Cirurgiões evitam suturas nessa área em reparos de CIV perimembranosa e plastia tricúspide para prevenir bloqueio AV iatrogênico completo."
+    "exp": "Eletrofisiologistas usam o triângulo de Koch para mapear e ablacionar a via lenta do nó AV (TSVP por reentrada nodal). Cirurgiões evitam suturas nessa área em reparos de CIV perimembranosa e plastia tricúspide para prevenir bloqueio AV iatrogênico completo.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Grandes Vasos — Variantes",
     "q": "O que é a artéria subclávia direita aberrante (arteria lusoria) e como pode se apresentar clinicamente?",
     "a": "Variante em ~0,5–2% da população: a subclávia direita origina-se como 4º ramo do arco, passando posterior ao esôfago → disfagia lusoria (disfagia por compressão esofágica).",
     "hint": "Subclávia D aberrante = 4º ramo do arco = posterior ao esôfago.",
-    "exp": "Em anestesia, a monitorização da pressão arterial no braço direito pode subestimar a pressão central se a artéria for hipoplásica. Na dissecção aórtica, a artéria lusoria pode ser acometida. A correção cirúrgica (transposição) é indicada em sintomáticos."
+    "exp": "Em anestesia, a monitorização da pressão arterial no braço direito pode subestimar a pressão central se a artéria for hipoplásica. Na dissecção aórtica, a artéria lusoria pode ser acometida. A correção cirúrgica (transposição) é indicada em sintomáticos.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Grandes Vasos — Variantes",
     "q": "O que é a coarctação da aorta e qual é sua localização anatômica mais comum?",
     "a": "Estreitamento congênito da aorta no istmo aórtico (junção do arco com a aorta descendente, ao nível da artéria subclávia esquerda e do ligamento arterioso).",
     "hint": "Coarctação = istmo aórtico = logo após subclávia E.",
-    "exp": "Apresentação: HAS em membros superiores + pulsos femorais diminuídos/atrasados, frêmito interescapular, circulação colateral (artérias intercostais dilatadas → erosões costais na Rx). Gradiente entre braço e perna >20 mmHg. Tratamento: angioplastia com stent ou correção cirúrgica. Associada a válvula aórtica bicúspide (~50%)."
+    "exp": "Apresentação: HAS em membros superiores + pulsos femorais diminuídos/atrasados, frêmito interescapular, circulação colateral (artérias intercostais dilatadas → erosões costais na Rx). Gradiente entre braço e perna >20 mmHg. Tratamento: angioplastia com stent ou correção cirúrgica. Associada a válvula aórtica bicúspide (~50%).\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Fisiologia Anatômica",
     "q": "Qual é a diferença anatômica entre a circulação brônquica e a circulação pulmonar?",
     "a": "Circulação pulmonar (artérias/veias pulmonares): baixa pressão, alto volume, destinada à hematose. Circulação brônquica (ramos da aorta torácica): alta pressão, nutre as paredes das vias aéreas até os bronquíolos terminais.",
     "hint": "Pulmonar = hematose; brônquica = nutrição das vias aéreas.",
-    "exp": "A circulação brônquica drena parcialmente nas veias pulmonares (shunt anatômico fisiológico ~2–5% do DC). Em hipertensão pulmonar grave, desenvolve-se hiperinsuflação brônquica colateral → hemoptise. Após transplante pulmonar, a circulação brônquica não é anastomosada (fica devascularizada) → risco de deiscência brônquica."
+    "exp": "A circulação brônquica drena parcialmente nas veias pulmonares (shunt anatômico fisiológico ~2–5% do DC). Em hipertensão pulmonar grave, desenvolve-se hiperinsuflação brônquica colateral → hemoptise. Após transplante pulmonar, a circulação brônquica não é anastomosada (fica devascularizada) → risco de deiscência brônquica.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Anatomia Funcional",
     "q": "O que é a interdependência ventricular e como ela impacta a hemodinâmica no tamponamento?",
     "a": "VD e VE compartilham o septo interventricular e o pericárdio. Expansão do VD por aumento de pressão/volume desloca o septo para a esquerda → reduz enchimento e débito do VE.",
     "hint": "Dilatação do VD comprime o VE pelo septo.",
-    "exp": "No tamponamento cardíaco, o líquido pericárdico comprime todas as câmaras. Inspiração → retorno venoso D aumenta → VD dilata → septo desvia → VE enche menos → queda do DC e da PA inspiratória (pulso paradoxal >10 mmHg). Pericardiocentese alivia imediatamente a compressão."
+    "exp": "No tamponamento cardíaco, o líquido pericárdico comprime todas as câmaras. Inspiração → retorno venoso D aumenta → VD dilata → septo desvia → VE enche menos → queda do DC e da PA inspiratória (pulso paradoxal >10 mmHg). Pericardiocentese alivia imediatamente a compressão.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Ciclo Cardíaco - Fases",
     "q": "Quais são as 7 fases clássicas do ciclo cardíaco ventricular?",
     "a": "1) Contração isovolumétrica; 2) Ejeção rápida; 3) Ejeção lenta; 4) Relaxamento isovolumétrico; 5) Enchimento rápido; 6) Diastase; 7) Sístole atrial",
     "hint": "Pense nas fases de acordo com a abertura/fechamento das valvas",
-    "exp": "O ciclo cardíaco é dividido em sístole (contração) e diástole (relaxamento). A sístole ventricular compreende as fases de contração isovolumétrica e ejeção. A diástole inclui relaxamento isovolumétrico, enchimento rápido, diastase e sístole atrial. Cada fase é definida pelo estado das valvas mitral/tricúspide e aórtica/pulmonar."
+    "exp": "O ciclo cardíaco é dividido em sístole (contração) e diástole (relaxamento). A sístole ventricular compreende as fases de contração isovolumétrica e ejeção. A diástole inclui relaxamento isovolumétrico, enchimento rápido, diastase e sístole atrial. Cada fase é definida pelo estado das valvas mitral/tricúspide e aórtica/pulmonar.\n\nReferência: ACC/AHA/ACCP/HRS Guideline for Atrial Fibrillation (2023); ESC Guidelines for Atrial Fibrillation."
   },
   {
     "cat": "Ciclo Cardíaco - Fases",
     "q": "Durante a contração isovolumétrica, quais valvas estão abertas?",
     "a": "Nenhuma — todas as valvas estão fechadas",
     "hint": "A pressão aumenta sem variação de volume",
-    "exp": "Na contração isovolumétrica, após o fechamento das valvas atrioventriculares (M1/T1 = 1ª bulha) e antes da abertura das valvas semilunares, a pressão ventricular eleva-se rapidamente sem variação de volume. A valva aórtica só abre quando a pressão ventricular esquerda supera a pressão diastólica aórtica (~80 mmHg)."
+    "exp": "Na contração isovolumétrica, após o fechamento das valvas atrioventriculares (M1/T1 = 1ª bulha) e antes da abertura das valvas semilunares, a pressão ventricular eleva-se rapidamente sem variação de volume. A valva aórtica só abre quando a pressão ventricular esquerda supera a pressão diastólica aórtica (~80 mmHg).\n\nReferência: ACC/AHA/ACCP/HRS Guideline for Atrial Fibrillation (2023); ESC Guidelines for Atrial Fibrillation."
   },
   {
     "cat": "Ciclo Cardíaco - Fases",
     "q": "O que define o início da ejeção ventricular?",
     "a": "Abertura da valva aórtica (e pulmonar), quando a pressão ventricular supera a pressão arterial diastólica",
     "hint": "Pressão ventricular > pressão diastólica da artéria",
-    "exp": "A ejeção começa quando a pressão no VE ultrapassa ~80 mmHg (pressão diastólica aórtica). No VD, a valva pulmonar abre com ~8-10 mmHg. Durante a ejeção rápida (~70% do VS é ejetado) a pressão ainda sobe; na ejeção lenta, a pressão já está caindo mas o fluxo continua por inércia."
+    "exp": "A ejeção começa quando a pressão no VE ultrapassa ~80 mmHg (pressão diastólica aórtica). No VD, a valva pulmonar abre com ~8-10 mmHg. Durante a ejeção rápida (~70% do VS é ejetado) a pressão ainda sobe; na ejeção lenta, a pressão já está caindo mas o fluxo continua por inércia.\n\nReferência: ACC/AHA/ACCP/HRS Guideline for Atrial Fibrillation (2023); ESC Guidelines for Atrial Fibrillation."
   },
   {
     "cat": "Ciclo Cardíaco - Fases",
     "q": "O que é o relaxamento isovolumétrico?",
     "a": "Fase de queda da pressão ventricular com todas as valvas fechadas, após fechamento das valvas semilunares até abertura das valvas AV",
     "hint": "Volume fixo, pressão cai",
-    "exp": "Após o fechamento das valvas aórtica/pulmonar (A2/P2 = componentes da 2ª bulha), a pressão ventricular cai rapidamente sem alteração de volume. Termina quando a pressão ventricular cai abaixo da pressão atrial, abrindo as valvas mitral e tricúspide. É o período de maior demanda energética relativa para o relaxamento ativo (consumo de ATP pela SERCA2a)."
+    "exp": "Após o fechamento das valvas aórtica/pulmonar (A2/P2 = componentes da 2ª bulha), a pressão ventricular cai rapidamente sem alteração de volume. Termina quando a pressão ventricular cai abaixo da pressão atrial, abrindo as valvas mitral e tricúspide. É o período de maior demanda energética relativa para o relaxamento ativo (consumo de ATP pela SERCA2a).\n\nReferência: ACC/AHA/ACCP/HRS Guideline for Atrial Fibrillation (2023); ESC Guidelines for Atrial Fibrillation."
   },
   {
     "cat": "Volumes e Pressões",
     "q": "Qual é o volume diastólico final (VDF) normal do VE?",
     "a": "~120-130 mL",
     "hint": "Volume ao final do enchimento ventricular",
-    "exp": "O VDF representa o volume no ventrículo ao final da diástole, antes da contração. O volume sistólico final (VSF) é ~50 mL. O volume sistólico (VS) = VDF - VSF ≈ 70 mL. A fração de ejeção (FE) = VS/VDF = 70/120 ≈ 55-65%. Em ICC com FE reduzida, o VDF aumenta (remodelamento)."
+    "exp": "O VDF representa o volume no ventrículo ao final da diástole, antes da contração. O volume sistólico final (VSF) é ~50 mL. O volume sistólico (VS) = VDF - VSF ≈ 70 mL. A fração de ejeção (FE) = VS/VDF = 70/120 ≈ 55-65%. Em ICC com FE reduzida, o VDF aumenta (remodelamento).\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Volumes e Pressões",
     "q": "Qual a pressão diastólica final do VE (PDFVE) normal e seu significado clínico?",
     "a": "Normal: 8-12 mmHg. Elevada indica aumento da pré-carga ou disfunção diastólica",
     "hint": "Correlaciona-se com a pressão de oclusão pulmonar (POAP)",
-    "exp": "A PDFVE reflete a pré-carga e a complacência ventricular. A POAP (wedge) estima indiretamente a PDFVE quando não há obstrução mitral. PDFVE > 18 mmHg causa edema pulmonar. Em disfunção diastólica, a PDFVE sobe mesmo com função sistólica preservada. Na anestesia, agentes inalatórios e betabloqueadores podem aumentar PDFVE."
+    "exp": "A PDFVE reflete a pré-carga e a complacência ventricular. A POAP (wedge) estima indiretamente a PDFVE quando não há obstrução mitral. PDFVE > 18 mmHg causa edema pulmonar. Em disfunção diastólica, a PDFVE sobe mesmo com função sistólica preservada. Na anestesia, agentes inalatórios e betabloqueadores podem aumentar PDFVE.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Volumes e Pressões",
     "q": "Quais são as pressões normais no coração direito (AD, VD, AP)?",
     "a": "AD: 2-8 mmHg; VD: 15-30/0-8 mmHg; AP: 15-30/8-15 mmHg (média ~15 mmHg)",
     "hint": "Pressões do lado direito são muito menores que as do esquerdo",
-    "exp": "O lado direito opera em baixa pressão. A HP é definida por PMAP ≥ 25 mmHg em repouso. A pré-carga do VD é estimada pela PVC (normal 2-8 mmHg). Em TEP maciço, a pressão sistólica do VD pode igualar a sistêmica. A anestesia geral frequentemente reduz a pré-carga do VD por vasodilatação venosa."
+    "exp": "O lado direito opera em baixa pressão. A HP é definida por PMAP ≥ 25 mmHg em repouso. A pré-carga do VD é estimada pela PVC (normal 2-8 mmHg). Em TEP maciço, a pressão sistólica do VD pode igualar a sistêmica. A anestesia geral frequentemente reduz a pré-carga do VD por vasodilatação venosa.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Débito Cardíaco",
     "q": "Como se calcula o débito cardíaco (DC) e qual o valor normal?",
     "a": "DC = VS × FC. Normal: 4-8 L/min (índice cardíaco: 2,5-4 L/min/m²)",
     "hint": "Produto do volume ejetado pela frequência",
-    "exp": "O DC normal é ~5 L/min (70 mL × 72 bpm). O índice cardíaco (IC) corrige pelo tamanho corporal. Métodos de medição: termodiluição (Swan-Ganz), Fick (DC = VO2/diferença arteriovenosa de O2), ecocardiografia (Doppler), bioimpedância. Em choque, o DC pode estar reduzido (distributivo, cardiogênico) ou elevado (séptico precoce)."
+    "exp": "O DC normal é ~5 L/min (70 mL × 72 bpm). O índice cardíaco (IC) corrige pelo tamanho corporal. Métodos de medição: termodiluição (Swan-Ganz), Fick (DC = VO2/diferença arteriovenosa de O2), ecocardiografia (Doppler), bioimpedância. Em choque, o DC pode estar reduzido (distributivo, cardiogênico) ou elevado (séptico precoce).\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Débito Cardíaco",
     "q": "Quais são os 4 determinantes do débito cardíaco?",
     "a": "Pré-carga, pós-carga, contratilidade e frequência cardíaca",
     "hint": "Os 4 pilares da função cardíaca",
-    "exp": "Pré-carga (VDF, relação Frank-Starling), pós-carga (resistência à ejeção, principalmente RVS), contratilidade (inotropismo, Ca²⁺ intracelular, catecolaminas) e FC (cronotopismo). Na anestesia, todos são afetados: inalatórios reduzem contratilidade e pré-carga; opioides bradicardizam; vasopressores aumentam pós-carga."
+    "exp": "Pré-carga (VDF, relação Frank-Starling), pós-carga (resistência à ejeção, principalmente RVS), contratilidade (inotropismo, Ca²⁺ intracelular, catecolaminas) e FC (cronotopismo). Na anestesia, todos são afetados: inalatórios reduzem contratilidade e pré-carga; opioides bradicardizam; vasopressores aumentam pós-carga.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Lei de Frank-Starling",
     "q": "O que descreve a lei de Frank-Starling?",
     "a": "O volume sistólico aumenta com o aumento da pré-carga (VDF), até um ponto ótimo além do qual ocorre queda do desempenho",
     "hint": "Maior estiramento = maior contração (até o limite)",
-    "exp": "O mecanismo de Frank-Starling baseia-se no aumento da sensibilidade das miofibrilas ao Ca²⁺ e maior sobreposição actina-miosina com o estiramento. A curva de Starling é deslocada para cima por inotrópicos positivos (catecolaminas, digoxina) e para baixo em ICC. Em IC grave, o coração opera no platô descendente da curva."
+    "exp": "O mecanismo de Frank-Starling baseia-se no aumento da sensibilidade das miofibrilas ao Ca²⁺ e maior sobreposição actina-miosina com o estiramento. A curva de Starling é deslocada para cima por inotrópicos positivos (catecolaminas, digoxina) e para baixo em ICC. Em IC grave, o coração opera no platô descendente da curva.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Lei de Frank-Starling",
     "q": "Como a anestesia geral afeta a curva de Frank-Starling?",
     "a": "Desloca a curva para baixo e para a direita (depressão da contratilidade + vasodilatação → redução da pré-carga)",
     "hint": "Inalatórios são inotrópicos negativos",
-    "exp": "Agentes halogenados (sevoflurano, isoflurano, desflurano) deprimem a função miocárdica dose-dependente por redução do Ca²⁺ intracelular (inibição dos canais L e liberação do RS). A vasodilatação venosa reduz o retorno venoso (pré-carga). O resultado é deslocamento inferior da curva de Starling. Propofol também tem efeito inotrópico negativo significativo."
+    "exp": "Agentes halogenados (sevoflurano, isoflurano, desflurano) deprimem a função miocárdica dose-dependente por redução do Ca²⁺ intracelular (inibição dos canais L e liberação do RS). A vasodilatação venosa reduz o retorno venoso (pré-carga). O resultado é deslocamento inferior da curva de Starling. Propofol também tem efeito inotrópico negativo significativo.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Pré-carga",
     "q": "Como a pré-carga é definida fisiologicamente?",
     "a": "É o estresse na parede ventricular ao final da diástole, proporcional ao VDF e inversamente proporcional à espessura da parede (Lei de Laplace)",
     "hint": "Tensão da parede = P × r / (2 × espessura)",
-    "exp": "Pela Lei de Laplace: T = P × r / (2h). Clinicamente, a pré-carga é estimada pela PVC (VD) ou POAP/PDFVE (VE). O volume diastólico final é o melhor correlato. Na prática anestésica, monitoramos a pré-carga por variação da pressão de pulso (VPP > 13% sugere responsividade a volume), VPP e VS, ou ecocardiografia."
+    "exp": "Pela Lei de Laplace: T = P × r / (2h). Clinicamente, a pré-carga é estimada pela PVC (VD) ou POAP/PDFVE (VE). O volume diastólico final é o melhor correlato. Na prática anestésica, monitoramos a pré-carga por variação da pressão de pulso (VPP > 13% sugere responsividade a volume), VPP e VS, ou ecocardiografia.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Pós-carga",
     "q": "Como a pós-carga é definida e estimada clinicamente?",
     "a": "É o estresse sistólico da parede ventricular (resistência à ejeção). Estimada pela resistência vascular sistêmica (RVS) = (PAM - PVC) × 80 / DC",
     "hint": "RVS normal: 800-1200 dinas·s/cm⁵",
-    "exp": "A pós-carga real é o estresse parietal sistólico (Lei de Laplace em sístole). A RVS é uma proxy clínica. RVS elevada (vasoconstricção) aumenta o trabalho cardíaco e reduz o VS. Em choque distributivo, RVS está baixa. Vasodilatadores (nitroprussiato, hidralazina) reduzem pós-carga e melhoram VS em ICC. O VE normal tolera bem aumentos de pós-carga; o VD insuficiente, não."
+    "exp": "A pós-carga real é o estresse parietal sistólico (Lei de Laplace em sístole). A RVS é uma proxy clínica. RVS elevada (vasoconstricção) aumenta o trabalho cardíaco e reduz o VS. Em choque distributivo, RVS está baixa. Vasodilatadores (nitroprussiato, hidralazina) reduzem pós-carga e melhoram VS em ICC. O VE normal tolera bem aumentos de pós-carga; o VD insuficiente, não.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Contratilidade",
     "q": "Qual é o índice mais independente de pré e pós-carga para medir contratilidade?",
     "a": "dP/dt máximo (taxa máxima de ascensão da pressão ventricular) e a relação pressão-volume de fim de sístole (ESPVR)",
     "hint": "Avalia a velocidade de desenvolvimento de pressão",
-    "exp": "O dP/dt máx normal é >1200 mmHg/s. Reduz com inotrópicos negativos e ICC. A ESPVR (Emax) é o índice mais rigoroso, obtido por loops pressão-volume com variação de carga. Na prática clínica, a FE ao eco é o mais usado, apesar de ser dependente de carga. A contractilidade aumenta com catecolaminas (β1), Ca²⁺, glicosídeos cardíacos e milrinona."
+    "exp": "O dP/dt máx normal é >1200 mmHg/s. Reduz com inotrópicos negativos e ICC. A ESPVR (Emax) é o índice mais rigoroso, obtido por loops pressão-volume com variação de carga. Na prática clínica, a FE ao eco é o mais usado, apesar de ser dependente de carga. A contractilidade aumenta com catecolaminas (β1), Ca²⁺, glicosídeos cardíacos e milrinona.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Bulhas Cardíacas",
     "q": "Quais eventos do ciclo cardíaco geram a 1ª bulha (B1)?",
     "a": "Fechamento das valvas mitral (M1) e tricúspide (T1) no início da sístole ventricular",
     "hint": "Início da contração isovolumétrica",
-    "exp": "B1 ocorre no início da sístole, com o fechamento das valvas AV. O componente mitral (M1) precede o tricúspide (T1) em ~20-30 ms. B1 hiperfonética: estenose mitral, hiperdinâmico. B1 hipofonética: disfunção miocárdica grave, obesidade, derrame pericárdico. O desdobramento amplo de B1 ocorre no bloqueio de ramo direito (fechamento tardio de T1)."
+    "exp": "B1 ocorre no início da sístole, com o fechamento das valvas AV. O componente mitral (M1) precede o tricúspide (T1) em ~20-30 ms. B1 hiperfonética: estenose mitral, hiperdinâmico. B1 hipofonética: disfunção miocárdica grave, obesidade, derrame pericárdico. O desdobramento amplo de B1 ocorre no bloqueio de ramo direito (fechamento tardio de T1).\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Bulhas Cardíacas",
     "q": "Quais eventos geram a 2ª bulha (B2) e como ocorre seu desdobramento fisiológico?",
     "a": "Fechamento das valvas aórtica (A2) e pulmonar (P2). Desdobramento fisiológico: P2 atrasa na inspiração (↑ retorno venoso → ↑ sístole VD → fechamento tardio da valva pulmonar)",
     "hint": "Inspiração → P2 mais tarde",
-    "exp": "A2 normalmente precede P2. Na inspiração, o retorno venoso ao VD aumenta, prolongando a sístole direita → P2 atrasa. Na expiração, ambos se fundem. O desdobramento fixo ocorre no CIA (shunt E→D constante). O desdobramento paradoxal (B2 unido na inspiração) ocorre no BRE e estenose aórtica grave (A2 atrasado)."
+    "exp": "A2 normalmente precede P2. Na inspiração, o retorno venoso ao VD aumenta, prolongando a sístole direita → P2 atrasa. Na expiração, ambos se fundem. O desdobramento fixo ocorre no CIA (shunt E→D constante). O desdobramento paradoxal (B2 unido na inspiração) ocorre no BRE e estenose aórtica grave (A2 atrasado).\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Bulhas Cardíacas",
     "q": "Qual é o mecanismo da 3ª bulha (B3) e seu significado clínico?",
     "a": "Vibração da parede ventricular durante o enchimento rápido diastólico precoce. Patológica em adultos > 40 anos → ICC, disfunção sistólica",
     "hint": "Tom de baixa frequência no início da diástole",
-    "exp": "B3 ocorre logo após A2, no início do enchimento rápido. Em crianças e adultos jovens pode ser fisiológica. Em adultos, indica câmara dilatada e complacência reduzida. Forma o ritmo de galope ventricular (B1-B2-B3). É sinal precoce e sensível de ICC descompensada. Auscultar com campânula na região apical, com paciente em decúbito lateral esquerdo."
+    "exp": "B3 ocorre logo após A2, no início do enchimento rápido. Em crianças e adultos jovens pode ser fisiológica. Em adultos, indica câmara dilatada e complacência reduzida. Forma o ritmo de galope ventricular (B1-B2-B3). É sinal precoce e sensível de ICC descompensada. Auscultar com campânula na região apical, com paciente em decúbito lateral esquerdo.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Bulhas Cardíacas",
     "q": "O que é a 4ª bulha (B4) e quando ocorre?",
     "a": "Vibração ventricular gerada pela contração atrial forceful contra um ventrículo rígido/hipertrófico. Ocorre no final da diástole (pré-sistólica)",
     "hint": "Sempre indica disfunção diastólica ou hipertrofia",
-    "exp": "B4 ocorre justo antes de B1, gerada pela sístole atrial forçada tentando encher um ventrículo pouco complacente (HVE, cardiopatia isquêmica, estenose aórtica). Forma galope atrial (B4-B1-B2). É sempre patológica. Nunca ocorre em FA (sem sístole atrial eficaz). Auscultar com campânula no ápice. Indica hipertrofia ou isquemia."
+    "exp": "B4 ocorre justo antes de B1, gerada pela sístole atrial forçada tentando encher um ventrículo pouco complacente (HVE, cardiopatia isquêmica, estenose aórtica). Forma galope atrial (B4-B1-B2). É sempre patológica. Nunca ocorre em FA (sem sístole atrial eficaz). Auscultar com campânula no ápice. Indica hipertrofia ou isquemia.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Pressão Arterial e Pulso",
     "q": "Como se definem pressão arterial sistólica, diastólica, de pulso e média?",
     "a": "PAS: pico sistólico; PAD: mínima diastólica; PP = PAS - PAD; PAM ≈ PAD + PP/3 (ou [PAS + 2×PAD]/3)",
     "hint": "PAM é o principal determinante da perfusão orgânica",
-    "exp": "PAM normal: 70-100 mmHg. A PAM é a pressão de perfusão relevante para a maioria dos órgãos (cérebro, rins, coração). PP normal: 30-40 mmHg. PP alargada (>60 mmHg): insuficiência aórtica, aterosclerose rígida. PP estreita (<25 mmHg): tamponamento cardíaco, estenose aórtica grave, choque cardiogênico. A manutenção da PAM ≥65 mmHg é meta padrão no choque séptico (Surviving Sepsis Campaign)."
+    "exp": "PAM normal: 70-100 mmHg. A PAM é a pressão de perfusão relevante para a maioria dos órgãos (cérebro, rins, coração). PP normal: 30-40 mmHg. PP alargada (>60 mmHg): insuficiência aórtica, aterosclerose rígida. PP estreita (<25 mmHg): tamponamento cardíaco, estenose aórtica grave, choque cardiogênico. A manutenção da PAM ≥65 mmHg é meta padrão no choque séptico (Surviving Sepsis Campaign).\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Pressão Arterial e Pulso",
     "q": "Quais são os determinantes da pressão arterial sistólica?",
     "a": "Volume sistólico (VS), complacência aórtica e velocidade de ejeção",
     "hint": "PAS reflete principalmente o VS e a rigidez vascular",
-    "exp": "PAS = função do VS ejetado e da capacidade aórtica de amortecer a pressão (complacência). Com envelhecimento e aterosclerose, a aorta fica rígida → PAS sobe mais para o mesmo VS. A PAD é determinada principalmente pelo tônus vasomotor periférico (RVS) e pela FC (tempo de esvaziamento). O DC ↑ → PAS ↑; RVS ↑ → PAD ↑."
+    "exp": "PAS = função do VS ejetado e da capacidade aórtica de amortecer a pressão (complacência). Com envelhecimento e aterosclerose, a aorta fica rígida → PAS sobe mais para o mesmo VS. A PAD é determinada principalmente pelo tônus vasomotor periférico (RVS) e pela FC (tempo de esvaziamento). O DC ↑ → PAS ↑; RVS ↑ → PAD ↑.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Regulação Autonômica",
     "q": "Como o barorreflexo arterial regula a pressão arterial?",
     "a": "Barorreceptores carotídeos (IX) e aórticos (X) detectam aumento de PA → ativam NTS → inibem simpático + estimulam parassimpático → bradicardia + vasodilatação",
     "hint": "PA ↑ → FC ↓ (reflexo de Hering-Breuer cardiovascular)",
-    "exp": "Os barorreceptores de alta pressão no seio carotídeo e arco aórtico respondem ao estiramento da parede arterial. A aferência vai ao NTS (núcleo do trato solitário) no bulbo. O NTS inibe o RVLM (simpático) e ativa o núcleo ambíguo (parassimpático/vagal). O resultado é bradicardia reflexa, vasodilatação e redução da PA. Anestésicos geralmente atenuam o barorreflexo."
+    "exp": "Os barorreceptores de alta pressão no seio carotídeo e arco aórtico respondem ao estiramento da parede arterial. A aferência vai ao NTS (núcleo do trato solitário) no bulbo. O NTS inibe o RVLM (simpático) e ativa o núcleo ambíguo (parassimpático/vagal). O resultado é bradicardia reflexa, vasodilatação e redução da PA. Anestésicos geralmente atenuam o barorreflexo.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Regulação Autonômica",
     "q": "Qual é o efeito da estimulação β1-adrenérgica no coração?",
     "a": "Cronotrópico positivo (↑FC), inotrópico positivo (↑contratilidade), dromotrópico positivo (↑condução AV), lusitrópico positivo (↑relaxamento)",
     "hint": "Catecolaminas = tudo aumenta no coração",
-    "exp": "A estimulação β1 ativa adenilil ciclase → ↑AMPc → PKA → fosforilação de canais de Ca²⁺ tipo L, fosfolambana e troponina I. Resultado: ↑Ca²⁺ intracelular (inotropismo), ↑recaptação de Ca²⁺ (lusitropismo), ↑automaticidade do nó SA (cronotopismo). Bloqueadores β1 (metoprolol, atenolol) revertem esses efeitos e são cardioprotetores no pós-IAM."
+    "exp": "A estimulação β1 ativa adenilil ciclase → ↑AMPc → PKA → fosforilação de canais de Ca²⁺ tipo L, fosfolambana e troponina I. Resultado: ↑Ca²⁺ intracelular (inotropismo), ↑recaptação de Ca²⁺ (lusitropismo), ↑automaticidade do nó SA (cronotopismo). Bloqueadores β1 (metoprolol, atenolol) revertem esses efeitos e são cardioprotetores no pós-IAM.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Regulação Autonômica",
     "q": "Como a acetilcolina (estimulação vagal) afeta o coração?",
     "a": "Cronotrópico negativo (↓FC), dromotrópico negativo (↓condução AV), inotrópico negativo leve (principalmente atrial)",
     "hint": "Vago = freio cardíaco",
-    "exp": "A ACh liga-se a receptores M2 (Gi) no nó SA e AV → ↑condutância K⁺ (IKACh) → hiperpolarização → ↓automaticidade e ↓condução AV. Também inibe adenilil ciclase → ↓AMPc. O efeito inotrópico negativo é mais pronunciado em átrios que em ventrículos. A atropina (antagonista muscarínico) é usada para tratar bradicardias vagais na anestesia."
+    "exp": "A ACh liga-se a receptores M2 (Gi) no nó SA e AV → ↑condutância K⁺ (IKACh) → hiperpolarização → ↓automaticidade e ↓condução AV. Também inibe adenilil ciclase → ↓AMPc. O efeito inotrópico negativo é mais pronunciado em átrios que em ventrículos. A atropina (antagonista muscarínico) é usada para tratar bradicardias vagais na anestesia.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Potencial de Ação Cardíaco",
     "q": "Quais são as 5 fases do potencial de ação ventricular?",
     "a": "Fase 0: despolarização rápida (INa); Fase 1: repolarização inicial (IKto); Fase 2: platô (ICa-L = IK); Fase 3: repolarização rápida (IKr, IKs); Fase 4: potencial de repouso (-85 mV)",
     "hint": "0,1,2,3,4 — depende dos canais iônicos específicos",
-    "exp": "A fase 0 é gerada por canais rápidos de Na⁺ (bloqueados por antiarrítmicos classe I). O platô (fase 2) é único do coração e garante a refratariedade longa, impedindo tetania. Os canais HERG (IKr, bloqueados por amiodarona, droperidol) prolongam o QT quando inibidos. A fase 4 automática (canais If — 'funny') no nó SA gera o automatismo."
+    "exp": "A fase 0 é gerada por canais rápidos de Na⁺ (bloqueados por antiarrítmicos classe I). O platô (fase 2) é único do coração e garante a refratariedade longa, impedindo tetania. Os canais HERG (IKr, bloqueados por amiodarona, droperidol) prolongam o QT quando inibidos. A fase 4 automática (canais If — 'funny') no nó SA gera o automatismo.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Potencial de Ação Cardíaco",
     "q": "Como o potencial de ação do nó SA difere do potencial ventricular?",
     "a": "Nó SA: despolarização lenta via ICa-L (sem fase 0 rápida de INa), potencial de repouso instável (-60 mV), automatismo por If (corrente funny)",
     "hint": "SA usa cálcio, não sódio, para despolarizar",
-    "exp": "O nó SA e AV são células de resposta lenta: despolarização via Ca²⁺ (canais L e T). A fase 4 tem inclinação ascendente espontânea (corrente If = canais HCN, bloqueados por ivabradina). Por isso, bloqueadores de Ca²⁺ (verapamil, diltiazem) deprimem o nó SA/AV. Lidocaína não atua no nó SA (não há INa significativo). O período refratário longo do nó AV protege contra taquicardias supraventriculares."
+    "exp": "O nó SA e AV são células de resposta lenta: despolarização via Ca²⁺ (canais L e T). A fase 4 tem inclinação ascendente espontânea (corrente If = canais HCN, bloqueados por ivabradina). Por isso, bloqueadores de Ca²⁺ (verapamil, diltiazem) deprimem o nó SA/AV. Lidocaína não atua no nó SA (não há INa significativo). O período refratário longo do nó AV protege contra taquicardias supraventriculares.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Sistema de Condução",
     "q": "Qual é a sequência de ativação elétrica normal do coração?",
     "a": "Nó SA → internodal (Bachmann para AD→AE) → nó AV → feixe de His → ramos D e E → fibras de Purkinje → miocárdio ventricular",
     "hint": "SA → AV → His → Purkinje → miocárdio",
-    "exp": "A condução do nó SA ao nó AV leva ~40-100 ms (atraso AV = intervalo PR). O nó AV é a única via normal de condução AV. O feixe de His se divide em ramo direito e esquerdo (fascículos anterior e posterior). As fibras de Purkinje conduzem a 2-4 m/s (mais rápido do sistema). A ativação ventricular inicia no septo médio e propaga para ápice → base."
+    "exp": "A condução do nó SA ao nó AV leva ~40-100 ms (atraso AV = intervalo PR). O nó AV é a única via normal de condução AV. O feixe de His se divide em ramo direito e esquerdo (fascículos anterior e posterior). As fibras de Purkinje conduzem a 2-4 m/s (mais rápido do sistema). A ativação ventricular inicia no septo médio e propaga para ápice → base.\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "Sistema de Condução",
     "q": "Qual é a velocidade de condução nos diferentes componentes do sistema de condução?",
     "a": "Nó SA: 0,05 m/s; Nó AV: 0,02-0,05 m/s; Feixe de His/ramos: 1-2 m/s; Purkinje: 2-4 m/s; Miocárdio ventricular: 0,3-0,5 m/s",
     "hint": "Nó AV = mais lento; Purkinje = mais rápido",
-    "exp": "A lentidão do nó AV (decremental conduction) garante o atraso AV (enchimento ventricular após contração atrial) e protege os ventrículos de frequências atriais excessivas (FA, flutter). As fibras de Purkinje são as mais rápidas para permitir ativação ventricular quase simultânea. Bloqueio do nó AV causa escape juncional (~40-60 bpm) ou ventricular (~20-40 bpm)."
+    "exp": "A lentidão do nó AV (decremental conduction) garante o atraso AV (enchimento ventricular após contração atrial) e protege os ventrículos de frequências atriais excessivas (FA, flutter). As fibras de Purkinje são as mais rápidas para permitir ativação ventricular quase simultânea. Bloqueio do nó AV causa escape juncional (~40-60 bpm) ou ventricular (~20-40 bpm).\n\nReferência: Gray's Anatomy for Students; Moore - Anatomia Orientada para a Clínica."
   },
   {
     "cat": "ECG e Ciclo Cardíaco",
     "q": "Quais eventos do ciclo cardíaco correspondem às ondas P, QRS e T do ECG?",
     "a": "P: despolarização atrial; QRS: despolarização ventricular; T: repolarização ventricular. (A repolarização atrial = onda Ta, oculta no QRS)",
     "hint": "P→átrios, QRS→ventrículos, T→repolarização ventricular",
-    "exp": "O intervalo PR (0,12-0,20 s) = condução AV. O QRS (< 0,12 s) = despolarização ventricular. O intervalo QT (corrigido = QTc) = duração total da sístole elétrica. QTc > 450ms (H) / 470ms (M) indica risco de TV polimórfica (torsades). O segmento ST (= platô da fase 2) deve ser isoelétrico; supradesnível = isquemia transmural/oclusão."
+    "exp": "O intervalo PR (0,12-0,20 s) = condução AV. O QRS (< 0,12 s) = despolarização ventricular. O intervalo QT (corrigido = QTc) = duração total da sístole elétrica. QTc > 450ms (H) / 470ms (M) indica risco de TV polimórfica (torsades). O segmento ST (= platô da fase 2) deve ser isoelétrico; supradesnível = isquemia transmural/oclusão.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "ECG e Ciclo Cardíaco",
     "q": "Como o intervalo QT varia com a FC e como se calcula o QTc?",
     "a": "QT diminui com FC aumentada. QTc (Bazett) = QT / √RR (em segundos). Normal: QTc < 450ms (H) e < 470ms (M)",
     "hint": "Fórmula de Bazett: QT/√RR",
-    "exp": "A fórmula de Bazett é a mais usada, mas superestima QTc em taquicardia. Fridericia (QT/RR^1/3) é mais precisa em FC extremas. Causas de QT longo: hipocalemia, hipomagnesemia, hipocalcemia, drogas (antiarrítmicos, antipsicóticos, ondansetrona, droperidol, azitromicina, cloroquina, haloperidol). Na anestesia, monitorar QTc especialmente com propofol em altas doses e ondansetrona."
+    "exp": "A fórmula de Bazett é a mais usada, mas superestima QTc em taquicardia. Fridericia (QT/RR^1/3) é mais precisa em FC extremas. Causas de QT longo: hipocalemia, hipomagnesemia, hipocalcemia, drogas (antiarrítmicos, antipsicóticos, ondansetrona, droperidol, azitromicina, cloroquina, haloperidol). Na anestesia, monitorar QTc especialmente com propofol em altas doses e ondansetrona.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Diástole e Função Diastólica",
     "q": "Quais são as 4 fases da diástole ventricular?",
     "a": "1) Relaxamento isovolumétrico; 2) Enchimento rápido passivo; 3) Diastase (enchimento lento); 4) Sístole atrial (contribui com ~20-30% do VDF)",
     "hint": "Relaxamento → enchimento → diastase → contração atrial",
-    "exp": "O relaxamento isovolumétrico é processo ativo (consome ATP via SERCA2a para recaptação de Ca²⁺). O enchimento rápido é passivo e dependente do gradiente pressão atrial > ventricular. A diastase é o período de baixo fluxo. A sístole atrial ('chute atrial') é crucial em ventrículos rígidos (HVE, cardiomiopatia restritiva) — sua perda em FA pode reduzir o DC em 20-30%."
+    "exp": "O relaxamento isovolumétrico é processo ativo (consome ATP via SERCA2a para recaptação de Ca²⁺). O enchimento rápido é passivo e dependente do gradiente pressão atrial > ventricular. A diastase é o período de baixo fluxo. A sístole atrial ('chute atrial') é crucial em ventrículos rígidos (HVE, cardiomiopatia restritiva) — sua perda em FA pode reduzir o DC em 20-30%.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Diástole e Função Diastólica",
     "q": "Como o Doppler tecidual (TDI) e o Doppler mitral classificam a disfunção diastólica?",
     "a": "Grau I: relaxamento prejudicado (E/A<1, E' reduzido); Grau II: pseudonormal (E/A 1-2, E/e'>14); Grau III: restritivo reversível; Grau IV: restritivo irreversível",
     "hint": "Onda E = enchimento precoce; A = sístole atrial; E' = velocidade tecidual",
-    "exp": "A relação E/e' > 14 (pelo TDI do anel mitral) indica elevação das pressões de enchimento. No padrão pseudonormal, a manobra de Valsalva desmascara o padrão de relaxamento prejudicado (E/A inverte). O padrão restritivo (E/A ≥ 2, tempo de desaceleração < 150ms) indica doença avançada e mal prognóstico. Em anestesia, o TDI é útil para detectar disfunção diastólica perioperatória."
+    "exp": "A relação E/e' > 14 (pelo TDI do anel mitral) indica elevação das pressões de enchimento. No padrão pseudonormal, a manobra de Valsalva desmascara o padrão de relaxamento prejudicado (E/A inverte). O padrão restritivo (E/A ≥ 2, tempo de desaceleração < 150ms) indica doença avançada e mal prognóstico. Em anestesia, o TDI é útil para detectar disfunção diastólica perioperatória.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Trabalho e Consumo de O₂",
     "q": "Como se calcula o trabalho sistólico ventricular esquerdo (TSVE) e quais fatores aumentam o consumo de O₂ miocárdico (MVO₂)?",
     "a": "TSVE = VS × PAM × 0,0136 (g·m). MVO₂ aumenta com: ↑FC, ↑contratilidade, ↑tensão parietal (↑pré e pós-carga)",
     "hint": "Duplo produto (FC × PAS) é proxy clínica do MVO₂",
-    "exp": "O consumo de O₂ miocárdico é determinado principalmente pela tensão parietal (maior determinante), FC e contratilidade. O duplo produto (FC × PAS) > 20.000 indica alto consumo. Na isquemia miocárdica, a balança oferta/demanda pende contra a oferta (↓fluxo coronário) ou contra a demanda (↑MVO₂). Betabloqueadores protegem reduzindo FC e contratilidade (↓MVO₂)."
+    "exp": "O consumo de O₂ miocárdico é determinado principalmente pela tensão parietal (maior determinante), FC e contratilidade. O duplo produto (FC × PAS) > 20.000 indica alto consumo. Na isquemia miocárdica, a balança oferta/demanda pende contra a oferta (↓fluxo coronário) ou contra a demanda (↑MVO₂). Betabloqueadores protegem reduzindo FC e contratilidade (↓MVO₂).\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Trabalho e Consumo de O₂",
     "q": "Qual é a extração de O₂ miocárdica em repouso e sua implicação para reserva coronária?",
     "a": "~70-80% (a mais alta do organismo). A reserva para aumentar extração é mínima; o aumento de MVO₂ depende quase exclusivamente de ↑fluxo coronário",
     "hint": "Coração quase maximiza extração em repouso",
-    "exp": "Enquanto o músculo esquelético extrai ~30% em repouso (podendo aumentar para ~70% no exercício), o miocárdio já extrai ~75% em repouso. Portanto, qualquer aumento de demanda metabólica deve ser atendido por aumento de fluxo (vasodilatação coronária). A reserva de fluxo coronário (RFC = fluxo máximo/fluxo basal) é ~4-5x. Em estenose coronária significativa (>70% da luz), a RFC reduz, manifestando isquemia ao esforço."
+    "exp": "Enquanto o músculo esquelético extrai ~30% em repouso (podendo aumentar para ~70% no exercício), o miocárdio já extrai ~75% em repouso. Portanto, qualquer aumento de demanda metabólica deve ser atendido por aumento de fluxo (vasodilatação coronária). A reserva de fluxo coronário (RFC = fluxo máximo/fluxo basal) é ~4-5x. Em estenose coronária significativa (>70% da luz), a RFC reduz, manifestando isquemia ao esforço.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Circulação Coronária",
     "q": "Quais são as peculiaridades do fluxo coronário esquerdo durante o ciclo cardíaco?",
     "a": "O fluxo na coronária esquerda ocorre predominantemente na diástole, pois a contração sistólica comprime os vasos intramurais do VE",
     "hint": "VE: fluxo diastólico; VD: fluxo sistólico e diastólico",
-    "exp": "Durante a sístole, a pressão intramiocárdica no VE (~120 mmHg) supera a pressão de perfusão, comprimindo os vasos subendocárdicos → fluxo cessa ou reverte. O subendocárdio é mais vulnerável à isquemia. No VD (pressão sistólica ~25 mmHg), o fluxo ocorre em sístole e diástole. Taquicardia (↓duração diastólica) e PA diastólica baixa (↓gradiente) são deletérias para a perfusão coronária esquerda."
+    "exp": "Durante a sístole, a pressão intramiocárdica no VE (~120 mmHg) supera a pressão de perfusão, comprimindo os vasos subendocárdicos → fluxo cessa ou reverte. O subendocárdio é mais vulnerável à isquemia. No VD (pressão sistólica ~25 mmHg), o fluxo ocorre em sístole e diástole. Taquicardia (↓duração diastólica) e PA diastólica baixa (↓gradiente) são deletérias para a perfusão coronária esquerda.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Circulação Coronária",
     "q": "Quais são os mecanismos de autorregulação do fluxo coronário?",
     "a": "Metabólico (adenosina, H⁺, K⁺, CO₂), miogênico (resposta ao estiramento), endotelial (NO, prostaciclina), neuronal (β2: vasodilatação; α1: vasoconstrição)",
     "hint": "Adenosina é o principal mediador vasodilatador coronário",
-    "exp": "A adenosina (produzida por hidrólise de AMP) é o principal regulador metabólico coronário — é a base do teste de stress farmacológico (adenosina/dipiridamol). O NO endotelial (via eNOS) é vasodilatador potente; sua disfunção (aterosclerose) predispõe a vasoespasmo. A autorregulação mantém o fluxo constante entre PAM 50-130 mmHg. Abaixo desse limite inferior, isquemia."
+    "exp": "A adenosina (produzida por hidrólise de AMP) é o principal regulador metabólico coronário — é a base do teste de stress farmacológico (adenosina/dipiridamol). O NO endotelial (via eNOS) é vasodilatador potente; sua disfunção (aterosclerose) predispõe a vasoespasmo. A autorregulação mantém o fluxo constante entre PAM 50-130 mmHg. Abaixo desse limite inferior, isquemia.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Loops Pressão-Volume",
     "q": "O que é o loop pressão-volume (PV loop) e o que cada segmento representa?",
     "a": "Diagrama da pressão vs. volume ventricular ao longo do ciclo. Segmentos: enchimento diastólico (abaixo), contração isovolumétrica (esquerda), ejeção (acima), relaxamento isovolumétrico (direita)",
     "hint": "Retângulo que gira no sentido anti-horário",
-    "exp": "O loop PV gira no sentido horário no VE. A largura = VS; a altura = pressão sistólica pico. A área interna = trabalho por batimento. A EDPVR (curva diastólica) define a complacência. A ESPVR (linha sistólica) define a contratilidade (Emax). Com ↑pré-carga: loop se desloca direita e alarga. Com ↑pós-carga: loop fica mais alto e estreito. Com ↑inotrópico: loop se desloca esquerda-cima."
+    "exp": "O loop PV gira no sentido horário no VE. A largura = VS; a altura = pressão sistólica pico. A área interna = trabalho por batimento. A EDPVR (curva diastólica) define a complacência. A ESPVR (linha sistólica) define a contratilidade (Emax). Com ↑pré-carga: loop se desloca direita e alarga. Com ↑pós-carga: loop fica mais alto e estreito. Com ↑inotrópico: loop se desloca esquerda-cima.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Loops Pressão-Volume",
     "q": "Como o tamponamento cardíaco altera o loop pressão-volume?",
     "a": "Reduz o VDF (compressão externa → ↓enchimento) → loop estreito, deslocado para a esquerda, com ↓VS e ↑FC compensatória",
     "hint": "Compressão externa = restrição ao enchimento",
-    "exp": "No tamponamento, a pressão pericárdica comprime todas as câmaras, igualando pressões (equalização das pressões de enchimento: PVC = POAP = pressão diastólica AP). O VDF cai drasticamente → ↓VS → ↓DC. Compensação simpática: ↑FC, vasoconstrição (↑RVS). Sinal de Kussmaul (↑PVC na inspiração) é mais típico de pericardite constritiva. Tratamento: pericardiocentese imediata."
+    "exp": "No tamponamento, a pressão pericárdica comprime todas as câmaras, igualando pressões (equalização das pressões de enchimento: PVC = POAP = pressão diastólica AP). O VDF cai drasticamente → ↓VS → ↓DC. Compensação simpática: ↑FC, vasoconstrição (↑RVS). Sinal de Kussmaul (↑PVC na inspiração) é mais típico de pericardite constritiva. Tratamento: pericardiocentese imediata.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Resposta ao Exercício",
     "q": "Quais são as adaptações cardiovasculares agudas ao exercício máximo?",
     "a": "↑DC (até 20-25 L/min), ↑FC (até 200 bpm), ↑VS (120-170 mL), ↑PAS, ↓RVS (vasodilatação muscular), ↑retorno venoso",
     "hint": "DC pode quintuplicar no exercício máximo",
-    "exp": "No exercício: ativação simpática ↑FC e contratilidade; vasodilatação metabólica muscular ↓RVS e ↑retorno venoso; mecanismo de Frank-Starling ↑VS. A PAD pode não se alterar ou cair (↓RVS compensa ↑DC). Em atletas treinados, o VS é maior em repouso e no pico (hipertrofia excêntrica fisiológica). O VO2max é o melhor índice de aptidão cardiorrespiratória e preditor de mortalidade cirúrgica."
+    "exp": "No exercício: ativação simpática ↑FC e contratilidade; vasodilatação metabólica muscular ↓RVS e ↑retorno venoso; mecanismo de Frank-Starling ↑VS. A PAD pode não se alterar ou cair (↓RVS compensa ↑DC). Em atletas treinados, o VS é maior em repouso e no pico (hipertrofia excêntrica fisiológica). O VO2max é o melhor índice de aptidão cardiorrespiratória e preditor de mortalidade cirúrgica.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Resposta ao Exercício",
     "q": "Como o treinamento físico crônico remodela o coração (coração de atleta)?",
     "a": "Hipertrofia excêntrica (↑VDF, ↑espessura parietal proporcional), bradicardia sinusal de repouso, ↑VS, ↑reserva vagal",
     "hint": "Excêntrico = câmara dilata + paredes espessam proporcionalmente",
-    "exp": "O coração de atleta resulta de exercício aeróbico crônico: VDF aumenta (↑pré-carga crônica), paredes espessam proporcionalmente (diferente da HVE patológica, que tem paredes grossas com câmara normal/pequena). FC de repouso: 40-50 bpm por ↑tônus vagal. Deve-se diferenciar de CMH: no atleta, a hipertrofia regride com destreinamento; na CMH não. Ecocardiografia é essencial para distinção."
+    "exp": "O coração de atleta resulta de exercício aeróbico crônico: VDF aumenta (↑pré-carga crônica), paredes espessam proporcionalmente (diferente da HVE patológica, que tem paredes grossas com câmara normal/pequena). FC de repouso: 40-50 bpm por ↑tônus vagal. Deve-se diferenciar de CMH: no atleta, a hipertrofia regride com destreinamento; na CMH não. Ecocardiografia é essencial para distinção.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Pressão Venosa Central",
     "q": "O que são as ondas a, c, v e os vales x, y da curva de PVC/pressão atrial direita?",
     "a": "a = contração atrial; c = fechamento tricúspide; v = enchimento atrial com tricúspide fechada; x = relaxamento atrial; y = abertura tricúspide/esvaziamento atrial",
     "hint": "a, c, v são ascendentes; x, y são descendentes",
-    "exp": "Onda a ampla: estenose tricúspide, hipertensão pulmonar, bloqueio AV 1°. Onda a em canhão: bloqueio AV 3° (contração atrial contra tricúspide fechada). Ausência de onda a: FA. Onda v proeminente: insuficiência tricúspide (refluxo sistólico → onda v sistólica). Depressão x abolida: tamponamento (a pressão intrapericárdica impede queda). Vale y lento: estenose tricúspide ou tamponamento."
+    "exp": "Onda a ampla: estenose tricúspide, hipertensão pulmonar, bloqueio AV 1°. Onda a em canhão: bloqueio AV 3° (contração atrial contra tricúspide fechada). Ausência de onda a: FA. Onda v proeminente: insuficiência tricúspide (refluxo sistólico → onda v sistólica). Depressão x abolida: tamponamento (a pressão intrapericárdica impede queda). Vale y lento: estenose tricúspide ou tamponamento.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Pressão Venosa Central",
     "q": "Qual é a confiabilidade da PVC como guia de ressuscitação volêmica?",
     "a": "Baixa. PVC não prediz responsividade a volume de forma confiável (evidências nível A contra seu uso isolado como guia de fluidos — Marik et al., Rivers reversal)",
     "hint": "PVC estática ≠ responsividade a volume",
-    "exp": "Múltiplos estudos (incluindo meta-análise de Marik, Chest 2008) demonstraram que PVC entre 0-20 mmHg não prediz responsividade a volume. Parâmetros dinâmicos são superiores: variação da pressão de pulso (VPP>13%), variação do volume sistólico (VVS>10%), teste de elevação passiva das pernas (PLR), ecocardiografia (colapsabilidade da VCI). Em VM controlada, VPP é o melhor preditor."
+    "exp": "Múltiplos estudos (incluindo meta-análise de Marik, Chest 2008) demonstraram que PVC entre 0-20 mmHg não prediz responsividade a volume. Parâmetros dinâmicos são superiores: variação da pressão de pulso (VPP>13%), variação do volume sistólico (VVS>10%), teste de elevação passiva das pernas (PLR), ecocardiografia (colapsabilidade da VCI). Em VM controlada, VPP é o melhor preditor.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Regulação a Longo Prazo",
     "q": "Como o sistema renina-angiotensina-aldosterona (SRAA) afeta o débito cardíaco?",
     "a": "Retém Na⁺/H₂O (aldosterona) → ↑volemia → ↑pré-carga → ↑DC pelo mecanismo de Frank-Starling. Angiotensina II também vasoconstringe (↑pós-carga)",
     "hint": "SRAA: volemia → pré-carga → DC",
-    "exp": "Ang II estimula zona glomerulosa adrenal → aldosterona → ↑reabsorção de Na⁺ no néfron distal → ↑volemia. Também estimula sede, libera ADH e vasoconstringe (↑pós-carga). Inibidores do SRAA (IECA, BRA, sacubitril/valsartana) são pilares do tratamento da ICC com FE reduzida por reduzirem pós-carga e remodelamento ventricular."
+    "exp": "Ang II estimula zona glomerulosa adrenal → aldosterona → ↑reabsorção de Na⁺ no néfron distal → ↑volemia. Também estimula sede, libera ADH e vasoconstringe (↑pós-carga). Inibidores do SRAA (IECA, BRA, sacubitril/valsartana) são pilares do tratamento da ICC com FE reduzida por reduzirem pós-carga e remodelamento ventricular.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Regulação a Longo Prazo",
     "q": "Qual é o papel do peptídeo natriurético (BNP/NT-proBNP) no ciclo cardíaco?",
     "a": "Liberado pelos miócitos ventriculares em resposta ao estiramento (↑pressão de enchimento) → natriurese, vasodilatação, inibição do SRAA e SNS",
     "hint": "BNP = hormônio de sobrecarga ventricular",
-    "exp": "BNP (cérebro) e NT-proBNP são biomarcadores de disfunção ventricular. BNP > 100 pg/mL e NT-proBNP > 300 pg/mL sugerem ICC. São ajustados por idade e função renal. Na anestesia, BNP elevado pré-operatório é preditor independente de MACE perioperatório (evidência nível A no FOCUS). Nesiritida (BNP recombinante) já foi usado na ICC aguda descompensada."
+    "exp": "BNP (cérebro) e NT-proBNP são biomarcadores de disfunção ventricular. BNP > 100 pg/mL e NT-proBNP > 300 pg/mL sugerem ICC. São ajustados por idade e função renal. Na anestesia, BNP elevado pré-operatório é preditor independente de MACE perioperatório (evidência nível A no FOCUS). Nesiritida (BNP recombinante) já foi usado na ICC aguda descompensada.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Acoplamento Excitação-Contração",
     "q": "Descreva o acoplamento excitação-contração no cardiomiócito (calcium-induced calcium release — CICR)",
     "a": "PA → abertura de canais L de Ca²⁺ (diidropiridina) → entrada de Ca²⁺ → ativa receptores RyR2 (rianodina) no RS → liberação maciça de Ca²⁺ → liga troponina C → encurtamento actina-miosina",
     "hint": "Pequena entrada de Ca²⁺ dispara liberação maior do RS",
-    "exp": "O Ca²⁺ que entra pelo sarcolema (~10-20% do total) funciona como gatilho para a liberação de Ca²⁺ do retículo sarcoplasmático (RS) pelos receptores RyR2 (90% do Ca²⁺ citosólico). O Ca²⁺ citoplasmático sobe de 0,1 para 1-10 μM, ativa a troponina C, desloca a troponina I do filamento de actina e permite a ciclagem cruzada actina-miosina. Bloqueadores de Ca²⁺ (verapamil) atuam nos canais L."
+    "exp": "O Ca²⁺ que entra pelo sarcolema (~10-20% do total) funciona como gatilho para a liberação de Ca²⁺ do retículo sarcoplasmático (RS) pelos receptores RyR2 (90% do Ca²⁺ citosólico). O Ca²⁺ citoplasmático sobe de 0,1 para 1-10 μM, ativa a troponina C, desloca a troponina I do filamento de actina e permite a ciclagem cruzada actina-miosina. Bloqueadores de Ca²⁺ (verapamil) atuam nos canais L.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Acoplamento Excitação-Contração",
     "q": "Como ocorre o relaxamento miocárdico (lusitropismo)?",
     "a": "Recaptação ativa de Ca²⁺ para o RS pela SERCA2a (inibida por fosfolambana), efluxo pelo NCX (Na⁺/Ca²⁺ exchanger) e por canais de Ca²⁺ do sarcolema",
     "hint": "SERCA2a é o principal mecanismo (70% do Ca²⁺)",
-    "exp": "O relaxamento é processo ativo que consome ATP (fase mais energética da diástole). SERCA2a recapta ~70% do Ca²⁺; o NCX extrude ~30%. A fosfolambana inibe a SERCA2a; sua fosforilação (por PKA via β1-adrenérgico) libera essa inibição → relaxamento mais rápido (efeito lusitrópico positivo das catecolaminas). Disfunção da SERCA2a é mecanismo central da IC e disfunção diastólica."
+    "exp": "O relaxamento é processo ativo que consome ATP (fase mais energética da diástole). SERCA2a recapta ~70% do Ca²⁺; o NCX extrude ~30%. A fosfolambana inibe a SERCA2a; sua fosforilação (por PKA via β1-adrenérgico) libera essa inibição → relaxamento mais rápido (efeito lusitrópico positivo das catecolaminas). Disfunção da SERCA2a é mecanismo central da IC e disfunção diastólica.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Sístole Atrial",
     "q": "Qual a contribuição da sístole atrial para o volume diastólico final e quando ela é crítica?",
     "a": "Contribui com ~20-30% do VDF em repouso. Crítica em: ventrículos hipertróficos/rígidos (HVE, CMH, estenose aórtica), taquicardia, e em qualquer condição de disfunção diastólica",
     "hint": "Mais importante quanto menor for a complacência ventricular",
-    "exp": "Em condições normais, o enchimento passivo é responsável por ~70-80% do VDF, e a sístole atrial contribui com ~20-30%. Em ventrículos rígidos, a dependência do 'chute atrial' aumenta para > 40%. A perda da sístole atrial eficaz em FA pode reduzir o DC em 20-30% em pacientes com disfunção diastólica. Daí a importância de manter o ritmo sinusal ou controlar a FC na FA em cardiopatas."
+    "exp": "Em condições normais, o enchimento passivo é responsável por ~70-80% do VDF, e a sístole atrial contribui com ~20-30%. Em ventrículos rígidos, a dependência do 'chute atrial' aumenta para > 40%. A perda da sístole atrial eficaz em FA pode reduzir o DC em 20-30% em pacientes com disfunção diastólica. Daí a importância de manter o ritmo sinusal ou controlar a FC na FA em cardiopatas.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Valvas Cardíacas",
     "q": "Quais são os mecanismos que promovem o fechamento adequado das valvas semilunares (aórtica/pulmonar)?",
     "a": "Reversão do gradiente de pressão no final da ejeção (pressão arterial > pressão ventricular) + fluxo retrógrado precoce que preenche os seios de Valsalva",
     "hint": "Os seios de Valsalva previnem oclusão dos óstios coronários",
-    "exp": "No final da ejeção, a pressão ventricular cai abaixo da pressão arterial. O fluxo reverso preenche os seios de Valsalva (aórtico direito, esquerdo e não-coronariano), gerando vórtices que fecham as cúspides uniformemente. Os ostia coronários ficam na periferia dos seios, protegidos da oclusão pelas cúspides. Doença da raiz aórtica altera essa geometria e pode causar insuficiência aórtica."
+    "exp": "No final da ejeção, a pressão ventricular cai abaixo da pressão arterial. O fluxo reverso preenche os seios de Valsalva (aórtico direito, esquerdo e não-coronariano), gerando vórtices que fecham as cúspides uniformemente. Os ostia coronários ficam na periferia dos seios, protegidos da oclusão pelas cúspides. Doença da raiz aórtica altera essa geometria e pode causar insuficiência aórtica.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Reserva Cardíaca",
     "q": "O que é a reserva cardíaca e como ela é avaliada pré-operatoriamente?",
     "a": "Capacidade do coração de aumentar DC acima do basal. Avaliada pelo MET (equivalente metabólico): < 4 METs = reserva funcional baixa → ↑risco cirúrgico",
     "hint": "< 4 METs = sobe 1 lance de escadas sem desconforto?",
-    "exp": "1 MET = consumo de O₂ em repouso (~3,5 mL/kg/min). Atividades: 1-2 METs (cuidados pessoais), 4 METs (subir escada, caminhar 100m rápido), >10 METs (natação, corrida). MET < 4 é critério de risco no algoritmo ACC/AHA perioperatório (junto com índice RCRI). Quando MET < 4 e risco cirúrgico elevado, considerar teste funcional (ECO dobutamina, cintilografia) antes de cirurgia não cardíaca."
+    "exp": "1 MET = consumo de O₂ em repouso (~3,5 mL/kg/min). Atividades: 1-2 METs (cuidados pessoais), 4 METs (subir escada, caminhar 100m rápido), >10 METs (natação, corrida). MET < 4 é critério de risco no algoritmo ACC/AHA perioperatório (junto com índice RCRI). Quando MET < 4 e risco cirúrgico elevado, considerar teste funcional (ECO dobutamina, cintilografia) antes de cirurgia não cardíaca.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Reserva Cardíaca",
     "q": "O que é o índice de risco cardíaco revisado (RCRI/Lee) e seus 6 preditores?",
     "a": "1) Cirurgia de alto risco; 2) Doença coronária; 3) ICC; 4) Doença cerebrovascular; 5) DM insulino-dependente; 6) Creatinina > 2 mg/dL. RCRI ≥ 3 → risco MACE >10%",
     "hint": "6 variáveis clínicas pré-operatórias",
-    "exp": "O RCRI (Lee et al., 1999) é a ferramenta mais validada para estratificação de risco cardíaco perioperatório em cirurgia não cardíaca. Cada variável vale 1 ponto. RCRI 0: risco ~0,4%; 1: ~1%; 2: ~2-3%; ≥3: >5-10%. Diretrizes ACC/AHA 2014/2024 recomendam seu uso na avaliação pré-operatória. O calculador ACS-NSQIP MICA tem desempenho similar ou superior."
+    "exp": "O RCRI (Lee et al., 1999) é a ferramenta mais validada para estratificação de risco cardíaco perioperatório em cirurgia não cardíaca. Cada variável vale 1 ponto. RCRI 0: risco ~0,4%; 1: ~1%; 2: ~2-3%; ≥3: >5-10%. Diretrizes ACC/AHA 2014/2024 recomendam seu uso na avaliação pré-operatória. O calculador ACS-NSQIP MICA tem desempenho similar ou superior.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Mecanismos de Choque",
     "q": "Como o choque cardiogênico altera os parâmetros hemodinâmicos do ciclo cardíaco?",
     "a": "↓DC, ↓FE, ↑PDFVE/POAP (>18 mmHg), ↑RVS, ↓SvO₂, ↓pressão de pulso",
     "hint": "Bomba fraca + vasos tensos + pulmão cheio",
-    "exp": "No choque cardiogênico (mortalidade ~40-50%): DC baixo (<2,2 L/min/m²), POAP elevada (>18 mmHg = edema pulmonar), RVS alta (compensação). SvO₂ < 60% indica extração aumentada por baixa oferta. Diferente do choque distributivo (séptico): DC alto, RVS baixa, SvO₂ alta. O tratamento do cardiogênico inclui inotrópicos (dobutamina), vasopressores se hipotensão grave, e suporte mecânico (balão intra-aórtico, Impella, ECMO-VA)."
+    "exp": "No choque cardiogênico (mortalidade ~40-50%): DC baixo (<2,2 L/min/m²), POAP elevada (>18 mmHg = edema pulmonar), RVS alta (compensação). SvO₂ < 60% indica extração aumentada por baixa oferta. Diferente do choque distributivo (séptico): DC alto, RVS baixa, SvO₂ alta. O tratamento do cardiogênico inclui inotrópicos (dobutamina), vasopressores se hipotensão grave, e suporte mecânico (balão intra-aórtico, Impella, ECMO-VA).\n\nReferência: Surviving Sepsis Campaign 2021 (Intensive Care Medicine); Sepsis-3 (JAMA 2016)."
   },
   {
     "cat": "Efeitos dos Anestésicos",
     "q": "Como o propofol afeta o ciclo cardíaco e a hemodinâmica?",
     "a": "↓PA (vasodilatação arterial e venosa > depressão miocárdica), ↓FC (modesto), ↓DC, ↓RVS. Pode precipitar bradicardia sinusal grave",
     "hint": "Propofol: vasodilatação predomina sobre depressão miocárdica",
-    "exp": "O propofol inibe canais de Ca²⁺ vascular e reduz o tônus simpático → vasodilatação intensa (↓pré e pós-carga). A depressão miocárdica direta existe mas é menos pronunciada que com inalatórios. A hipotensão é especialmente severa em pacientes hipovolêmicos, idosos e cardiopatas. Síndrome de infusão do propofol (PRIS): doses > 4-5 mg/kg/h por > 48h → acidose lática, rabdomiólise, arritmia, IC."
+    "exp": "O propofol inibe canais de Ca²⁺ vascular e reduz o tônus simpático → vasodilatação intensa (↓pré e pós-carga). A depressão miocárdica direta existe mas é menos pronunciada que com inalatórios. A hipotensão é especialmente severa em pacientes hipovolêmicos, idosos e cardiopatas. Síndrome de infusão do propofol (PRIS): doses > 4-5 mg/kg/h por > 48h → acidose lática, rabdomiólise, arritmia, IC.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Efeitos dos Anestésicos",
     "q": "Qual anestésico inalatório tem maior efeito deprimente sobre a contratilidade miocárdica e por que?",
     "a": "Halotano > isoflurano ≈ sevoflurano > desflurano. Mecanismo: redução de Ca²⁺ intracelular (inibição de canais L e do RS) + redução da sensibilidade das miofibrilas ao Ca²⁺",
     "hint": "Halotano sensitiza para arritmias E deprime mais",
-    "exp": "Todos os halogenados deprimem o miocárdio dose-dependente. Halotano é o mais depressor e sensitiza para arritmias por catecolaminas (cuidado com epinefrina em campo cirúrgico). Sevoflurano e isoflurano têm perfil mais favorável; causam vasodilatação periférica que pode reduzir a aparente depressão. Desflurano estimula o sistema simpático (principalmente com elevação rápida de concentração), podendo causar taquicardia e hipertensão transitórias."
+    "exp": "Todos os halogenados deprimem o miocárdio dose-dependente. Halotano é o mais depressor e sensitiza para arritmias por catecolaminas (cuidado com epinefrina em campo cirúrgico). Sevoflurano e isoflurano têm perfil mais favorável; causam vasodilatação periférica que pode reduzir a aparente depressão. Desflurano estimula o sistema simpático (principalmente com elevação rápida de concentração), podendo causar taquicardia e hipertensão transitórias.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Monitoração Hemodinâmica",
     "q": "Quais variáveis dinâmicas predizem responsividade a volume em paciente em ventilação mecânica?",
     "a": "VPP (variação da pressão de pulso) > 13% e VVS (variação do volume sistólico) > 10% são os melhores preditores (AUC > 0,85)",
     "hint": "Variação respiratória do pulso arterial = guia de fluidos",
-    "exp": "Em VM controlada com VC ≥ 8 mL/kg e sem arritmias, VPP e VVS predizem a responsividade a volume com acurácia superior a parâmetros estáticos (PVC, POAP). O mecanismo: variações de pressão intratorácica durante a VM geram oscilações no retorno venoso e no VS. Limitações: FA, respiração espontânea, VC baixo (< 8 mL/kg), cor pulmonale, abertura do tórax. O PLR (teste de elevação passiva) é alternativa quando há limitações."
+    "exp": "Em VM controlada com VC ≥ 8 mL/kg e sem arritmias, VPP e VVS predizem a responsividade a volume com acurácia superior a parâmetros estáticos (PVC, POAP). O mecanismo: variações de pressão intratorácica durante a VM geram oscilações no retorno venoso e no VS. Limitações: FA, respiração espontânea, VC baixo (< 8 mL/kg), cor pulmonale, abertura do tórax. O PLR (teste de elevação passiva) é alternativa quando há limitações.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Acoplamento Ventriculo-Arterial",
     "q": "O que é o acoplamento ventriculo-arterial (VAC) e qual seu valor ótimo?",
     "a": "VAC = Ea/Ees, onde Ea = elastância arterial efetiva (pós-carga) e Ees = elastância máxima ventricular (contratilidade). Valor ótimo = 0,6-1,2 para eficiência máxima",
     "hint": "VAC ~ 1 = coração casado com a vasculatura",
-    "exp": "O VAC descreve a interação entre o ventrículo e a vasculatura sistêmica. Ea = pressão de fim de sístole / VS; reflete pós-carga. Ees (Emax) = inclinação da ESPVR; reflete contratilidade. VAC ótimo (~0,6-1) maximiza eficiência energética e VS. Na ICC, VAC aumenta (Ea↑ por aterosclerose ou Ees↓ por disfunção sistólica). Vasodilatadores melhoram VAC ao reduzir Ea."
+    "exp": "O VAC descreve a interação entre o ventrículo e a vasculatura sistêmica. Ea = pressão de fim de sístole / VS; reflete pós-carga. Ees (Emax) = inclinação da ESPVR; reflete contratilidade. VAC ótimo (~0,6-1) maximiza eficiência energética e VS. Na ICC, VAC aumenta (Ea↑ por aterosclerose ou Ees↓ por disfunção sistólica). Vasodilatadores melhoram VAC ao reduzir Ea.\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   },
   {
     "cat": "Timing e Sincronismo",
     "q": "O que é a dissociação eletromecânica (DEA/AESP) e quais são suas causas reversíveis?",
     "a": "Atividade elétrica organizada sem pulso palpável. Causas reversíveis (6H 5T): Hipovolemia, Hipóxia, Hidrogênio (acidose), Hipo/hipercalemia, Hipotermia, Hipoglicemia; Tensão pneumotórax, Tamponamento, Toxinas, Trombose pulmonar, Trombose coronária",
     "hint": "6H e 5T = causas reversíveis de AESP",
-    "exp": "Na AESP, o coração tem atividade elétrica mas a contração mecânica é ineficaz ou inexistente. O tratamento é da causa subjacente + RCP de qualidade. As causas 6H5T devem ser lembradas sistematicamente durante a parada. O ecocardiograma (POCUS) durante a parada pode identificar rapidamente: tamponamento (pericardiocentese), hipovolemia grave (VDF colabado), pneumotórax (ausência de sliding pleural)."
+    "exp": "Na AESP, o coração tem atividade elétrica mas a contração mecânica é ineficaz ou inexistente. O tratamento é da causa subjacente + RCP de qualidade. As causas 6H5T devem ser lembradas sistematicamente durante a parada. O ecocardiograma (POCUS) durante a parada pode identificar rapidamente: tamponamento (pericardiocentese), hipovolemia grave (VDF colabado), pneumotórax (ausência de sliding pleural).\n\nReferência: Miller's Anesthesia; Goodman & Gilman; diretrizes de sociedades médicas aplicáveis ao tema."
   }
 ]
