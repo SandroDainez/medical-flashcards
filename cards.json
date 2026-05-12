@@ -1384,5 +1384,390 @@
     "a": "Beta-lactâmicos são tempo-dependentes: eficácia correlaciona-se com % do tempo que a concentração livre > CIM (fT > CIM). Na sepse: volumes de distribuição alterados, clearance aumentado. Estratégias: infusão estendida (3-4h) ou contínua, doses maiores e mais frequentes, monitoramento farmacocinético (TDM).",
     "hint": "Infusão estendida, fT>CIM",
     "exp": "Na sepse, alterações farmacocinéticas (FC) comprometem a eficácia dos ATB: aumento do volume de distribuição por edema (dilui a concentração sérica), hiperfiltração glomerular aumenta clearance renal (underexposure), hipoalbuminemia aumenta fração livre de ATB ligados a proteínas. Infusão estendida de piperacilina-tazobactam ou meropeném por 3-4h maximiza o fT>CIM. TDM (therapeutic drug monitoring) é cada vez mais recomendado para personalizar doses em pacientes críticos."
+  },
+  {
+    "cat": "Coração — Visão Geral",
+    "q": "Qual é o peso médio do coração adulto e onde ele se localiza no mediastino?",
+    "a": "250–350 g; localizado no mediastino médio, entre o 2º e o 5º espaço intercostal, com 2/3 à esquerda da linha média.",
+    "hint": "Pense no ápice e na base.",
+    "exp": "O ápice aponta para baixo-esquerda (5º EIC, linha hemiclavicular esquerda). A base corresponde à face posterior (átrios). Essencial para interpretar radiografia de tórax e localização de eletrodos em ECG."
+  },
+  {
+    "cat": "Coração — Visão Geral",
+    "q": "Quais são as quatro câmaras cardíacas e seus pares funcionais?",
+    "a": "AD + VD (circulação pulmonar / direita) e AE + VE (circulação sistêmica / esquerda).",
+    "hint": "Dois átrios recebem, dois ventrículos bombeiam.",
+    "exp": "O VD tem parede mais fina (~4 mm) e menor pressão (~25/5 mmHg). O VE tem parede mais espessa (~9 mm) e maior pressão (~120/8 mmHg). Essa diferença explica por que o IAM direito causa hipotensão por baixo débito e é tratado com volume, não nitrato."
+  },
+  {
+    "cat": "Coração — Visão Geral",
+    "q": "O que é o septo interatrial e qual sua relevância clínica?",
+    "a": "Parede muscular entre AD e AE; a fossa oval é um remanescente do forame oval fetal, patente em ~25% dos adultos (FOP).",
+    "hint": "Forame oval → fossa oval.",
+    "exp": "O FOP pode causar embolia paradoxal (trombo venoso → circulação arterial). Na ecocardiografia com contraste salino (bolhas), o shunt D→E é visível com manobra de Valsalva. Relevante no pré-operatório de cirurgia cardíaca e neurológica."
+  },
+  {
+    "cat": "Válvulas Cardíacas",
+    "q": "Quais são as válvulas atrioventriculares e quantos folhetos cada uma possui?",
+    "a": "Mitral (AE→VE): 2 folhetos (anterior e posterior). Tricúspide (AD→VD): 3 folhetos (anterior, posterior e septal).",
+    "hint": "Mi-tral = 2 = bicicleta; Tri-cúspide = 3.",
+    "exp": "A válvula mitral é a mais acometida por doença reumática. Os músculos papilares (anterolateral e posteromedial no VE) sustentam as cordoalhas tendíneas; sua ruptura por IAM inferior gera regurgitação mitral aguda grave, emergência cirúrgica."
+  },
+  {
+    "cat": "Válvulas Cardíacas",
+    "q": "Quais são as válvulas semilunares e suas localizações anatômicas?",
+    "a": "Aórtica (VE → aorta): 3 cúspides (direita, esquerda, posterior/não-coronariana). Pulmonar (VD → tronco pulmonar): 3 cúspides (anterior, direita, esquerda).",
+    "hint": "Semilunares = meia-lua; nenhuma tem cordoalhas.",
+    "exp": "A estenose aórtica calcificada é a valvopatia mais comum em idosos. Gradiente médio >40 mmHg ou área <1 cm² define estenose grave. Em anestesia, evitar bradicardia, taquicardia extrema e queda abrupta de RVS."
+  },
+  {
+    "cat": "Válvulas Cardíacas",
+    "q": "Onde se ausculta cada válvula cardíaca no exame físico?",
+    "a": "Aórtica: 2º EID paraesternal. Pulmonar: 2º EIE paraesternal. Tricúspide: 4º EIE paraesternal (borda inferior). Mitral: ápice (5º EIC, LHC esquerda).",
+    "hint": "'Aorta Para Todos os Médicos' — A=2D, P=2E, T=4E, M=ápice.",
+    "exp": "Regurgitação mitral: sopro holossistólico no ápice com irradiação para axila. Estenose aórtica: sopro sistólico ejetivo em losango no 2º EID com irradiação para carótidas. Conhecer a auscultação orienta o monitoramento intraoperatório."
+  },
+  {
+    "cat": "Artérias Coronárias",
+    "q": "Quais são os dois ostia coronarianos e de onde originam?",
+    "a": "Artéria coronária esquerda (ACE) e artéria coronária direita (ACD), ambas originam dos seios de Valsalva (sinuses aórticos) logo acima da válvula aórtica.",
+    "hint": "Seios de Valsalva = origem das coronárias.",
+    "exp": "Os ostia estão no seio coronariano direito (ACD) e esquerdo (ACE). Em cirurgia de troca valvular aórtica, a proteção miocárdica inclui cardioplegia nos ostia coronarianos. Estenose ostial é complicação rara, mas grave, da dissecção aórtica tipo A."
+  },
+  {
+    "cat": "Artérias Coronárias",
+    "q": "Quais são os principais ramos da artéria coronária esquerda (ACE)?",
+    "a": "Tronco da coronária esquerda (TCE) → Artéria Descendente Anterior (ADA) + Artéria Circunflexa (ACx).",
+    "hint": "TCE bifurca em DA e Cx.",
+    "exp": "A ADA irriga o septo interventricular anterior e a parede anterior do VE (ramos septais e diagonais). A ACx irriga a parede lateral do VE (ramos marginais obtusos). Lesão de TCE = 'widow maker'; afeta >40% do miocárdio."
+  },
+  {
+    "cat": "Artérias Coronárias",
+    "q": "O que é dominância coronariana e qual é a mais prevalente?",
+    "a": "Define-se pela artéria que origina a artéria descendente posterior (ADP) e irriga o nó AV. Dominância direita em ~70%; codominância ~20%; dominância esquerda ~10%.",
+    "hint": "Dominância = quem dá a ADP.",
+    "exp": "Na dominância direita, a ACD origina a ADP e ramos para o nó AV → IAM de parede inferior (ACD) pode causar bloqueio AV. Em dominância esquerda, a ACx origina a ADP, tornando seus IAMs mais graves hemodinamicamente."
+  },
+  {
+    "cat": "Artérias Coronárias",
+    "q": "Qual artéria irriga o nó sinusal na maioria das pessoas?",
+    "a": "Artéria coronária direita (ACD) em ~60% dos casos; ACx nos ~40% restantes.",
+    "hint": "Dominância direita → nó SA irrigado pela ACD.",
+    "exp": "IAM de parede inferior frequentemente envolve a ACD e pode causar bradicardia sinusal ou bloqueio AV por isquemia do nó SA e nó AV. Monitoramento com ECG contínuo é mandatório no perioperatório de pacientes com história de IAM inferior."
+  },
+  {
+    "cat": "Sistema de Condução",
+    "q": "Descreva a sequência normal de condução elétrica no coração.",
+    "a": "Nó SA → miocárdio atrial → Nó AV → Feixe de His → Ramos direito e esquerdo → Fibras de Purkinje → miocárdio ventricular.",
+    "hint": "SA → AV → His → Purkinje.",
+    "exp": "O nó SA (marca-passo natural, 60–100 bpm) fica na junção da VCS com o AD. O nó AV introduz atraso de ~120 ms (intervalo PR). As fibras de Purkinje permitem condução rápida e contração sincronizada dos ventrículos. Anestésicos voláteis deprimem a condução nodal."
+  },
+  {
+    "cat": "Sistema de Condução",
+    "q": "Onde se localiza o nó AV e qual sua importância clínica?",
+    "a": "Triângulo de Koch (entre o óstio do seio coronariano, o folheto septal da tricúspide e o tendão de Todaro), no assoalho do AD.",
+    "hint": "Triângulo de Koch → nó AV.",
+    "exp": "Relevante em ablação de TSVP (via acessória perinodal) e cirurgia de CIV perimembranosa (risco de bloqueio AV iatrogênico). A isquemia nodal causa bloqueio AV de 2º/3º grau; indica marcapasso temporário perioperatório."
+  },
+  {
+    "cat": "Sistema de Condução",
+    "q": "Quais são as frequências intrínsecas dos principais marca-passos cardíacos?",
+    "a": "Nó SA: 60–100 bpm. Nó AV / junção: 40–60 bpm. Sistema His-Purkinje / ventrículo: 20–40 bpm.",
+    "hint": "SA > AV > ventrículo — hierarquia descendente.",
+    "exp": "Em bloqueio AV completo sem marca-passo, a frequência ventricular é 20–40 bpm, insuficiente para débito cardíaco adequado. Atropina aumenta o automatismo do nó SA e acelera a condução AV; adrenalina pode aumentar ritmo de escape ventricular."
+  },
+  {
+    "cat": "Pericárdio",
+    "q": "Descreva as camadas do pericárdio e o volume normal de líquido pericárdico.",
+    "a": "Pericárdio fibroso (externo) e pericárdio seroso [visceral (epicárdio) + parietal]. Volume normal de líquido: 15–50 mL.",
+    "hint": "Duas camadas serosas + uma fibrosa.",
+    "exp": "O tamponamento cardíaco ocorre quando o acúmulo de líquido (>200 mL de forma aguda, >2 L crônico) comprime as câmaras. Tríade de Beck: hipotensão + turgência jugular + abafamento de bulhas. A pericardiocentese sub-xifoide é tratamento imediato."
+  },
+  {
+    "cat": "Pericárdio",
+    "q": "O que é o recesso oblíquo e o recesso transverso do pericárdio?",
+    "a": "Recesso transverso: entre aorta/tronco pulmonar (anteriores) e veias pulmonares/VCS (posteriores) — acessado para clampeamento aórtico. Recesso oblíquo: posterior ao AE, entre veias pulmonares.",
+    "hint": "Transverso = entre grandes vasos; oblíquo = posterior ao AE.",
+    "exp": "O cirurgião cardíaco passa o dedo pelo recesso transverso para aplicar o clampe aórtico durante circulação extracorpórea. O recesso oblíquo pode acumular efusão isolada e ser visível ao ecocardiograma como espaço posterior ao AE."
+  },
+  {
+    "cat": "Grandes Vasos",
+    "q": "Quais são os ramos diretos do arco aórtico (em ordem)?",
+    "a": "1º Tronco braquiocefálico (→ subclávia direita + carótida comum direita), 2º Carótida comum esquerda, 3º Subclávia esquerda.",
+    "hint": "Braquiocefálico – Carótida E – Subclávia E.",
+    "exp": "Em ~10% há variantes (ex: artéria vertebral esquerda nascendo diretamente do arco). Relevante em dissecção aórtica tipo A, onde os ramos podem ser comprometidos causando AVC ou isquemia de membros. Monitoramento da pressão arterial em ambos os braços identifica diferença > 20 mmHg sugestiva de dissecção."
+  },
+  {
+    "cat": "Grandes Vasos",
+    "q": "Qual é a diferença entre a aorta ascendente, o arco aórtico e a aorta descendente?",
+    "a": "Ascendente: da válvula aórtica ao tronco braquiocefálico (~5 cm). Arco: do tronco braquiocefálico à subclávia esquerda. Descendente (torácica): da subclávia E ao hiato aórtico (T12).",
+    "hint": "Ascendente → Arco → Descendente torácica → Abdominal.",
+    "exp": "Aneurismas da aorta ascendente (>5,5 cm) e do arco são tratados cirurgicamente. A aorta descendente, após a subclávia E, é o local mais comum de dissecção tipo B (Stanford). A reparação endovascular (TEVAR) substituiu cirurgia aberta em muitos casos."
+  },
+  {
+    "cat": "Grandes Vasos",
+    "q": "Quais estruturas compõem o pedículo vascular pulmonar em cada hilo?",
+    "a": "Artéria pulmonar (superior), veias pulmonares (superior e inferior, anteriores e inferiores), brônquio (posterior). Hilo direito: veias na frente, artéria acima, brônquio atrás. Hilo esquerdo: semelhante.",
+    "hint": "Artéria acima, veias na frente, brônquio atrás.",
+    "exp": "Essencial em lobectomia e pneumonectomia — o cirurgião liga e secciona estruturas do hilo. A artéria pulmonar direita é mais longa, passando abaixo do arco aórtico. Embolia pulmonar maciça bloqueia o tronco pulmonar ou ramos principais, causando cor pulmonale agudo."
+  },
+  {
+    "cat": "Circulação Coronariana Venosa",
+    "q": "Qual é o principal coletora do retorno venoso coronariano e onde drena?",
+    "a": "Seio coronariano, localizado no sulco AV posterior, drena no átrio direito através do óstio do seio coronariano.",
+    "hint": "Seio coronariano → AD.",
+    "exp": "~75% do retorno venoso coronariano passa pelo seio coronariano. As veias cardíacas maior, média e menor drenam para ele. O cateter de cardioplegia retrógrada é inserido no seio coronariano (acesso pelo AD) para proteção miocárdica em CEC. As veias de Tebesio drenam diretamente nas câmaras."
+  },
+  {
+    "cat": "Circulação Coronariana Venosa",
+    "q": "Quais são as três principais veias cardíacas que drenam no seio coronariano?",
+    "a": "Veia cardíaca maior (acompanha ADA), veia cardíaca média (acompanha ADP), veia cardíaca menor (acompanha ramo marginal direito).",
+    "hint": "Maior = ADA; Média = ADP; Menor = marginal D.",
+    "exp": "A veia cardíaca maior é utilizada para posicionamento do eletrodo de estimulação ventricular esquerda em TRC (terapia de ressincronização cardíaca), via ramos laterais/posterolaterais do seio coronariano. A fluoroscopia identifica os ramos durante o implante."
+  },
+  {
+    "cat": "Inervação Cardíaca",
+    "q": "Qual é a inervação autonômica do coração e seus efeitos?",
+    "a": "Simpático (T1–T5): aumenta FC, contratilidade, velocidade de condução (efeitos crono, ino, dromotrópico positivos). Parassimpático (X par — vago): reduz FC e condução AV (cronotrópico e dromotrópico negativos).",
+    "hint": "Simpático acelera; vago freia.",
+    "exp": "O tônus vagal predomina em repouso. O reflexo de Bezold-Jarisch (estimulação de receptores ventriculares inferiores → bradicardia + vasodilatação) ocorre em IAM inferior e pode ocorrer durante raquianestesia. Atropina bloqueia o vago; propranolol bloqueia o simpático."
+  },
+  {
+    "cat": "Inervação Cardíaca",
+    "q": "O que são os plexos cardíacos superficial e profundo?",
+    "a": "Superficial: abaixo do arco aórtico, à direita do ligamento arterioso — fibras do vago esquerdo + simpático cervical superior esquerdo. Profundo: entre aorta e bifurcação traqueal — fibras dos demais nervos cardíacos.",
+    "hint": "Superficial = abaixo do arco aórtico; profundo = atrás da aorta.",
+    "exp": "Esses plexos regulam a frequência cardíaca reflexa. O bloqueio simpático torácico (anestesia peridural alta T1–T4) causa bradicardia e redução da contratilidade — monitoramento intensivo é necessário. A denervação no transplante cardíaco elimina reflexos autonômicos; a FC de repouso é ~90–100 bpm."
+  },
+  {
+    "cat": "Inervação Cardíaca",
+    "q": "Por que o transplante cardíaco resulta em taquicardia de repouso e resposta atenuada ao exercício?",
+    "a": "A denervação autonômica pós-transplante remove o tônus vagal (que freia a FC) e impede o aumento mediado pelo simpático no exercício. A FC de repouso é 90–110 bpm; a resposta ao esforço depende de catecolaminas circulantes.",
+    "hint": "Sem vago → FC alta; sem simpático direto → resposta lenta ao esforço.",
+    "exp": "Atropina não tem efeito no coração transplantado (ausência de inervação vagal). Epinefrina e isoproterenol são eficazes (receptores beta intactos). Com o tempo, pode ocorrer reinervação parcial simpática, melhorando a resposta ao exercício."
+  },
+  {
+    "cat": "Relações Anatômicas",
+    "q": "Quais estruturas são anteriores ao coração no mediastino?",
+    "a": "Esterno, cartilagens costais, timo (ou gordura tímica), pericárdio fibroso anterior.",
+    "hint": "Esterno protege o coração anteriormente.",
+    "exp": "A janela paraesternal esquerda é usada para pericardiocentese cirúrgica (janela pericárdica). A ressecção do timo é necessária em cirurgia de miastenia gravis e timoma; a veia inominada esquerda (braquiocefálica E) cruza anteriormente ao arco aórtico logo abaixo do timo."
+  },
+  {
+    "cat": "Relações Anatômicas",
+    "q": "Quais estruturas são posteriores ao coração?",
+    "a": "Esôfago, aorta descendente, veia ázigos, ducto torácico, coluna vertebral (T5–T8), veias pulmonares.",
+    "hint": "Esôfago e aorta descendente são os vizinhos posteriores principais.",
+    "exp": "O ecocardiograma transesofágico (ETE) utiliza a proximidade do esôfago com o AE para obter imagens de alta qualidade das válvulas mitral e aórtica, veias pulmonares e apêndice atrial esquerdo (pesquisa de trombo). Contraindicado em varizes esofágicas graves."
+  },
+  {
+    "cat": "Relações Anatômicas",
+    "q": "Qual é a relação do nervo frênico com o pericárdio?",
+    "a": "Ambos os nervos frênicos (C3–C5) descem lateralmente ao pericárdio fibroso, entre ele e as pleuras mediastinais.",
+    "hint": "Frênico = lateral ao pericárdio.",
+    "exp": "Risco de lesão do nervo frênico em: pericardiocentese lateral, cirurgia cardíaca (criopreservação, hemostasia), timectomia e ressecção de tumores mediastinais. A lesão resulta em paralisia hemidiafragmática ipsilateral e comprometimento ventilatório, especialmente em pacientes com função pulmonar limítrofe."
+  },
+  {
+    "cat": "Relações Anatômicas",
+    "q": "O que é o ligamento arterioso e qual sua importância cirúrgica?",
+    "a": "Remanescente fibroso do ducto arterioso (fetal), conecta a aorta descendente proximal ao tronco pulmonar esquerdo. Marca o limite esquerdo do arco aórtico.",
+    "hint": "Ductus arteriosus obliterado = ligamento arterioso.",
+    "exp": "O nervo laríngeo recorrente esquerdo curva-se abaixo do ligamento arterioso e ao redor do arco aórtico. Em cirurgia aórtica e ressecção de tumores mediastinais, a rouquidão pós-operatória indica lesão desse nervo. A coarctação da aorta tipicamente ocorre na junção com o ligamento arterioso (istmo aórtico)."
+  },
+  {
+    "cat": "Veias Cavas",
+    "q": "Onde se formam a VCS e a VCI e onde drenam?",
+    "a": "VCS: junção das veias braquiocefálicas D e E, drena no AD superior (T3). VCI: formada na confluência das ilíacas comuns (L5), penetra no AD inferior pelo hiato da VCI no diafragma (T8).",
+    "hint": "VCS = T3; VCI = T8 (diafragma).",
+    "exp": "A VCS é local de inserção de cateteres venosos centrais (jugular interna, subclávia). Posição ideal da ponta do CVC: junção VCS-AD. A síndrome da VCS (compressão por neoplasia mediastinal) causa edema em capa e turgência jugular; pode dificultar monitoramento venoso central."
+  },
+  {
+    "cat": "Veias Cavas",
+    "q": "Por que a pressão venosa central (PVC) pode não refletir a pré-carga do VE?",
+    "a": "A PVC reflete a pressão de enchimento do AD/VD. Pode não correlacionar com a pressão de enchimento do VE em: disfunção do VD, hipertensão pulmonar, valvopatia tricúspide/mitral e variações de complacência ventricular.",
+    "hint": "PVC = pré-carga direita; não necessariamente = pré-carga esquerda.",
+    "exp": "O ecocardiograma (variação do diâmetro da VCI com respiração) e a pressão de oclusão da artéria pulmonar (POAP) são complementares. Segundo diretrizes ESICM, a PVC isolada não deve guiar reposição volêmica; parâmetros dinâmicos (VPP, VVE) são superiores."
+  },
+  {
+    "cat": "Septo Interventricular",
+    "q": "Quais são as partes do septo interventricular e qual é a mais frequentemente afetada na CIV congênita?",
+    "a": "Parte membranosa (pequena, superior) e parte muscular (maior, inferior e apical). CIV perimembranosa (~80%) é a mais comum.",
+    "hint": "Membranosa = pequena e superior; muscular = grande e inferior.",
+    "exp": "A CIV perimembranosa é adjacente ao nó AV e ao feixe de His, aumentando o risco de bloqueio AV cirúrgico. O shunt E→D aumenta o fluxo pulmonar; grandes CIVs levam a hipertensão pulmonar e eventual inversão do shunt (síndrome de Eisenmenger)."
+  },
+  {
+    "cat": "Anatomia do VE",
+    "q": "Quais são os músculos papilares do VE e o que acontece quando o posteromedial é isquêmico?",
+    "a": "Anterolateral (irrigado por ADA + ACx — dupla irrigação) e posteromedial (irrigado apenas pela ADP — único suprimento). Isquemia do posteromedial → ruptura → regurgitação mitral aguda grave.",
+    "hint": "Posteromedial = suprimento único = mais vulnerável.",
+    "exp": "A ruptura do músculo papilar posteromedial ocorre 2–7 dias após IAM inferior-posterior. Causa edema pulmonar agudo e choque cardiogênico. Diagnóstico por ETE (jato excêntrico de RM). Tratamento: cirurgia de emergência (reparo/troca mitral + revascularização)."
+  },
+  {
+    "cat": "Anatomia do VE",
+    "q": "O que são as trabéculas cárneas e a moderadora banda (banda moderadora)?",
+    "a": "Trabéculas cárneas: saliências musculares internas dos ventrículos. Banda moderadora: trabécula específica do VD que conduz fibras do ramo direito do feixe de His até o músculo papilar anterior.",
+    "hint": "Banda moderadora = atalho elétrico no VD.",
+    "exp": "A banda moderadora é visível ao ETE e à RM cardíaca; pode ser confundida com trombo ventricular. Em cardiomiopatia arritmogênica do VD (CAVD), as trabéculas são substituídas por gordura/fibrose. A biópsia endomiocárdica via VD pode atingir essa região."
+  },
+  {
+    "cat": "Anatomia do VD",
+    "q": "Por que o VD é mais tolerante à sobrecarga de volume, mas mais sensível à sobrecarga de pressão aguda?",
+    "a": "O VD tem parede fina (~3–4 mm), baixa pós-carga fisiológica (~25 mmHg) e alta complacência → tolera volume. Aumento agudo de pressão (TEP maciço, SDRA) causa dilatação, deslocamento septal e queda do débito cardíaco.",
+    "hint": "VD = câmara de volume; falha com aumento súbito de pós-carga.",
+    "exp": "Na falência do VD aguda: milrinona (inodilatador) + norepinefrina (mantém perfusão coronariana do VD) + vasodilatador pulmonar (óxido nítrico inalatório, iloprosta). Evitar hipervolemia agressiva (agrava o deslocamento septal e comprime o VE — interdependência ventricular)."
+  },
+  {
+    "cat": "Irrigação do Miocárdio",
+    "q": "Quais segmentos do VE são irrigados pela artéria descendente anterior (ADA)?",
+    "a": "Parede anterior, ápice, 2/3 anteriores do septo interventricular e parte da parede lateral (via ramos diagonais).",
+    "hint": "ADA = parede anterior + septo anterior + ápice.",
+    "exp": "IAM anterior extenso (oclusão proximal da ADA) afeta >40% da massa ventricular e causa disfunção sistólica grave, bloqueio de ramo esquerdo e risco de ruptura de parede livre / CIV. É o IAM de maior mortalidade e demanda revascularização imediata (ICP primária)."
+  },
+  {
+    "cat": "Irrigação do Miocárdio",
+    "q": "Quais segmentos do VE são irrigados pela artéria circunflexa (ACx)?",
+    "a": "Parede lateral e posterolateral do VE; em dominância esquerda, também a parede inferior e o nó AV.",
+    "hint": "Cx = lateral esquerda.",
+    "exp": "IAM de parede lateral pode ser silencioso no ECG (derivações I, aVL, V5–V6). Em dominância esquerda, oclusão da ACx causa IAM inferior e bloqueio AV — padrão atípico que exige suspeição clínica e cineangiocoronariografia."
+  },
+  {
+    "cat": "Anatomia Cirúrgica",
+    "q": "Quais são os sítios de canulação habitual para circulação extracorpórea (CEC)?",
+    "a": "Cânula arterial: aorta ascendente (ou femoral/axilar quando indisponível). Cânula venosa: AD (cânula única) ou VCS + VCI (bicaval, em cirurgias intracardíacas).",
+    "hint": "Arterial = aorta; venosa = AD ou bicaval.",
+    "exp": "A canulação femoral (artéria + veia femorais) é usada em reoperações, emergências e ECMO venoarterial. O risco é de perfusão retrógrada em dissecção aórtica (propaga o falso lúmen). A canulação axilar (subclávia direita) oferece perfusão anterógrada e é preferida em dissecção tipo A."
+  },
+  {
+    "cat": "Anatomia Cirúrgica",
+    "q": "Por que a veia safena magna e a artéria torácica interna (mamária) são os enxertos de escolha em CABG?",
+    "a": "Safena magna: comprimento, calibre e fácil coleta, mas patência 10 anos ~50%. Artéria torácica interna esquerda (ATIE) → ADA: patência 10 anos >90%, por autorregulação e ausência de aterosclerose.",
+    "hint": "ATIE-ADA = padrão ouro; safena = alternativa/complemento.",
+    "exp": "A ATIE direita pode ser anastomosada como enxerto in situ (artéria subclávia direita) ou como enxerto livre. O uso bilateral de artérias torácicas internas melhora sobrevida mas aumenta risco de infecção esternal (especialmente em diabéticos obesos). A artéria radial é alternativa para o 3º enxerto."
+  },
+  {
+    "cat": "Anatomia da Aorta",
+    "q": "Quais são os seios de Valsalva e qual sua função?",
+    "a": "Três dilatações da raiz aórtica acima das cúspides: seio direito (origina coronária direita), seio esquerdo (origina coronária esquerda) e seio posterior (não-coronariano). Função: evitar oclusão dos ostia coronarianos pelo fechamento das cúspides; criam fluxo turbilhonar que fecha a válvula.",
+    "hint": "Três seios → dois coronarianos + um não-coronariano.",
+    "exp": "Aneurisma do seio de Valsalva (geralmente seio direito) pode romper para o VD ou AD, causando shunt contínuo agudo e insuficiência cardíaca. Em cirurgia da raiz aórtica (Bentall), os seios são excisados e os ostia reimplantados no tubo protético."
+  },
+  {
+    "cat": "Anatomia da Aorta",
+    "q": "Qual é a pressão normal no interior das diferentes porções da aorta e como isso muda na hipertensão?",
+    "a": "Normal: sistólica ~120 mmHg, diastólica ~80 mmHg em toda a aorta. Na hipertensão, pressão aumentada → remodelamento da parede (hipertrofia, fibrose), aumentando risco de dissecção e aneurisma.",
+    "hint": "Pressão uniforme em toda a aorta (não há gradiente fisiológico significativo).",
+    "exp": "A dissecção aórtica tipo A (Stanford) envolve a aorta ascendente e é emergência cirúrgica (mortalidade 1–2%/hora sem tratamento). Tipo B (apenas descendente): tratamento clínico com controle rigoroso da PA (alvo <120/80 mmHg, FC <60 bpm) com betabloqueadores + nitroprussiato."
+  },
+  {
+    "cat": "Linfáticos Cardíacos",
+    "q": "Qual é o principal tronco linfático do coração e onde drena?",
+    "a": "Os vasos linfáticos cardíacos convergem para o tronco cardíaco, que drena nos linfonodos traqueobronquiais inferiores (subcarinais) e daí para o ducto linfático direito ou ducto torácico.",
+    "hint": "Linfáticos cardíacos → linfonodos mediastinais.",
+    "exp": "Obstrução linfática (pós-cirurgia cardíaca ou linfoma mediastinal) pode causar quilopericárdio ou efusão pericárdica quilosa. O derrame pericárdico pós-pericardiotomia (síndrome pós-pericardiotomia) tem componente inflamatório e pode ocorrer semanas após cirurgia cardíaca."
+  },
+  {
+    "cat": "Apêndices Atriais",
+    "q": "O que é o apêndice atrial esquerdo (AAE) e por que é clinicamente importante?",
+    "a": "Estrutura auricular muscular do AE, com trabeculações internas (mm pectinados). Principal sítio de formação de trombos na fibrilação atrial (>90% dos trombos no AE estão no AAE).",
+    "hint": "FA + AAE = trombo → AVC.",
+    "exp": "O ETE é o exame de escolha para excluir trombo no AAE antes de cardioversão elétrica. Velocidade de fluxo no AAE <20 cm/s (ao ETE) é marcador de alto risco trombótico. A oclusão percutânea do AAE (Watchman®) é alternativa à anticoagulação em pacientes com FA e contraindicação a anticoagulantes."
+  },
+  {
+    "cat": "Embriologia Cardiovascular",
+    "q": "Quais são as estruturas fetais que se fecham ao nascimento e o que formam?",
+    "a": "Forame oval → fossa oval. Ducto arterioso → ligamento arterioso. Ducto venoso → ligamento venoso. Veia umbilical → ligamento redondo do fígado. Artérias umbilicais → ligamentos umbilicais mediais.",
+    "hint": "Cinco estruturas fetais → cinco ligamentos/fossa.",
+    "exp": "O fechamento do forame oval é funcional (primeiros dias) e anatômico (primeiros meses). O ducto arterioso fecha pela elevação da pO2 e queda das prostaglandinas; a indometacina acelera o fechamento (prematuros). A persistência do ducto arterioso (PDA) causa sopro contínuo em maquinaria e shunt E→D."
+  },
+  {
+    "cat": "Embriologia Cardiovascular",
+    "q": "O que é a tetralogia de Fallot e quais são seus quatro componentes anatômicos?",
+    "a": "1) CIV subaórtica, 2) Estenose pulmonar (infundibular ± valvar), 3) Cavalgamento aórtico sobre o septo, 4) Hipertrofia do VD.",
+    "hint": "CIV + EP + aorta cavalgando + HVD.",
+    "exp": "A desvantagem do VD sobre-pressurizado e o shunt D→E causam cianose. A crise hipóxica (hipercianose) é desencadeada por choro, esforço ou desidratação → tratamento: posição genupeitoral, morfina, oxigênio, betabloqueador. Correção cirúrgica total é o tratamento definitivo."
+  },
+  {
+    "cat": "Válvulas — Mecanismo",
+    "q": "Como a válvula aórtica se abre e fecha durante o ciclo cardíaco?",
+    "a": "Abre quando a pressão no VE supera a pressão aórtica (início da sístole). Fecha quando a pressão aórtica supera a pressão do VE (início da diástole); o fluxo reverso breve preenche os seios de Valsalva e coapta as cúspides.",
+    "hint": "Pressão VE > Ao = abre; Ao > VE = fecha.",
+    "exp": "A incisura dicrótica no traçado de pressão arterial corresponde ao fechamento da válvula aórtica (componente A2 da 2ª bulha). Em EA grave, o pico de pressão VE pode atingir 200–250 mmHg. O Doppler de onda contínua mede o gradiente transvalvar (Bernoulli simplificado: ΔP = 4v²)."
+  },
+  {
+    "cat": "Pressões Intracardíacas",
+    "q": "Quais são as pressões normais em cada câmara e nos grandes vasos?",
+    "a": "AD: 0–8 mmHg. VD: 25/0–5 mmHg. AP: 25/10 mmHg (média ~15). POAP: 6–12 mmHg. AE: 6–12 mmHg. VE: 120/0–10 mmHg. Aorta: 120/80 mmHg.",
+    "hint": "Direito = baixas pressões; esquerdo = altas pressões.",
+    "exp": "A POAP estima a pressão de enchimento do VE e correlaciona com a pressão diastólica final do VE. POAP >18 mmHg sugere edema pulmonar cardiogênico. Hipertensão arterial pulmonar: PAP média >20 mmHg em repouso. Essencial para interpretação do cateter de Swan-Ganz."
+  },
+  {
+    "cat": "Anatomia Ecocardiográfica",
+    "q": "Quais são as janelas acústicas padrão do ecocardiograma transtorácico (ETT)?",
+    "a": "Paraesternal esquerda, apical (4, 5, 3, 2 câmaras), subcostal e supraesternal.",
+    "hint": "4 janelas principais: paraesternal, apical, subcostal, supraesternal.",
+    "exp": "A janela paraesternal eixo longo mostra VE, VD, mitral e aórtica. A apical 4 câmaras mostra todos os 4 compartimentos e é ideal para medir função sistólica (FEVE). A subcostal é a de escolha em ventilados (pulmão hiperinsuflado). Supraesternal avalia o arco aórtico."
+  },
+  {
+    "cat": "Anatomia Ecocardiográfica",
+    "q": "Quais são as 17 segmentos do VE segundo a nomenclatura ASE/SBA?",
+    "a": "6 basais, 6 médios, 4 apicais e 1 apex. Distribuídos em anterior, anterosseptal, septal, inferior, inferolateral e anterolateral.",
+    "hint": "6+6+4+1 = 17 segmentos.",
+    "exp": "Cada segmento correlaciona com o território coronariano predominante. A análise segmentar da motilidade de parede (normocinesia, hipocinesia, acinesia, discinesia) identifica isquemia regional. Fundamental na avaliação pré-operatória e intraoperatória por ETE em cirurgia de alto risco."
+  },
+  {
+    "cat": "Microcirculação",
+    "q": "O que é a reserva fracionada de fluxo (FFR) e como se relaciona com a anatomia coronariana?",
+    "a": "FFR = pressão distal à estenose / pressão aórtica, em hiperemia máxima (adenosina). FFR ≤0,80 indica estenose hemodinamicamente significativa e se beneficia de revascularização.",
+    "hint": "FFR ≤0,80 = revascularizar.",
+    "exp": "A FFR não pode ser determinada pela anatomia angiográfica isolada: estenoses de 50–70% frequentemente são não-funcionais (FFR >0,80). O estudo FAME demonstrou que a revascularização guiada por FFR reduz MACE comparada à angiografia isolada. A tomografia de coerência óptica (OCT) complementa com detalhes morfológicos da placa."
+  },
+  {
+    "cat": "Coração — Relações Clínicas",
+    "q": "Qual é a importância clínica da artéria de Kugel e da circulação colateral coronariana?",
+    "a": "A artéria de Kugel (ramo atrial da ACD ou ACx) conecta ACD e ACx pelo septo interatrial. A circulação colateral (vasos de Wearn, anastomoses intercoronarianas) é protetora: reduz o tamanho do infarto em oclusões graduais versus agudas.",
+    "hint": "Colaterais = proteção natural contra isquemia.",
+    "exp": "Pacientes com oclusão crônica total (CTO) frequentemente têm colaterais bem desenvolvidas e isquemia mínima. A ICP de CTO é tecnicamente desafiadora mas pode melhorar sintomas e função ventricular. A hiperemia miocárdica (adenosina) é usada para avaliar colaterais por FFR."
+  },
+  {
+    "cat": "Coração — Relações Clínicas",
+    "q": "O que é a síndrome de Brugada e qual é a base anatômico-eletrofisiológica?",
+    "a": "Canalopatia do canal de sódio (SCN5A) que afeta o gradiente transmural de repolarização no TSVD (trato de saída do VD), criando padrão de supradesnivelamento de ST em V1–V3 e risco de FV.",
+    "hint": "SCN5A + TSVD = Brugada.",
+    "exp": "O padrão tipo 1 (coved) é diagnóstico. A febre, cocaína e bloqueadores de canal de sódio (ajmalina, flecainida) podem desmascarar o padrão. O CDI é o único tratamento comprovado para prevenção de morte súbita. Anestesia: evitar propofol em altas doses e bloqueadores de Na⁺ (lidocaína em excesso)."
+  },
+  {
+    "cat": "Coração — Relações Clínicas",
+    "q": "O que é o triângulo de Koch e por que o cirurgião deve respeitá-lo?",
+    "a": "Região do AD delimitada pelo tendão de Todaro (anteriormente), folheto septal da tricúspide (inferiormente) e óstio do seio coronariano (base). Contém o nó AV.",
+    "hint": "Triângulo de Koch = sede do nó AV.",
+    "exp": "Eletrofisiologistas usam o triângulo de Koch para mapear e ablacionar a via lenta do nó AV (TSVP por reentrada nodal). Cirurgiões evitam suturas nessa área em reparos de CIV perimembranosa e plastia tricúspide para prevenir bloqueio AV iatrogênico completo."
+  },
+  {
+    "cat": "Grandes Vasos — Variantes",
+    "q": "O que é a artéria subclávia direita aberrante (arteria lusoria) e como pode se apresentar clinicamente?",
+    "a": "Variante em ~0,5–2% da população: a subclávia direita origina-se como 4º ramo do arco, passando posterior ao esôfago → disfagia lusoria (disfagia por compressão esofágica).",
+    "hint": "Subclávia D aberrante = 4º ramo do arco = posterior ao esôfago.",
+    "exp": "Em anestesia, a monitorização da pressão arterial no braço direito pode subestimar a pressão central se a artéria for hipoplásica. Na dissecção aórtica, a artéria lusoria pode ser acometida. A correção cirúrgica (transposição) é indicada em sintomáticos."
+  },
+  {
+    "cat": "Grandes Vasos — Variantes",
+    "q": "O que é a coarctação da aorta e qual é sua localização anatômica mais comum?",
+    "a": "Estreitamento congênito da aorta no istmo aórtico (junção do arco com a aorta descendente, ao nível da artéria subclávia esquerda e do ligamento arterioso).",
+    "hint": "Coarctação = istmo aórtico = logo após subclávia E.",
+    "exp": "Apresentação: HAS em membros superiores + pulsos femorais diminuídos/atrasados, frêmito interescapular, circulação colateral (artérias intercostais dilatadas → erosões costais na Rx). Gradiente entre braço e perna >20 mmHg. Tratamento: angioplastia com stent ou correção cirúrgica. Associada a válvula aórtica bicúspide (~50%)."
+  },
+  {
+    "cat": "Fisiologia Anatômica",
+    "q": "Qual é a diferença anatômica entre a circulação brônquica e a circulação pulmonar?",
+    "a": "Circulação pulmonar (artérias/veias pulmonares): baixa pressão, alto volume, destinada à hematose. Circulação brônquica (ramos da aorta torácica): alta pressão, nutre as paredes das vias aéreas até os bronquíolos terminais.",
+    "hint": "Pulmonar = hematose; brônquica = nutrição das vias aéreas.",
+    "exp": "A circulação brônquica drena parcialmente nas veias pulmonares (shunt anatômico fisiológico ~2–5% do DC). Em hipertensão pulmonar grave, desenvolve-se hiperinsuflação brônquica colateral → hemoptise. Após transplante pulmonar, a circulação brônquica não é anastomosada (fica devascularizada) → risco de deiscência brônquica."
+  },
+  {
+    "cat": "Anatomia Funcional",
+    "q": "O que é a interdependência ventricular e como ela impacta a hemodinâmica no tamponamento?",
+    "a": "VD e VE compartilham o septo interventricular e o pericárdio. Expansão do VD por aumento de pressão/volume desloca o septo para a esquerda → reduz enchimento e débito do VE.",
+    "hint": "Dilatação do VD comprime o VE pelo septo.",
+    "exp": "No tamponamento cardíaco, o líquido pericárdico comprime todas as câmaras. Inspiração → retorno venoso D aumenta → VD dilata → septo desvia → VE enche menos → queda do DC e da PA inspiratória (pulso paradoxal >10 mmHg). Pericardiocentese alivia imediatamente a compressão."
   }
 ]
