@@ -2889,5 +2889,355 @@
     "a": "Fármacos voláteis, como anestésicos inalatórios, são eliminados principalmente pela exalação pulmonar. Alterações na função pulmonar podem retardar eliminação e prolongar efeito.",
     "hint": "Pulmão elimina fármacos voláteis",
     "exp": "Importante considerar em pacientes com doenças pulmonares crônicas para evitar sedação prolongada."
+  },
+  {
+    "cat": "Fisiologia da Gravidez",
+    "q": "Qual a principal alteração cardiovascular na gravidez relevante para anestesia obstétrica?",
+    "a": "Aumento do débito cardíaco em até 40-50%, com redução da resistência vascular periférica.",
+    "hint": "Débito cardíaco elevado na gravidez",
+    "exp": "Durante a gravidez, o débito cardíaco aumenta para suprir a demanda fetal e materna, o que altera a farmacocinética dos anestésicos. A redução da resistência vascular pode predispor a hipotensão após bloqueios neuraxiais, importante para o manejo anestésico."
+  },
+  {
+    "cat": "Fisiologia da Gravidez",
+    "q": "Como a posição supina da gestante pode afetar a circulação durante a anestesia?",
+    "a": "Pode causar compressão da veia cava inferior pelo útero, levando à síndrome da hipotensão supina.",
+    "hint": "Síndrome da veia cava inferior",
+    "exp": "A compressão da veia cava inferior diminui o retorno venoso, reduzindo o débito cardíaco e causando hipotensão severa. É fundamental posicionar a gestante com inclinação lateral esquerda para evitar essa complicação durante a anestesia."
+  },
+  {
+    "cat": "Farmacologia",
+    "q": "Qual a dose recomendada de bupivacaína para anestesia raquidiana no parto cesáreo?",
+    "a": "Entre 10 a 15 mg de bupivacaína 0,5% hiperbárica.",
+    "hint": "Dose bupivacaína para cesáreo",
+    "exp": "A dose ideal permite bloqueio sensitivo até T4 para cirurgia cesariana, garantindo analgesia adequada sem risco aumentado de toxicidade ou bloqueio motor excessivo, facilitando a recuperação pós-operatória."
+  },
+  {
+    "cat": "Farmacologia",
+    "q": "Por que os anestésicos locais têm efeito prolongado na gravidez?",
+    "a": "Devido a alterações no volume plasmático, maior sensibilidade do sistema nervoso e diminuição da proteína plasmática alfa-1 glicoproteína ácida.",
+    "hint": "Metabolismo alterado na gravidez",
+    "exp": "As alterações fisiológicas da gravidez aumentam a concentração livre dos anestésicos locais, prolongando seu efeito e aumentando a sensibilidade ao bloqueio, o que exige ajuste cuidadoso das doses para evitar toxicidade."
+  },
+  {
+    "cat": "Anestesia Raquidiana",
+    "q": "Qual o nível sensitivo ideal para anestesia raquidiana em cesariana?",
+    "a": "Bloqueio sensitivo até o nível T4 (mamilo).",
+    "hint": "Nível T4 para cesárea",
+    "exp": "O bloqueio até T4 é necessário para anestesiar as fibras aferentes da parede abdominal e útero, garantindo analgesia adequada durante a cesariana. Bloqueios mais baixos podem resultar em dor intraoperatória."
+  },
+  {
+    "cat": "Anestesia Raquidiana",
+    "q": "Quais são os sinais clínicos de bloqueio alto após anestesia raquidiana?",
+    "a": "Hipotensão grave, bradicardia, dificuldade respiratória e bloqueio motor dos músculos respiratórios.",
+    "hint": "Bloqueio alto = sintomas graves",
+    "exp": "Bloqueio alto pode comprometer a função respiratória e cardiovascular, exigindo suporte imediato com ventilação, vasopressores e monitorização intensiva, sendo uma emergência anestésica."
+  },
+  {
+    "cat": "Anestesia Peridural",
+    "q": "Qual a principal vantagem da anestesia peridural em relação à raquidiana na obstetrícia?",
+    "a": "Permite titulação da dose e controle gradual do bloqueio sensitivo e motor.",
+    "hint": "Controle gradual no peridural",
+    "exp": "A anestesia peridural possibilita administração fracionada do anestésico, reduzindo riscos de bloqueio alto e facilitando analgesia contínua durante o trabalho de parto, sendo preferida para analgesia progressiva."
+  },
+  {
+    "cat": "Anestesia Peridural",
+    "q": "Qual anestésico local é mais comumente usado para analgesia peridural no trabalho de parto?",
+    "a": "Bupivacaína em baixas concentrações (0,0625% a 0,125%).",
+    "hint": "Baixa concentração para analgesia",
+    "exp": "Concentrações baixas proporcionam analgesia eficaz com mínimo bloqueio motor, permitindo que a paciente mantenha força para o parto ativo, melhorando a experiência do parto e reduzindo intervenções."
+  },
+  {
+    "cat": "Anestesia Geral",
+    "q": "Quais os riscos anestésicos específicos da anestesia geral em cesariana?",
+    "a": "Risco aumentado de aspiração, dificuldade de intubação e depressão neonatal pelos anestésicos.",
+    "hint": "Aspiração e intubação difícil",
+    "exp": "Devido ao relaxamento do esfíncter esofágico e aumento da pressão intra-abdominal, a gestante tem maior risco de refluxo e aspiração. Além disso, alterações anatômicas dificultam a intubação, exigindo preparo adequado e uso de protocolos de indução rápida."
+  },
+  {
+    "cat": "Anestesia Geral",
+    "q": "Qual a via preferencial para indução da anestesia geral em cesariana de emergência?",
+    "a": "Indução rápida com pré-oxigenação e uso de agentes de ação rápida, como tiopental ou propofol e succinilcolina para intubação rápida.",
+    "hint": "Indução rápida para cesariana",
+    "exp": "A indução rápida minimiza o tempo sem proteção das vias aéreas, reduzindo o risco de aspiração. O uso de succinilcolina facilita intubação rápida e segura, fundamental em emergências obstétricas."
+  },
+  {
+    "cat": "Complicações",
+    "q": "Como prevenir a hipotensão após bloqueio neuraxial na obstetrícia?",
+    "a": "Hidratação prévia adequada, posicionamento lateral esquerdo e uso profilático de vasopressores como fenilefrina.",
+    "hint": "Prevenir hipotensão com hidratação e vasopressor",
+    "exp": "A hipotensão é comum devido à vasodilatação e bloqueio simpático. A reposição volêmica e o uso de fenilefrina mantêm a pressão arterial, garantindo perfusão uteroplacentária adequada e reduzindo riscos maternos e fetais."
+  },
+  {
+    "cat": "Complicações",
+    "q": "Qual o tratamento inicial para hipotensão grave pós-anestesia raquidiana em gestante?",
+    "a": "Administração rápida de vasopressor (fenilefrina) e posicionamento em decúbito lateral esquerdo.",
+    "hint": "Fenilefrina para hipotensão obstétrica",
+    "exp": "Fenilefrina é o vasopressor de escolha por sua ação alfa-adrenérgica pura, aumentando a pressão sem diminuir o débito cardíaco. O posicionamento evita compressão da veia cava, melhorando o retorno venoso."
+  },
+  {
+    "cat": "Monitorização",
+    "q": "Quais os parâmetros mínimos que devem ser monitorados durante anestesia obstétrica?",
+    "a": "Monitorização contínua de pressão arterial, frequência cardíaca, oximetria de pulso e eletrocardiograma.",
+    "hint": "Monitorização básica obstétrica",
+    "exp": "Monitorização adequada detecta precocemente alterações hemodinâmicas e respiratórias, permitindo intervenções rápidas e seguras para mãe e feto durante o procedimento anestésico."
+  },
+  {
+    "cat": "Monitorização",
+    "q": "Por que a oximetria de pulso é essencial durante anestesia obstétrica?",
+    "a": "Permite detecção precoce de hipóxia materna, que pode comprometer a oxigenação fetal.",
+    "hint": "Oximetria para oxigenação fetal",
+    "exp": "Hipóxia materna pode levar à acidose fetal e complicações neonatais. A oximetria é uma ferramenta não invasiva e imediata para monitorar a saturação e prevenir eventos adversos."
+  },
+  {
+    "cat": "Técnicas Anestésicas",
+    "q": "Quando é indicada a anestesia combinada raquiperidural na obstetrícia?",
+    "a": "Indicação para analgesia rápida no início do trabalho de parto com possibilidade de prolongamento e ajuste do bloqueio.",
+    "hint": "Rápido início e controle prolongado",
+    "exp": "A combinação permite início rápido da analgesia pela raquiana e manutenção contínua pela peridural, ideal para trabalho de parto prolongado e para cesariana de emergência se necessária."
+  },
+  {
+    "cat": "Técnicas Anestésicas",
+    "q": "Qual o benefício da analgesia peridural contínua durante o trabalho de parto?",
+    "a": "Permite analgesia eficaz e ajustável sem prejudicar a força motora da paciente.",
+    "hint": "Analgesia ajustável e preserva força",
+    "exp": "Ao usar baixas concentrações de anestésicos locais com opioides, a analgesia é mantida com mínimo bloqueio motor, facilitando a mobilização e o parto ativo, o que melhora os desfechos maternos."
+  },
+  {
+    "cat": "Fármacos e Segurança",
+    "q": "Por que evitar o uso de meperidina na analgesia obstétrica?",
+    "a": "Risco de depressão respiratória neonatal e menor eficácia analgésica comparada a outras opções.",
+    "hint": "Meperidina não é ideal na obstetrícia",
+    "exp": "A meperidina atravessa a placenta e pode causar depressão respiratória no recém-nascido, além de ter menor potência analgésica e efeitos colaterais, sendo substituída por opioides mais seguros como a fentanila."
+  },
+  {
+    "cat": "Fármacos e Segurança",
+    "q": "Quais opioides são preferidos para analgesia peridural no trabalho de parto?",
+    "a": "Fentanil e sufentanil, devido a menor passagem placentária e rápido início de ação.",
+    "hint": "Fentanil e sufentanil na peridural",
+    "exp": "Esses opioides lipofílicos proporcionam analgesia rápida e eficaz com menor risco de depressão neonatal, sendo combinados com anestésicos locais para potencializar o efeito analgésico."
+  },
+  {
+    "cat": "Anestesia para Parto Normal",
+    "q": "Qual o método de analgesia mais utilizado durante o trabalho de parto vaginal?",
+    "a": "Anestesia peridural contínua com anestésicos locais e opioides em baixas doses.",
+    "hint": "Peridural para trabalho de parto",
+    "exp": "A analgesia peridural proporciona excelente controle da dor com mínimo bloqueio motor, permitindo que a paciente participe ativamente do parto e reduzindo o estresse materno."
+  },
+  {
+    "cat": "Anestesia para Parto Normal",
+    "q": "Quais são as contraindicações relativas para anestesia peridural no trabalho de parto?",
+    "a": "Coagulopatias, infecção local, hipovolemia grave e distúrbios neurológicos.",
+    "hint": "Contraindicações importantes na peridural",
+    "exp": "Essas condições aumentam o risco de complicações, como hematoma epidural ou infecção, sendo fundamental avaliação cuidadosa antes da realização do bloqueio neuraxial."
+  },
+  {
+    "cat": "Aspectos Técnicos",
+    "q": "Qual espaço anatômico onde é administrada a anestesia peridural?",
+    "a": "No espaço peridural, entre o ligamento amarelo e a dura-máter.",
+    "hint": "Espaço peridural = entre lig. amarelo e dura",
+    "exp": "A anestesia peridural é realizada nesse espaço potencial, permitindo a difusão do anestésico local para as raízes nervosas, bloqueando a transmissão da dor sem penetrar no líquor."
+  },
+  {
+    "cat": "Aspectos Técnicos",
+    "q": "Qual técnica é usada para identificar o espaço peridural durante a punção peridural?",
+    "a": "Técnica da perda de resistência com seringa preenchida por ar ou soro fisiológico.",
+    "hint": "Perda de resistência para peridural",
+    "exp": "Ao avançar a agulha, a resistência ao avanço diminui abruptamente ao atingir o espaço peridural, sinalizando o local correto para injeção do anestésico."
+  },
+  {
+    "cat": "Complicações",
+    "q": "O que caracteriza uma cefaleia pós-punção dural e como é tratada?",
+    "a": "Dor de cabeça intensa, piora ao ficar em pé, causada por vazamento de líquor; tratada com hidratação, analgésicos e, se persistente, punção sanguínea epidural.",
+    "hint": "Cefaleia pós-punção = piora ortostática",
+    "exp": "O vazamento de líquor reduz a pressão intracraniana, causando cefaleia típica. O tratamento conservador é inicial, mas a punção sanguínea epidural pode selar o orifício e resolver o quadro."
+  },
+  {
+    "cat": "Complicações",
+    "q": "Quais sinais sugerem toxicidade por anestésico local na obstetrícia?",
+    "a": "Tontura, zumbido, formigamento perioral, convulsões e arritmias cardíacas.",
+    "hint": "Sintomas clássicos de toxicidade local",
+    "exp": "A absorção sistêmica excessiva pode causar efeitos neurológicos e cardiovasculares graves. Reconhecimento precoce e tratamento imediato com suporte avançado e lipidoterapia são essenciais."
+  },
+  {
+    "cat": "Fisiologia da Gravidez",
+    "q": "Como a redução da albumina plasmática na gravidez influencia a anestesia?",
+    "a": "Aumenta a fração livre dos anestésicos locais, potencializando seu efeito e risco de toxicidade.",
+    "hint": "Menos albumina = mais anestésico livre",
+    "exp": "A diminuição da albumina reduz a ligação dos anestésicos, aumentando a concentração ativa no plasma e tecidos, exigindo ajuste cuidadoso das doses para evitar efeitos adversos."
+  },
+  {
+    "cat": "Farmacologia",
+    "q": "Qual a concentração de adrenalina recomendada para uso com anestésicos locais em obstetrícia?",
+    "a": "1:200.000 ou 5 mcg/mL para prolongar o efeito e reduzir absorção sistêmica.",
+    "hint": "Adrenalina diluída para segurança",
+    "exp": "A adição de adrenalina causa vasoconstrição local, prolongando a duração da anestesia e diminuindo o pico plasmático do anestésico, reduzindo toxicidade e sangramento."
+  },
+  {
+    "cat": "Anestesia Raquidiana",
+    "q": "Qual a complicação mais comum da anestesia raquidiana na obstetrícia?",
+    "a": "Hipotensão arterial devido ao bloqueio simpático.",
+    "hint": "Hipotensão pós-bloqueio",
+    "exp": "O bloqueio simpático causa vasodilatação e queda do retorno venoso, reduzindo a pressão arterial. A prevenção e tratamento são essenciais para manter a perfusão uterina e evitar sofrimento fetal."
+  },
+  {
+    "cat": "Anestesia Raquidiana",
+    "q": "Por que é importante avaliar o nível de bloqueio sensitivo após anestesia raquidiana?",
+    "a": "Para garantir analgesia adequada e evitar bloqueio insuficiente ou excessivo que comprometa a função respiratória.",
+    "hint": "Avaliação do nível para segurança",
+    "exp": "O nível correto assegura conforto e segurança durante a cirurgia. Bloqueios muito altos podem causar parada respiratória, enquanto bloqueios baixos podem resultar em dor intraoperatória."
+  },
+  {
+    "cat": "Anestesia Geral",
+    "q": "Qual é a dose segura de succinilcolina para intubação rápida em gestantes?",
+    "a": "1 a 1,5 mg/kg intravenoso.",
+    "hint": "Dose padrão para intubação rápida",
+    "exp": "Essa dose proporciona bloqueio neuromuscular rápido e eficaz, facilitando a intubação rápida e segura, importante para reduzir o risco de aspiração durante anestesia geral em cesariana."
+  },
+  {
+    "cat": "Anestesia Geral",
+    "q": "Quais medidas devem ser tomadas para reduzir o risco de aspiração em anestesia geral obstétrica?",
+    "a": "Jejum adequado, pré-medicação com antiácidos, intubação rápida e uso de pressão cricoide (manobra de Sellick).",
+    "hint": "Prevenção da aspiração",
+    "exp": "Essas medidas minimizam o risco de refluxo e aspiração pulmonar, complicações graves que podem levar a pneumonia química e insuficiência respiratória, aumentando a segurança materna."
+  },
+  {
+    "cat": "Farmacologia",
+    "q": "Qual a vantagem do uso de bloqueadores neuromusculares não despolarizantes na cesariana?",
+    "a": "Menor liberação de potássio e menor risco de efeitos adversos no recém-nascido em comparação com succinilcolina.",
+    "hint": "Bloqueadores não despolarizantes = menos potássio",
+    "exp": "Embora a succinilcolina seja preferida para intubação rápida, bloqueadores não despolarizantes são usados no controle de via aérea prolongado e têm menor risco de hiperpotassemia e efeitos colaterais neonatais."
+  },
+  {
+    "cat": "Complicações",
+    "q": "O que é síndrome de hipotensão supina e quais são suas consequências?",
+    "a": "Compressão da veia cava inferior pelo útero gravídico em decúbito dorsal, causando hipotensão materna e diminuição da perfusão uteroplacentária.",
+    "hint": "Síndrome da veia cava na gestação",
+    "exp": "Essa síndrome provoca redução do retorno venoso e débito cardíaco, levando a tontura, náuseas e risco de sofrimento fetal. O posicionamento lateral esquerdo é a principal medida preventiva."
+  },
+  {
+    "cat": "Monitorização",
+    "q": "Qual a frequência ideal para monitorar a pressão arterial após bloqueio neuraxial em obstetrícia?",
+    "a": "A cada 1 a 3 minutos nos primeiros 15 minutos, depois a cada 5 minutos durante o procedimento.",
+    "hint": "Monitoramento frequente pós-bloqueio",
+    "exp": "A hipotensão pode ocorrer rapidamente após bloqueio, sendo necessário monitoramento frequente para detecção precoce e tratamento imediato, prevenindo complicações maternas e fetais."
+  },
+  {
+    "cat": "Farmacologia",
+    "q": "Qual a dose típica de morfina intratecal para analgesia prolongada no parto?",
+    "a": "100 a 200 mcg de morfina intratecal.",
+    "hint": "Dose morfina intratecal",
+    "exp": "A morfina intratecal proporciona analgesia eficaz por até 24 horas, ideal para controle da dor pós-parto e cesariana, mas requer monitorização para possíveis efeitos adversos como prurido e depressão respiratória."
+  },
+  {
+    "cat": "Anestesia Raquidiana",
+    "q": "Quais são as contraindicações absolutas para anestesia raquidiana na obstetrícia?",
+    "a": "Coagulopatias graves, infecção no local da punção, hipovolemia grave e recusa da paciente.",
+    "hint": "Contraindicações para raquidiana",
+    "exp": "A presença dessas condições aumenta o risco de complicações sérias como hematomas epidurais e infecções, além de comprometer a segurança da técnica, sendo fundamental identificá-las antes do procedimento."
+  },
+  {
+    "cat": "Técnicas Anestésicas",
+    "q": "Qual a diferença principal entre anestesia raquidiana e peridural em termos de ação?",
+    "a": "A raquidiana tem início rápido e bloqueio denso, enquanto a peridural tem início mais lento e bloqueio modulável e menos intenso.",
+    "hint": "Raquidiana = rápido e denso",
+    "exp": "A raquidiana envolve injeção direta no líquor com anestésico local, causando bloqueio rápido e completo. A peridural injeta no espaço peridural, permitindo ajuste da dose e bloqueio gradual, útil para analgesia prolongada."
+  },
+  {
+    "cat": "Farmacologia",
+    "q": "Qual o mecanismo de ação dos anestésicos locais utilizados em obstetrícia?",
+    "a": "Bloqueiam os canais de sódio dependentes de voltagem, impedindo a condução do impulso nervoso.",
+    "hint": "Bloqueio dos canais de sódio",
+    "exp": "Ao impedir a entrada de sódio nas células nervosas, os anestésicos locais impedem a despolarização e propagação do impulso doloroso, resultando em analgesia ou anestesia."
+  },
+  {
+    "cat": "Complicações",
+    "q": "Como reconhecer e manejar a bradicardia após bloqueio neuraxial em gestante?",
+    "a": "Sinais incluem frequência cardíaca <60 bpm; manejo com atropina, epinefrina e correção da hipotensão e hipovolemia.",
+    "hint": "Bradicardia pós-bloqueio = atropina",
+    "exp": "O bloqueio simpático reduz a frequência cardíaca. A rápida intervenção com atropina e tratamento da hipotensão previne colapso cardiovascular e mantém a perfusão materna e fetal."
+  },
+  {
+    "cat": "Aspectos Técnicos",
+    "q": "Qual o ponto anatômico ideal para punção raquidiana na gestante?",
+    "a": "Entre as vértebras L3-L4 ou L4-L5, na linha média ou paramediana.",
+    "hint": "L3-L4 para raquidiana",
+    "exp": "Essa região oferece melhor acesso ao espaço subaracnóideo com menor risco de lesão medular, importante para a segurança do procedimento anestésico."
+  },
+  {
+    "cat": "Anestesia Geral",
+    "q": "Quais agentes inalatórios são preferidos na manutenção da anestesia geral em cesariana e por quê?",
+    "a": "Sevoflurano e isoflurano, devido ao rápido início e recuperação e menor depressão uterina comparados a outros agentes.",
+    "hint": "Sevo e iso na cesárea",
+    "exp": "Esses agentes permitem controle preciso da profundidade anestésica, com menor efeito relaxante uterino e rápida recuperação pós-operatória, melhorando a segurança materna e fetal."
+  },
+  {
+    "cat": "Fisiologia da Gravidez",
+    "q": "Como a progesterona influencia o sistema respiratório na gestante durante anestesia?",
+    "a": "Aumenta o volume corrente e a sensibilidade ao CO2, causando alcalose respiratória leve e maior risco de hipoxemia.",
+    "hint": "Progesterona e respiração aumentada",
+    "exp": "Essas alterações aumentam a demanda de oxigênio e diminuem a reserva respiratória, tornando a gestante mais vulnerável à hipóxia durante a anestesia, o que requer cuidados redobrados na ventilação."
+  },
+  {
+    "cat": "Farmacologia",
+    "q": "Qual o efeito dos bloqueadores neuromusculares na passagem placentária e no recém-nascido?",
+    "a": "Bloqueadores não atravessam significativamente a placenta e têm efeito mínimo direto no recém-nascido.",
+    "hint": "Bloqueadores com baixa passagem placentária",
+    "exp": "Devido ao seu alto peso molecular e carga, os bloqueadores neuromusculares não alcançam concentrações tóxicas no feto, tornando-os seguros para uso durante cesariana."
+  },
+  {
+    "cat": "Complicações",
+    "q": "Quais cuidados tomar para evitar a parada respiratória por bloqueio alto em anestesia raquidiana?",
+    "a": "Monitorização rigorosa, posicionamento adequado, uso de doses corretas e disponibilidade de suporte ventilatório imediato.",
+    "hint": "Prevenção da parada respiratória",
+    "exp": "O bloqueio do centro respiratório ou dos músculos respiratórios pode ocorrer se o bloqueio atingir níveis altos. A vigilância e preparo para intubação são essenciais para a segurança da gestante."
+  },
+  {
+    "cat": "Anestesia Geral",
+    "q": "Qual a importância do pré-oxigenação na indução anestésica obstétrica?",
+    "a": "Aumenta as reservas de oxigênio, prolongando o tempo até a dessaturação durante a apneia induzida pela indução anestésica.",
+    "hint": "Pré-oxigenação para segurança",
+    "exp": "Como a gestante tem menor reserva respiratória, a pré-oxigenação é fundamental para evitar hipóxia durante a indução e intubação, especialmente em casos de via aérea difícil."
+  },
+  {
+    "cat": "Técnicas Anestésicas",
+    "q": "Quando é indicado o uso de anestesia geral em cesariana?",
+    "a": "Em emergências com contraindicações para bloqueio neuraxial ou falha deste, e em casos de urgência extrema.",
+    "hint": "Anestesia geral para situações críticas",
+    "exp": "A anestesia geral é reservada para situações onde o bloqueio neuraxial é inviável ou insuficiente, exigindo rápida intervenção para salvar mãe e feto, porém com maior risco de complicações."
+  },
+  {
+    "cat": "Farmacologia",
+    "q": "Por que a lidocaína é menos usada para anestesia raquidiana em cesariana atualmente?",
+    "a": "Devido ao risco de neurotoxicidade e menor duração do bloqueio comparada à bupivacaína.",
+    "hint": "Bupivacaína substitui lidocaína",
+    "exp": "A bupivacaína oferece bloqueio mais denso e prolongado com menor toxicidade, sendo mais segura e eficaz para cesariana, o que levou à redução do uso da lidocaína."
+  },
+  {
+    "cat": "Monitorização",
+    "q": "Como é monitorado o bem-estar fetal durante anestesia em parto ou cesariana?",
+    "a": "Por meio da cardiotocografia, avaliando frequência cardíaca fetal e suas variações.",
+    "hint": "Cardiotocografia no intraoperatório",
+    "exp": "A monitorização fetal contínua permite identificação precoce de sofrimento fetal, possibilitando intervenções rápidas para preservar a vida e saúde do recém-nascido."
+  },
+  {
+    "cat": "Complicações",
+    "q": "Qual a abordagem em caso de parada cardíaca materna durante anestesia obstétrica?",
+    "a": "Realizar reanimação cardiopulmonar imediata, cesariana perimortem em até 4 minutos para melhorar sobrevida materna e fetal.",
+    "hint": "Cesárea perimortem em parada cardíaca",
+    "exp": "A cesariana perimortem descomprime a veia cava e melhora a circulação materna, aumentando as chances de sucesso da reanimação e sobrevivência de mãe e feto."
+  },
+  {
+    "cat": "Aspectos Técnicos",
+    "q": "Qual o efeito do bloqueio do nervo frênico durante anestesia neuraxial e sua importância clínica?",
+    "a": "Pode causar sensação de falta de ar e desconforto, mas geralmente não compromete a função respiratória em gestantes saudáveis.",
+    "hint": "Bloqueio frênico = desconforto respiratório",
+    "exp": "O bloqueio do nervo frênico ocorre em bloqueios altos, causando parestesia e sensação de falta de ar, importante para diferenciar de insuficiência respiratória real e evitar intervenções desnecessárias."
+  },
+  {
+    "cat": "Farmacologia",
+    "q": "Qual a função da clonidina quando usada como adjuvante em anestesia peridural obstétrica?",
+    "a": "Potencializa analgesia e prolonga a duração do bloqueio ao atuar nos receptores alfa-2 adrenérgicos.",
+    "hint": "Clonidina adjuvante alfa-2",
+    "exp": "A clonidina melhora a qualidade da analgesia e permite redução da dose de anestésico local, diminuindo efeitos colaterais como bloqueio motor excessivo."
   }
 ]
