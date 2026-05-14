@@ -121,6 +121,18 @@ const USER_ROLE = {
  ADMIN: 'admin'
 };
 
+const BASIC_SCIENCE_DISCIPLINE = 'Ciências Básicas';
+const BASIC_SCIENCE_TOPICS = [
+  'Anatomia',
+  'Fisiologia',
+  'Farmacologia',
+  'Patologia',
+  'Microbiologia',
+  'Imunologia',
+  'Bioquímica',
+  'Semiologia'
+];
+
 const KNOWN_DISCIPLINES = [
   'Anestesiologia',
   'Terapia Intensiva',
@@ -131,14 +143,6 @@ const KNOWN_DISCIPLINES = [
   'Clínica Geral',
   'Pneumologia',
   'Ortopedia e Traumatologia',
-  'Fisiologia',
-  'Anatomia',
-  'Farmacologia',
-  'Patologia',
-  'Microbiologia',
-  'Imunologia',
-  'Bioquímica',
-  'Semiologia',
   'Neurologia',
   'Cirurgia',
   'Pediatria',
@@ -176,7 +180,7 @@ const DISCIPLINE_COLORS = {
 function inferDisciplineByContent(cat = '', q = '') {
   const text = `${cat} ${q}`.toLowerCase();
 
-  if (/ciências básicas|absor[cç][aã]o|distribui[cç][aã]o|metabolismo|excre[cç][aã]o|meia-vida|cin[eéê]tica|cinetica|biodispon|depura[cç][aã]o|f[aá]rmaco|farmacologia/.test(text)) return 'Ciências Básicas';
+  if (/ciências básicas|anatom|fisiolog|farmacolog|patolog|microbiolog|imunolog|bioqu[ií]m|semiolog|absor[cç][aã]o|distribui[cç][aã]o|metabolismo|excre[cç][aã]o|meia-vida|cin[eéê]tica|cinetica|biodispon|depura[cç][aã]o|f[aá]rmaco/.test(text)) return BASIC_SCIENCE_DISCIPLINE;
   if (/fibrila|flutter|ablação|anticoag|cardiovers|apêndice atrial|wpw|frequência|ritmo|fa\\b/.test(text)) return 'Cardiologia';
   if (/sepse|choque|ventila|ressuscita|hemodin|uti|intensiv|lactato|swan-ganz|foco infecc|suporte renal|pics|medicina intensiva/.test(text)) return 'Medicina Intensiva';
   if (/cl[ií]nica geral/.test(text)) return 'Clínica Geral';
@@ -208,13 +212,26 @@ function splitCategory(cat = '', q = '') {
       const parts = text.split(sep);
       const first = (parts.shift() || '').trim();
       const topic = parts.join(sep).trim();
+      if (BASIC_SCIENCE_TOPICS.includes(first)) {
+        const normalizedTopic = first;
+        return { discipline: BASIC_SCIENCE_DISCIPLINE, topic: normalizedTopic };
+      }
       if (KNOWN_DISCIPLINES.includes(first)) {
+        if (first === BASIC_SCIENCE_DISCIPLINE) {
+          const normalizedTopic = topic && BASIC_SCIENCE_TOPICS.includes(topic) ? topic : (topic || '');
+          return { discipline: BASIC_SCIENCE_DISCIPLINE, topic: normalizedTopic || BASIC_SCIENCE_DISCIPLINE };
+        }
         return { discipline: first, topic: topic || first };
       }
       return { discipline: inferDisciplineByContent(text, q), topic: text };
     }
   }
-  return { discipline: inferDisciplineByContent(text, q), topic: text };
+  const inferred = inferDisciplineByContent(text, q);
+  if (inferred === BASIC_SCIENCE_DISCIPLINE) {
+    const normalizedTopic = BASIC_SCIENCE_TOPICS.find(t => text.toLowerCase().includes(t.toLowerCase()));
+    return { discipline: BASIC_SCIENCE_DISCIPLINE, topic: normalizedTopic || text };
+  }
+  return { discipline: inferred, topic: text };
 }
 
 function getDiscipline(card) {
@@ -249,6 +266,9 @@ function getAllBrowseTopics(selectedDiscipline = '') {
 
 function getDisciplineTopicOptions(discipline) {
   if (discipline === 'Anestesiologia') return ['ME1', 'ME2', 'ME3'];
+  if (discipline === BASIC_SCIENCE_DISCIPLINE) {
+    return BASIC_SCIENCE_TOPICS;
+  }
   return [...new Set(
     state.cards
       .filter(c => getDiscipline(c) === discipline)
