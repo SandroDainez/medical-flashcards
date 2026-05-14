@@ -2511,5 +2511,383 @@
     "a": "Reduz a depuração renal, aumenta a meia-vida e risco de acúmulo dos fármacos eliminados pelos rins, exigindo ajuste rigoroso das doses.",
     "hint": "Rins falhos acumulam fármacos",
     "exp": "Essencial monitorar níveis plasmáticos e função renal para evitar toxicidade, especialmente com aminoglicosídeos e digoxina."
+  },
+  {
+    "cat": "Absorção",
+    "q": "Quais fatores podem alterar a absorção de um medicamento administrado por via oral?",
+    "a": "Fatores incluem pH gástrico, motilidade gastrointestinal, presença de alimentos, interação com outros medicamentos, propriedades físico-químicas do fármaco (solubilidade, lipossolubilidade) e metabolismo de primeira passagem.",
+    "hint": "pH, comida e movimentos intestinais influenciam absorção",
+    "exp": "Na residência, reconhecer esses fatores permite antecipar variações na resposta terapêutica, como atraso na ação ou redução da eficácia, importante em fármacos como digoxina e levotiroxina."
+  },
+  {
+    "cat": "Absorção",
+    "q": "O que é efeito de primeira passagem hepática?",
+    "a": "É a metabolização significativa de um fármaco pela enzima hepática antes que ele atinja a circulação sistêmica, reduzindo sua biodisponibilidade, especialmente em medicamentos administrados por via oral.",
+    "hint": "Fármaco 'passa' pelo fígado e perde potência",
+    "exp": "Clinicamente, o efeito de primeira passagem pode exigir doses maiores ou vias alternativas para fármacos como propranolol e lidocaína, para garantir níveis terapêuticos eficazes."
+  },
+  {
+    "cat": "Distribuição",
+    "q": "O que determina o volume de distribuição (Vd) de um fármaco?",
+    "a": "O Vd é determinado pela relação entre a quantidade total de fármaco no corpo e sua concentração plasmática. Depende da lipossolubilidade, ligação às proteínas plasmáticas e permeabilidade dos tecidos.",
+    "hint": "Vd relaciona fármaco no corpo e no plasma",
+    "exp": "O Vd auxilia na escolha da dose de ataque e indica onde o fármaco se distribui, por exemplo, fármacos com alto Vd, como a digoxina, acumulam-se em tecidos e requerem monitoramento cuidadoso."
+  },
+  {
+    "cat": "Distribuição",
+    "q": "Qual a principal proteína plasmática que se liga a fármacos ácidos fracos e sua relevância clínica?",
+    "a": "A albumina é a principal proteína que se liga a fármacos ácidos fracos, como ácido acetilsalicílico. Alterações na albumina podem alterar a fração livre do fármaco, impactando sua eficácia e toxicidade.",
+    "hint": "Albumina liga ácidos fracos",
+    "exp": "Em pacientes com hipoalbuminemia, como em doenças hepáticas, a fração livre aumenta, elevando risco de efeitos adversos, crucial na prescrição e monitoramento durante a residência."
+  },
+  {
+    "cat": "Distribuição",
+    "q": "Como a barreira hematoencefálica afeta a distribuição de fármacos?",
+    "a": "A barreira hematoencefálica é seletiva, permitindo a passagem preferencial de fármacos lipossolúveis e de baixo peso molecular, limitando o acesso de muitos medicamentos ao sistema nervoso central.",
+    "hint": "Barreira protege cérebro, impede drogas hidrossolúveis",
+    "exp": "Conhecer essa barreira é fundamental para prescrever fármacos que atuam no SNC, como anticonvulsivantes, e para entender efeitos colaterais centrais."
+  },
+  {
+    "cat": "Metabolismo",
+    "q": "Qual é o principal órgão responsável pelo metabolismo dos fármacos e qual sistema enzimático é mais importante nesse processo?",
+    "a": "O fígado é o principal órgão do metabolismo, com o sistema enzimático do citocromo P450 (CYP450) sendo o mais importante para a biotransformação de fármacos.",
+    "hint": "Fígado + CYP450 = metabolismo",
+    "exp": "Na prática clínica, o conhecimento do CYP450 permite entender interações medicamentosas e variações individuais na resposta ao tratamento."
+  },
+  {
+    "cat": "Metabolismo",
+    "q": "Explique a diferença entre metabolismo fase I e fase II.",
+    "a": "Metabolismo fase I envolve reações de oxidação, redução e hidrólise, que introduzem ou expõem grupos funcionais no fármaco. Fase II envolve conjugação com moléculas endógenas, aumentando a solubilidade para excreção.",
+    "hint": "Fase I modifica; Fase II conjuga",
+    "exp": "Essa diferenciação é clínica porque algumas drogas precisam de ativação (pró-fármacos) na fase I ou dependem da conjugação para eliminação, afetando dose e toxicidade."
+  },
+  {
+    "cat": "Metabolismo",
+    "q": "O que são indutores e inibidores enzimáticos e qual sua importância na farmacocinética?",
+    "a": "Indutores aumentam a atividade das enzimas metabolizadoras, acelerando o metabolismo e reduzindo a concentração plasmática do fármaco. Inibidores diminuem a atividade enzimática, aumentando a concentração e risco de toxicidade.",
+    "hint": "Indutor acelera; inibidor retarda metabolismo",
+    "exp": "Na residência, identificar essas ações é fundamental para evitar interações medicamentosas graves, como entre rifampicina (indutor) e anticonvulsivantes."
+  },
+  {
+    "cat": "Metabolismo",
+    "q": "Qual é o impacto clínico de polimorfismos genéticos nas enzimas do citocromo P450?",
+    "a": "Polimorfismos genéticos podem alterar a atividade das enzimas CYP450, classificando pacientes em metabolizadores rápidos, intermediários ou lentos, influenciando eficácia e toxicidade dos fármacos.",
+    "hint": "Genética afeta metabolismo",
+    "exp": "Na prática clínica, reconhecer esses polimorfismos ajuda na personalização da terapia, especialmente em fármacos como a codeína e a warfarina."
+  },
+  {
+    "cat": "Eliminação",
+    "q": "Quais são as principais vias de eliminação de fármacos do organismo?",
+    "a": "As principais vias são renal (urina), hepática (bile e fezes), pulmonar (exalação) e em menor grau por suor, saliva e leite materno.",
+    "hint": "Rins e fígado principais eliminadores",
+    "exp": "Identificar a via de eliminação é crucial para ajustar doses em insuficiência renal ou hepática, prevenindo acúmulo e toxicidade."
+  },
+  {
+    "cat": "Eliminação",
+    "q": "O que é depuração (clearance) e qual sua importância na farmacocinética?",
+    "a": "Depuração é o volume de plasma completamente livre do fármaco por unidade de tempo, refletindo a eficiência do organismo em eliminar o fármaco. É usada para ajustar doses, especialmente em disfunções orgânicas.",
+    "hint": "Clearance = volume plasma limpo",
+    "exp": "Na residência, calcular clearance renal ajuda no manejo de fármacos nefrotóxicos ou com eliminação predominantemente renal, como digoxina e aminoglicosídeos."
+  },
+  {
+    "cat": "Eliminação",
+    "q": "Qual a meia-vida (t1/2) e como ela influencia o esquema posológico?",
+    "a": "Meia-vida é o tempo necessário para reduzir pela metade a concentração plasmática do fármaco. Ela determina a frequência das doses e o tempo para atingir estado estacionário.",
+    "hint": "Meia-vida guia intervalos de dose",
+    "exp": "Compreender a meia-vida permite adequar doses para manter níveis terapêuticos, evitando subdosagem ou toxicidade, essencial em medicamentos como a fenitoína."
+  },
+  {
+    "cat": "Eliminação",
+    "q": "Como a insuficiência renal afeta a farmacocinética dos medicamentos eliminados por via renal?",
+    "a": "A insuficiência renal reduz a depuração dos fármacos renais, prolongando a meia-vida e aumentando risco de acúmulo e toxicidade, necessitando ajuste de dose.",
+    "hint": "Rins ruins prolongam ação do remédio",
+    "exp": "Na prática, ajustar doses em pacientes com insuficiência renal é fundamental para evitar efeitos adversos, especialmente com fármacos como digoxina e vancomicina."
+  },
+  {
+    "cat": "Absorção",
+    "q": "Qual via de administração possui 100% de biodisponibilidade e por quê?",
+    "a": "A administração intravenosa possui 100% de biodisponibilidade porque o fármaco é diretamente introduzido na circulação sistêmica, sem perdas por absorção ou metabolismo de primeira passagem.",
+    "hint": "IV = biodisponibilidade total",
+    "exp": "Essa via é usada em emergências para ação rápida e controle preciso da dose, importante em anestesia e medicamentos vasoativos."
+  },
+  {
+    "cat": "Absorção",
+    "q": "Como o pH do meio influencia a absorção de fármacos ácidos e básicos?",
+    "a": "Fármacos ácidos são melhor absorvidos em meio ácido (estômago), enquanto fármacos básicos são melhor absorvidos em meio alcalino (intestino), devido ao grau de ionização que afeta permeabilidade celular.",
+    "hint": "pH afeta ionização e absorção",
+    "exp": "Este conceito é útil para entender interações, como antiácidos que alteram absorção de outros medicamentos e para escolher melhor via e momento da administração."
+  },
+  {
+    "cat": "Distribuição",
+    "q": "O que significa um fármaco estar altamente ligado a proteínas plasmáticas e qual o impacto clínico disso?",
+    "a": "Alta ligação a proteínas plasmáticas reduz a fração livre ativa do fármaco, limitando seu efeito e eliminando, mas pequenas variações podem causar alterações significativas na ação e toxicidade.",
+    "hint": "Ligação = menos fármaco livre",
+    "exp": "Na residência, monitorar interações que desloquem fármacos da albumina (ex: varfarina) é vital para evitar sangramentos ou falha terapêutica."
+  },
+  {
+    "cat": "Metabolismo",
+    "q": "O que é um pró-fármaco e qual a sua vantagem clínica?",
+    "a": "Pró-fármaco é uma substância inativa que é metabolizada no organismo em um fármaco ativo. Permite melhorar absorção, distribuição ou reduzir efeitos colaterais iniciais.",
+    "hint": "Pró-fármaco ativa depois do metabolismo",
+    "exp": "Exemplos como enalapril são importantes para entender que a falha no metabolismo pode prejudicar a resposta terapêutica."
+  },
+  {
+    "cat": "Eliminação",
+    "q": "Como a função hepática alterada pode afetar a eliminação de medicamentos?",
+    "a": "Disfunção hepática reduz o metabolismo de fármacos, especialmente os que passam por metabolismo de primeira passagem, aumentando sua concentração plasmática e risco de toxicidade.",
+    "hint": "Fígado ruim retarda limpeza do fármaco",
+    "exp": "Na prática, avaliar função hepática é essencial para ajustar doses de medicamentos como benzodiazepínicos e opioides."
+  },
+  {
+    "cat": "Absorção",
+    "q": "Qual é o papel dos transportadores de membrana na absorção de fármacos?",
+    "a": "Transportadores facilitam ou limitam a entrada e saída de fármacos nas células, influenciando biodisponibilidade e possíveis interações medicamentosas.",
+    "hint": "Transportadores regulam entrada do fármaco",
+    "exp": "Conhecer transportadores como P-glicoproteína é útil para entender resistência a fármacos e otimizar terapias, especialmente em oncologia e infectologia."
+  },
+  {
+    "cat": "Distribuição",
+    "q": "Por que fármacos lipossolúveis tendem a ter um volume de distribuição maior?",
+    "a": "Porque se acumulam em tecidos adiposos e membranas celulares, reduzindo sua concentração plasmática e aumentando o Vd.",
+    "hint": "Lipossolúveis entram nos tecidos gordurosos",
+    "exp": "Isso impacta o tempo de ação e a necessidade de doses de ataque para alcançar efeito terapêutico, importante em anestésicos e psicotrópicos."
+  },
+  {
+    "cat": "Metabolismo",
+    "q": "Quais são os efeitos clínicos da indução enzimática prolongada em fármacos com estreita janela terapêutica?",
+    "a": "Redução da concentração plasmática do fármaco, perda do efeito terapêutico e necessidade de aumento da dose para manter eficácia.",
+    "hint": "Indução prolongada diminui efeito do remédio",
+    "exp": "Exemplo clássico é a rifampicina que reduz níveis de anticonvulsivantes, podendo causar crises convulsivas se não ajustado."
+  },
+  {
+    "cat": "Eliminação",
+    "q": "Como a depuração renal é estimada na prática clínica e qual sua relevância para ajuste de doses?",
+    "a": "A depuração renal é estimada pelo clearance de creatinina, que correlaciona com a função renal, sendo usada para ajustar doses de fármacos eliminados pelos rins.",
+    "hint": "Clearance de creatinina guia doses renais",
+    "exp": "Fundamental para evitar toxicidade em pacientes com insuficiência renal, especialmente para aminoglicosídeos e digoxina."
+  },
+  {
+    "cat": "Absorção",
+    "q": "O que caracteriza a absorção via transporte ativo e sua importância clínica?",
+    "a": "Transporte ativo envolve gasto energético para transportar o fármaco contra o gradiente de concentração, sendo saturável e sujeito a competição entre fármacos.",
+    "hint": "Transporte ativo usa energia e é saturável",
+    "exp": "Importante para fármacos como levodopa, onde competição pode reduzir absorção e eficácia."
+  },
+  {
+    "cat": "Distribuição",
+    "q": "Como a idade influencia o volume de distribuição de fármacos em idosos?",
+    "a": "Idosos apresentam aumento da gordura corporal e diminuição da água corporal e albumina, aumentando Vd para fármacos lipossolúveis e diminuindo para hidrossolúveis.",
+    "hint": "Idosos têm mais gordura e menos água",
+    "exp": "Isso altera a farmacocinética e requer ajustes na dose para evitar superdosagem ou perda de eficácia."
+  },
+  {
+    "cat": "Metabolismo",
+    "q": "O que é metabolismo de primeira passagem e qual sua consequência na biodisponibilidade oral?",
+    "a": "É a metabolização do fármaco no fígado antes de atingir a circulação sistêmica, reduzindo significativamente a biodisponibilidade oral de certos medicamentos.",
+    "hint": "Fígado 'queima' parte do fármaco oral",
+    "exp": "Medicamentos como propranolol e lidocaína têm baixa biodisponibilidade oral devido ao efeito de primeira passagem, influenciando a escolha da via e dose."
+  },
+  {
+    "cat": "Eliminação",
+    "q": "Explique a relação entre meia-vida e estado estacionário na administração contínua de um fármaco.",
+    "a": "O estado estacionário ocorre após aproximadamente 4 a 5 meias-vidas, quando a taxa de administração iguala a taxa de eliminação, estabilizando a concentração plasmática do fármaco.",
+    "hint": "Estado estacionário = equilíbrio após várias meias-vidas",
+    "exp": "Compreender o tempo para estado estacionário é importante para avaliar quando esperar efeito clínico pleno e para monitorar níveis plasmáticos."
+  },
+  {
+    "cat": "Absorção",
+    "q": "Quais as vantagens e desvantagens da via sublingual na absorção de fármacos?",
+    "a": "Vantagem: rápida absorção e evita metabolismo de primeira passagem hepática. Desvantagem: limitada para pequenas doses e fármacos com sabor desagradável.",
+    "hint": "Sublingual é rápido e evita fígado",
+    "exp": "Útil para nitroglicerina em angina, onde a rapidez e biodisponibilidade são essenciais."
+  },
+  {
+    "cat": "Distribuição",
+    "q": "O que é o efeito do espaço corporal na distribuição de fármacos hidrossolúveis em pacientes com edema ou ascite?",
+    "a": "O aumento do volume de água corporal aumenta o volume de distribuição de fármacos hidrossolúveis, podendo diminuir a concentração plasmática e exigir ajuste de dose.",
+    "hint": "Mais água corporal dilui o fármaco hidrossolúvel",
+    "exp": "Importante em pacientes críticos para evitar subdosagem de antibióticos hidrossolúveis."
+  },
+  {
+    "cat": "Metabolismo",
+    "q": "Quais são os principais fatores que podem reduzir o metabolismo hepático de fármacos?",
+    "a": "Fatores incluem insuficiência hepática, idade avançada, uso de inibidores enzimáticos, doenças hepáticas crônicas e polimorfismos genéticos.",
+    "hint": "Fígado doente ou idade baixa metabolismo",
+    "exp": "Na clínica, isso pode levar a acúmulo do fármaco e toxicidade, exigindo vigilância e ajuste de doses."
+  },
+  {
+    "cat": "Eliminação",
+    "q": "Como a depuração biliar contribui para a eliminação de fármacos e qual sua relevância clínica?",
+    "a": "Fármacos metabolizados no fígado podem ser excretados na bile, sendo eliminados pelas fezes. Isso é relevante em pacientes com colestase ou obstrução biliar, que podem acumular esses fármacos.",
+    "hint": "Bile elimina fármacos via fezes",
+    "exp": "Conhecer essa via permite ajustar doses em doenças hepáticas obstrutivas, prevenindo toxicidade."
+  },
+  {
+    "cat": "Absorção",
+    "q": "O que é o tempo de latência na absorção de um fármaco e qual seu impacto clínico?",
+    "a": "Tempo de latência é o intervalo entre a administração e o início da absorção significativa do fármaco. Impacta na velocidade do início do efeito terapêutico.",
+    "hint": "Latência = atraso na absorção",
+    "exp": "Fármacos com latência prolongada podem não ser indicados em situações de emergência, influenciando a escolha terapêutica."
+  },
+  {
+    "cat": "Distribuição",
+    "q": "Como a ligação aos tecidos influencia a farmacocinética de um fármaco?",
+    "a": "A ligação aos tecidos pode atuar como reservatório, prolongando o tempo de ação e a meia-vida do fármaco, podendo causar efeitos prolongados ou toxicidade retardada.",
+    "hint": "Tecido pode armazenar fármaco",
+    "exp": "Importante em fármacos como o dinitrofenol, cuja liberação lenta pode causar efeitos adversos inesperados."
+  },
+  {
+    "cat": "Metabolismo",
+    "q": "Quais são as principais reações enzimáticas da fase I do metabolismo de fármacos?",
+    "a": "Oxidação, redução e hidrólise são as principais reações da fase I, que modificam a estrutura química do fármaco para facilitar sua excreção ou ativação.",
+    "hint": "Oxidação, redução e hidrólise na fase I",
+    "exp": "Essas reações são catalisadas principalmente pelo CYP450, impactando a duração e intensidade do efeito dos fármacos."
+  },
+  {
+    "cat": "Eliminação",
+    "q": "Explique o conceito de meia-vida de eliminação e sua relação com a depuração e volume de distribuição.",
+    "a": "Meia-vida de eliminação é o tempo para a concentração plasmática cair pela metade e é determinada pela fórmula t1/2 = (0,693 × Vd) / Clearance. Assim, depende do volume de distribuição e da depuração do fármaco.",
+    "hint": "Meia-vida depende de Vd e clearance",
+    "exp": "Essa relação permite entender como alterações no clearance ou volume de distribuição afetam a duração do efeito do medicamento."
+  },
+  {
+    "cat": "Absorção",
+    "q": "Quais são as características de fármacos que facilitam sua absorção por difusão passiva?",
+    "a": "Baixa polaridade, alta lipossolubilidade, pequeno tamanho molecular e não ionização favorecem a passagem por difusão passiva através das membranas celulares.",
+    "hint": "Lipossolúvel e não ionizado absorve fácil",
+    "exp": "Essas características ajudam a prever a absorção e a escolha de fármacos para via oral ou tópica."
+  },
+  {
+    "cat": "Distribuição",
+    "q": "O que é o coeficiente de partição óleo/água e sua importância na distribuição de fármacos?",
+    "a": "É uma medida da lipossolubilidade do fármaco, indicando sua capacidade de atravessar membranas lipídicas e se distribuir em tecidos gordurosos.",
+    "hint": "Coeficiente óleo/água = lipossolubilidade",
+    "exp": "Fármacos com alto coeficiente tendem a ter maior volume de distribuição e efeito prolongado."
+  },
+  {
+    "cat": "Metabolismo",
+    "q": "Por que alguns fármacos apresentam metabolismo não linear e qual a implicação clínica disso?",
+    "a": "Metabolismo não linear ocorre quando as enzimas metabolizadoras saturam em determinadas concentrações, resultando em aumento desproporcional da concentração plasmática com doses maiores.",
+    "hint": "Saturação enzimática causa metabolismo não linear",
+    "exp": "Na prática, isso implica risco aumentado de toxicidade com aumentos pequenos na dose, como ocorre com fenitoína."
+  },
+  {
+    "cat": "Eliminação",
+    "q": "O que é o clearance renal e quais processos renais contribuem para ele?",
+    "a": "Clearance renal é o volume de plasma que é completamente limpo do fármaco pelos rins por unidade de tempo, envolvendo filtração glomerular, secreção tubular ativa e reabsorção tubular.",
+    "hint": "Filtração + secreção - reabsorção = clearance renal",
+    "exp": "Compreender esses processos auxilia na avaliação do impacto de doenças renais e interações medicamentosas na eliminação."
+  },
+  {
+    "cat": "Absorção",
+    "q": "Como a presença de alimentos pode afetar a absorção de fármacos administrados por via oral?",
+    "a": "Alimentos podem retardar o esvaziamento gástrico, modificar o pH, formar complexos com o fármaco ou estimular secreções que alteram a absorção, podendo aumentar ou diminuir a biodisponibilidade.",
+    "hint": "Alimentos podem atrasar ou reduzir absorção",
+    "exp": "Saber essa interação é importante para orientar o paciente sobre o momento ideal da administração, como no caso do ferro, cuja absorção diminui com alimentos."
+  },
+  {
+    "cat": "Distribuição",
+    "q": "Por que fármacos com alta afinidade por tecidos podem apresentar efeito prolongado mesmo após a interrupção da administração?",
+    "a": "Porque permanecem armazenados nos tecidos e são lentamente liberados para a circulação, mantendo níveis plasmáticos e efeitos farmacológicos por mais tempo.",
+    "hint": "Reservatório tecidual prolonga efeito",
+    "exp": "Isso é importante para drogas como o diazepam, que pode causar sedação duradoura em idosos."
+  },
+  {
+    "cat": "Metabolismo",
+    "q": "Como a indução enzimática pode levar à redução da eficácia de medicamentos coadministrados?",
+    "a": "Indução enzimática aumenta a metabolização do fármaco coadministrado, diminuindo sua concentração plasmática e efeito terapêutico.",
+    "hint": "Indução baixa níveis do outro fármaco",
+    "exp": "Exemplo: rifampicina reduz eficácia de anticoncepcionais orais, aumentando risco de gravidez indesejada."
+  },
+  {
+    "cat": "Eliminação",
+    "q": "Qual a importância do clearance hepático na eliminação de fármacos e como ele pode ser afetado por doenças hepáticas?",
+    "a": "Clearance hepático é a capacidade do fígado de metabolizar e eliminar fármacos; doenças hepáticas podem reduzir esse clearance, levando ao acúmulo e toxicidade dos fármacos metabolizados no fígado.",
+    "hint": "Fígado doente diminui clearance hepático",
+    "exp": "Ajustes de dose são essenciais em hepatopatias para prevenir efeitos adversos, especialmente com benzodiazepínicos e opioides."
+  },
+  {
+    "cat": "Absorção",
+    "q": "Qual a diferença entre absorção por difusão passiva e transporte facilitado?",
+    "a": "Difusão passiva ocorre sem gasto de energia, seguindo o gradiente de concentração. Transporte facilitado utiliza proteínas para atravessar membranas, também sem gasto energético, mas é saturável e seletivo.",
+    "hint": "Difusão é simples; transporte facilitado usa proteínas",
+    "exp": "Essa distinção explica variações na absorção e possíveis interações, útil para fármacos como a vitamina B12."
+  },
+  {
+    "cat": "Distribuição",
+    "q": "Como a hipoproteinemia pode alterar a farmacocinética de fármacos altamente ligados à albumina?",
+    "a": "Hipoproteinemia reduz a ligação proteica, aumentando a fração livre ativa do fármaco, o que pode aumentar efeitos terapêuticos e toxicidade, mesmo com concentrações plasmáticas totais estáveis.",
+    "hint": "Menos proteínas = mais fármaco livre",
+    "exp": "Importante monitorar fármacos como varfarina e fenitoína em pacientes com desnutrição ou doenças hepáticas."
+  },
+  {
+    "cat": "Metabolismo",
+    "q": "O que significa metabolismo induzido e qual o impacto no tempo para atingir estado estacionário?",
+    "a": "Metabolismo induzido aumenta a velocidade de eliminação do fármaco, podendo reduzir a meia-vida e acelerar o alcance do estado estacionário, mas também diminuir níveis plasmáticos e eficácia.",
+    "hint": "Metabolismo induzido acelera eliminação",
+    "exp": "Na residência, ajustar doses em induções enzimáticas é fundamental para manter eficácia, como em pacientes com tuberculose usando rifampicina."
+  },
+  {
+    "cat": "Eliminação",
+    "q": "Como a reabsorção tubular influencia a eliminação renal de fármacos?",
+    "a": "A reabsorção tubular pode recuperar parte do fármaco filtrado, diminuindo sua excreção urinária e prolongando sua meia-vida, especialmente para fármacos lipossolúveis e não ionizados no pH urinário.",
+    "hint": "Reabsorção reduz eliminação urinária",
+    "exp": "Conhecer esse processo é importante para manipular pH urinário e favorecer excreção em casos de intoxicação."
+  },
+  {
+    "cat": "Absorção",
+    "q": "Quais as principais características que dificultam a absorção de fármacos por via oral?",
+    "a": "Grande peso molecular, baixa lipossolubilidade, alta ionização, instabilidade no pH gástrico e metabolismo de primeira passagem intenso dificultam a absorção oral.",
+    "hint": "Fármacos grandes e polares absorvem mal",
+    "exp": "Essas características justificam o uso de vias alternativas, como injetáveis ou inaláveis em casos específicos."
+  },
+  {
+    "cat": "Distribuição",
+    "q": "Por que o fármaco digoxina tem um volume de distribuição muito alto e qual a implicação clínica disso?",
+    "a": "A digoxina se acumula em tecidos, especialmente no músculo cardíaco, resultando em um Vd alto (~7 L/kg). Isso exige doses de ataque para atingir níveis terapêuticos e cuidado para evitar toxicidade.",
+    "hint": "Digoxina acumula em tecidos",
+    "exp": "Na prática, monitorar níveis plasmáticos e ajustar doses é essencial para segurança e eficácia."
+  },
+  {
+    "cat": "Metabolismo",
+    "q": "Como a idade pode afetar o metabolismo hepático dos medicamentos?",
+    "a": "Com o envelhecimento, há redução da massa hepática e fluxo sanguíneo hepático, diminuindo o metabolismo de fármacos de alta depuração, prolongando sua meia-vida e aumentando risco de toxicidade.",
+    "hint": "Idosos metabolizam menos alguns fármacos",
+    "exp": "Ajustes de dose e monitoramento são importantes em pacientes idosos para evitar superdosagem."
+  },
+  {
+    "cat": "Eliminação",
+    "q": "O que é clearance total e como ele é calculado na farmacocinética?",
+    "a": "Clearance total é a soma dos clearances por todas as vias de eliminação (renal, hepática, pulmonar). Pode ser calculado dividindo a taxa de eliminação pela concentração plasmática do fármaco.",
+    "hint": "Clearance total = soma das eliminações",
+    "exp": "Essa medida ajuda a entender a eficiência global de eliminação e ajustar doses em disfunções orgânicas múltiplas."
+  },
+  {
+    "cat": "Absorção",
+    "q": "Quais são os principais mecanismos de absorção de fármacos no trato gastrointestinal?",
+    "a": "Os principais mecanismos são difusão passiva, transporte ativo, transporte facilitado e endocitose. Cada um depende das características do fármaco e das células intestinais.",
+    "hint": "Difusão, transporte ativo/facilitado e endocitose",
+    "exp": "Conhecer esses mecanismos permite prever absorção e interações, auxiliando na escolha e ajuste terapêutico."
+  },
+  {
+    "cat": "Distribuição",
+    "q": "Como a insuficiência cardíaca pode alterar a distribuição de fármacos?",
+    "a": "A insuficiência cardíaca pode reduzir o débito cardíaco e perfusão tecidual, afetando a distribuição e o início de ação dos fármacos, especialmente os com distribuição rápida.",
+    "hint": "Coração ruim reduz distribuição",
+    "exp": "Essas alterações requerem atenção na monitorização e ajuste posológico para evitar falha terapêutica."
+  },
+  {
+    "cat": "Metabolismo",
+    "q": "Por que alguns fármacos apresentam metabolismo saturável e quais são as implicações clínicas?",
+    "a": "Metabolismo saturável ocorre quando as enzimas metabolizadoras atingem sua capacidade máxima, fazendo com que pequenas aumentos na dose causem grandes aumentos na concentração plasmática, aumentando risco de toxicidade.",
+    "hint": "Saturação causa acúmulo rápido do fármaco",
+    "exp": "Essencial monitorar pacientes em uso de fenitoína para evitar efeitos adversos graves."
+  },
+  {
+    "cat": "Eliminação",
+    "q": "Como a função pulmonar pode influenciar a eliminação de fármacos voláteis?",
+    "a": "Fármacos voláteis, como anestésicos inalatórios, são eliminados principalmente pela exalação pulmonar. Alterações na função pulmonar podem retardar eliminação e prolongar efeito.",
+    "hint": "Pulmão elimina fármacos voláteis",
+    "exp": "Importante considerar em pacientes com doenças pulmonares crônicas para evitar sedação prolongada."
   }
 ]
