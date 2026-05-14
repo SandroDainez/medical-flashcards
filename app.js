@@ -433,6 +433,27 @@ async function loadUserData() {
     return loadUserData();
   }
 
+  // Keep category taxonomy aligned with cards.json for existing cards.
+  // This prevents legacy rows from staying under "Outro" after taxonomy updates.
+  const sourceByQuestion = new Map(state.allCards.map(c => [c.q, c]));
+  const categoryUpdates = cards
+    .map(card => {
+      const source = sourceByQuestion.get(card.q);
+      if (!source || source.cat === card.cat) return null;
+      return { id: card.id, cat: source.cat };
+    })
+    .filter(Boolean);
+
+  if (categoryUpdates.length > 0) {
+    const updateRequests = categoryUpdates.map(update =>
+      supabaseClient
+        .from('cards')
+        .update({ cat: update.cat })
+        .eq('id', update.id)
+    );
+    await Promise.all(updateRequests);
+  }
+
   // Sync new cards from cards.json that user doesn't have yet
   const existingQuestions = new Set(cards.map(c => c.q));
   const newCards = state.allCards.filter(c => !existingQuestions.has(c.q));
