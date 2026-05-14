@@ -124,8 +124,11 @@ const USER_ROLE = {
 const KNOWN_DISCIPLINES = [
   'Anestesiologia',
   'Terapia Intensiva',
+  'Medicina Intensiva',
   'Cardiologia',
   'Clínica Médica',
+  'Ciências Básicas',
+  'Clínica Geral',
   'Pneumologia',
   'Ortopedia e Traumatologia',
   'Fisiologia',
@@ -147,8 +150,11 @@ const KNOWN_DISCIPLINES = [
 const DISCIPLINE_COLORS = {
   'Anestesiologia': '#ea580c',
   'Terapia Intensiva': '#dc2626',
+  'Medicina Intensiva': '#dc2626',
   'Cardiologia': '#1d4ed8',
   'Clínica Médica': '#2563eb',
+  'Ciências Básicas': '#0f766e',
+  'Clínica Geral': '#2563eb',
   'Pneumologia': '#0284c7',
   'Ortopedia e Traumatologia': '#b45309',
   'Fisiologia': '#7c3aed',
@@ -170,8 +176,10 @@ const DISCIPLINE_COLORS = {
 function inferDisciplineByContent(cat = '', q = '') {
   const text = `${cat} ${q}`.toLowerCase();
 
+  if (/ciências básicas|absor[cç][aã]o|distribui[cç][aã]o|metabolismo|excre[cç][aã]o|meia-vida|cin[eéê]tica|cinetica|biodispon|depura[cç][aã]o|f[aá]rmaco|farmacologia/.test(text)) return 'Ciências Básicas';
   if (/fibrila|flutter|ablação|anticoag|cardiovers|apêndice atrial|wpw|frequência|ritmo|fa\\b/.test(text)) return 'Cardiologia';
-  if (/sepse|choque|ventila|ressuscita|hemodin|uti|intensiv|lactato|swan-ganz|foco infecc|suporte renal|pics/.test(text)) return 'Terapia Intensiva';
+  if (/sepse|choque|ventila|ressuscita|hemodin|uti|intensiv|lactato|swan-ganz|foco infecc|suporte renal|pics|medicina intensiva/.test(text)) return 'Medicina Intensiva';
+  if (/cl[ií]nica geral/.test(text)) return 'Clínica Geral';
   if (/noradrenalina|vasopressina|dobutamina|receptores adren|vasopressor|inotrópico|farmacocin|efeitos adversos/.test(text)) return 'Farmacologia';
   if (/anestesi|via aére|pré-op|bloqueador neuromuscular/.test(text)) return 'Anestesiologia';
   if (/anatom/.test(text)) return 'Anatomia';
