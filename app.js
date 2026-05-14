@@ -206,6 +206,11 @@ function splitCategory(cat = '', q = '') {
   const text = (cat || '').trim();
   if (!text) return { discipline: 'Outro', topic: '' };
 
+  const legacyBasicTopics = ['Absorção', 'Distribuição', 'Excreção', 'Metabolismo', 'Meia-vida e Cinética', 'Cinética'];
+  if (legacyBasicTopics.includes(text)) {
+    return { discipline: BASIC_SCIENCE_DISCIPLINE, topic: 'Fisiologia' };
+  }
+
   const separators = [' - ', ' – ', ': '];
   for (const sep of separators) {
     if (text.includes(sep)) {
