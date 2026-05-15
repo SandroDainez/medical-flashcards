@@ -135,30 +135,25 @@ const BASIC_SCIENCE_TOPICS = [
 
 const KNOWN_DISCIPLINES = [
   'Anestesiologia',
-  'Terapia Intensiva',
   'Medicina Intensiva',
   'Cardiologia',
-  'Clínica Médica',
   'Ciências Básicas',
-  'Clínica Geral',
-  'Pneumologia',
-  'Ortopedia e Traumatologia',
-  'Neurologia',
   'Cirurgia',
-  'Pediatria',
+  'Clínica Médica',
   'Ginecologia e Obstetrícia',
-  'Psiquiatria',
-  'Outro'
+  'Neurologia',
+  'Ortopedia e Traumatologia',
+  'Pediatria',
+  'Pneumologia',
+  'Psiquiatria'
 ];
 
 const DISCIPLINE_COLORS = {
   'Anestesiologia': '#ea580c',
-  'Terapia Intensiva': '#dc2626',
   'Medicina Intensiva': '#dc2626',
   'Cardiologia': '#1d4ed8',
   'Clínica Médica': '#2563eb',
   'Ciências Básicas': '#0f766e',
-  'Clínica Geral': '#2563eb',
   'Pneumologia': '#0284c7',
   'Ortopedia e Traumatologia': '#b45309',
   'Fisiologia': '#7c3aed',
@@ -182,8 +177,8 @@ function inferDisciplineByContent(cat = '', q = '') {
 
   if (/ciências básicas|anatom|fisiolog|farmacolog|patolog|microbiolog|imunolog|bioqu[ií]m|semiolog|absor[cç][aã]o|distribui[cç][aã]o|metabolismo|excre[cç][aã]o|meia-vida|cin[eéê]tica|cinetica|biodispon|depura[cç][aã]o|f[aá]rmaco/.test(text)) return BASIC_SCIENCE_DISCIPLINE;
   if (/fibrila|flutter|ablação|anticoag|cardiovers|apêndice atrial|wpw|frequência|ritmo|fa\\b/.test(text)) return 'Cardiologia';
-  if (/sepse|choque|ventila|ressuscita|hemodin|uti|intensiv|lactato|swan-ganz|foco infecc|suporte renal|pics|medicina intensiva/.test(text)) return 'Medicina Intensiva';
-  if (/cl[ií]nica geral/.test(text)) return 'Clínica Geral';
+  if (/sepse|choque|ventila|ressuscita|hemodin|uti|intensiv|terapia intensiva|lactato|swan-ganz|foco infecc|suporte renal|pics|medicina intensiva/.test(text)) return 'Medicina Intensiva';
+  if (/cl[ií]nica geral/.test(text)) return 'Clínica Médica';
   if (/noradrenalina|vasopressina|dobutamina|receptores adren|vasopressor|inotrópico|farmacocin|efeitos adversos/.test(text)) return 'Farmacologia';
   if (/anestesi|via aére|pré-op|bloqueador neuromuscular/.test(text)) return 'Anestesiologia';
   if (/anatom/.test(text)) return 'Anatomia';
@@ -196,7 +191,7 @@ function inferDisciplineByContent(cat = '', q = '') {
   if (/pediatria|vacina/.test(text)) return 'Pediatria';
   if (/neurolog|cushing/.test(text)) return 'Neurologia';
   if (/cirurg/.test(text)) return 'Cirurgia';
-  if (/gineco|obstetr|gravidez/.test(text)) return 'Ginecologia e Obstetrícia';
+  if (/gineco|obstetr|gravidez|parto|gestante|gestação|obstetric/.test(text)) return 'Ginecologia e Obstetrícia';
   if (/pneumolog|sdra/.test(text)) return 'Pneumologia';
   if (/cl[ií]nica m[eé]dica|framingham|insufici[eê]ncia card[ií]aca/.test(text)) return 'Clínica Médica';
   return 'Outro';
