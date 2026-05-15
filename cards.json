@@ -3239,5 +3239,383 @@
     "a": "Potencializa analgesia e prolonga a duração do bloqueio ao atuar nos receptores alfa-2 adrenérgicos.",
     "hint": "Clonidina adjuvante alfa-2",
     "exp": "A clonidina melhora a qualidade da analgesia e permite redução da dose de anestésico local, diminuindo efeitos colaterais como bloqueio motor excessivo."
+  },
+  {
+    "cat": "Anestesiologia - Bloqueios de Neuroeixo Básico",
+    "q": "O que é anestesia raquidiana?",
+    "a": "É a injeção de anestésico local no espaço subaracnóideo, causando bloqueio sensitivo, motor e autonômico abaixo do nível da punção.",
+    "hint": "Espaço subaracnóideo = líquido cefalorraquidiano",
+    "exp": "A anestesia raquidiana promove bloqueio rápido e eficaz para cirurgias abaixo do umbigo, pois o anestésico entra em contato direto com as raízes nervosas no líquor, bloqueando a condução nervosa. É indicada para procedimentos de curta a média duração."
+  },
+  {
+    "cat": "Anestesiologia - Bloqueios de Neuroeixo Básico",
+    "q": "Qual a diferença principal entre anestesia raquidiana e peridural?",
+    "a": "A anestesia raquidiana é feita no espaço subaracnóideo, enquanto a peridural é feita no espaço peridural, fora da dura-máter.",
+    "hint": "Raqui = subaracnóideo; Peridural = fora da dura",
+    "exp": "No bloqueio raquidiano, o anestésico é depositado diretamente no líquor, proporcionando início rápido e bloqueio denso. Na peridural, o anestésico difunde-se através da dura, com início mais lento e possibilidade de cateter para analgesia contínua."
+  },
+  {
+    "cat": "Anestesiologia - Fisiologia do Bloqueio Raquidiano",
+    "q": "Qual a ordem típica de bloqueio sensitivo e motor na anestesia raquidiana?",
+    "a": "Primeiro ocorre o bloqueio das fibras autonômicas, seguido do bloqueio sensitivo e, por último, o motor.",
+    "hint": "Ordem: autonômico > sensitivo > motor",
+    "exp": "As fibras pré-ganglionares autonômicas são mais finas e sensíveis, bloqueando-se primeiro, o que explica a hipotensão precoce. As fibras sensoriais são bloqueadas em seguida, e as motoras, por serem maiores, requerem maior concentração e tempo para bloqueio."
+  },
+  {
+    "cat": "Anestesiologia - Técnica Peridural",
+    "q": "Qual a técnica mais utilizada para localizar o espaço peridural?",
+    "a": "A técnica do 'loss of resistance' (perda de resistência) com seringa preenchida com ar ou soro fisiológico.",
+    "hint": "Loss of resistance = perda de resistência",
+    "exp": "Durante a punção com agulha peridural, o avanço através dos ligamentos gera resistência. Ao alcançar o espaço peridural, a resistência desaparece abruptamente, permitindo a identificação do espaço para injeção do anestésico."
+  },
+  {
+    "cat": "Anestesiologia - Farmacologia dos Anestésicos Locais",
+    "q": "Qual a concentração típica de bupivacaína usada em anestesia raquidiana para cirurgias de membros inferiores?",
+    "a": "Entre 0,5% e 0,75% de bupivacaína hiperbárica.",
+    "hint": "Bupivacaína hiperbárica 0,5-0,75%",
+    "exp": "A bupivacaína hiperbárica é usada por sua ação prolongada e bloqueio sensitivo denso, ideal para procedimentos ortopédicos. A concentração e volume determinam o nível e duração do bloqueio, sendo importante para evitar bloqueios altos e complicações."
+  },
+  {
+    "cat": "Anestesiologia - Complicações do Bloqueio Raquidiano",
+    "q": "Quais os sinais clínicos de bloqueio raquidiano alto (bloqueio espinhal alto)?",
+    "a": "Dificuldade respiratória, bradicardia, hipotensão grave e bloqueio motor dos músculos respiratórios.",
+    "hint": "Alto = afetando respiratório e cardiovascular",
+    "exp": "O bloqueio espinhal alto pode atingir os segmentos cervicais, comprometendo o nervo frênico e os centros cardiovasculares, causando insuficiência respiratória e choque. Requer suporte ventilatório imediato e tratamento hemodinâmico."
+  },
+  {
+    "cat": "Anestesiologia - Indicações da Anestesia Peridural",
+    "q": "Quais as principais indicações da anestesia peridural?",
+    "a": "Analgesia em trabalho de parto, cirurgias abdominais, torácicas e ortopédicas de longa duração, e analgesia pós-operatória.",
+    "hint": "Peridural = analgesia contínua e prolongada",
+    "exp": "A possibilidade de cateter peridural permite administração contínua ou intermitente de anestésicos, tornando-a ideal para analgesia prolongada, especialmente no trabalho de parto e pós-operatório, além de permitir ajuste do bloqueio conforme a necessidade."
+  },
+  {
+    "cat": "Anestesiologia - Anatomia do Espaço Peridural",
+    "q": "Qual a composição do espaço peridural e sua importância na anestesia peridural?",
+    "a": "O espaço peridural contém tecido adiposo, veias epidurais e fibras nervosas, permitindo a difusão do anestésico para as raízes nervosas próximas.",
+    "hint": "Peridural = tecido gorduroso + plexo venoso",
+    "exp": "A presença de veias e tecido adiposo influencia a absorção e o volume do anestésico no espaço peridural, afetando a eficácia e duração do bloqueio. Conhecer essa anatomia ajuda a prevenir complicações como a punção inadvertida da veia epidural."
+  },
+  {
+    "cat": "Anestesiologia - Volume e Dose na Anestesia Peridural",
+    "q": "Qual o volume típico de anestésico local para bloqueio peridural em cirurgias abdominais inferiores?",
+    "a": "Entre 15 a 20 ml de anestésico local a 0,25-0,5%.",
+    "hint": "Peridural = volume maior que raqui",
+    "exp": "Para obter bloqueio adequado, a anestesia peridural requer volumes maiores que a raquidiana, devido à difusão do anestésico no espaço peridural. O volume determina o nível do bloqueio, e deve ser ajustado para evitar bloqueios altos e complicações."
+  },
+  {
+    "cat": "Anestesiologia - Farmacocinética dos Anestésicos Locais",
+    "q": "Por que a bupivacaína é preferida para bloqueios neuroaxiais prolongados?",
+    "a": "Devido à sua longa duração de ação e maior potência anestésica em comparação com lidocaína.",
+    "hint": "Bupi = longa duração",
+    "exp": "A bupivacaína tem alta afinidade pelos canais de sódio e lenta dissociação, prolongando o bloqueio nervoso. Isso a torna ideal para cirurgias longas e analgesia pós-operatória, reduzindo a necessidade de doses repetidas."
+  },
+  {
+    "cat": "Anestesiologia - Manejo da Hipotensão Pós-Raqui",
+    "q": "Qual o tratamento inicial da hipotensão após bloqueio raquidiano?",
+    "a": "Administração de fluidos intravenosos e vasopressores, como a fenilefrina ou epinefrina em bolus.",
+    "hint": "Hipotensão = volume + vasopressor",
+    "exp": "O bloqueio do sistema nervoso simpático causa vasodilatação e queda da pressão arterial. A reposição volêmica e o uso de vasopressores são essenciais para manter a perfusão tecidual, especialmente em pacientes frágeis ou com comorbidades."
+  },
+  {
+    "cat": "Anestesiologia - Técnica Raquidiana",
+    "q": "Qual o nível de punção mais comum para anestesia raquidiana em cirurgias de membros inferiores?",
+    "a": "Entre L3-L4 ou L4-L5.",
+    "hint": "Punção abaixo de L2",
+    "exp": "A medula espinhal termina geralmente em L1-L2, portanto a punção abaixo desse nível evita lesão medular. Os espaços intervertebrais L3-L4 ou L4-L5 são os mais utilizados para acesso seguro ao espaço subaracnóideo."
+  },
+  {
+    "cat": "Anestesiologia - Contraindicações Absolutas da Raquidiana",
+    "q": "Quais são as contraindicações absolutas da anestesia raquidiana?",
+    "a": "Infecção local no local da punção, coagulopatias graves, hipovolemia não corrigida e recusa do paciente.",
+    "hint": "Infecção e coagulopatia = não fazer",
+    "exp": "Punção em sítio infectado pode disseminar infecção ao sistema nervoso central. Coagulopatias aumentam risco de hematoma epidural, podendo causar compressão medular. Hipovolemia pode agravar hipotensão pós-raqui."
+  },
+  {
+    "cat": "Anestesiologia - Farmacologia Avançada",
+    "q": "Qual o efeito da adição de opioides à anestesia peridural?",
+    "a": "Potencializa a analgesia ao atuar nos receptores opioides espinhais, reduzindo a dose de anestésico local necessária e melhorando o controle da dor.",
+    "hint": "Opióides = analgesia espinhal",
+    "exp": "Opióides como fentanil ou morfina adicionados ao anestésico local no espaço peridural atuam nos receptores μ da medula, promovendo analgesia segmentar sem afetar motricidade, ideal para analgesia prolongada no pós-operatório ou trabalho de parto."
+  },
+  {
+    "cat": "Anestesiologia - Complicações da Anestesia Peridural",
+    "q": "Quais as principais complicações associadas à anestesia peridural?",
+    "a": "Puntura dural acidental, hematoma epidural, infecção, bloqueio alto e toxicidade por anestésico local.",
+    "hint": "Peridural = risco dural e hematoma",
+    "exp": "A punção dural pode levar a cefaleia pós-punção. Hematomas epidurais podem causar compressão medular e déficit neurológico. Infecções, embora raras, podem ser graves. É fundamental monitorar sinais e sintomas para diagnóstico precoce."
+  },
+  {
+    "cat": "Anestesiologia - Diagnóstico Diferencial de Cefaleia Pós-Punção",
+    "q": "Como diferenciar cefaleia pós-punção dural de outras cefaleias em paciente submetido a bloqueio neuroaxial?",
+    "a": "A cefaleia pós-punção piora ao ficar em pé e melhora ao deitar, geralmente começa 24-48h após o procedimento.",
+    "hint": "Piora em pé, alívio ao deitar",
+    "exp": "A perda de líquido cefalorraquidiano após punção dural provoca dor de cabeça característica que se agrava quando o paciente está em posição ortostática. Outras cefaleias não apresentam essa relação postural, facilitando o diagnóstico clínico."
+  },
+  {
+    "cat": "Anestesiologia - Fisiologia do Bloqueio Autonômico",
+    "q": "Por que o bloqueio autonômico ocorre antes do bloqueio motor na anestesia raquidiana?",
+    "a": "Porque as fibras autonômicas são mais finas (fibras B) e mais sensíveis aos anestésicos locais do que as fibras motoras (fibras A).",
+    "hint": "Fibras finas bloqueiam primeiro",
+    "exp": "Fibras menores e mielinizadas tendem a ser bloqueadas mais facilmente pelos anestésicos locais. Isso explica a hipotensão (bloqueio simpático) precoce, antes da perda motora, importante para o manejo hemodinâmico durante a anestesia."
+  },
+  {
+    "cat": "Anestesiologia - Indicadores de Bloqueio Motor Adequado",
+    "q": "Como avaliar o bloqueio motor durante anestesia raquidiana?",
+    "a": "Utilizando a escala de Bromage, que avalia a capacidade de movimentar pernas e pés.",
+    "hint": "Escala de Bromage para motor",
+    "exp": "A escala de Bromage varia de 0 (sem bloqueio) a 3 (bloqueio motor completo). É útil para monitorar a profundidade do bloqueio e ajustar doses, garantindo segurança e conforto ao paciente."
+  },
+  {
+    "cat": "Anestesiologia - Anatomia Raquidiana",
+    "q": "Qual o nível onde a medula espinhal geralmente termina em adultos?",
+    "a": "Entre os níveis vertebrais L1 e L2.",
+    "hint": "Termina em L1-L2",
+    "exp": "Conhecer o término da medula evita punções que possam causar lesão medular direta. Por isso, a punção para anestesia raquidiana é feita abaixo desse nível, geralmente em L3-L4 ou L4-L5."
+  },
+  {
+    "cat": "Anestesiologia - Tipos de Agulhas para Raquianestesia",
+    "q": "Qual a vantagem das agulhas tipo Quincke na anestesia raquidiana?",
+    "a": "Possuem ponta cortante que facilita a penetração rápida da dura-máter, porém aumentam o risco de cefaleia pós-punção dural.",
+    "hint": "Quincke = ponta cortante",
+    "exp": "Agulhas Quincke são comuns e fáceis de usar, mas o corte da dura pode causar maior vazamento de líquor, aumentando a incidência de cefaleia pós-punção. Agulhas atraumáticas reduzem esse risco."
+  },
+  {
+    "cat": "Anestesiologia - Agulhas Atraumáticas",
+    "q": "Como as agulhas tipo Whitacre ou Sprotte reduzem a incidência de cefaleia pós-punção?",
+    "a": "Possuem ponta pencil-point que separa as fibras da dura sem cortá-las, diminuindo o vazamento de líquor.",
+    "hint": "Ponta pencil-point = menos dano",
+    "exp": "Agulhas atraumáticas causam menos trauma à dura, minimizando vazamento de líquor e consequentemente a cefaleia pós-punção, melhorando o conforto do paciente e reduzindo complicações pós-anestésicas."
+  },
+  {
+    "cat": "Anestesiologia - Influência do Paciente na Altura do Bloqueio Raquidiano",
+    "q": "Como a posição do paciente influencia a altura do bloqueio em anestesia raquidiana com anestésico hiperbárico?",
+    "a": "A posição em que o paciente é mantido após a injeção influencia a distribuição do anestésico hiperbárico pelo líquor, podendo aumentar ou diminuir o nível do bloqueio.",
+    "hint": "Hipérbarico = anestésico 'desce' com gravidade",
+    "exp": "Anestésicos hiperbáricos são mais densos que o líquor, por isso a gravidade influencia sua distribuição. Manter o paciente sentado limita o bloqueio a níveis baixos; deitar rapidamente pode levar a bloqueios altos, importante para evitar complicações."
+  },
+  {
+    "cat": "Anestesiologia - Toxicidade por Anestésicos Locais",
+    "q": "Quais os sinais iniciais de toxicidade sistêmica por anestésico local?",
+    "a": "Tontura, zumbido, formigamento perioral, tremores e convulsões.",
+    "hint": "Sintomas neurológicos iniciais",
+    "exp": "A absorção excessiva do anestésico local pode afetar o SNC, com sintomas progressivos que podem evoluir para depressão respiratória e cardiovascular. Reconhecer precocemente permite intervenção rápida para evitar desfechos graves."
+  },
+  {
+    "cat": "Anestesiologia - Tratamento da Toxicidade por Anestésicos Locais",
+    "q": "Qual o tratamento imediato para toxicidade grave por anestésicos locais?",
+    "a": "Administração de emulsão lipídica intravenosa (lipid rescue) e suporte avançado de vida.",
+    "hint": "Lipid rescue salva vidas",
+    "exp": "A emulsão lipídica atua como 'chamariz' para o anestésico local, reduzindo sua concentração livre no plasma. Esse tratamento é fundamental para reverter arritmias e convulsões causadas por toxicidade, sendo padrão em emergências."
+  },
+  {
+    "cat": "Anestesiologia - Anestésicos Locais Comuns",
+    "q": "Qual o anestésico local com início mais rápido, mas menor duração, usado em bloqueios de neuroeixo?",
+    "a": "A lidocaína.",
+    "hint": "Lidocaína = rápido, curto",
+    "exp": "A lidocaína tem início de ação rápido (2-5 minutos) e duração curta (1-2 horas), sendo útil para procedimentos de curta duração. Porém, está associada a maior risco de cefaleia pós-punção e toxicidade, comparado à bupivacaína."
+  },
+  {
+    "cat": "Anestesiologia - Manejo da Cefaleia Pós-Punção",
+    "q": "Qual a conduta inicial para cefaleia pós-punção dural?",
+    "a": "Repouso, hidratação, analgésicos simples e cafeína.",
+    "hint": "Repouso e cafeína ajudam",
+    "exp": "A cefaleia pós-punção resulta da perda de líquor, portanto medidas que aumentam a pressão intracraniana, como cafeína e hidratação, ajudam na recuperação. Caso persista, pode ser indicado o blood patch epidural."
+  },
+  {
+    "cat": "Anestesiologia - Blood Patch Epidural",
+    "q": "Quando está indicado o blood patch epidural no tratamento da cefaleia pós-punção dural?",
+    "a": "Quando a cefaleia é intensa, persistente e não responde ao tratamento conservador após 24-48 horas.",
+    "hint": "Blood patch = última opção eficaz",
+    "exp": "O blood patch consiste na injeção de sangue autólogo no espaço peridural, formando um coágulo que sela a punção dural, interrompendo o vazamento de líquor e aliviando rapidamente a cefaleia."
+  },
+  {
+    "cat": "Anestesiologia - Monitorização Durante Bloqueios Neuroaxiais",
+    "q": "Quais os parâmetros hemodinâmicos mais importantes a serem monitorados após anestesia raquidiana?",
+    "a": "Pressão arterial, frequência cardíaca e oximetria de pulso.",
+    "hint": "Pressão e FC monitorar sempre",
+    "exp": "O bloqueio simpático pode causar hipotensão e bradicardia, necessitando monitorização rigorosa para intervenção precoce, prevenindo complicações graves como choque e parada cardíaca."
+  },
+  {
+    "cat": "Anestesiologia - Duração Média da Anestesia Raquidiana com Bupivacaína",
+    "q": "Qual a duração média do bloqueio sensitivo com bupivacaína 0,5% hiperbárica em anestesia raquidiana?",
+    "a": "Entre 90 e 150 minutos.",
+    "hint": "Duração 1,5 a 2,5 horas",
+    "exp": "A duração varia conforme dose e concentração, mas geralmente é suficiente para procedimentos de médio porte. A duração do bloqueio motor é similar, sendo importante para planejamento do pós-operatório."
+  },
+  {
+    "cat": "Anestesiologia - Efeitos da Gravidade do Anestésico Local",
+    "q": "O que significa anestésico hiperbárico, isobárico e hipobárico no contexto da anestesia raquidiana?",
+    "a": "Hipérbarico é mais denso que o líquor; isobárico tem densidade similar; hipobárico é menos denso; essa característica influencia a distribuição do anestésico no espaço subaracnóideo.",
+    "hint": "Densidade influencia bloqueio",
+    "exp": "A densidade do anestésico local determina sua migração pelo líquor sob influência da gravidade, permitindo direcionar o bloqueio para níveis específicos, otimizando a anestesia e minimizando efeitos colaterais."
+  },
+  {
+    "cat": "Anestesiologia - Indicações Relativas da Raquianestesia",
+    "q": "Quais são as indicações relativas para anestesia raquidiana?",
+    "a": "Doença cardíaca grave, escoliose severa, hipertensão intracraniana e obesidade mórbida.",
+    "hint": "Relativas = cuidado e avaliação",
+    "exp": "Nesses casos, o risco-benefício deve ser avaliado. Por exemplo, pacientes com doença cardíaca podem ter instabilidade hemodinâmica, requerendo monitorização rigorosa e possível alternativa anestésica."
+  },
+  {
+    "cat": "Anestesiologia - Fisiopatologia do Bloqueio Simpático",
+    "q": "Quais os efeitos hemodinâmicos do bloqueio simpático na anestesia raquidiana?",
+    "a": "Vasodilatação periférica, redução da resistência vascular sistêmica, hipotensão e bradicardia reflexa.",
+    "hint": "Bloqueio simpático = vasodilatação",
+    "exp": "O bloqueio do sistema simpático leva a queda da pressão arterial pela vasodilatação e redução do retorno venoso, podendo causar choque distributivo. A bradicardia ocorre por reflexos vagais e bloqueio dos nervos cardíacos simpáticos."
+  },
+  {
+    "cat": "Anestesiologia - Anestesia Raquidiana em Gestantes",
+    "q": "Por que a dose de anestésico local na raquianestesia é menor em gestantes que em não gestantes?",
+    "a": "Devido à diminuição do volume do líquor e alterações anatômicas que aumentam a sensibilidade ao anestésico local durante a gestação.",
+    "hint": "Gestante = menor dose necessária",
+    "exp": "O aumento da pressão intra-abdominal e congestão venosa reduzem o espaço liquórico, aumentando a concentração do anestésico local e a altura do bloqueio, o que exige redução da dose para evitar bloqueios altos."
+  },
+  {
+    "cat": "Anestesiologia - Técnica Combinada Raquianestesia-Peridural",
+    "q": "Qual a vantagem da técnica combinada raquianestesia-peridural (CSE)?",
+    "a": "Permite início rápido do bloqueio pela raquianestesia e manutenção prolongada e controle da analgesia pela peridural.",
+    "hint": "CSE = rápido + prolongado",
+    "exp": "A técnica combinada oferece o benefício do início imediato da raquianestesia com a flexibilidade do cateter peridural para analgesia contínua, sendo muito utilizada em obstetrícia e cirurgias complexas."
+  },
+  {
+    "cat": "Anestesiologia - Monitorização Neurológica",
+    "q": "Qual exame é útil para monitorar a integridade neurológica durante bloqueios neuroaxiais prolongados?",
+    "a": "Avaliação periódica da sensibilidade e motricidade nos membros inferiores.",
+    "hint": "Sensibilidade + motricidade = monitorar",
+    "exp": "Monitorar função neurológica permite detectar precocemente complicações como hematoma ou lesão nervosa, possibilitando intervenção rápida e prevenindo sequelas permanentes."
+  },
+  {
+    "cat": "Anestesiologia - Uso de Vasopressores",
+    "q": "Qual vasopressor é preferido para tratar hipotensão pós-raquidiana, especialmente em gestantes?",
+    "a": "Fenilefrina, pela sua ação vasoconstritora e menor efeito sobre a frequência cardíaca.",
+    "hint": "Fenilefrina = vasoconstrição pura",
+    "exp": "Fenilefrina aumenta a resistência vascular sistêmica sem causar taquicardia significativa, sendo eficaz para manter a pressão arterial e perfusão uterina durante o bloqueio neuroaxial em gestantes."
+  },
+  {
+    "cat": "Anestesiologia - Técnica de Punção Peridural",
+    "q": "Qual a angulação recomendada para a punção peridural na região lombar?",
+    "a": "A agulha deve ser inserida com angulação ligeiramente caudal, entre 10° a 30°, para facilitar a passagem pelos ligamentos interespinhosos e amarelo.",
+    "hint": "Angulação caudal leve",
+    "exp": "A angulação apropriada facilita a passagem da agulha sem trauma e permite melhor localização do espaço peridural, aumentando a segurança e eficácia do bloqueio."
+  },
+  {
+    "cat": "Anestesiologia - Fatores que Influenciam a Altura do Bloqueio Raquidiano",
+    "q": "Quais fatores influenciam a altura do bloqueio anestésico raquidiano?",
+    "a": "Dose e volume do anestésico, densidade do anestésico, posição do paciente, idade, altura e pressão intra-abdominal.",
+    "hint": "Múltiplos fatores afetam altura",
+    "exp": "Compreender esses fatores é crucial para ajustar a dose e prevenir bloqueios altos ou insuficientes, otimizando o bloqueio e minimizando riscos."
+  },
+  {
+    "cat": "Anestesiologia - Efeitos da Anestesia Raquidiana no Sistema Respiratório",
+    "q": "Como a anestesia raquidiana pode afetar a função respiratória?",
+    "a": "Bloqueios altos podem paralisar os músculos intercostais e, em níveis cervicais, o diafragma, levando à insuficiência respiratória.",
+    "hint": "Bloqueio alto = risco respiratório",
+    "exp": "É fundamental monitorar pacientes para sinais de comprometimento respiratório após bloqueios altos, garantindo suporte ventilatório imediato se necessário."
+  },
+  {
+    "cat": "Anestesiologia - Prevenção da Cefaleia Pós-Punção",
+    "q": "Quais medidas podem reduzir a incidência de cefaleia pós-punção dural?",
+    "a": "Uso de agulhas atraumáticas, minimizar número de punções, evitar agulhas de grande calibre e posicionar adequadamente o paciente.",
+    "hint": "Agulhas atraumáticas são chave",
+    "exp": "A técnica cuidadosa reduz o trauma na dura-máter, diminuindo o risco de vazamento de líquor e cefaleia, melhorando o conforto e a recuperação pós-procedimento."
+  },
+  {
+    "cat": "Anestesiologia - Escolha do Anestésico Local na Peridural",
+    "q": "Por que se prefere usar concentrações mais baixas de anestésico local na anestesia peridural comparada à raquidiana?",
+    "a": "Porque o espaço peridural necessita de maior volume e menor concentração para difusão adequada, evitando bloqueios motores profundos.",
+    "hint": "Peridural = volume alto, concentração baixa",
+    "exp": "A concentração baixa permite analgesia segmentar eficaz com menor bloqueio motor, especialmente útil em obstetrícia, onde a mobilidade materna pode ser preservada."
+  },
+  {
+    "cat": "Anestesiologia - Manejo da Bradicardia Pós-Raquidiana",
+    "q": "Qual a conduta inicial para bradicardia após anestesia raquidiana?",
+    "a": "Administrar atropina e avaliar volume intravascular e pressão arterial para suporte hemodinâmico.",
+    "hint": "Atropina para bradicardia",
+    "exp": "A bradicardia pode ser reflexa pelo bloqueio simpático e aumento do tônus vagal. Atropina antagoniza o efeito vagal, revertendo a bradicardia, sendo essencial para prevenir complicações cardíacas."
+  },
+  {
+    "cat": "Anestesiologia - Diferença entre Bloqueio Segmentar e Bloqueio Total",
+    "q": "O que caracteriza um bloqueio segmentar na anestesia peridural?",
+    "a": "Bloqueio limitado a determinados segmentos da medula espinhal, permitindo analgesia localizada.",
+    "hint": "Segmentar = bloqueio limitado",
+    "exp": "O bloqueio segmentar é desejado para analgesia eficaz sem comprometer áreas não envolvidas na cirurgia, facilitando recuperação e reduzindo efeitos colaterais."
+  },
+  {
+    "cat": "Anestesiologia - Uso da Anestesia Peridural em Cirurgias Torácicas",
+    "q": "Qual a vantagem do bloqueio peridural em cirurgias torácicas?",
+    "a": "Proporciona analgesia eficaz, melhora a ventilação pulmonar e reduz complicações respiratórias pós-operatórias.",
+    "hint": "Peridural melhora respiração pós-op",
+    "exp": "O bloqueio peridural torácico reduz dor intensa, facilitando tosse e expansão pulmonar, prevenindo atelectasia e pneumonia, especialmente importante em cirurgias de tórax e abdome superior."
+  },
+  {
+    "cat": "Anestesiologia - Técnica de Punção Raquidiana",
+    "q": "Qual o sinal característico da punção correta do espaço subaracnóideo durante a raquianestesia?",
+    "a": "Saída livre e pulsátil de líquido cefalorraquidiano pela agulha.",
+    "hint": "Líquor livre na agulha",
+    "exp": "A presença do líquor confirma a localização correta da agulha no espaço subaracnóideo, garantindo a segurança e eficácia da anestesia raquidiana."
+  },
+  {
+    "cat": "Anestesiologia - Efeitos do Bloqueio Neuroaxial no Sistema Urinário",
+    "q": "Por que o bloqueio neuroaxial pode causar retenção urinária?",
+    "a": "Porque bloqueia as fibras nervosas autonômicas que controlam a contração da bexiga e o relaxamento do esfíncter interno.",
+    "hint": "Bloqueio autonômico = retenção urinária",
+    "exp": "O bloqueio do plexo sacral pode prejudicar a sensação e o controle da micção, necessitando monitorização da função urinária no pós-operatório para prevenir retenção e complicações."
+  },
+  {
+    "cat": "Anestesiologia - Diferença entre Anestesia Raquidiana e Bloqueio Peridural em Termos de Inicio de Ação",
+    "q": "Qual bloqueio tem início de ação mais rápido: raquidiano ou peridural?",
+    "a": "A anestesia raquidiana tem início de ação mais rápido que a peridural.",
+    "hint": "Raqui = início rápido",
+    "exp": "Devido à aplicação direta no líquor, a raquianestesia proporciona bloqueio em minutos, enquanto a anestesia peridural depende da difusão do anestésico pelo espaço peridural, demorando mais para efeito completo."
+  },
+  {
+    "cat": "Anestesiologia - Manejo da Parestesia Durante Punção Peridural",
+    "q": "O que deve ser feito se o paciente relata parestesia durante a punção peridural?",
+    "a": "Retirar levemente a agulha para evitar lesão nervosa, mudar o trajeto ou trocar de nível vertebral.",
+    "hint": "Parestesia = cuidado imediato",
+    "exp": "Parestesia pode indicar contato com raiz nervosa, e continuar a punção pode causar lesão permanente. Ajustar a agulha previne complicações neurológicas."
+  },
+  {
+    "cat": "Anestesiologia - Uso de Vasoconstritores na Anestesia Neuroaxial",
+    "q": "Qual a função da adrenalina adicionada aos anestésicos locais na anestesia neuroaxial?",
+    "a": "Reduz a absorção sistêmica do anestésico local, prolongando sua ação e diminuindo toxicidade.",
+    "hint": "Adrenalina = prolonga efeito",
+    "exp": "A vasoconstrição local causada pela adrenalina limita o fluxo sanguíneo, retardando a absorção do anestésico para a circulação, aumentando a duração do bloqueio e melhorando segurança."
+  },
+  {
+    "cat": "Anestesiologia - Avaliação Pré-Anestésica para Bloqueios Neuroaxiais",
+    "q": "Quais exames laboratoriais são essenciais antes de realizar bloqueios neuroaxiais?",
+    "a": "Coagulograma completo para avaliar risco de sangramento e plaquetas para garantir hemostasia adequada.",
+    "hint": "Coagulograma fundamental",
+    "exp": "Avaliar coagulação é crucial para evitar hematomas epidurais que podem causar compressão medular e sequelas neurológicas graves. Essa avaliação é obrigatória em pacientes com risco aumentado."
+  },
+  {
+    "cat": "Anestesiologia - Contraindicações Relativas da Anestesia Peridural",
+    "q": "Quais são contraindicações relativas para anestesia peridural?",
+    "a": "Infeção sistêmica leve, alterações anatômicas da coluna, uso de anticoagulantes em doses controladas e disfunção neurológica pré-existente.",
+    "hint": "Relativas = avaliar risco-benefício",
+    "exp": "Nesses casos, a decisão deve ser individualizada, ponderando riscos e benefícios, e garantindo monitorização rigorosa para prevenir complicações."
+  },
+  {
+    "cat": "Anestesiologia - Diferença entre Analgesia e Anestesia Neuroaxial",
+    "q": "Qual a diferença entre analgesia e anestesia quando aplicadas via neuroeixo?",
+    "a": "Analgesia visa controlar a dor sem bloqueio motor significativo, enquanto anestesia bloqueia sensibilidade e motricidade, podendo causar perda completa da sensação e movimento.",
+    "hint": "Analgesia = dor; anestesia = dor + motor",
+    "exp": "Analgesia neuroaxial é usada para controle da dor em trabalho de parto e pós-operatório, preservando função motora, enquanto anestesia é usada para procedimentos cirúrgicos que requerem bloqueio motor e sensitivo completos."
+  },
+  {
+    "cat": "Anestesiologia - Uso de Anestésicos Locais em Pacientes Idosos",
+    "q": "Por que a dose de anestésico local deve ser reduzida em pacientes idosos na anestesia raquidiana?",
+    "a": "Devido à diminuição do volume do líquor e maior sensibilidade dos tecidos nervosos, aumentando o risco de bloqueios altos e prolongados.",
+    "hint": "Idosos = dose menor",
+    "exp": "Alterações fisiológicas no envelhecimento exigem ajuste de dose para evitar complicações, garantindo bloqueio eficaz e seguro."
+  },
+  {
+    "cat": "Anestesiologia - Resposta Cardiovascular ao Bloqueio Simpático",
+    "q": "Por que pode ocorrer bradicardia após bloqueio simpático torácico na raquianestesia?",
+    "a": "Porque o bloqueio dos nervos simpáticos cardíacos diminui o estímulo simpático ao coração, predominando o tônus parassimpático e causando bradicardia.",
+    "hint": "Bloqueio simpático reduz FC",
+    "exp": "O equilíbrio autonômico é alterado, com redução do impulso simpático, levando a bradicardia que pode ser grave, especialmente se associada a hipotensão."
   }
 ]
