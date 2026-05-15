@@ -315,8 +315,9 @@ function getDisciplineCounts() {
 
 function getAllDisciplines() {
   const EXCLUDE = ['Outro', 'Terapia Intensiva', 'Clínica Geral'];
+  // Só mostrar disciplinas que têm pelo menos 1 card — igual ao Dashboard
   const fromCards = [...new Set(state.cards.map(c => getDiscipline(c)))].filter(d => !EXCLUDE.includes(d));
-  return [...new Set([...KNOWN_DISCIPLINES, ...fromCards])].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+  return fromCards.sort((a, b) => a.localeCompare(b, 'pt-BR'));
 }
 
 function populateDisciplineSelect(selectEl) {
