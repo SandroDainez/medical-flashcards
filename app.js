@@ -168,8 +168,7 @@ const DISCIPLINE_COLORS = {
   'Cirurgia': '#be123c',
   'Pediatria': '#0284c7',
   'Ginecologia e Obstetrícia': '#9d174d',
-  'Psiquiatria': '#4338ca',
-  'Outro': '#475569'
+  'Psiquiatria': '#4338ca'
 };
 
 function inferDisciplineByContent(cat = '', q = '') {
@@ -194,12 +193,12 @@ function inferDisciplineByContent(cat = '', q = '') {
   if (/gineco|obstetr|gravidez|parto|gestante|gestação|obstetric/.test(text)) return 'Ginecologia e Obstetrícia';
   if (/pneumolog|sdra/.test(text)) return 'Pneumologia';
   if (/cl[ií]nica m[eé]dica|framingham|insufici[eê]ncia card[ií]aca/.test(text)) return 'Clínica Médica';
-  return 'Outro';
+  return 'Clínica Médica'; // fallback genérico — nunca mostrar 'Outro'
 }
 
 function splitCategory(cat = '', q = '') {
   const text = (cat || '').trim();
-  if (!text) return { discipline: 'Outro', topic: '' };
+  if (!text) return { discipline: 'Clínica Médica', topic: '' };
 
   const legacyBasicTopics = ['Absorção', 'Distribuição', 'Excreção', 'Metabolismo', 'Meia-vida e Cinética', 'Cinética'];
   if (legacyBasicTopics.includes(text)) {
@@ -315,7 +314,8 @@ function getDisciplineCounts() {
 }
 
 function getAllDisciplines() {
-  const fromCards = [...new Set(state.cards.map(c => getDiscipline(c)))];
+  const EXCLUDE = ['Outro', 'Terapia Intensiva', 'Clínica Geral'];
+  const fromCards = [...new Set(state.cards.map(c => getDiscipline(c)))].filter(d => !EXCLUDE.includes(d));
   return [...new Set([...KNOWN_DISCIPLINES, ...fromCards])].sort((a, b) => a.localeCompare(b, 'pt-BR'));
 }
 
