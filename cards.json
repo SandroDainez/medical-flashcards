@@ -3617,5 +3617,362 @@
     "a": "Porque o bloqueio dos nervos simpáticos cardíacos diminui o estímulo simpático ao coração, predominando o tônus parassimpático e causando bradicardia.",
     "hint": "Bloqueio simpático reduz FC",
     "exp": "O equilíbrio autonômico é alterado, com redução do impulso simpático, levando a bradicardia que pode ser grave, especialmente se associada a hipotensão."
+  },
+  {
+    "cat": "Medicina Intensiva - Modos Básicos de Ventilação Mecânica",
+    "q": "O que é o modo VCV (Ventilação Controlada por Volume)?",
+    "a": "Modo onde o ventilador entrega um volume corrente fixo a cada ciclo, independentemente da pressão necessária.",
+    "hint": "Volume fixo, pressão variável",
+    "exp": "No VCV, o controle é pelo volume, garantindo um volume corrente constante, útil para manter a ventilação alveolar. Porém, a pressão pode variar conforme a complacência pulmonar, o que pode aumentar o risco de barotrauma em pulmões rígidos."
+  },
+  {
+    "cat": "Medicina Intensiva - Modos Básicos de Ventilação Mecânica",
+    "q": "Qual a principal característica do modo PCV (Ventilação Controlada por Pressão)?",
+    "a": "O ventilador entrega um fluxo até alcançar uma pressão inspiratória pré-definida, com volume variável.",
+    "hint": "Pressão fixa, volume variável",
+    "exp": "No PCV, o objetivo é limitar a pressão nas vias aéreas, reduzindo o risco de barotrauma. O volume corrente pode variar conforme a complacência e resistência do sistema respiratório, sendo útil em pulmões com baixa complacência, como na SDRA."
+  },
+  {
+    "cat": "Medicina Intensiva - Modos Básicos de Ventilação Mecânica",
+    "q": "O que é o modo SIMV (Ventilação Mandatória Intermitente Sincronizada)?",
+    "a": "Modo que combina ventilações mandatórias sincronizadas com esforços espontâneos do paciente.",
+    "hint": "Mandatório + espontâneo sincronizado",
+    "exp": "No SIMV, o ventilador fornece um número definido de ciclos controlados, permitindo que o paciente realize respirações espontâneas sincronizadas entre os ciclos, facilitando o desmame e reduzindo a fadiga muscular."
+  },
+  {
+    "cat": "Medicina Intensiva - Modos Básicos de Ventilação Mecânica",
+    "q": "Para que serve o modo CPAP (Pressão Positiva Contínua nas Vias Aéreas)?",
+    "a": "Mantém pressão positiva constante nas vias aéreas durante a respiração espontânea, sem ventilações mandatórias.",
+    "hint": "Pressão positiva contínua, respiração espontânea",
+    "exp": "O CPAP é usado para manter os alvéolos abertos, melhorar a oxigenação e prevenir o colapso alveolar, especialmente em pacientes com insuficiência respiratória leve e durante o desmame da ventilação mecânica."
+  },
+  {
+    "cat": "Medicina Intensiva - Modos Básicos de Ventilação Mecânica",
+    "q": "Qual a diferença entre PEEP e CPAP na ventilação mecânica?",
+    "a": "PEEP é pressão positiva aplicada durante a ventilação controlada/inspirada e expirada, enquanto CPAP é pressão positiva contínua durante respiração espontânea sem ventilações mandatórias.",
+    "hint": "PEEP: modo ventilado; CPAP: espontâneo",
+    "exp": "PEEP ajuda a manter os alvéolos abertos durante o ciclo respiratório, melhorando a oxigenação e prevenindo atelectasias em pacientes ventilados. O CPAP aplica essa pressão em pacientes que respiram espontaneamente, sem suporte ventilatório completo."
+  },
+  {
+    "cat": "Medicina Intensiva - Parâmetros da Ventilação Mecânica",
+    "q": "Qual o valor recomendado do volume corrente (VC) em pacientes com SDRA na ventilação mecânica protetora?",
+    "a": "Entre 4 a 6 mL/kg de peso corporal ideal.",
+    "hint": "Volume corrente baixo na SDRA",
+    "exp": "A ventilação com baixo volume corrente evita lesão pulmonar induzida pelo ventilador (VILI) em pacientes com SDRA. Estudos mostraram redução da mortalidade com volumes entre 4-6 mL/kg, ao invés de volumes tradicionais mais altos."
+  },
+  {
+    "cat": "Medicina Intensiva - Parâmetros da Ventilação Mecânica",
+    "q": "O que é a PEEP e qual sua função na ventilação mecânica?",
+    "a": "PEEP é a pressão positiva mantida nas vias aéreas ao final da expiração para prevenir o colapso alveolar e melhorar a oxigenação.",
+    "hint": "Pressão no final da expiração",
+    "exp": "A PEEP mantém os alvéolos abertos durante todo o ciclo respiratório, aumentando a capacidade funcional residual e melhorando a troca gasosa, sendo fundamental especialmente na SDRA para evitar atelectasias e melhorar a oxigenação."
+  },
+  {
+    "cat": "Medicina Intensiva - Parâmetros da Ventilação Mecânica",
+    "q": "Qual a importância do plateau pressure (pressão de platô) na ventilação mecânica?",
+    "a": "É a pressão alveolar medida no final da inspiração, importante para avaliar o risco de barotrauma; deve ser mantida abaixo de 30 cmH2O.",
+    "hint": "Pressão alveolar segura",
+    "exp": "O plateau pressure reflete a pressão alveolar quando o fluxo é zero, indicando a pressão real sobre os pulmões. Manter abaixo de 30 cmH2O reduz o risco de lesão pulmonar induzida pelo ventilador, essencial em pacientes com SDRA."
+  },
+  {
+    "cat": "Medicina Intensiva - Parâmetros da Ventilação Mecânica",
+    "q": "O que é a complacência pulmonar e como ela influencia a ventilação mecânica?",
+    "a": "É a capacidade do pulmão de se expandir frente a uma pressão aplicada, calculada pela variação de volume sobre variação de pressão; baixa complacência indica pulmão rígido, comum na SDRA.",
+    "hint": "Pulmão rígido x pulmão complacente",
+    "exp": "A complacência baixa significa que para um mesmo volume, a pressão necessária é maior, indicando risco de barotrauma. Ajustar os parâmetros ventilatórios, como diminuir volume corrente ou limitar pressão, é essencial para evitar lesão."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Qual é a definição clínica e radiológica da SDRA segundo o consenso de Berlim?",
+    "a": "SDRA é insuficiência respiratória aguda com início em até 1 semana, infiltrados bilaterais em imagem sem edema cardíaco significativo, e relação PaO2/FiO2 ≤ 300 mmHg com PEEP ≥ 5 cmH2O.",
+    "hint": "Critérios Berlim: tempo, imagem, hipoxemia",
+    "exp": "O consenso de Berlim padroniza o diagnóstico da SDRA para uniformizar estudos e condutas clínicas, definindo critérios clínicos, radiológicos e gasométricos que auxiliam no diagnóstico e gravidade da síndrome."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Quais os critérios para classificar a gravidade da SDRA segundo o consenso de Berlim?",
+    "a": "Leve: PaO2/FiO2 201-300 mmHg; Moderada: 101-200 mmHg; Grave: ≤ 100 mmHg, todos com PEEP ≥ 5 cmH2O.",
+    "hint": "PaO2/FiO2 define gravidade",
+    "exp": "A classificação em leve, moderada e grave orienta a intensidade do suporte ventilatório e prognóstico. A hipoxemia mais grave indica maior comprometimento pulmonar e necessidade de estratégias mais agressivas."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Qual o principal objetivo da ventilação mecânica protetora na SDRA?",
+    "a": "Minimizar a lesão pulmonar induzida pelo ventilador, evitando volutrauma, barotrauma e atelectrauma.",
+    "hint": "Proteção pulmonar na VM",
+    "exp": "A ventilação protetora utiliza baixos volumes correntes, controle da pressão de platô e PEEP adequada para manter os alvéolos abertos, reduzindo o ciclo de abertura e fechamento alveolar que causa dano tecidual."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Como é calculado o volume corrente ideal para ventilação protetora na SDRA?",
+    "a": "Calculado com base no peso corporal ideal: 4-6 mL/kg de peso ideal, não peso real.",
+    "hint": "Peso ideal para VC",
+    "exp": "Usar peso real pode levar a volumes excessivos e maior risco de lesão pulmonar. O peso ideal é calculado com base na altura, garantindo volumes adequados e seguros para a mecânica pulmonar do paciente."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Qual é a faixa recomendada para PEEP na SDRA e por que é importante ajustá-la adequadamente?",
+    "a": "PEEP entre 8-15 cmH2O, ajustada para manter alvéolos abertos sem causar hiperinsuflação e barotrauma.",
+    "hint": "PEEP balanceada",
+    "exp": "PEEP ajuda a prevenir colapso alveolar e melhora a oxigenação. Ajuste inadequado pode causar hiperinsuflação e redução do débito cardíaco. O ajuste deve equilibrar a melhora da oxigenação com efeitos hemodinâmicos."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Qual a importância do recrutamento alveolar na SDRA e quais são os riscos associados?",
+    "a": "Recrutamento alveolar visa abrir alvéolos colapsados para melhorar a oxigenação, mas pode causar barotrauma, hipotensão e lesão pulmonar se usado de forma inadequada.",
+    "hint": "Abrir alvéolos com cuidado",
+    "exp": "Manobras de recrutamento aumentam a pressão por breve período para expandir alvéolos. Apesar de melhorar oxigenação, o aumento da pressão pode prejudicar função cardíaca e causar ruptura alveolar, devendo ser usado com monitorização rigorosa."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Quais são as principais causas clínicas da SDRA?",
+    "a": "Pneumonia, sepse, aspiração de conteúdo gástrico, trauma, pancreatite, transfusões maciças e inalação de fumaça.",
+    "hint": "Causas pulmonares e extrapulmonares",
+    "exp": "A SDRA pode ser causada por processos pulmonares diretos, como pneumonia, ou extrapulmonares, como sepse, que provocam inflamação sistêmica e dano alveolar difuso, caracterizando o quadro clínico e determinando abordagens terapêuticas."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Por que o uso de altas concentrações de oxigênio (FiO2 > 0,6) deve ser evitado na SDRA?",
+    "a": "Porque pode causar toxicidade pulmonar e aumentar o dano alveolar, além de não melhorar a oxigenação de forma sustentável.",
+    "hint": "Toxicidade do oxigênio",
+    "exp": "Oxigênio em altas concentrações gera radicais livres e inflamação, agravando o dano pulmonar. Na SDRA, o objetivo é otimizar FiO2 para manter SpO2 entre 88-95%, usando PEEP para melhorar oxigenação sem aumentar FiO2 excessivamente."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Qual a relação ideal entre PaO2 e FiO2 para diagnóstico e monitoramento da SDRA?",
+    "a": "PaO2/FiO2 ≤ 300 mmHg indica SDRA, sendo que valores menores indicam maior gravidade.",
+    "hint": "Índice de oxigenação",
+    "exp": "O índice PaO2/FiO2 é uma medida simples para avaliar a gravidade da hipoxemia e responder ao tratamento. É utilizado no diagnóstico e para ajustar estratégias ventilatórias e suporte clínico."
+  },
+  {
+    "cat": "Medicina Intensiva - Modos Básicos de Ventilação Mecânica",
+    "q": "O que caracteriza o modo PSV (Ventilação com Pressão de Suporte)?",
+    "a": "O ventilador fornece pressão positiva durante a inspiração para aumentar o esforço espontâneo do paciente, facilitando a respiração.",
+    "hint": "Suporte à respiração espontânea",
+    "exp": "No PSV, o paciente inicia o ciclo respiratório espontaneamente e o ventilador oferece pressão para diminuir o trabalho respiratório, sendo muito usado durante o desmame da ventilação mecânica."
+  },
+  {
+    "cat": "Medicina Intensiva - Modos Básicos de Ventilação Mecânica",
+    "q": "Qual a vantagem do modo PCV sobre o VCV em pacientes com baixa complacência pulmonar?",
+    "a": "PCV limita a pressão inspiratória, reduzindo risco de barotrauma, enquanto VCV pode gerar pressões elevadas em pulmões rígidos.",
+    "hint": "Pressão controlada protege pulmão rígido",
+    "exp": "Em pacientes com baixa complacência, o volume fixo do VCV pode resultar em pressões altas, aumentando o risco de lesão pulmonar. O PCV controla a pressão máxima, protegendo as vias aéreas e os alvéolos."
+  },
+  {
+    "cat": "Medicina Intensiva - Parâmetros da Ventilação Mecânica",
+    "q": "Qual a frequência respiratória recomendada na ventilação mecânica para SDRA?",
+    "a": "Entre 20 a 30 respirações por minuto, ajustando conforme o pH e o CO2 arterial.",
+    "hint": "Frequência aumentada para compensar baixo VC",
+    "exp": "Como o volume corrente é reduzido para proteção pulmonar, a frequência deve ser aumentada para manter o débito ventilatório e evitar acidose respiratória, respeitando limites para não causar hiperinsuflação ou fadiga muscular."
+  },
+  {
+    "cat": "Medicina Intensiva - Parâmetros da Ventilação Mecânica",
+    "q": "O que significa o conceito de 'driving pressure' na ventilação mecânica e qual seu valor alvo na SDRA?",
+    "a": "Driving pressure é a diferença entre plateau pressure e PEEP, idealmente < 15 cmH2O para reduzir mortalidade na SDRA.",
+    "hint": "Pressão que realmente distende pulmão",
+    "exp": "O driving pressure reflete a pressão efetiva para distensão pulmonar, correlacionando-se a lesão pulmonar. Manter esse parâmetro baixo é fundamental para ventilação protetora e melhor prognóstico."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Quando está indicada a utilização de ventilação em decúbito ventral na SDRA?",
+    "a": "Em casos de SDRA grave (PaO2/FiO2 < 150) para melhorar a oxigenação e redistribuir o fluxo pulmonar.",
+    "hint": "Decúbito ventral para SDRA grave",
+    "exp": "A posição prona melhora a relação ventilação-perfusão, reduz a compressão pulmonar e melhora a oxigenação. Tem benefício comprovado em pacientes com SDRA grave e deve ser mantida por 12-16 horas/dia."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Qual o papel da sedação na ventilação mecânica de pacientes com SDRA?",
+    "a": "Sedação adequada permite sincronização com o ventilador, reduz gasto energético e evita auto-PEEP e lesão pulmonar.",
+    "hint": "Sedação para conforto e sincronia",
+    "exp": "Pacientes agitados podem interferir na ventilação, aumentando o risco de lesão pulmonar. A sedação facilita o controle ventilatório, melhora conforto e permite estratégias protetoras, porém deve ser usada com cautela para evitar complicações."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Quando a oxigenação permanece inadequada mesmo com ventilação mecânica protetora, qual terapia adjuvante pode ser considerada na SDRA?",
+    "a": "Oxigenação por membrana extracorpórea (ECMO) pode ser indicada em casos refratários para suporte temporário.",
+    "hint": "ECMO para SDRA grave refratária",
+    "exp": "ECMO permite a oxigenação e remoção de CO2 fora do pulmão, dando tempo para recuperação pulmonar. É indicada em centros especializados e pacientes selecionados com falência respiratória grave e sem resposta às medidas convencionais."
+  },
+  {
+    "cat": "Medicina Intensiva - Modos Básicos de Ventilação Mecânica",
+    "q": "O que é auto-PEEP e como pode ser identificado clinicamente?",
+    "a": "Auto-PEEP é pressão positiva residual nas vias aéreas devido à expiração incompleta; pode ser identificado por aumento do volume residual e dificuldade para desencadear ciclos ventilatórios.",
+    "hint": "PEEP involuntário",
+    "exp": "Auto-PEEP causa aumento do trabalho respiratório e pode levar à instabilidade hemodinâmica. É comum em obstrução das vias aéreas e ventilação rápida. Detectado por manobra de pausa expiratória e monitorização de pressões."
+  },
+  {
+    "cat": "Medicina Intensiva - Modos Básicos de Ventilação Mecânica",
+    "q": "Quais sinais indicam má sincronia paciente-ventilador?",
+    "a": "Respiração contra o ventilador, uso de musculatura acessória, desconforto, aumento do consumo de oxigênio e pressão negativa nas vias aéreas.",
+    "hint": "Conflito paciente-ventilador",
+    "exp": "A má sincronia aumenta o trabalho respiratório e pode prejudicar a ventilação protetora. Identificar e corrigir com ajuste de parâmetros ou sedação é essencial para evitar complicações."
+  },
+  {
+    "cat": "Medicina Intensiva - Parâmetros da Ventilação Mecânica",
+    "q": "Como ajustar a FiO2 na SDRA para evitar toxicidade por oxigênio?",
+    "a": "Manter FiO2 abaixo de 0,6 sempre que possível, aumentando PEEP para melhorar oxigenação.",
+    "hint": "Menor FiO2 possível",
+    "exp": "Elevadas FiO2 causam lesão oxidativa pulmonar. A estratégia é otimizar PEEP para abertura alveolar e reduzir a necessidade de altas concentrações de oxigênio."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Qual o papel da monitorização da pressão de platô e como ela deve ser realizada?",
+    "a": "É usada para avaliar a pressão alveolar durante pausa inspiratória de 0,5-1 segundo com ausência de fluxo.",
+    "hint": "Pausa inspiratória para medir platô",
+    "exp": "Controle da pressão de platô evita barotrauma. A medição é feita com pausa no final da inspiração para avaliar pressão estática, essencial para ajustar ventilação protetora."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Quais complicações mais comuns da ventilação mecânica em SDRA?",
+    "a": "Barotrauma, volutrauma, atelectrauma, infecções (pneumonia associada à ventilação), e instabilidade hemodinâmica.",
+    "hint": "Riscos da VM",
+    "exp": "Ventilação inadequada pode agravar lesões pulmonares e causar complicações sistêmicas. A monitorização constante e ajustes são fundamentais para minimizar riscos."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "O que é volutrauma e como preveni-lo na SDRA?",
+    "a": "Lesão pulmonar causada por volumes excessivos durante ventilação; prevenido com baixos volumes correntes (4-6 mL/kg peso ideal).",
+    "hint": "Volume excessivo causa dano",
+    "exp": "Volutrauma resulta do estiramento alveolar excessivo, levando a inflamação e aumento da permeabilidade capilar. Ventilação protetora reduz este risco."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Qual a importância do uso de sedação profunda e bloqueadores neuromusculares em SDRA grave?",
+    "a": "Melhora a sincronia ventilatória, reduz o consumo de oxigênio e pode diminuir a mortalidade em fases iniciais da SDRA grave.",
+    "hint": "Bloqueio para controle ventilatório",
+    "exp": "Pacientes com SDRA grave apresentam alto esforço respiratório que prejudica a ventilação protetora; sedação e bloqueadores ajudam a controlar o padrão respiratório e evitar lesão pulmonar."
+  },
+  {
+    "cat": "Medicina Intensiva - Modos Básicos de Ventilação Mecânica",
+    "q": "O que é o modo APRV (Pressão de via aérea nas vias aéreas de liberação ajustada)?",
+    "a": "Modo que mantém pressão alta por longos períodos, com breves liberações para ventilação, facilitando recrutamento alveolar.",
+    "hint": "Pressão alta e liberação breve",
+    "exp": "APRV permite ventilação espontânea durante pressão alta, melhorando oxigenação e recrutamento pulmonar, útil em SDRA, porém requer experiência para manejo adequado."
+  },
+  {
+    "cat": "Medicina Intensiva - Parâmetros da Ventilação Mecânica",
+    "q": "Quando está indicada a troca do modo ventilatório para facilitar o desmame?",
+    "a": "Quando o paciente apresenta melhora clínica e é capaz de realizar respirações espontâneas, geralmente usando modos como SIMV ou PSV.",
+    "hint": "Desmame com modos espontâneos",
+    "exp": "A transição gradual para suporte ventilatório que permite respirações espontâneas ajuda a fortalecer musculatura respiratória e reduzir tempo de ventilação mecânica."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Qual o papel do corticosteroide na SDRA?",
+    "a": "Pode reduzir inflamação pulmonar e melhorar desfechos quando usado nas fases iniciais da SDRA, porém evidências são controversas.",
+    "hint": "Anti-inflamatório na SDRA",
+    "exp": "Corticosteroides podem reduzir a resposta inflamatória e fibrose, mas seu uso deve ser individualizado, considerando contraindicações e efeitos adversos."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Como monitorar a oxigenação em paciente com SDRA em ventilação mecânica?",
+    "a": "Através da gasometria arterial (PaO2), saturação periférica (SpO2) e relação PaO2/FiO2.",
+    "hint": "Gasometria e saturação",
+    "exp": "Monitorar a oxigenação permite avaliar resposta à ventilação e ajustar parâmetros para evitar hipóxia ou toxicidade por oxigênio."
+  },
+  {
+    "cat": "Medicina Intensiva - Parâmetros da Ventilação Mecânica",
+    "q": "O que é o índice de oxigenação (OI) e como é calculado?",
+    "a": "OI = (FiO2 x pressão média das vias aéreas x 100) / PaO2; avalia gravidade da hipoxemia e necessidade de suporte avançado.",
+    "hint": "Índice para gravidade da oxigenação",
+    "exp": "OI é usado para monitorar gravidade da insuficiência respiratória, especialmente em pediatria, mas pode ser útil em adultos para avaliar necessidade de ECMO."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Quais parâmetros clínicos e laboratoriais sugerem resolução da SDRA e possibilidade de desmame da ventilação mecânica?",
+    "a": "Melhora da oxigenação (PaO2/FiO2 > 200), estabilidade hemodinâmica, capacidade ventilatória espontânea e melhora radiológica.",
+    "hint": "Critérios para desmame",
+    "exp": "Avaliar múltiplos parâmetros garante segurança no desmame, evitando recaídas e complicações respiratórias."
+  },
+  {
+    "cat": "Medicina Intensiva - Modos Básicos de Ventilação Mecânica",
+    "q": "Qual a função do trigger no ventilador mecânico?",
+    "a": "Detectar o esforço inspiratório do paciente para iniciar o ciclo ventilatório.",
+    "hint": "Disparo do ventilador",
+    "exp": "O trigger pode ser de fluxo ou pressão, e uma boa sensibilidade evita atraso ou disparos falsos, melhorando a sincronia paciente-ventilador."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Por que é importante evitar hipercapnia permissiva na ventilação protetora da SDRA?",
+    "a": "Hipercapnia permissiva é tolerada para proteger pulmão, mas níveis muito altos podem causar acidose grave e efeitos hemodinâmicos negativos.",
+    "hint": "Equilíbrio na hipercapnia",
+    "exp": "Aceitar hipercapnia moderada ajuda na ventilação protetora. Monitorar pH e CO2 evita complicações, ajustando suporte conforme tolerância."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Quais exames de imagem são úteis para diagnóstico e monitorização da SDRA?",
+    "a": "Radiografia de tórax e tomografia computadorizada de tórax.",
+    "hint": "Imagem para SDRA",
+    "exp": "Radiografia mostra infiltrados bilaterais; TC ajuda a avaliar extensão do dano, atelectasias e outras complicações, auxiliando no manejo."
+  },
+  {
+    "cat": "Medicina Intensiva - Parâmetros da Ventilação Mecânica",
+    "q": "Como é calculada a complacência estática pulmonar na ventilação mecânica?",
+    "a": "Complacência estática = Volume corrente / (Pressão de platô - PEEP).",
+    "hint": "Fórmula da complacência",
+    "exp": "Esse cálculo avalia a elasticidade pulmonar durante pausa inspiratória, importante para ajustar parâmetros e identificar alterações na mecânica pulmonar."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Qual a importância do posicionamento e mobilização precoce em pacientes ventilados com SDRA?",
+    "a": "Previne complicações como atelectasias, fraqueza muscular e melhora a ventilação/perfusão.",
+    "hint": "Mobilização para recuperação",
+    "exp": "Apesar da gravidade, a mobilização precoce, quando possível, melhora prognóstico geral, reduz tempo de ventilação e complicações associadas."
+  },
+  {
+    "cat": "Medicina Intensiva - Modos Básicos de Ventilação Mecânica",
+    "q": "O que é o modo ventilatório de controle assistido (AC)?",
+    "a": "Modo onde o ventilador realiza ciclos mandatórios que podem ser disparados pelo paciente ou pelo ventilador, garantindo volume ou pressão constantes.",
+    "hint": "Ciclos assistidos ou controlados",
+    "exp": "Permite suporte total ventilatório, útil em pacientes com insuficiência respiratória grave, garantindo ventilação adequada mesmo sem esforço espontâneo."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Qual a abordagem nutricional recomendada para pacientes com SDRA em ventilação mecânica?",
+    "a": "Nutrição enteral com controle calórico moderado para evitar overfeeding e suporte metabólico adequado.",
+    "hint": "Nutrição adequada na SDRA",
+    "exp": "Nutrição adequada é essencial para recuperação, mas excesso calórico pode aumentar CO2 produzido e dificultar ventilação. Nutrição enteral precoce é preferida."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Quais são as indicações para traqueostomia em pacientes com SDRA em ventilação mecânica prolongada?",
+    "a": "Quando a ventilação mecânica é necessária por mais de 10-14 dias, visando conforto, redução do trabalho respiratório e facilitação do desmame.",
+    "hint": "Traqueostomia após ventilação prolongada",
+    "exp": "Traqueostomia facilita higiene, reduz sedação e melhora conforto, sendo indicada em casos de ventilação prolongada para otimizar prognóstico."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Qual o papel da ventilação não invasiva na SDRA?",
+    "a": "Pode ser usada em casos leves e selecionados, mas tem alta taxa de falha em SDRA moderada a grave.",
+    "hint": "Uso restrito da VNI",
+    "exp": "VNI pode evitar intubação em casos leves, mas em SDRA grave o risco de atraso no intubação e piora clínica é alto, devendo ser monitorado cuidadosamente."
+  },
+  {
+    "cat": "Medicina Intensiva - Modos Básicos de Ventilação Mecânica",
+    "q": "O que é o trigger de fluxo e quais suas vantagens?",
+    "a": "Disparo do ventilador baseado no fluxo inspiratório do paciente, mais sensível e confortável que o trigger de pressão.",
+    "hint": "Trigger por fluxo",
+    "exp": "O trigger de fluxo detecta pequenas variações no fluxo geradas pelo paciente, facilitando a sincronia e reduzindo esforço respiratório."
+  },
+  {
+    "cat": "Medicina Intensiva - Parâmetros da Ventilação Mecânica",
+    "q": "Como identificar e manejar a hiperventilação iatrogênica na ventilação mecânica?",
+    "a": "Identificada por pCO2 arterial baixo e alcalose respiratória, deve-se reduzir frequência ou volume corrente para corrigir.",
+    "hint": "pCO2 baixo e ajuste ventilatório",
+    "exp": "Hiperventilação pode causar vasoconstrição cerebral e outros efeitos adversos. Ajustar parâmetros para evitar complicações é essencial."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Qual a importância do suporte hemodinâmico na SDRA?",
+    "a": "Manter pressão arterial e perfusão adequadas para garantir oxigenação tecidual e evitar lesão renal e outros órgãos.",
+    "hint": "Suporte circulatório",
+    "exp": "Pacientes com SDRA frequentemente apresentam instabilidade hemodinâmica; manejo adequado com fluidos e vasopressores melhora prognóstico."
+  },
+  {
+    "cat": "Medicina Intensiva - SDRA",
+    "q": "Quais são os sinais clínicos e laboratoriais que indicam piora da SDRA durante a ventilação mecânica?",
+    "a": "Deterioração da oxigenação (queda do PaO2/FiO2), aumento da pressão de platô, acidose respiratória e sinais de sobrecarga hídrica.",
+    "hint": "Indicadores de piora",
+    "exp": "Monitoramento contínuo permite ajustes precoces no suporte ventilatório e terapêutico para evitar complicações e mortalidade."
   }
 ]
