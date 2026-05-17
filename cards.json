@@ -3974,5 +3974,376 @@
     "a": "Deterioração da oxigenação (queda do PaO2/FiO2), aumento da pressão de platô, acidose respiratória e sinais de sobrecarga hídrica.",
     "hint": "Indicadores de piora",
     "exp": "Monitoramento contínuo permite ajustes precoces no suporte ventilatório e terapêutico para evitar complicações e mortalidade."
+  },
+  {
+    "cat": "Cardiologia - Definição e Classificação",
+    "q": "O que caracteriza uma Síndrome Coronariana Aguda (SCA)?",
+    "a": "A SCA é caracterizada por um espectro clínico decorrente da ruptura ou erosão de placa aterosclerótica, levando à redução súbita do fluxo sanguíneo coronariano e isquemia miocárdica aguda.",
+    "hint": "Ruptura de placa + isquemia aguda",
+    "exp": "A SCA engloba desde angina instável até infarto agudo do miocárdio com ou sem supradesnivelamento do segmento ST. A identificação rápida é crucial para o manejo e prognóstico do paciente."
+  },
+  {
+    "cat": "Cardiologia - Definição e Classificação",
+    "q": "Quais são as três principais classificações das Síndromes Coronarianas Agudas?",
+    "a": "Infarto agudo do miocárdio com supradesnivelamento do ST (IAM com ST), infarto agudo do miocárdio sem supradesnivelamento do ST (IAM sem ST) e angina instável.",
+    "hint": "ST elevado, ST normal e angina",
+    "exp": "A classificação é baseada no ECG e nos marcadores cardíacos, influenciando diretamente a conduta terapêutica e a urgência do tratamento."
+  },
+  {
+    "cat": "Cardiologia - Fisiopatologia",
+    "q": "Qual é o mecanismo fisiopatológico mais comum das Síndromes Coronarianas Agudas?",
+    "a": "Ruptura ou erosão de placa aterosclerótica seguida de trombose coronariana aguda.",
+    "hint": "Placa + trombo",
+    "exp": "A ruptura da placa expõe o conteúdo lipídico e colágeno, ativando a cascata de coagulação e levando à formação de trombo, que pode obstruir total ou parcialmente a artéria coronária."
+  },
+  {
+    "cat": "Cardiologia - Fisiopatologia",
+    "q": "Como a isquemia miocárdica ocorre nas SCAs?",
+    "a": "Decorrente da obstrução aguda do fluxo coronariano, reduzindo o aporte de oxigênio e nutrientes ao miocárdio, causando disfunção e necrose celular.",
+    "hint": "Fluxo sanguíneo reduzido",
+    "exp": "A isquemia prolongada pode levar a necrose irreversível do músculo cardíaco, sendo fundamental o reconhecimento e revascularização rápidas para minimizar danos."
+  },
+  {
+    "cat": "Cardiologia - Diagnóstico Clínico",
+    "q": "Quais são os sintomas clássicos da Síndrome Coronariana Aguda?",
+    "a": "Dor torácica opressiva, em aperto, irradiada para braço esquerdo, mandíbula ou costas, associada a sudorese, náuseas, dispneia e sensação de morte iminente.",
+    "hint": "Dor + irradiação + sintomas vegetativos",
+    "exp": "Apesar do quadro clássico, apresentações atípicas são comuns em mulheres, idosos e diabéticos, exigindo alto grau de suspeição clínica."
+  },
+  {
+    "cat": "Cardiologia - Diagnóstico Clínico",
+    "q": "Qual o papel do eletrocardiograma (ECG) no diagnóstico inicial da SCA?",
+    "a": "Detectar alterações isquêmicas, como supradesnivelamento ou infradesnivelamento do segmento ST, auxiliando na classificação e no direcionamento terapêutico imediato.",
+    "hint": "ECG + ST",
+    "exp": "O ECG deve ser realizado em até 10 minutos na chegada do paciente, pois mudanças no ST indicam extensão e gravidade da isquemia, sendo fundamental para definição de tratamento."
+  },
+  {
+    "cat": "Cardiologia - Diagnóstico Laboratorial",
+    "q": "Quais marcadores cardíacos são utilizados para confirmar o diagnóstico de infarto agudo do miocárdio?",
+    "a": "Troponinas cardíacas (I ou T) e creatina quinase MB (CK-MB), sendo a troponina o marcador mais sensível e específico.",
+    "hint": "Troponina é rei",
+    "exp": "A elevação das troponinas ocorre 3-6 horas após o início da necrose e pode permanecer elevada por até duas semanas, sendo essencial para diagnóstico e estratificação de risco."
+  },
+  {
+    "cat": "Cardiologia - Diagnóstico Laboratorial",
+    "q": "Qual o valor de troponina considerado sugestivo de infarto agudo do miocárdio?",
+    "a": "Troponina acima do 99º percentil do valor de referência da população saudável, geralmente > 0,04 ng/mL, dependendo do kit laboratorial utilizado.",
+    "hint": "99º percentil",
+    "exp": "Valores elevados indicam lesão miocárdica, mas devem ser interpretados no contexto clínico, pois podem elevar-se em outras condições não isquêmicas."
+  },
+  {
+    "cat": "Cardiologia - Classificação ECG",
+    "q": "Qual a definição de IAM com supradesnivelamento do ST no ECG?",
+    "a": "Elevação do segmento ST ≥1 mm em duas derivações contíguas, ou ≥2 mm em derivações precordiais, indicando oclusão arterial completa.",
+    "hint": "ST elevado em 2 derivações",
+    "exp": "Esse achado caracteriza um infarto transmural e requer reperfusão imediata para reduzir mortalidade e preservar função miocárdica."
+  },
+  {
+    "cat": "Cardiologia - Classificação ECG",
+    "q": "Qual a diferença no ECG entre angina instável e infarto sem supradesnivelamento do ST?",
+    "a": "Ambos podem apresentar infradesnivelamento do ST ou inversão da onda T, mas no IAM sem ST há elevação dos marcadores cardíacos, ausentes na angina instável.",
+    "hint": "Marcadores positivos definem IAM",
+    "exp": "A distinção é importante para tratamento e prognóstico, já que o IAM sem ST tem necrose, enquanto a angina instável é isquemia sem necrose."
+  },
+  {
+    "cat": "Cardiologia - Tratamento Inicial",
+    "q": "Qual é a conduta inicial para um paciente com suspeita de Síndrome Coronariana Aguda?",
+    "a": "Oxigenação se saturação < 90%, administração de ácido acetilsalicílico (300 mg), monitorização cardíaca, acesso venoso, e avaliação rápida com ECG em até 10 minutos.",
+    "hint": "ASA + ECG rápido",
+    "exp": "Medidas iniciais visam estabilizar o paciente, prevenir progressão do trombo e orientar terapias específicas, impactando diretamente na mortalidade."
+  },
+  {
+    "cat": "Cardiologia - Tratamento Inicial",
+    "q": "Em pacientes com dor torácica e suspeita de SCA, qual é a dose recomendada de ácido acetilsalicílico na fase aguda?",
+    "a": "Dose de 160 a 325 mg, preferencialmente via oral, mastigada para rápida absorção.",
+    "hint": "ASA mastigado",
+    "exp": "O ácido acetilsalicílico inibe irreversivelmente a agregação plaquetária, reduzindo a formação de trombos e melhorando o prognóstico."
+  },
+  {
+    "cat": "Cardiologia - Tratamento Reperfusivo",
+    "q": "Qual é o tratamento de reperfusão de escolha para IAM com supradesnivelamento do ST?",
+    "a": "Intervenção coronariana percutânea (ICP) primária, idealmente realizada em até 90 minutos após o primeiro contato médico.",
+    "hint": "ICP primária <90 min",
+    "exp": "A ICP permite desobstrução mecânica da artéria, reduzindo mortalidade e complicações, sendo superior à trombólise quando disponível rapidamente."
+  },
+  {
+    "cat": "Cardiologia - Tratamento Reperfusivo",
+    "q": "Quando a trombólise é indicada no IAM com supradesnivelamento do ST?",
+    "a": "Quando a ICP não puder ser realizada em até 120 minutos, especialmente se iniciada dentro de 12 horas do início dos sintomas.",
+    "hint": "Trombolítico até 12h",
+    "exp": "A trombólise farmacológica busca dissolver o trombo, sendo menos eficaz que a ICP, mas fundamental em locais sem acesso a cateterismo imediato."
+  },
+  {
+    "cat": "Cardiologia - Tratamento Medicamentoso",
+    "q": "Qual o papel dos inibidores da P2Y12 no tratamento das SCAs?",
+    "a": "Inibem a agregação plaquetária ao bloquear o receptor P2Y12 do ADP, sendo usados em associação ao ácido acetilsalicílico para dupla antiagregação plaquetária.",
+    "hint": "Dual antiplatelet therapy",
+    "exp": "Medicamentos como clopidogrel, prasugrel e ticagrelor reduzem eventos trombóticos e são essenciais no manejo medicamentoso para prevenir reinfarto."
+  },
+  {
+    "cat": "Cardiologia - Tratamento Medicamentoso",
+    "q": "Qual a diferença clínica entre clopidogrel, prasugrel e ticagrelor no tratamento das SCAs?",
+    "a": "Prasugrel e ticagrelor têm início de ação mais rápido e maior eficácia, porém maior risco de sangramento, enquanto clopidogrel tem efeito mais lento e variável.",
+    "hint": "Prasugrel e ticagrelor são mais potentes",
+    "exp": "A escolha depende do perfil do paciente, risco hemorrágico e tipo de tratamento invasivo, sendo importante para otimizar eficácia e segurança."
+  },
+  {
+    "cat": "Cardiologia - Tratamento Medicamentoso",
+    "q": "Quando o uso de betabloqueadores é contraindicado nas SCAs?",
+    "a": "Em pacientes com choque cardiogênico, bradicardia grave, bloqueio AV de segundo ou terceiro grau sem marcapasso, e asma brônquica grave não controlada.",
+    "hint": "Contraindicações clássicas betabloqueador",
+    "exp": "Os betabloqueadores reduzem a demanda de oxigênio do miocárdio, mas podem agravar bradicardia e insuficiência cardíaca, portanto sua indicação deve ser criteriosa."
+  },
+  {
+    "cat": "Cardiologia - Tratamento Medicamentoso",
+    "q": "Qual a indicação do uso de inibidores da enzima conversora de angiotensina (IECA) nas SCAs?",
+    "a": "Recomendados para pacientes com disfunção ventricular esquerda (FEVE <40%), hipertensão, diabetes ou insuficiência cardíaca após estabilização clínica.",
+    "hint": "IECA para remodelamento",
+    "exp": "Os IECA ajudam a prevenir remodelamento ventricular adverso, reduzindo mortalidade e morbidade pós-infarto, sendo parte da terapia otimizada."
+  },
+  {
+    "cat": "Cardiologia - Diagnóstico Diferencial",
+    "q": "Quais condições devem ser consideradas no diagnóstico diferencial da dor torácica sugestiva de SCA?",
+    "a": "Dissecção aórtica, embolia pulmonar, pericardite, pneumotórax, esofagite e dor musculoesquelética.",
+    "hint": "Dor torácica não é só infarto",
+    "exp": "A avaliação cuidadosa é crucial para evitar erros diagnósticos e atrasos no tratamento, pois algumas condições são emergências que simulam SCA."
+  },
+  {
+    "cat": "Cardiologia - Epidemiologia",
+    "q": "Qual é a principal causa de morte relacionada a doenças cardiovasculares no Brasil?",
+    "a": "As Síndromes Coronarianas Agudas, especialmente o infarto agudo do miocárdio, são a principal causa de morte cardiovascular.",
+    "hint": "Infarto lidera mortalidade CV",
+    "exp": "Reconhecer a prevalência e impacto das SCAs reforça a importância do diagnóstico precoce e tratamento eficaz na prática clínica e saúde pública."
+  },
+  {
+    "cat": "Cardiologia - Fatores de Risco",
+    "q": "Quais são os principais fatores de risco modificáveis para Síndromes Coronarianas Agudas?",
+    "a": "Hipertensão arterial, diabetes mellitus, dislipidemia, tabagismo, obesidade, sedentarismo e dieta inadequada.",
+    "hint": "6 modificáveis clássicos",
+    "exp": "Identificar e controlar esses fatores é fundamental na prevenção primária e secundária das SCAs, reduzindo incidência e complicações."
+  },
+  {
+    "cat": "Cardiologia - Fatores de Risco",
+    "q": "Como o diabetes mellitus influencia o prognóstico das SCAs?",
+    "a": "Diabéticos apresentam maior risco de eventos isquêmicos, mortalidade e complicações devido a doença vascular avançada e neuropatia autonômica que pode mascarar sintomas.",
+    "hint": "Diabetes piora prognóstico",
+    "exp": "A alta prevalência de doença arterial coronariana silenciosa em diabéticos exige vigilância rigorosa e tratamento intensivo."
+  },
+  {
+    "cat": "Cardiologia - Prognóstico",
+    "q": "Quais são os principais fatores prognósticos desfavoráveis nas SCAs?",
+    "a": "Idade avançada, insuficiência cardíaca, choque cardiogênico, elevação importante dos marcadores cardíacos, extensão do infarto e disfunção ventricular esquerda.",
+    "hint": "Idade e disfunção LV",
+    "exp": "Esses fatores ajudam a estratificar risco, influenciando decisões terapêuticas, necessidade de UTI e acompanhamento pós-alta."
+  },
+  {
+    "cat": "Cardiologia - Estratificação de Risco",
+    "q": "Para que serve o escore TIMI na avaliação das SCAs sem supradesnivelamento do ST?",
+    "a": "Para estratificar o risco de eventos cardiovasculares maiores e auxiliar na decisão sobre terapia invasiva ou conservadora.",
+    "hint": "TIMI = risco e conduta",
+    "exp": "O escore considera fatores clínicos e laboratoriais, facilitando abordagem individualizada e otimização do uso de recursos."
+  },
+  {
+    "cat": "Cardiologia - Estratificação de Risco",
+    "q": "Quais são os componentes do escore TIMI para SCA sem supradesnivelamento do ST?",
+    "a": "Idade ≥65 anos, ≥3 fatores de risco ateroscleróticos, uso de AAS nos últimos 7 dias, angina grave recente, elevação leve de troponina, alterações no ECG e doença coronariana conhecida.",
+    "hint": "7 fatores no TIMI",
+    "exp": "Cada fator soma 1 ponto; escores maiores indicam maior risco, orientando a necessidade de intervenção precoce."
+  },
+  {
+    "cat": "Cardiologia - Complicações",
+    "q": "Quais as principais complicações mecânicas do infarto agudo do miocárdio?",
+    "a": "Ruptura do músculo papilar, ruptura do septo interventricular e ruptura da parede livre do ventrículo esquerdo.",
+    "hint": "3 rupturas mecânicas",
+    "exp": "Essas complicações são graves, causam instabilidade hemodinâmica e muitas vezes necessitam de cirurgia emergencial."
+  },
+  {
+    "cat": "Cardiologia - Complicações",
+    "q": "O que caracteriza o choque cardiogênico pós-infarto e qual sua mortalidade aproximada?",
+    "a": "Insuficiência cardíaca grave com hipotensão persistente e hipoperfusão tecidual, com mortalidade superior a 50% mesmo com tratamento.",
+    "hint": "Choque cardiogênico = mau prognóstico",
+    "exp": "O choque cardiogênico resulta da perda massiva da função contrátil do ventrículo esquerdo e é a principal causa de morte precoce pós-infarto."
+  },
+  {
+    "cat": "Cardiologia - ECG em SCAs",
+    "q": "Qual alteração eletrocardiográfica é típica da pericardite e pode confundir o diagnóstico de SCA?",
+    "a": "Supradesnivelamento difuso do segmento ST com concavidade para cima e depressão do PR.",
+    "hint": "ST côncavo e PR deprimido",
+    "exp": "Diferenciar pericardite de IAM é essencial para evitar tratamentos desnecessários e potencialmente prejudiciais."
+  },
+  {
+    "cat": "Cardiologia - Conduta Pós-Reperfusão",
+    "q": "Qual a conduta imediata após realização de ICP primária bem-sucedida em IAM com ST?",
+    "a": "Manter dupla antiagregação plaquetária, iniciar betabloqueador na ausência de contraindicações, controlar fatores de risco e monitorar sinais de complicações.",
+    "hint": "Terapia otimizada pós-ICP",
+    "exp": "O manejo pós-reperfusão visa prevenir reinfarto, melhorar recuperação ventricular e reduzir mortalidade a longo prazo."
+  },
+  {
+    "cat": "Cardiologia - Terapia Anticoagulante",
+    "q": "Qual o papel da anticoagulação nas SCAs sem supradesnivelamento do ST?",
+    "a": "Reduzir a formação de trombos e eventos isquêmicos, geralmente com uso de heparina não fracionada ou enoxaparina durante a fase aguda.",
+    "hint": "Heparina nas SCAs sem ST",
+    "exp": "A anticoagulação associada à antiagregação otimiza o tratamento, especialmente em pacientes com maior risco trombótico."
+  },
+  {
+    "cat": "Cardiologia - Terapia Anticoagulante",
+    "q": "Por quanto tempo deve ser mantida a anticoagulação parenteral nas SCAs sem supradesnivelamento do ST?",
+    "a": "Geralmente entre 48 horas e até 8 dias, ou até a realização da intervenção coronariana percutânea.",
+    "hint": "48h a 8 dias",
+    "exp": "A duração depende da resposta clínica, risco hemorrágico e plano terapêutico, visando segurança e eficácia."
+  },
+  {
+    "cat": "Cardiologia - Insuficiência Cardíaca Pós-Infarto",
+    "q": "Quais sinais clínicos indicam insuficiência cardíaca aguda após infarto do miocárdio?",
+    "a": "Dispneia, ortopneia, estertores pulmonares, edema de membros inferiores e congestão venosa jugular.",
+    "hint": "Sinais clássicos IC",
+    "exp": "Reconhecer precocemente permite iniciar tratamentos que melhoram a função cardíaca e diminuem complicações."
+  },
+  {
+    "cat": "Cardiologia - Monitorização",
+    "q": "Qual a importância da monitorização contínua em pacientes com SCAs na fase aguda?",
+    "a": "Detectar arritmias graves, instabilidade hemodinâmica e sinais precoces de complicações para intervenção rápida.",
+    "hint": "Monitorar ritmo e pressão",
+    "exp": "Arritmias ventriculares, bloqueios e instabilidade podem ser fatais; o monitoramento é padrão em unidades de terapia intensiva cardiológica."
+  },
+  {
+    "cat": "Cardiologia - Arritmias",
+    "q": "Qual a arritmia ventricular mais comum nas primeiras horas após infarto agudo do miocárdio?",
+    "a": "Taquicardia ventricular sustentada e fibrilação ventricular são as mais comuns e perigosas no período agudo.",
+    "hint": "TV e FV no infarto",
+    "exp": "Essas arritmias podem causar morte súbita; o reconhecimento e desfibrilação precoce salvam vidas."
+  },
+  {
+    "cat": "Cardiologia - Angiografia Coronariana",
+    "q": "Quando está indicada a angiografia coronariana em pacientes com SCA sem supradesnivelamento do ST?",
+    "a": "Em pacientes de alto risco, como aqueles com escore TIMI ≥3, instabilidade clínica ou elevação progressiva dos marcadores cardíacos.",
+    "hint": "Angiografia para alto risco",
+    "exp": "A angiografia permite avaliação anatômica e planejamento terapêutico invasivo, melhorando prognóstico nos casos selecionados."
+  },
+  {
+    "cat": "Cardiologia - Avaliação de Função Ventricular",
+    "q": "Qual exame é padrão ouro para avaliação da fração de ejeção do ventrículo esquerdo pós-infarto?",
+    "a": "Ecocardiograma transtorácico.",
+    "hint": "Eco para FEVE",
+    "exp": "Avaliar a função ventricular é fundamental para estratificação prognóstica e decisão sobre terapias como IECA e betabloqueadores."
+  },
+  {
+    "cat": "Cardiologia - Prevenção Secundária",
+    "q": "Quais medidas são essenciais na prevenção secundária após um episódio de SCA?",
+    "a": "Controle rigoroso dos fatores de risco, uso contínuo de ácido acetilsalicílico, betabloqueadores, estatinas, IECA/ARA-II e reabilitação cardíaca.",
+    "hint": "Prevenção secundária multifatorial",
+    "exp": "Essas medidas reduzem risco de novos eventos, melhoram qualidade de vida e prolongam sobrevida."
+  },
+  {
+    "cat": "Cardiologia - Estatinas",
+    "q": "Qual o papel das estatinas no manejo das Síndromes Coronarianas Agudas?",
+    "a": "Reduzem a LDL colesterol, estabilizam placas ateroscleróticas e apresentam efeito anti-inflamatório, diminuindo eventos cardiovasculares.",
+    "hint": "Estatinas estabilizam placas",
+    "exp": "A terapia com estatinas deve ser iniciada precocemente e mantida a longo prazo para prevenir recidivas e melhorar prognóstico."
+  },
+  {
+    "cat": "Cardiologia - Dor Torácica Atípica",
+    "q": "Quais pacientes frequentemente apresentam sintomas atípicos nas SCAs?",
+    "a": "Mulheres, idosos e pacientes diabéticos frequentemente apresentam sintomas como fadiga, dispneia isolada, náuseas ou dor abdominal.",
+    "hint": "Sintomas atípicos em grupos específicos",
+    "exp": "Conhecer essas apresentações evita atrasos no diagnóstico e tratamento, reduzindo morbimortalidade."
+  },
+  {
+    "cat": "Cardiologia - Impacto do Tempo na SCA",
+    "q": "Qual a importância da janela temporal para o tratamento da SCA com supradesnivelamento do ST?",
+    "a": "Quanto mais precoce a reperfusão, menor a extensão do infarto e melhor o prognóstico; idealmente até 12 horas do início dos sintomas.",
+    "hint": "Tempo é músculo",
+    "exp": "A demora no atendimento aumenta necrose miocárdica, insuficiência cardíaca e mortalidade."
+  },
+  {
+    "cat": "Cardiologia - Infarto Silencioso",
+    "q": "O que caracteriza o infarto do miocárdio silencioso e em quais pacientes é mais comum?",
+    "a": "Infarto sem sintomas típicos de dor torácica, mais comum em diabéticos e idosos devido à neuropatia autonômica e alterações na percepção da dor.",
+    "hint": "Infarto sem dor",
+    "exp": "Muitas vezes diagnosticado tardiamente, tem pior prognóstico, reforçando a importância do rastreamento e monitoramento desses grupos."
+  },
+  {
+    "cat": "Cardiologia - Classificação de Killip",
+    "q": "O que avalia a classificação de Killip em pacientes com infarto agudo do miocárdio?",
+    "a": "Avalia a gravidade da insuficiência cardíaca clínica, classificando em quatro classes que se correlacionam com o prognóstico.",
+    "hint": "Killip = IC e prognóstico",
+    "exp": "Classe I indica ausência de IC, classe II crepitações pulmonares leves, classe III edema pulmonar e classe IV choque cardiogênico."
+  },
+  {
+    "cat": "Cardiologia - Uso de Nitratos",
+    "q": "Qual a indicação e contraindicação do uso de nitratos nas SCAs?",
+    "a": "Indicados para alívio da dor isquêmica, exceto em casos de hipotensão, uso recente de inibidores de PDE-5 ou suspeita de infarto do ventrículo direito.",
+    "hint": "Nitrato contra indicado em hipotensão",
+    "exp": "Os nitratos promovem vasodilatação coronariana e sistêmica, mas podem agravar hipotensão e diminuir retorno venoso, comprometendo hemodinâmica."
+  },
+  {
+    "cat": "Cardiologia - Infarto do Ventrículo Direito",
+    "q": "Quais sinais clínicos sugerem infarto do ventrículo direito associado à SCA?",
+    "a": "Hipotensão, distensão jugular com pulso venoso aumentado e ausência de congestão pulmonar.",
+    "hint": "Hipotensão + jugular distendida + pulmão limpo",
+    "exp": "O reconhecimento é importante porque o tratamento com nitratos pode agravar a hipotensão; o manejo hemodinâmico cuidadoso é necessário."
+  },
+  {
+    "cat": "Cardiologia - Avaliação Inicial",
+    "q": "Além do ECG e marcadores cardíacos, qual exame é fundamental na avaliação inicial do paciente com SCA para excluir outras causas de dor torácica?",
+    "a": "Radiografia de tórax para avaliar causas pulmonares e cardiomegalia.",
+    "hint": "Rx tórax na dor torácica",
+    "exp": "O RX ajuda a identificar pneumotórax, edema pulmonar e outras causas, direcionando o diagnóstico e tratamento."
+  },
+  {
+    "cat": "Cardiologia - Uso de Morfina",
+    "q": "Qual o papel da morfina no tratamento das SCAs e quais as precauções?",
+    "a": "Alivia a dor intensa e a ansiedade, mas deve ser usada com cautela pois pode causar depressão respiratória, hipotensão e mascarar sintomas clínicos.",
+    "hint": "Morfina = dor, mas com cuidado",
+    "exp": "Seu uso é indicado para dor refratária após nitrato, sendo importante monitorar efeitos adversos."
+  },
+  {
+    "cat": "Cardiologia - Cuidados no Transporte",
+    "q": "Quais cuidados devem ser adotados no transporte de pacientes com IAM para centros especializados?",
+    "a": "Monitorização contínua, suporte hemodinâmico se necessário, administração de medicações prévias e comunicação prévia com equipe receptora para agilizar atendimento.",
+    "hint": "Transporte seguro e coordenado",
+    "exp": "Transporte adequado reduz tempo para reperfusão e melhora desfechos clínicos."
+  },
+  {
+    "cat": "Cardiologia - Indicadores de Gravidade no ECG",
+    "q": "O que indica a presença de ondas Q patológicas no ECG após SCA?",
+    "a": "Necrose transmural do miocárdio, indicando infarto estabelecido e maior extensão da lesão.",
+    "hint": "Onda Q = necrose",
+    "exp": "A presença de ondas Q sugere infarto antigo ou evoluído, com implicações prognósticas e terapêuticas."
+  },
+  {
+    "cat": "Cardiologia - Angina Instável",
+    "q": "Como se define angina instável na prática clínica?",
+    "a": "Dor torácica nova, em crescendo, prolongada ou em repouso, sem elevação dos marcadores cardíacos e com alterações transitórias no ECG.",
+    "hint": "Dor em repouso + marcadores negativos",
+    "exp": "A angina instável representa isquemia crítica sem necrose, requerendo avaliação e tratamento rápido para evitar evolução para infarto."
+  },
+  {
+    "cat": "Cardiologia - Cuidados Pós-Alta",
+    "q": "Quais orientações são essenciais para o paciente após alta hospitalar por SCA?",
+    "a": "Adesão à medicação, mudanças no estilo de vida, controle rigoroso dos fatores de risco, reabilitação cardíaca e acompanhamento regular com cardiologista.",
+    "hint": "Alta = educação e controle",
+    "exp": "O sucesso do tratamento a longo prazo depende da educação do paciente e manejo multidisciplinar para prevenir novos eventos."
+  },
+  {
+    "cat": "Cardiologia - Avaliação Hemodinâmica",
+    "q": "Quando está indicada a avaliação hemodinâmica invasiva em pacientes com SCAs?",
+    "a": "Em casos de instabilidade, choque cardiogênico, falha terapêutica ou dúvida diagnóstica para guiar terapias específicas.",
+    "hint": "Avaliação invasiva em instabilidade",
+    "exp": "Cateterismo direito permite monitorizar pressão, débito cardíaco e orientar suporte hemodinâmico."
+  },
+  {
+    "cat": "Cardiologia - Terapia com Inibidores de GPIIb/IIIa",
+    "q": "Qual o uso dos inibidores do receptor GPIIb/IIIa nas SCAs?",
+    "a": "São antiagregantes potentes usados em combinação com outras terapias para prevenir trombose durante procedimentos percutâneos em pacientes de alto risco.",
+    "hint": "GPIIb/IIIa = antiagregante potente",
+    "exp": "Seu uso deve ser balanceado com o risco de sangramento e indicado especialmente em ICP primária ou SCA de alto risco."
+  },
+  {
+    "cat": "Cardiologia - Monitorização Laboratorial",
+    "q": "Além da troponina, quais outros exames laboratoriais são importantes na avaliação inicial das SCAs?",
+    "a": "Hemograma, eletrólitos, função renal, glicemia, coagulograma e perfil lipídico.",
+    "hint": "Exames básicos complementares",
+    "exp": "Esses exames auxiliam na avaliação do estado geral, complicações e planejamento terapêutico."
   }
 ]
